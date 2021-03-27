@@ -1,0 +1,67 @@
+﻿<Page
+    x:Class="MEnglish.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MEnglish"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loaded="Page_Loaded">
+    
+    <Page.Background>
+        <LinearGradientBrush EndPoint="0.5,1"
+                             StartPoint="0.5,0">
+            <GradientStop Color="#FF643CBB"/>
+            <GradientStop Color="#FFFF9696"
+                          Offset="1"/>
+        </LinearGradientBrush>
+    </Page.Background>
+
+    <Grid>
+        <StackPanel x:Name="CenterStack" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    Canvas.ZIndex="1">
+            <StackPanel Margin="40">
+                <Grid x:Name="VkSize"
+                      HorizontalAlignment="Center"
+                      Width="320">
+                    <Image x:Name="VKLink"
+                           Source="VK_Full_Logo.png"/>
+                    <HyperlinkButton NavigateUri="https://vk.com/public198072202"
+                                     Height="64" 
+                                     Width="320"
+                                     Canvas.ZIndex="1"/>
+                </Grid>
+            </StackPanel>
+            <TextBlock x:Name="VKGroupText"
+                       Text="Сообщество ВК"
+                       HorizontalAlignment="Center"
+                       FontFamily="Bahnschrift" 
+                       FontSize="20"
+                       FontWeight="Bold"/>
+            <TextBlock Text="Обновление от: 09.01.2021"
+                       FontSize="14"
+                       Foreground="White"
+                       FontFamily="Bahnschrift"
+                       HorizontalAlignment="Center"/>
+            <TextBlock Text="Версия: 1.5 Store Edition" 
+                       FontSize="14"
+                       Foreground="#FFFFBDBD"
+                       FontFamily="Bahnschrift" 
+                       HorizontalAlignment="Center"/>
+            <TextBlock x:Name="SteamvinStudios"
+                       Text="STEAMVIN STUDIOS"
+                       FontWeight="Bold"
+                       FontSize="14"
+                       Foreground="#FF3E3E3E"
+                       FontFamily="Bahnschrift"
+                       HorizontalAlignment="Center"/>
+            <TextBlock Text="2020"
+                       FontSize="14"
+                       Foreground="White" 
+                       FontFamily="Bahnschrift"
+                       HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Page>

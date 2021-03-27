@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="MEnglish.PickFromFour"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MEnglish"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loaded="Page_Loaded">
+
+    <Grid>
+        <Image x:Name="BgImg" Stretch="UniformToFill" Opacity="0.1"/>
+        <StackPanel x:Name="MainStack" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Vertical" Width="400" Margin="0 80">
+            <TextBlock x:Name="SomeEnWord"
+                       FontSize="36"
+                       FontWeight="Bold"
+                       Text="Sample Text"
+                       VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                       Margin="20"
+                       TextWrapping="Wrap"/>
+            <Button x:Name="PickBt1" Content="Sample 1" Margin="4" CornerRadius="20" MinWidth="120" Padding="20" HorizontalAlignment="Center" FontSize="20" Click="PickBt1_Click"/>
+            <Button x:Name="PickBt2" Content="Sample 2" Margin="4" CornerRadius="20" MinWidth="120" Padding="20" HorizontalAlignment="Center" FontSize="20" Click="PickBt2_Click"/>
+            <Button x:Name="PickBt3" Content="Sample 3" Margin="4" CornerRadius="20" MinWidth="120" Padding="20" HorizontalAlignment="Center" FontSize="20" Click="PickBt3_Click"/>
+            <Button x:Name="PickBt4" Content="Sample 4" Margin="4" CornerRadius="20" MinWidth="120" Padding="20" HorizontalAlignment="Center" FontSize="20" Click="PickBt4_Click"/>
+
+            <!--<Button x:Name="GenerateWords" Content="Generate New Words" Margin="4" CornerRadius="28" Padding="20" HorizontalAlignment="Center" Background="#FF4FAFFF" Foreground="White" Click="GenerateWords_Click"/>-->
+        </StackPanel>
+        <Button x:Name="GreatBadJob"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Margin="20"
+                Content="Sample text 😋"
+                Padding="32 16"
+                FontSize="20"
+                CornerRadius="28"
+                Opacity="0"/>
+    </Grid>
+</Page>

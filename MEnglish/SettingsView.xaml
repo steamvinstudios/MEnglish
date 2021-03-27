@@ -1,0 +1,55 @@
+﻿<Page 
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MEnglish"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Custom="using:System.Numerics"
+    x:Class="MEnglish.SettingsView"
+    mc:Ignorable="d"
+    x:Name="mySetView"
+    Loaded="mySetView_Loaded">
+
+    <Page.Background>
+        <AcrylicBrush x:Name="bgAcr" BackgroundSource="HostBackdrop" TintColor="{Binding Color, ElementName=clrPicker, Mode=OneWay}"/>
+    </Page.Background>
+
+    <Grid>
+        <ScrollViewer>
+            <StackPanel Spacing="8" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 200">
+                <TextBlock Text="Настройки приложения" Style="{StaticResource HeaderTextBlockStyle}"/>
+                <ToggleSwitch Header="Анимации" Visibility="Collapsed"/>
+                <TextBlock x:Name="TextValue"/>
+                <Slider Visibility="Collapsed" Value="{x:Bind ShareValue, Mode=TwoWay}" Maximum="1.0" Minimum="0.0" StepFrequency="0.1"/>
+                <TextBlock Visibility="Collapsed" Text="Цвет акрила" Margin="0 4" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                
+                <muxc:ColorPicker
+                    Color="Black"
+                    ColorChanged="ColorPicker_ColorChanged"
+                    HorizontalAlignment="Left"
+                    ColorSpectrumShape="Ring"
+                    IsMoreButtonVisible="False"
+                    IsColorSliderVisible="True"
+                    IsColorChannelTextInputVisible="False"
+                    IsHexInputVisible="False"
+                    IsAlphaEnabled="False"
+                    IsAlphaSliderVisible="True"
+                    IsAlphaTextInputVisible="True"/>
+                <muxc:InfoBar
+                    IsOpen="True"
+                    Severity="Informational"
+                    Title="Внимание" 
+                    Message="Настройки в экспериментальном режиме"
+                    CornerRadius="20"/>
+                <Slider
+                    Header="Степень прозрачности" 
+                    ValueChanged="Slider_ValueChanged_1"
+                    Minimum="0.0"
+                    Maximum="1.0"
+                    StepFrequency="0.1"/>
+            </StackPanel>
+        </ScrollViewer>
+
+    </Grid>
+</Page>
