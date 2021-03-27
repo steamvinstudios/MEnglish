@@ -32,7 +32,6 @@ namespace MEnglish
         public TrainerMode()
         {
             this.InitializeComponent();
-            //this.NavigationCacheMode = NavigationCacheMode.Enabled; // кэш страницы вкл.
 
         }
         private void ShortTrainBt_Click(object sender, RoutedEventArgs e)
@@ -71,9 +70,6 @@ namespace MEnglish
         {
             Frame.Navigate(typeof(PickFromFour));
         }
-        //-------------------------------------------------------------------------------------
-        //------------------------СТРАНИЦА ЗАГРУЖЕНА-------------------------------------------
-        //-------------------------------------------------------------------------------------
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
             var posSnow = 0;
@@ -82,19 +78,6 @@ namespace MEnglish
 
             var myPage = sender as TrainerMode;
             myPage.Background = GlobalUISettings.BgAcr;
-
-
-            //StGdTipAnim();
-
-            // АНИМАЦИЯ СНЕЖИНОК
-
-            /*while (true)
-            {
-                await Task.Delay(120);
-                var rnd = new Random();
-                sn1.Translation = new Vector3(rnd.Next(posSnow, 1280), rnd.Next(posSnow, 1280), 0);
-                posSnow++;
-            }*/
 
         }
 
@@ -107,59 +90,5 @@ namespace MEnglish
         {
             ShortTrainBt.Translation -= GridVectorForShadow;
         }
-        /*async void StGdTipAnim()
-{
-await Task.Delay(1000);
-StartGuideTip.Title = "Совет";
-StartGuideTip.Subtitle = "Выбор режима";
-StartGuideTip.Content = new TextBlock
-{
-Text = "Выбери один из режимов тренировки",
-FontSize = 24,
-TextWrapping = TextWrapping.Wrap,
-Foreground = new SolidColorBrush(Color.FromArgb(255, (byte)random.Next(150, 256), (byte)random.Next(150, 256), (byte)random.Next(150, 256)))
-};
-StartGuideTip.Target = ShortTrainBt;
-StartGuideTip.IsOpen = true;
-await Task.Delay(2000);
-StartGuideTip.IsOpen = false;
-await Task.Delay(500);
-StartGuideTip.Content = new TextBlock
-{
-Text = "Ты пройдешь несколько тренажеров подряд",
-FontSize = 24,
-TextWrapping = TextWrapping.Wrap,
-Foreground = new SolidColorBrush(Color.FromArgb(255, (byte)random.Next(150, 256), (byte)random.Next(150, 256), (byte)random.Next(150, 256)))
-};
-StartGuideTip.Target = MidTrainBt;
-StartGuideTip.IsOpen = true;
-await Task.Delay(2000);
-StartGuideTip.IsOpen = false;
-await Task.Delay(500);
-StartGuideTip.Content = new TextBlock
-{
-Text = "И заработаешь очки",
-FontSize = 24,
-TextWrapping = TextWrapping.Wrap,
-Foreground = new SolidColorBrush(Color.FromArgb(255, (byte)random.Next(150, 256), (byte)random.Next(150, 256), (byte)random.Next(150, 256)))
-};
-StartGuideTip.Target = LongTrainBt;
-StartGuideTip.IsOpen = true;
-await Task.Delay(2000);
-StartGuideTip.IsOpen = false;
-await Task.Delay(500);
-StartGuideTip.Title = "Совет";
-StartGuideTip.Subtitle = "Наставление";
-StartGuideTip.Content = new TextBlock
-{
-Text = "Удачи!",
-FontSize = 32,
-Foreground = new SolidColorBrush(Color.FromArgb(255, 255, 50, 70))
-};
-StartGuideTip.Target = null;
-StartGuideTip.IsOpen = true;
-await Task.Delay(2000);
-StartGuideTip.IsOpen = false;
-}*/
     }
 }
