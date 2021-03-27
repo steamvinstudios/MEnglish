@@ -155,9 +155,6 @@
     <Compile Include="GreatJob.xaml.cs">
       <DependentUpon>GreatJob.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Intro.xaml.cs">
-      <DependentUpon>Intro.xaml</DependentUpon>
-    </Compile>
     <Compile Include="JsonWords.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -284,6 +281,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="Assets\Windows Balloon.wav" />
     <Content Include="FodyWeavers.xml" />
+    <Content Include="GitHub_Logo.png" />
     <Content Include="MEnglish.csproj.user" />
     <Content Include="VK_Blue_Logo_transparent.png" />
     <Content Include="VK_Full_Logo.png" />
@@ -338,10 +336,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GreatJob.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Intro.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -21,17 +21,33 @@
         <StackPanel x:Name="CenterStack" 
                     HorizontalAlignment="Center" 
                     VerticalAlignment="Center"
-                    Canvas.ZIndex="1">
-            <StackPanel Margin="40">
+                    Canvas.ZIndex="1"
+                    Spacing="8">
+            <Grid x:Name="GitHubLink" Background="#22FFFFFF" CornerRadius="20" HorizontalAlignment="Center">
+                
+                <HyperlinkButton Canvas.ZIndex="1"
+                                 Width="100"
+                                 Height="100"
+                                 NavigateUri="https://github.com/steamvinstudios/MEnglish">
+                    <Image Source="/GitHub_Logo.png"
+                       MaxHeight="100"/>
+                </HyperlinkButton>
+            </Grid>
+            <StackPanel>
                 <Grid x:Name="VkSize"
                       HorizontalAlignment="Center"
-                      Width="320">
-                    <Image x:Name="VKLink"
-                           Source="VK_Full_Logo.png"/>
+                      Width="320"
+                      Background="#22FFFFFF"
+                      CornerRadius="20">
+                    
                     <HyperlinkButton NavigateUri="https://vk.com/public198072202"
                                      Height="64" 
-                                     Width="320"
-                                     Canvas.ZIndex="1"/>
+                                     HorizontalAlignment="Center"
+                                     Width="220"
+                                     Canvas.ZIndex="1">
+                        <Image x:Name="VKLink"
+                           Source="VK_Full_Logo.png"/>
+                    </HyperlinkButton>
                 </Grid>
             </StackPanel>
             <TextBlock x:Name="VKGroupText"
@@ -40,25 +56,25 @@
                        FontFamily="Bahnschrift" 
                        FontSize="20"
                        FontWeight="Bold"/>
-            <TextBlock Text="Обновление от: 09.01.2021"
+            <TextBlock Text="Обновление от: 28.03.2021"
                        FontSize="14"
                        Foreground="White"
                        FontFamily="Bahnschrift"
                        HorizontalAlignment="Center"/>
-            <TextBlock Text="Версия: 1.5 Store Edition" 
+            <TextBlock Text="Версия: 3.0 GitHub Edition" 
                        FontSize="14"
-                       Foreground="#FFFFBDBD"
+                       Foreground="GreenYellow"
                        FontFamily="Bahnschrift" 
                        HorizontalAlignment="Center"/>
             <TextBlock x:Name="SteamvinStudios"
                        Text="STEAMVIN STUDIOS"
                        FontWeight="Bold"
-                       FontSize="14"
+                       FontSize="18"
                        Foreground="#FF3E3E3E"
                        FontFamily="Bahnschrift"
                        HorizontalAlignment="Center"/>
-            <TextBlock Text="2020"
-                       FontSize="14"
+            <TextBlock Text="2021"
+                       FontSize="16"
                        Foreground="White" 
                        FontFamily="Bahnschrift"
                        HorizontalAlignment="Center"/>
