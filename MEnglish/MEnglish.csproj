@@ -135,52 +135,37 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AboutPage.xaml.cs">
+    <Compile Include="Views\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CurrentPage.cs" />
-    <Compile Include="Dictionary.xaml.cs">
+    <Compile Include="Views\Dictionary.xaml.cs">
       <DependentUpon>Dictionary.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FourPics.xaml.cs">
+    <Compile Include="Views\FourPics.xaml.cs">
       <DependentUpon>FourPics.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GenPoint.xaml.cs">
+    <Compile Include="Views\GenPoint.xaml.cs">
       <DependentUpon>GenPoint.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GlobalUISettings.cs" />
-    <Compile Include="GreatJob.xaml.cs">
+    <Compile Include="Views\GreatJob.xaml.cs">
       <DependentUpon>GreatJob.xaml</DependentUpon>
     </Compile>
-    <Compile Include="JsonWords.cs" />
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainProBar.cs" />
-    <Compile Include="MENotifications.cs" />
-    <Compile Include="MESettings.cs" />
-    <Compile Include="PickFromFour.xaml.cs">
+    <Compile Include="Views\PickFromFour.xaml.cs">
       <DependentUpon>PickFromFour.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SettingsProps.cs" />
-    <Compile Include="SettingsView.xaml.cs">
+    <Compile Include="Views\SettingsView.xaml.cs">
       <DependentUpon>SettingsView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SettingsViewModel.cs" />
-    <Compile Include="TestJson.xaml.cs">
-      <DependentUpon>TestJson.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TrainerMode.xaml.cs">
+    <Compile Include="Views\TrainerMode.xaml.cs">
       <DependentUpon>TrainerMode.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TrainerModel.cs" />
-    <Compile Include="ViewModelUI.cs" />
-    <Compile Include="Word.cs" />
-    <Compile Include="Words.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ArrayPics\animal.jpg" />
@@ -280,21 +265,9 @@
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="Assets\Windows Balloon.wav" />
-    <Content Include="FodyWeavers.xml" />
-    <Content Include="GitHub_Logo.png" />
+    <Content Include="Logos\GitHub_Logo.png" />
     <Content Include="MEnglish.csproj.user" />
-    <Content Include="VK_Blue_Logo_transparent.png" />
-    <Content Include="VK_Full_Logo.png" />
-    <Content Include="VK_Full_Logo.svg" />
-    <None Include="EnDic.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="FodyWeavers.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="GbDic.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <Content Include="Logos\VK_Full_Logo.png" />
     <None Include="MEnglish_TemporaryKey.pfx" />
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
@@ -307,55 +280,45 @@
     <Content Include="Assets\Square44x44Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
-    <None Include="RuDic.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TestJsonFile.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="AboutPage.xaml">
+    <Page Include="Views\AboutPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Dictionary.xaml">
+    <Page Include="Views\Dictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FourPics.xaml">
+    <Page Include="Views\FourPics.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="GenPoint.xaml">
+    <Page Include="Views\GenPoint.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="GreatJob.xaml">
+    <Page Include="Views\GreatJob.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainPage.xaml">
+    <Page Include="Views\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="PickFromFour.xaml">
+    <Page Include="Views\PickFromFour.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SettingsView.xaml">
+    <Page Include="Views\SettingsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TestJson.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TrainerMode.xaml">
+    <Page Include="Views\TrainerMode.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -385,11 +348,11 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.1</Version>
     </PackageReference>
-    <PackageReference Include="PropertyChanged.Fody">
-      <Version>3.3.3</Version>
-    </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
