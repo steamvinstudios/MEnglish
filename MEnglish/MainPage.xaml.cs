@@ -32,7 +32,6 @@ namespace MEnglish
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public SolidColorBrush GlobalColor { get; set; } = GlobalUISettings.BgColor;
         MediaPlayer player;
 
         Random random = new Random();
@@ -65,7 +64,7 @@ namespace MEnglish
             {
                 await Task.Delay(1000);
                 t += 1;
-                AppTimer.Content = t;
+                AppTimer.Text = t.ToString();
             }
         }
 
@@ -194,7 +193,6 @@ namespace MEnglish
             JsonWords.Init(); // инициализация словаря
 
             // наполняем вспл. подсказку
-            //teachingStack.Children.Add(headerWord);
             teachingStack.Children.Add(bigWord);
 
             // добавление подсказки на англ. слово
@@ -213,7 +211,6 @@ namespace MEnglish
             // Таймер
             ApplicationTimer();
             var myWriter = sender as MainPage;
-            myWriter.Background = GlobalUISettings.BgAcr;
         }
     }
 }

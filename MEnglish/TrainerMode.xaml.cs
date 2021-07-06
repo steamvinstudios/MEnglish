@@ -77,7 +77,7 @@ namespace MEnglish
             MainProBar.MainProBarLocal.Maximum = 0;
 
             var myPage = sender as TrainerMode;
-            myPage.Background = GlobalUISettings.BgAcr;
+            //myPage.Background = GlobalUISettings.BgAcr;
 
         }
 

@@ -39,7 +39,6 @@ namespace MEnglish
 
         private void gJob_Loaded(object sender, RoutedEventArgs e)
         {
-            gJob.Background = GlobalUISettings.BgAcr;
             GoToTheNext();
         }
     }

@@ -5,8 +5,10 @@ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 xmlns:local="using:MEnglish"
 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
 mc:Ignorable="d"
-Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+Background="Transparent"
+      muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"
 Loaded="Page_Loaded">
 
     <Grid>
@@ -28,7 +30,7 @@ Loaded="Page_Loaded">
                         </TransitionCollection>
                     </StackPanel.Transitions>
 
-                    <Grid Background="#22555555" CornerRadius="12" Padding="8">
+                    <Grid Background="#11555555" CornerRadius="12" Padding="8">
                         <StackPanel>
                             <TextBlock Text="Выбери режим тренировки"
                                        FontFamily="Bahnschrift"
@@ -40,9 +42,7 @@ Loaded="Page_Loaded">
                                         Content="Короткая"
                                         Click="ShortTrainBt_Click"
                                         FontFamily="Bahnschrift"
-                                        CornerRadius="12"
-                                PointerEntered="Grid_PointerEntered"
-                                        PointerExited="backLandGrid_PointerExited">
+                                        CornerRadius="12">
                                     <Button.Shadow>
                                         <ThemeShadow/>
                                     </Button.Shadow>
@@ -85,13 +85,13 @@ Loaded="Page_Loaded">
                         </StackPanel>
                     </Grid>
 
-                    <Grid x:Name="backLandGrid" Background="#22555555" CornerRadius="12" Padding="8" PointerEntered="Grid_PointerEntered" PointerExited="backLandGrid_PointerExited">
+                    <Grid x:Name="backLandGrid" Background="#11555555" CornerRadius="12" Padding="8" >
                         <Grid.Shadow>
                             <ThemeShadow/>
                         </Grid.Shadow>
                         <StackPanel Spacing="8">
                             <TextBlock Text="Режим тренировки" HorizontalAlignment="Center" FontSize="24" FontFamily="Bahnschrift" FontWeight="Bold"/>
-                            <Grid Background="#22555555" CornerRadius="12" Padding="8">
+                            <Grid Background="#11555555" CornerRadius="12" Padding="8">
                                 <TextBlock Text="Режим тренировки сочетает в себе все наши полезные, удобные и развивающие тренажеры. Выберете то, что подходит вам прямо сейчас, будь-то короткая, средняя или длинная тренировка. Со временем он будет обрастать новыми и полезными функциями, охватывать больше тем и быть лучше с каждым днем. На носу пара сюрпризов для вас. Обязательно ждите."
                                     Width="340"
                                     FontSize="16"
@@ -114,7 +114,7 @@ Loaded="Page_Loaded">
                             <RepositionThemeTransition/>
                         </TransitionCollection>
                     </StackPanel.Transitions>
-                    <Grid Background="#22555555" CornerRadius="12" Padding="8">
+                    <Grid Background="#11555555" CornerRadius="12" Padding="8">
                         <StackPanel Spacing="8">
                             <TextBlock Text="Тренажер райтер"
                         FontSize="24"
@@ -135,7 +135,7 @@ Loaded="Page_Loaded">
                                     </LinearGradientBrush>
                                 </Button.Background>
                             </Button>
-                            <Grid Background="#22555555" CornerRadius="12" Padding="8">
+                            <Grid Background="#11555555" CornerRadius="12" Padding="8">
                                 <TextBlock Text="Тренажер райтер представляет из себя механизм, позволяющий создать ассоциативную связь между английским словом и явлением или предметом, которое оно отображает. Это позволит вам понимать английскую речь напрямую без необходимости прямого перевода. Также в этом тренажере предлагается вручную вбивать перевод предлагаемого слова и его значений. Так вы будете знать, что в каждом частном случае может использоваться та же языковая конструкция, но несущая иной смысл."
                         Width="340"
                         FontSize="16"
@@ -154,7 +154,7 @@ Loaded="Page_Loaded">
                             <RepositionThemeTransition/>
                         </TransitionCollection>
                     </StackPanel.Transitions>
-                    <Grid Background="#22555555" CornerRadius="12" Padding="8">
+                    <Grid Background="#11555555" CornerRadius="12" Padding="8">
                         <StackPanel Spacing="8">
                             <TextBlock Text="Тренажер пикер"
                         FontSize="24"
@@ -169,7 +169,7 @@ Loaded="Page_Loaded">
                                     </LinearGradientBrush>
                                 </Button.Background>
                             </Button>
-                            <StackPanel Background="#22555555" CornerRadius="12" Padding="8">
+                            <StackPanel Background="#11555555" CornerRadius="12" Padding="8">
 
                                 <TextBlock Text="Тренажер пикер или ленивый тренажер предлагает вам русское слово и 4 варианта ответа. Своебразный тест, в которым вы оттачиваете свои навыки. Еле видимая картинка на фоне закрепляет ассоциативную связку и выступает своего рода подсказкой, которой вы всегда можете воспользоваться."
                                     FontSize="16"

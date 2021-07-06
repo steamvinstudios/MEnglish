@@ -41,9 +41,9 @@ namespace MEnglish
 
             while (true)
             {
-                r = Convert.ToByte(random.Next(170, 255));
-                g = Convert.ToByte(random.Next(170, 255));
-                b = Convert.ToByte(random.Next(220, 255));
+                r = Convert.ToByte(random.Next(0, 255));
+                g = Convert.ToByte(random.Next(0, 255));
+                b = Convert.ToByte(random.Next(0, 255));
 
                 VKGroupText.Foreground = new SolidColorBrush(Color.FromArgb(255, r, g, b));
 
