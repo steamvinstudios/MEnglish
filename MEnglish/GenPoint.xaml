@@ -62,7 +62,7 @@
                             MinWidth="120"
                             Background="{x:Null}"
                             Click="Button_Click_7"
-                            CornerRadius="4"
+                            CornerRadius="20"
                             BorderThickness="1"
                             Style="{StaticResource ButtonRevealStyle}">
                         <Button.Transitions>
@@ -82,7 +82,7 @@
                             MinWidth="120"
                             Background="{x:Null}"
                             Click="Button_Click_1"
-                            CornerRadius="4"
+                            CornerRadius="20"
                             BorderThickness="1"
                             Style="{StaticResource ButtonRevealStyle}">
                         <Button.Transitions>
@@ -102,7 +102,7 @@
                             Background="{x:Null}"
                             Click="Button_Click_4"
                             Visibility="Visible"
-                            CornerRadius="4"
+                            CornerRadius="20"
                             BorderThickness="1"
                             Style="{StaticResource ButtonRevealStyle}">
                         <Button.Transitions>
@@ -141,7 +141,7 @@
                     <Button MinWidth="120"
                             Background="{x:Null}"
                             Click="Button_Click_2"
-                            CornerRadius="4"
+                            CornerRadius="20"
                             BorderThickness="1"
                             Style="{StaticResource ButtonRevealStyle}">
                         <Button.Transitions>

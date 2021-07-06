@@ -20,10 +20,37 @@
                         HorizontalAlignment="Center"
                        Margin="20"
                        TextWrapping="Wrap"/>
-            <Button x:Name="PickBt1" Content="Sample 1" Margin="4" CornerRadius="20" MinWidth="120" Padding="20" HorizontalAlignment="Center" FontSize="20" Click="PickBt1_Click"/>
-            <Button x:Name="PickBt2" Content="Sample 2" Margin="4" CornerRadius="20" MinWidth="120" Padding="20" HorizontalAlignment="Center" FontSize="20" Click="PickBt2_Click"/>
-            <Button x:Name="PickBt3" Content="Sample 3" Margin="4" CornerRadius="20" MinWidth="120" Padding="20" HorizontalAlignment="Center" FontSize="20" Click="PickBt3_Click"/>
-            <Button x:Name="PickBt4" Content="Sample 4" Margin="4" CornerRadius="20" MinWidth="120" Padding="20" HorizontalAlignment="Center" FontSize="20" Click="PickBt4_Click"/>
+            <Button x:Name="PickBt1" Content="Sample 1" Margin="4" CornerRadius="20" MinWidth="120" Padding="20" HorizontalAlignment="Center" FontSize="20" Click="PickBt1_Click" Style="{ThemeResource ButtonRevealStyle}"/>
+            <Button x:Name="PickBt2"
+                    Content="Sample 2"
+                    Margin="4"
+                    CornerRadius="20"
+                    MinWidth="120"
+                    Padding="20"
+                    HorizontalAlignment="Center"
+                    FontSize="20"
+                    Click="PickBt2_Click"
+                    Style="{ThemeResource ButtonRevealStyle}" />
+            <Button x:Name="PickBt3"
+                    Content="Sample 3"
+                    Margin="4"
+                    CornerRadius="20"
+                    MinWidth="120"
+                    Padding="20"
+                    HorizontalAlignment="Center"
+                    FontSize="20"
+                    Click="PickBt3_Click"
+                    Style="{ThemeResource ButtonRevealStyle}" />
+            <Button x:Name="PickBt4"
+                    Content="Sample 4"
+                    Margin="4"
+                    CornerRadius="20"
+                    MinWidth="120"
+                    Padding="20"
+                    HorizontalAlignment="Center"
+                    FontSize="20"
+                    Click="PickBt4_Click"
+                    Style="{ThemeResource ButtonRevealStyle}" />
 
             <!--<Button x:Name="GenerateWords" Content="Generate New Words" Margin="4" CornerRadius="28" Padding="20" HorizontalAlignment="Center" Background="#FF4FAFFF" Foreground="White" Click="GenerateWords_Click"/>-->
         </StackPanel>
