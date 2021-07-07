@@ -83,7 +83,7 @@
 
             </StackPanel>
 
-            <muxc:ProgressBar Name="BadGoodBar"
+            <muxc:ProgressBar x:Name="BadGoodBar"
                          Margin="0 10"
                          Height="10"
                          CornerRadius="4"

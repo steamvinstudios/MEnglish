@@ -31,7 +31,7 @@ namespace MEnglish
         public PickFromFour()
         {
             this.InitializeComponent();
-            
+
         }
 
         async void GenerateNewWords()
@@ -51,37 +51,37 @@ namespace MEnglish
                 if (PickBt1.Content.ToString() == JsonWords.EWArray[currentRuWord])
                 {
                     //PickBt1.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(100, 0, 255, 0));
-                    GreatBadJob.Content = JsonWords.GBArray[random.Next(0, JsonWords.GBArray.Length)];
-                    GreatBadJob.Opacity = 1.0;
+                    //GreatBadJob.Content = JsonWords.GBArray[random.Next(0, JsonWords.GBArray.Length)];
+                    //GreatBadJob.Opacity = 1.0;
                     await Task.Delay(1000);
-                    GreatBadJob.Opacity = 0.0;
+                    //GreatBadJob.Opacity = 0.0;
                     break;
                 }
                 if (PickBt2.Content.ToString() == JsonWords.EWArray[currentRuWord])
                 {
                     //PickBt2.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(100, 0, 255, 0));
-                    GreatBadJob.Content = JsonWords.GBArray[random.Next(0, JsonWords.GBArray.Length)];
-                    GreatBadJob.Opacity = 1.0;
+                    //GreatBadJob.Content = JsonWords.GBArray[random.Next(0, JsonWords.GBArray.Length)];
+                    //GreatBadJob.Opacity = 1.0;
                     await Task.Delay(1000);
-                    GreatBadJob.Opacity = 0.0;
+                    //GreatBadJob.Opacity = 0.0;
                     break;
                 }
                 if (PickBt3.Content.ToString() == JsonWords.EWArray[currentRuWord])
                 {
                     //PickBt3.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(100, 0, 255, 0));
-                    GreatBadJob.Content = JsonWords.GBArray[random.Next(0, JsonWords.GBArray.Length)];
-                    GreatBadJob.Opacity = 1.0;
+                    //GreatBadJob.Content = JsonWords.GBArray[random.Next(0, JsonWords.GBArray.Length)];
+                    //GreatBadJob.Opacity = 1.0;
                     await Task.Delay(1000);
-                    GreatBadJob.Opacity = 0.0;
+                    //GreatBadJob.Opacity = 0.0;
                     break;
                 }
                 if (PickBt4.Content.ToString() == JsonWords.EWArray[currentRuWord])
                 {
                     //PickBt4.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(100, 0, 255, 0));
-                    GreatBadJob.Content = JsonWords.GBArray[random.Next(0, JsonWords.GBArray.Length)];
-                    GreatBadJob.Opacity = 1.0;
+                    //GreatBadJob.Content = JsonWords.GBArray[random.Next(0, JsonWords.GBArray.Length)];
+                    //GreatBadJob.Opacity = 1.0;
                     await Task.Delay(1000);
-                    GreatBadJob.Opacity = 0.0;
+                    //GreatBadJob.Opacity = 0.0;
                     break;
                 }
             }
@@ -107,7 +107,9 @@ namespace MEnglish
                 BgImg.Source = new BitmapImage(new Uri($"ms-appx:///ArrayPics/{JsonWords.EWArray[currentRuWord]}.jpg"));
                 GenerateNewWords();
                 MainProBar.MainProBarLocal.Value++;
-            } else
+
+            }
+            else
             {
                 PickBt1.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(100, 255, 0, 0));
             }

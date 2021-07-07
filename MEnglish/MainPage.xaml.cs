@@ -135,8 +135,8 @@ namespace MEnglish
                 IfFalse();
                 badRatingBar += 1;
             }
-            MaxOfBar.Text = $"{Convert.ToString(BadGoodBar.Maximum)}";
-            TrueBar.Text = $"{Convert.ToString(BadGoodBar.Value)}";
+            //MaxOfBar.Text = $"{Convert.ToString(BadGoodBar.Maximum)}";
+            //TrueBar.Text = $"{Convert.ToString(BadGoodBar.Value)}";
             FalseBar.Text = $"{badRatingBar}";
         }
 
@@ -168,8 +168,6 @@ namespace MEnglish
             teachingTip.Target = EngWord;
             teachingTip.Content = teachingStack;
 
-            //headerWord.FontSize = 36;
-            //headerWord.Text = "Перевод:";
 
             teachingTip.Title = "Подсказка:";
             teachingTip.Subtitle = JsonWords.EWArray[currentEngWord];
