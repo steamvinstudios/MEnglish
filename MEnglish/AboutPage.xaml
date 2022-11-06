@@ -10,6 +10,102 @@
       Loaded="Page_Loaded">
 
     <Grid>
+        <Rectangle x:Name="rectangle"
+                   Width="150"
+                   Height="150"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Bottom"
+                   Margin="40"
+                   Opacity=".5"
+                   Rotation="0">
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="{ThemeResource SystemAccentColorDark1}" />
+                    <GradientStop Color="{ThemeResource SystemAccentColorLight3}"
+                                  Offset="1" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="rectangle1"
+                   Width="120"
+                   Height="120"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Bottom"
+                   Margin="100"
+                   Opacity=".4"
+                   Rotation="0">
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="{ThemeResource SystemAccentColorDark1}" />
+                    <GradientStop Color="{ThemeResource SystemAccentColorLight3}"
+                                  Offset="1" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="rectangle2"
+                   Width="80"
+                   Height="80"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Bottom"
+                   Margin="164"
+                   Opacity=".3"
+                   Rotation="0">
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="{ThemeResource SystemAccentColorDark1}" />
+                    <GradientStop Color="{ThemeResource SystemAccentColorLight3}"
+                                  Offset="1" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="rectangle3"
+                   Width="150"
+                   Height="150"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom"
+                   Margin="40"
+                   Opacity=".5"
+                   Rotation="0">
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="{ThemeResource SystemAccentColorDark1}" />
+                    <GradientStop Color="{ThemeResource SystemAccentColorLight3}"
+                                  Offset="1" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="rectangle4"
+                   Width="120"
+                   Height="120"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom"
+                   Margin="100"
+                   Opacity=".4"
+                   Rotation="0">
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="{ThemeResource SystemAccentColorDark1}" />
+                    <GradientStop Color="{ThemeResource SystemAccentColorLight3}"
+                                  Offset="1" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="rectangle5"
+                   Width="80"
+                   Height="80"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom"
+                   Margin="164"
+                   Opacity=".3"
+                   Rotation="0">
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="{ThemeResource SystemAccentColorDark1}" />
+                    <GradientStop Color="{ThemeResource SystemAccentColorLight3}"
+                                  Offset="1" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
         <StackPanel x:Name="CenterStack"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
@@ -20,30 +116,26 @@
                   HorizontalAlignment="Center">
 
                 <HyperlinkButton Canvas.ZIndex="1"
-                                 Width="100"
-                                 Height="100"
                                  NavigateUri="https://github.com/steamvinstudios/MEnglish">
                     <Image Source="/GitHub_Logo.png"
                            MaxHeight="100" />
                 </HyperlinkButton>
             </Grid>
-            <StackPanel CornerRadius="20">
-                <Grid x:Name="VkSize"
-                      HorizontalAlignment="Center"
-                      Width="320"
-                      CornerRadius="20">
+            <Grid x:Name="VkSize"
+                  HorizontalAlignment="Center"
+                  Width="320"
+                  CornerRadius="20">
 
-                    <HyperlinkButton NavigateUri="https://vk.com/public198072202"
-                                     Height="64"
-                                     HorizontalAlignment="Center"
-                                     Width="220"
-                                     Canvas.ZIndex="1"
-                                     CornerRadius="20">
-                        <Image x:Name="VKLink"
-                               Source="VK_Full_Logo.png" />
-                    </HyperlinkButton>
-                </Grid>
-            </StackPanel>
+                <HyperlinkButton NavigateUri="https://vk.com/public198072202"
+                                 Height="64"
+                                 HorizontalAlignment="Center"
+                                 Width="220"
+                                 Canvas.ZIndex="1"
+                                 CornerRadius="20">
+                    <Image x:Name="VKLink"
+                           Source="VK_Full_Logo.png" />
+                </HyperlinkButton>
+            </Grid>
             <TextBlock x:Name="VKGroupText"
                        Text="Сообщество ВК"
                        HorizontalAlignment="Center"

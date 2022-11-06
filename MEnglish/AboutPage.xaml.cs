@@ -28,8 +28,6 @@ namespace MEnglish
         public AboutPage()
         {
             this.InitializeComponent();
-            //this.NavigationCacheMode = NavigationCacheMode.Enabled; // кэш страницы вкл.
-            
         }
 
         async void VKGroupTextAnim()
@@ -54,6 +52,21 @@ namespace MEnglish
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             VKGroupTextAnim();
+            RectangleAnimation();
+        }
+
+        private async void RectangleAnimation()
+        {
+            while (true)
+            {
+                await Task.Delay(1000);
+                rectangle.Rotation = new Random().Next(360);
+                rectangle1.Rotation = new Random().Next(360);
+                rectangle2.Rotation = new Random().Next(360);
+                rectangle3.Rotation = new Random().Next(360);
+                rectangle4.Rotation = new Random().Next(360);
+                rectangle5.Rotation = new Random().Next(360);
+            }
         }
     }
 }
