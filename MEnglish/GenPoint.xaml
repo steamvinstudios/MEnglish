@@ -2,14 +2,13 @@
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:local="using:MEnglish"
-      xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:controls="using:Microsoft.UI.Xaml.Controls"
+      xmlns:media="using:Microsoft.UI.Xaml.Media"
       mc:Ignorable="d"
-      
       Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-      muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"
-      xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+      controls:BackdropMaterial.ApplyToRootOrPageBackground="True"
       Loaded="Page_Loaded">
 
     <Grid>
@@ -26,11 +25,11 @@
                         VerticalAlignment="Top">
             </StackPanel>
         </Grid>
-        <StackPanel Orientation="Vertical"
+        <StackPanel x:Name="navigationBarStack"
+                    Orientation="Vertical"
                     VerticalAlignment="Bottom"
                     HorizontalAlignment="Center"
                     Canvas.ZIndex="1"
-                    x:Name="WowSt"
                     CornerRadius="20"
                     Margin="0 20">
             <StackPanel.Transitions>
@@ -41,9 +40,9 @@
             </StackPanel.Transitions>
 
             <StackPanel.Background>
-                <AcrylicBrush TintOpacity="0.0"
-                              TintLuminosityOpacity="0.05"
-                              TintColor="#11555555" />
+                <media:AcrylicBrush TintOpacity="0.0"
+                                    TintLuminosityOpacity="0.05"
+                                    TintColor="#11555555" />
             </StackPanel.Background>
 
             <StackPanel x:Name="BtStack"
@@ -80,7 +79,7 @@
                     </Button>
                     <Button x:Name="bWriter"
                             MinWidth="120"
-                            Background="{x:Null}"
+                            Background="Transparent"
                             Click="Button_Click_1"
                             CornerRadius="20"
                             BorderThickness="1"
@@ -99,7 +98,7 @@
                         </StackPanel>
                     </Button>
                     <Button MinWidth="120"
-                            Background="{x:Null}"
+                            Background="Transparent"
                             Click="Button_Click_4"
                             Visibility="Visible"
                             CornerRadius="20"
@@ -118,28 +117,8 @@
                                        FontFamily="Bahnschrift" />
                         </StackPanel>
                     </Button>
-                    <!--<Button x:Name="bDic"
-                            MinWidth="120"
-                            Background="{x:Null}"
-                            Click="Button_Click"
-                            CornerRadius="4"
-                            BorderThickness="1"
-                            Style="{StaticResource ButtonRevealStyle}">
-                        <Button.Transitions>
-                            <TransitionCollection>
-                                <RepositionThemeTransition />
-                            </TransitionCollection>
-                        </Button.Transitions>
-                        <StackPanel>
-                            <TextBlock Text="📔"
-                                       HorizontalAlignment="Center"
-                                       FontSize="24" />
-                            <TextBlock Text="Словарь"
-                                       FontFamily="Bahnschrift" />
-                        </StackPanel>
-                    </Button>-->
                     <Button MinWidth="120"
-                            Background="{x:Null}"
+                            Background="Transparent"
                             Click="Button_Click_2"
                             CornerRadius="20"
                             BorderThickness="1"
@@ -157,30 +136,54 @@
                                        FontFamily="Bahnschrift" />
                         </StackPanel>
                     </Button>
-                    <!--<Button Click="Button_Click_3"
+                    <Button x:Name="hideNavigationBarButton"
                             MinWidth="120"
-                            Background="{x:Null}"
-                            CornerRadius="4"
+                            Background="Transparent"
+                            CornerRadius="20"
                             BorderThickness="1"
-                            Style="{StaticResource ButtonRevealStyle}">
+                            Style="{StaticResource ButtonRevealStyle}"
+                            Click="HideNavigationBarButton_Click">
                         <Button.Transitions>
                             <TransitionCollection>
                                 <RepositionThemeTransition />
                             </TransitionCollection>
                         </Button.Transitions>
                         <StackPanel>
-                            <TextBlock Text="🕹"
+                            <TextBlock Text="👀"
                                        HorizontalAlignment="Center"
                                        FontSize="24" />
-                            <TextBlock Text="Настройки"
+                            <TextBlock Text="Скрыть"
                                        FontFamily="Bahnschrift" />
                         </StackPanel>
-                    </Button>-->
+                    </Button>
                 </VariableSizedWrapGrid>
             </StackPanel>
         </StackPanel>
         <ScrollViewer>
-            <Frame x:Name="GenPointFrame" muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"/>
+            <Frame x:Name="GenPointFrame" />
         </ScrollViewer>
+        <Button x:Name="showNavigationBarButton"
+                CornerRadius="20"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Visibility="Collapsed"
+                Margin="8"
+                Style="{ThemeResource ButtonRevealStyle}"
+                Click="ShowMavigationBarButton_Click">
+            <Button.Background>
+                <media:AcrylicBrush TintOpacity="0.0"
+                                    TintLuminosityOpacity="0.05"
+                                    TintColor="#11555555" />
+            </Button.Background>
+            <StackPanel>
+                <TextBlock Text="👀"
+                           HorizontalAlignment="Center"
+                           FontSize="24" />
+                <TextBlock Text="Показать"
+                           FontFamily="Bahnschrift" />
+            </StackPanel>
+        </Button>
     </Grid>
 </Page>

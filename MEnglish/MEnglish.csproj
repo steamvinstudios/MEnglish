@@ -152,6 +152,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainProBar.cs" />
+    <Compile Include="Models\Word.cs" />
     <Compile Include="PickFromFour.xaml.cs">
       <DependentUpon>PickFromFour.xaml</DependentUpon>
     </Compile>
@@ -359,7 +360,12 @@
       <Version>4.0.5</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Commands\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

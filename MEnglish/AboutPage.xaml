@@ -50,11 +50,11 @@
                        FontFamily="Bahnschrift"
                        FontSize="20"
                        FontWeight="Bold" />
-            <TextBlock Text="Обновление от: 06.07.2021"
+            <TextBlock Text="Обновление от: 06.11.2022"
                        FontSize="14"
                        FontFamily="Bahnschrift"
                        HorizontalAlignment="Center" />
-            <TextBlock Text="Версия: 4.0 Dev Edition"
+            <TextBlock Text="Версия: 11.0 Store Edition"
                        FontSize="14"
                        FontFamily="Bahnschrift"
                        HorizontalAlignment="Center" />

@@ -41,5 +41,17 @@ namespace MEnglish
             GenPointFrame.Navigate(typeof(TrainerMode));
             stackProBar.Children.Add(MainProBar.MainProBarLocal);
         }
+
+        private void HideNavigationBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            navigationBarStack.Visibility = Visibility.Collapsed;
+            showNavigationBarButton.Visibility = Visibility.Visible;
+        }
+
+        private void ShowMavigationBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            showNavigationBarButton.Visibility = Visibility.Collapsed;
+            navigationBarStack.Visibility = Visibility.Visible;
+        }
     }
 }
