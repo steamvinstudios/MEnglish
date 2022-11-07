@@ -162,6 +162,7 @@
       <DependentUpon>TrainerMode.xaml</DependentUpon>
     </Compile>
     <Compile Include="TrainerModel.cs" />
+    <Compile Include="ViewModels\WriterPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ArrayPics\animal.jpg" />
@@ -361,13 +362,12 @@
       <Version>13.0.1</Version>
     </PackageReference>
     <PackageReference Include="PropertyChanged.Fody">
-      <Version>4.0.5</Version>
+      <Version>4.1.0</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Commands\" />
     <Folder Include="Interfaces\" />
-    <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
