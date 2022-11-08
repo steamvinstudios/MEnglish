@@ -14,10 +14,9 @@
                Source="{x:Bind Words.All[0].Image}" />
         <StackPanel x:Name="MainStack"
                     HorizontalAlignment="Center"
-                    VerticalAlignment="Top"
+                    VerticalAlignment="Center"
                     Orientation="Vertical"
-                    Width="400"
-                    Margin="0 80">
+                    Width="400">
             <TextBlock x:Name="SomeEnWord"
                        FontSize="36"
                        FontWeight="Bold"

@@ -13,8 +13,7 @@
     <Grid>
         <StackPanel x:Name="CenterStack"
                     HorizontalAlignment="Center"
-                    VerticalAlignment="Top"
-                    Margin="0 112">
+                    VerticalAlignment="Center">
             <TextBlock Text="Переведи слово"
                        FontSize="36"
                        HorizontalAlignment="Center"

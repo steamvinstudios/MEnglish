@@ -145,6 +145,9 @@
     <Compile Include="Views\MVVMTestPage.xaml.cs">
       <DependentUpon>MVVMTestPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\TestImageHighlightPage.xaml.cs">
       <DependentUpon>TestImageHighlightPage.xaml</DependentUpon>
     </Compile>
@@ -303,6 +306,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MVVMTestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ProfilePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

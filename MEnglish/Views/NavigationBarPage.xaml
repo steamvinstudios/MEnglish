@@ -116,6 +116,26 @@
                                        FontFamily="Bahnschrift" />
                         </StackPanel>
                     </Button>
+                    <Button x:Name="profilePageButton"
+                            MinWidth="120"
+                            Background="Transparent"
+                            Click="ProfilePageButton_Click"
+                            CornerRadius="20"
+                            BorderThickness="1"
+                            Style="{StaticResource ButtonRevealStyle}">
+                        <Button.Transitions>
+                            <TransitionCollection>
+                                <RepositionThemeTransition />
+                            </TransitionCollection>
+                        </Button.Transitions>
+                        <StackPanel>
+                            <TextBlock Text="🥇"
+                                       HorizontalAlignment="Center"
+                                       FontSize="24" />
+                            <TextBlock Text="Профиль"
+                                       FontFamily="Bahnschrift" />
+                        </StackPanel>
+                    </Button>
                     <Button x:Name="hideNavigationBarButton"
                             MinWidth="120"
                             Background="Transparent"
@@ -140,7 +160,8 @@
             </StackPanel>
         </StackPanel>
         <ScrollViewer>
-            <Frame x:Name="GenPointFrame" />
+            <Frame x:Name="GenPointFrame"
+                   Padding="0 40" />
         </ScrollViewer>
         <Button x:Name="showNavigationBarButton"
                 CornerRadius="20"

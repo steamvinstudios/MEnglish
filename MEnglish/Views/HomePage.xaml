@@ -9,18 +9,17 @@
       mc:Ignorable="d"
       Background="Transparent"
       muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
-    <Grid>
+    <Grid VerticalAlignment="Center">
         <my:TeachingTip x:Name="StartGuideTip"
                         PreferredPlacement="Bottom" />
-        <StackPanel Margin="0 100"
-                    HorizontalAlignment="Center">
+        <StackPanel HorizontalAlignment="Center">
             <VariableSizedWrapGrid Orientation="Horizontal">
                 <VariableSizedWrapGrid.Transitions>
                     <TransitionCollection>
                         <ReorderThemeTransition />
                     </TransitionCollection>
                 </VariableSizedWrapGrid.Transitions>
-                <StackPanel Margin="20"
+                <StackPanel 
                             Spacing="8">
                     <StackPanel.Transitions>
                         <TransitionCollection>

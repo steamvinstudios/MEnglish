@@ -10,7 +10,7 @@ namespace MEnglish.Models
     {
         public List<string> EnglishForms { get; set; } = new List<string>();
         public List<string> RussianForms { get; set; } = new List<string>();
-        public int Rating { get; set; } = 0;
+        public int Rating { get; set; } = new Random().Next(100);
         public bool IsLearned { get; set; } = false;
         public DateTime LastRepeat { get; set; } = DateTime.Now;
         public string Image { get; set; } = "/ArrayPics/hello.jpg";

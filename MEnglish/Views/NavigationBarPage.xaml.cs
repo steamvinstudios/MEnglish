@@ -53,5 +53,10 @@ namespace MEnglish
         {
             GenPointFrame.Navigate(typeof(MainPage), ViewModel.Words);
         }
+
+        private void ProfilePageButton_Click(object sender, RoutedEventArgs e)
+        {
+            GenPointFrame.Navigate(typeof(Views.ProfilePage));
+        }
     }
 }

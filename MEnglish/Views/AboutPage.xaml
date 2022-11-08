@@ -9,7 +9,7 @@
       mc:Ignorable="d"
       controls:BackdropMaterial.ApplyToRootOrPageBackground="True"
       Loaded="Page_Loaded">
-    <Grid>
+    <Grid Margin="0 -40 0 0">
         <Border VerticalAlignment="Top"
                 HorizontalAlignment="Center"
                 Margin="40">
