@@ -15,7 +15,7 @@
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center">
             <Image Source="/ArrayPics/food.jpg"
-                   Width="300" />
+                   Width="280" />
         </Border>
 
         <Border>

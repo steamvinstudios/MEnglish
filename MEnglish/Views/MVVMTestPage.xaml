@@ -1,0 +1,42 @@
+﻿<Page x:Class="MEnglish.Views.MVVMTestPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:MEnglish.Views"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:models="using:MEnglish.Models"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <ListView HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  ItemsSource="{x:Bind ViewModel.Words.All}">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="models:Word">
+                    <StackPanel>
+                        <Border CornerRadius="28">
+                            <Image Height="120"
+                                   HorizontalAlignment="Left"
+                                   Source="{x:Bind Image}" />
+                        </Border>
+                        
+                        <TextBlock Text="{x:Bind EnglishForms[0]}" />
+                        <TextBlock Text="{x:Bind RussianForms[0]}" />
+                        <TextBlock Text="{x:Bind IsLearned}" />
+                        <TextBlock Text="{x:Bind Rating}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackPanel>
+            <Image Height="120"
+                   HorizontalAlignment="Left"
+                   Source="{x:Bind ViewModel.Words.All[0].Image}" />
+            <TextBlock Text="{x:Bind ViewModel.Words.All[0].EnglishForms[0]}" />
+            <TextBlock Text="{x:Bind ViewModel.Words.All[0].RussianForms[0]}" />
+            <TextBlock Text="{x:Bind ViewModel.Words.All[0].IsLearned}" />
+            <TextBlock Text="{x:Bind ViewModel.Words.All[0].Rating}" />
+        </StackPanel>
+    </Grid>
+</Page>

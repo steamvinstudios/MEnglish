@@ -4,12 +4,32 @@
       xmlns:local="using:MEnglish"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-      xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
-      muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"
+      xmlns:controls="using:Microsoft.UI.Xaml.Controls"
+      xmlns:media="using:Microsoft.UI.Xaml.Media"
       mc:Ignorable="d"
+      controls:BackdropMaterial.ApplyToRootOrPageBackground="True"
       Loaded="Page_Loaded">
 
     <Grid>
+        <Border VerticalAlignment="Top"
+                HorizontalAlignment="Center"
+                Margin="40">
+            <Image Source="/Images/menglishlogonew.png"
+                   Width="120" />
+        </Border>
+
+        <Border>
+            <Border.Background>
+                <media:AcrylicBrush TintColor="Transparent"
+                                    TintLuminosityOpacity="0" />
+            </Border.Background>
+        </Border>
+        <Border VerticalAlignment="Top"
+                HorizontalAlignment="Center">
+            <Image Source="/Images/menglishlogonew.png"
+                   Width="100"
+                   Margin="40" />
+        </Border>
         <Rectangle x:Name="rectangle"
                    Width="150"
                    Height="150"
@@ -106,6 +126,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
+
         <StackPanel x:Name="CenterStack"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"

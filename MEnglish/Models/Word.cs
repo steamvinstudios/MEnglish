@@ -13,6 +13,6 @@ namespace MEnglish.Models
         public int Rating { get; set; } = 0;
         public bool IsLearned { get; set; } = false;
         public DateTime LastRepeat { get; set; } = DateTime.Now;
-        public string Image { get; set; } = string.Empty;
+        public string Image { get; set; } = "/ArrayPics/hello.jpg";
     }
 }
