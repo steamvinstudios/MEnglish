@@ -266,7 +266,6 @@
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="Assets\Windows Balloon.wav" />
-    <Content Include="FodyWeavers.xml" />
     <Content Include="GitHub_Logo.png" />
     <Content Include="Images\menglishlogonew.png" />
     <Content Include="MEnglish.csproj.user" />
@@ -274,9 +273,6 @@
     <Content Include="VK_Full_Logo.png" />
     <None Include="EnDic.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="FodyWeavers.xsd">
-      <SubType>Designer</SubType>
     </None>
     <None Include="GbDic.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

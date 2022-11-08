@@ -28,29 +28,8 @@ namespace MEnglish
         {
             this.InitializeComponent();
         }
-
-        async void VKGroupTextAnim()
-        {
-            Random random = new Random();
-            byte r = 0;
-            byte g = 0;
-            byte b = 0;
-
-            while (true)
-            {
-                r = Convert.ToByte(random.Next(0, 255));
-                g = Convert.ToByte(random.Next(0, 255));
-                b = Convert.ToByte(random.Next(0, 255));
-
-                VKGroupText.Foreground = new SolidColorBrush(Color.FromArgb(255, r, g, b));
-
-                await Task.Delay(500);
-            }
-        }
-
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            VKGroupTextAnim();
             RectangleAnimation();
         }
 

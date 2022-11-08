@@ -143,21 +143,14 @@
                   Width="320"
                   CornerRadius="20">
                 <HyperlinkButton NavigateUri="https://vk.com/public198072202"
-                                 Height="64"
+                                 MaxHeight="100"
                                  HorizontalAlignment="Center"
-                                 Width="220"
                                  Canvas.ZIndex="1"
                                  CornerRadius="20">
                     <Image x:Name="VKLink"
-                           Source="VK_Full_Logo.png" />
+                           Source="/VK_Full_Logo.png" />
                 </HyperlinkButton>
             </Grid>
-            <TextBlock x:Name="VKGroupText"
-                       Text="Сообщество ВК"
-                       HorizontalAlignment="Center"
-                       FontFamily="Bahnschrift"
-                       FontSize="20"
-                       FontWeight="Bold" />
             <TextBlock Text="Обновление от: 06.11.2022"
                        FontSize="14"
                        FontFamily="Bahnschrift"
@@ -169,12 +162,12 @@
             <TextBlock x:Name="SteamvinStudios"
                        Text="STEAMVIN STUDIOS"
                        FontWeight="Bold"
-                       FontSize="18"
+                       FontSize="20"
                        FontFamily="Bahnschrift"
                        HorizontalAlignment="Center" />
-            <TextBlock Text="STEAMVINSTUDIOS@OUTLOOK.COM"
-                       FontWeight="Bold"
-                       FontSize="18"
+            <TextBlock x:Name="email"
+                       Text="STEAMVINSTUDIOS@OUTLOOK.COM"
+                       FontSize="12"
                        FontFamily="Bahnschrift"
                        HorizontalAlignment="Center" />
             <TextBlock Text="2022"
