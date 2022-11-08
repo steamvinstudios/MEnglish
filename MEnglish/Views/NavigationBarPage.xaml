@@ -10,21 +10,7 @@
       Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
       controls:BackdropMaterial.ApplyToRootOrPageBackground="True"
       Loaded="Page_Loaded">
-
     <Grid>
-        <Grid VerticalAlignment="Top"
-              Margin="20"
-              Canvas.ZIndex="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <StackPanel x:Name="stackProBar"
-                        Grid.Column="1"
-                        VerticalAlignment="Top">
-            </StackPanel>
-        </Grid>
         <StackPanel x:Name="navigationBarStack"
                     Orientation="Vertical"
                     VerticalAlignment="Bottom"
@@ -38,15 +24,12 @@
                     <PaneThemeTransition />
                 </TransitionCollection>
             </StackPanel.Transitions>
-
             <StackPanel.Background>
                 <media:AcrylicBrush TintOpacity="0.0"
                                     TintLuminosityOpacity="0.05"
                                     TintColor="#11555555" />
             </StackPanel.Background>
-
-            <StackPanel x:Name="BtStack"
-                        Orientation="Vertical"
+            <StackPanel Orientation="Vertical"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Top"
                         Margin="20 4">
@@ -55,11 +38,9 @@
                         <EntranceThemeTransition IsStaggeringEnabled="True" />
                     </TransitionCollection>
                 </StackPanel.ChildrenTransitions>
-
                 <VariableSizedWrapGrid Orientation="Horizontal">
-                    <Button x:Name="bTrain"
-                            MinWidth="120"
-                            Background="{x:Null}"
+                    <Button MinWidth="120"
+                            Background="Transparent"
                             Click="Button_Click_7"
                             CornerRadius="20"
                             BorderThickness="1"
@@ -77,8 +58,7 @@
                                        FontFamily="Bahnschrift" />
                         </StackPanel>
                     </Button>
-                    <Button x:Name="WriterButton"
-                            MinWidth="120"
+                    <Button MinWidth="120"
                             Background="Transparent"
                             Click="WriterButton_Click"
                             CornerRadius="20"

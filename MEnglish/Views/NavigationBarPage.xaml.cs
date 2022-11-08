@@ -35,7 +35,6 @@ namespace MEnglish
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             GenPointFrame.Navigate(typeof(TrainerMode));
-            stackProBar.Children.Add(MainProBar.MainProBarLocal);
         }
 
         private void HideNavigationBarButton_Click(object sender, RoutedEventArgs e)

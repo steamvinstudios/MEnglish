@@ -9,7 +9,6 @@
       mc:Ignorable="d"
       controls:BackdropMaterial.ApplyToRootOrPageBackground="True"
       Loaded="Page_Loaded">
-
     <Grid>
         <Border VerticalAlignment="Top"
                 HorizontalAlignment="Center"
@@ -17,7 +16,6 @@
             <Image Source="/Images/menglishlogonew.png"
                    Width="120" />
         </Border>
-
         <Border>
             <Border.Background>
                 <media:AcrylicBrush TintColor="Transparent"
@@ -126,7 +124,6 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-
         <StackPanel x:Name="CenterStack"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
@@ -135,7 +132,6 @@
             <Grid x:Name="GitHubLink"
                   CornerRadius="20"
                   HorizontalAlignment="Center">
-
                 <HyperlinkButton Canvas.ZIndex="1"
                                  NavigateUri="https://github.com/steamvinstudios/MEnglish">
                     <Image Source="/GitHub_Logo.png"
@@ -146,7 +142,6 @@
                   HorizontalAlignment="Center"
                   Width="320"
                   CornerRadius="20">
-
                 <HyperlinkButton NavigateUri="https://vk.com/public198072202"
                                  Height="64"
                                  HorizontalAlignment="Center"
@@ -173,6 +168,11 @@
                        HorizontalAlignment="Center" />
             <TextBlock x:Name="SteamvinStudios"
                        Text="STEAMVIN STUDIOS"
+                       FontWeight="Bold"
+                       FontSize="18"
+                       FontFamily="Bahnschrift"
+                       HorizontalAlignment="Center" />
+            <TextBlock Text="STEAMVINSTUDIOS@OUTLOOK.COM"
                        FontWeight="Bold"
                        FontSize="18"
                        FontFamily="Bahnschrift"

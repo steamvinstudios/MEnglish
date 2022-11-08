@@ -26,13 +26,10 @@ namespace MEnglish
         public GreatJob()
         {
             this.InitializeComponent();
-            // здесь кэш не нужен, иначе не будет возвращать на страницу тренировки
-            
         }
 
         async void GoToTheNext()
         {
-            TrainerModel.timesAmount = 0;
             await Task.Delay(2000);
             Frame.Navigate(typeof(TrainerMode));
         }

@@ -8,9 +8,7 @@
       xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
       mc:Ignorable="d"
       Background="Transparent"
-      muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"
-      Loaded="Page_Loaded">
-
+      muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
     <Grid>
         <my:TeachingTip x:Name="StartGuideTip"
                         PreferredPlacement="Bottom" />
@@ -29,7 +27,6 @@
                             <RepositionThemeTransition />
                         </TransitionCollection>
                     </StackPanel.Transitions>
-
                     <Grid Background="#11555555"
                           CornerRadius="32"
                           Padding="8">
@@ -101,7 +98,6 @@
                             </StackPanel>
                         </StackPanel>
                     </Grid>
-
                     <Grid x:Name="backLandGrid"
                           Background="#11555555"
                           CornerRadius="32"
@@ -125,11 +121,8 @@
                                            TextWrapping="Wrap"
                                            HorizontalAlignment="Center" />
                             </Grid>
-
                         </StackPanel>
-
                     </Grid>
-
                 </StackPanel>
                 <StackPanel Grid.Column="1"
                             Margin="20"
@@ -163,7 +156,6 @@
                                        FontFamily="Bahnschrift"
                                        FontWeight="Bold"
                                        HorizontalAlignment="Center" />
-
                             <Grid Background="#11555555"
                                   CornerRadius="32"
                                   Padding="16">
@@ -188,7 +180,6 @@
                     <Grid Background="#11555555"
                           CornerRadius="32">
                         <StackPanel Spacing="16">
-
                             <Button Content="🗃"
                                     HorizontalAlignment="Stretch"
                                     FontSize="72"
@@ -212,7 +203,6 @@
                             <StackPanel Background="#11555555"
                                         CornerRadius="32"
                                         Padding="16">
-
                                 <TextBlock Text="Тренажер пикер или ленивый тренажер предлагает вам русское слово и 4 варианта ответа. Своебразный тест, в которым вы оттачиваете свои навыки. Еле видимая картинка на фоне закрепляет ассоциативную связку и выступает своего рода подсказкой, которой вы всегда можете воспользоваться."
                                            FontSize="16"
                                            FontFamily="Bahnschrift"
@@ -221,10 +211,7 @@
                             </StackPanel>
                         </StackPanel>
                     </Grid>
-
-                    <StackPanel>
-
-                    </StackPanel>
+                    <StackPanel></StackPanel>
                 </StackPanel>
             </VariableSizedWrapGrid>
         </StackPanel>
