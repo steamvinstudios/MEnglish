@@ -9,6 +9,10 @@ namespace MEnglish.Models
 {
     public class Words
     {
+        public Word RandomWordFromFourRandomWords { get; set; } =
+            new Word();
+        public ObservableCollection<Word> FourRandomWords { get; set; } =
+            new ObservableCollection<Word>();
         public ObservableCollection<Word> All { get; set; } = new ObservableCollection<Word>
         {
             new Word
@@ -113,6 +117,126 @@ namespace MEnglish.Models
                 RussianForms = new List<string> { "еда" },
                 Image = "/ArrayPics/food.jpg"
             },
+            new Word
+            {
+                EnglishForms = new List<string> { "grow" },
+                RussianForms = new List<string> { "расти" },
+                Image = "/ArrayPics/grow.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "half" },
+                RussianForms = new List<string> { "половина" },
+                Image = "/ArrayPics/half.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "hand" },
+                RussianForms = new List<string> { "рука" },
+                Image = "/ArrayPics/hand.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "help" },
+                RussianForms = new List<string> { "помощь" },
+                Image = "/ArrayPics/help.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "horse" },
+                RussianForms = new List<string> { "лошадь" },
+                Image = "/ArrayPics/horse.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "idea" },
+                RussianForms = new List<string> { "идея" },
+                Image = "/ArrayPics/idea.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "land" },
+                RussianForms = new List<string> { "земля" },
+                Image = "/ArrayPics/land.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "letter" },
+                RussianForms = new List<string> { "письмо" },
+                Image = "/ArrayPics/letter.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "mint" },
+                RussianForms = new List<string> { "мята" },
+                Image = "/ArrayPics/mint.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "near" },
+                RussianForms = new List<string> { "близко" },
+                Image = "/ArrayPics/near.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "need" },
+                RussianForms = new List<string> { "необходимость" },
+                Image = "/ArrayPics/need.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "order" },
+                RussianForms = new List<string> { "порядок" },
+                Image = "/ArrayPics/order.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "part" },
+                RussianForms = new List<string> { "часть" },
+                Image = "/ArrayPics/part.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "plant" },
+                RussianForms = new List<string> { "растение" },
+                Image = "/ArrayPics/plant.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "round" },
+                RussianForms = new List<string> { "круглый" },
+                Image = "/ArrayPics/round.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "sea" },
+                RussianForms = new List<string> { "море" },
+                Image = "/ArrayPics/sea.jpg"
+            },
         };
+
+        public Words()
+        {
+            FourRandomWords.Add(All[new Random().Next(All.Count)]);
+            FourRandomWords.Add(All[new Random().Next(All.Count)]);
+            FourRandomWords.Add(All[new Random().Next(All.Count)]);
+            FourRandomWords.Add(All[new Random().Next(All.Count)]);
+            GetRandomWordFromFourRandomWords();
+        }
+
+        public void ShakeWords()
+        {
+            FourRandomWords.Clear();
+            FourRandomWords.Add(All[new Random().Next(All.Count)]);
+            FourRandomWords.Add(All[new Random().Next(All.Count)]);
+            FourRandomWords.Add(All[new Random().Next(All.Count)]);
+            FourRandomWords.Add(All[new Random().Next(All.Count)]);
+            GetRandomWordFromFourRandomWords();
+        }
+
+        public void GetRandomWordFromFourRandomWords()
+        {
+            RandomWordFromFourRandomWords = FourRandomWords[new Random().Next(FourRandomWords.Count)];
+        }
     }
 }

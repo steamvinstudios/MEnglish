@@ -1,5 +1,6 @@
 ﻿using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media.Animation;
 
 // Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,9 +23,9 @@ namespace MEnglish
             GenPointFrame.Navigate(typeof(AboutPage));
         }
 
-        private void Button_Click_4(object sender, RoutedEventArgs e)
+        private void PickerButton_Click(object sender, RoutedEventArgs e)
         {
-            GenPointFrame.Navigate(typeof(PickFromFour));
+            GenPointFrame.Navigate(typeof(PickFromFour), ViewModel.Words, new DrillInNavigationTransitionInfo());
         }
 
         private void Button_Click_7(object sender, RoutedEventArgs e)

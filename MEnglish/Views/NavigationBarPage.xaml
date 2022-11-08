@@ -77,9 +77,10 @@
                                        FontFamily="Bahnschrift" />
                         </StackPanel>
                     </Button>
-                    <Button MinWidth="120"
+                    <Button x:Name="pickerButton"
+                            MinWidth="120"
                             Background="Transparent"
-                            Click="Button_Click_4"
+                            Click="PickerButton_Click"
                             Visibility="Visible"
                             CornerRadius="20"
                             BorderThickness="1"

@@ -19,7 +19,7 @@
                        HorizontalAlignment="Center"
                        FontFamily="Bahnschrift" />
             <TextBlock x:Name="EngWord"
-                       Text="{x:Bind Words.All[0].EnglishForms[0]}"
+                       Text=""
                        FontSize="36"
                        FontWeight="Bold"
                        HorizontalAlignment="Center"
@@ -47,16 +47,6 @@
                        Stretch="UniformToFill"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center" />
-                <Button x:Name="ShowResultBut"
-                        Content="✔"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        FontWeight="Bold"
-                        Padding="20"
-                        CornerRadius="90"
-                        Opacity="0"
-                        Background="#FF212121"
-                        Foreground="White" />
             </Grid>
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center">

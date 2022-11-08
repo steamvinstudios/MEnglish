@@ -5,6 +5,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -36,6 +37,16 @@ namespace MEnglish
         {
             base.OnNavigatedTo(e);
             Words = (Words)e.Parameter;
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            Words.ShakeWords();
+        }
+
+        private void AnswerButton1_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

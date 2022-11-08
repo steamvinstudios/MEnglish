@@ -1,17 +1,13 @@
-﻿<Page xmlns:my="using:Microsoft.UI.Xaml.Controls"
-      x:Class="MEnglish.TrainerMode"
+﻿<Page x:Class="MEnglish.TrainerMode"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:local="using:MEnglish"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-      xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
-      mc:Ignorable="d"
+      xmlns:controls="using:Microsoft.UI.Xaml.Controls"
       Background="Transparent"
-      muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
+      controls:BackdropMaterial.ApplyToRootOrPageBackground="True">
     <Grid VerticalAlignment="Center">
-        <my:TeachingTip x:Name="StartGuideTip"
-                        PreferredPlacement="Bottom" />
         <StackPanel HorizontalAlignment="Center">
             <VariableSizedWrapGrid Orientation="Horizontal">
                 <VariableSizedWrapGrid.Transitions>
@@ -19,8 +15,7 @@
                         <ReorderThemeTransition />
                     </TransitionCollection>
                 </VariableSizedWrapGrid.Transitions>
-                <StackPanel 
-                            Spacing="8">
+                <StackPanel Spacing="8">
                     <StackPanel.Transitions>
                         <TransitionCollection>
                             <RepositionThemeTransition />
