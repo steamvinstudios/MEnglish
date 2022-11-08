@@ -77,10 +77,10 @@
                                        FontFamily="Bahnschrift" />
                         </StackPanel>
                     </Button>
-                    <Button x:Name="bWriter"
+                    <Button x:Name="WriterButton"
                             MinWidth="120"
                             Background="Transparent"
-                            Click="Button_Click_1"
+                            Click="WriterButton_Click"
                             CornerRadius="20"
                             BorderThickness="1"
                             Style="{StaticResource ButtonRevealStyle}">

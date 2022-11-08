@@ -10,14 +10,11 @@ namespace MEnglish
     /// </summary>
     public sealed partial class GenPoint : Page
     {
+        public ViewModels.MVVMTestPageViewModel ViewModel { get; set; } =
+            new ViewModels.MVVMTestPageViewModel();
         public GenPoint()
         {
             this.InitializeComponent();
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            GenPointFrame.Navigate(typeof(MainPage));
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -51,6 +48,11 @@ namespace MEnglish
         {
             showNavigationBarButton.Visibility = Visibility.Collapsed;
             navigationBarStack.Visibility = Visibility.Visible;
+        }
+
+        private void WriterButton_Click(object sender, RoutedEventArgs e)
+        {
+            GenPointFrame.Navigate(typeof(MainPage), ViewModel.Words);
         }
     }
 }
