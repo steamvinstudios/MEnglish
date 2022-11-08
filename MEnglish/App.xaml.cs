@@ -70,7 +70,7 @@ namespace MEnglish
                     // Если стек навигации не восстанавливается для перехода к первой странице,
                     // настройка новой страницы путем передачи необходимой информации в качестве параметра
                     // навигации
-                    rootFrame.Navigate(typeof(GenPoint), e.Arguments);
+                    rootFrame.Navigate(typeof(Views.BlankPage1), e.Arguments);
                 }
                 // Обеспечение активности текущего окна
                 Window.Current.Activate();
