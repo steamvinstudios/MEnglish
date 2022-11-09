@@ -291,6 +291,54 @@ namespace MEnglish.Models
                 RussianForms = new List<string> { "писать" },
                 Image = "/ArrayPics/write.jpg"
             },
+            new Word
+            {
+                EnglishForms = new List<string> { "ask for" },
+                RussianForms = new List<string> { "просить", "спрашивать", "требовать" },
+                Image = "/ArrayPics/askfor.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "be out" },
+                RussianForms = new List<string> { "отсутствовать" },
+                Image = "/ArrayPics/beout.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "break down" },
+                RussianForms = new List<string> { "сломать", "сломаться", "перестать работать" },
+                Image = "/ArrayPics/breakdown.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "break into" },
+                RussianForms = new List<string> { "врываться", "вломиться" },
+                Image = "/ArrayPics/breakinto.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "burst out" },
+                RussianForms = new List<string> { "окликнуть", "разразиться смехом", "внезапно начинаться" },
+                Image = "/ArrayPics/burstout.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "clean up" },
+                RussianForms = new List<string> { "чистить", "убирать", "приводить в порядок" },
+                Image = "/ArrayPics/cleanup.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "check in" },
+                RussianForms = new List<string> { "зарегистрироваться" },
+                Image = "/ArrayPics/checkin.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "check out" },
+                RussianForms = new List<string> { "проверить", "выписаться" },
+                Image = "/ArrayPics/checkout.jpg"
+            },
         };
 
         public Words()
