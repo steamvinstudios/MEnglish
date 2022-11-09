@@ -26,10 +26,6 @@
                     <DataTemplate x:DataType="models:Word">
                         <Grid>
                             <StackPanel CornerRadius="32">
-                                <StackPanel.Background>
-                                    <media:AcrylicBrush TintColor="Gray"
-                                                        Opacity=".1" />
-                                </StackPanel.Background>
                                 <Border CornerRadius="32 32 0 0">
                                     <Image Height="160"
                                            Width="160"
@@ -51,15 +47,17 @@
                                     </ProgressBar.Foreground>
                                 </ProgressBar>
                                 <TextBlock Text="{x:Bind EnglishForms[0]}"
-                                           FontSize="32"
+                                           FontSize="28"
                                            FontWeight="Bold"
                                            FontFamily="Bahnschrift"
+                                           FontStretch="Condensed"
                                            Margin="10 8 0 0" />
                                 <TextBlock Text="{x:Bind RussianForms[0]}"
-                                           FontSize="24"
-                                           FontWeight="Bold"
+                                           FontSize="20"
                                            FontFamily="Bahnschrift"
-                                           Margin="10 0" />
+                                           FontStretch="Condensed"
+                                           Margin="10 0"
+                                           Opacity=".7" />
                                 <TextBlock Text="{x:Bind IsLearned}"
                                            Margin="10 0 0 16" />
                             </StackPanel>

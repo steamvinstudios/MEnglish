@@ -213,6 +213,84 @@ namespace MEnglish.Models
                 RussianForms = new List<string> { "море" },
                 Image = "/ArrayPics/sea.jpg"
             },
+            new Word
+            {
+                EnglishForms = new List<string> { "small" },
+                RussianForms = new List<string> { "маленький" },
+                Image = "/ArrayPics/small.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "star" },
+                RussianForms = new List<string> { "звезда" },
+                Image = "/ArrayPics/star.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "strawberry" },
+                RussianForms = new List<string> { "клубника" },
+                Image = "/ArrayPics/strawberry.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "study" },
+                RussianForms = new List<string> { "изучать" },
+                Image = "/ArrayPics/study.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "surface" },
+                RussianForms = new List<string> { "поверхность" },
+                Image = "/ArrayPics/surface.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "table" },
+                RussianForms = new List<string> { "стол" },
+                Image = "/ArrayPics/table.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "tea" },
+                RussianForms = new List<string> { "чай" },
+                Image = "/ArrayPics/tea.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "time" },
+                RussianForms = new List<string> { "время" },
+                Image = "/ArrayPics/time.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "walk" },
+                RussianForms = new List<string> { "прогулка" },
+                Image = "/ArrayPics/walk.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "watch" },
+                RussianForms = new List<string> { "часы" },
+                Image = "/ArrayPics/watch.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "way" },
+                RussianForms = new List<string> { "путь" },
+                Image = "/ArrayPics/way.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "wind" },
+                RussianForms = new List<string> { "ветер" },
+                Image = "/ArrayPics/wind.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "write" },
+                RussianForms = new List<string> { "писать" },
+                Image = "/ArrayPics/write.jpg"
+            },
         };
 
         public Words()

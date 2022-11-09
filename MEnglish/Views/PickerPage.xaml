@@ -17,21 +17,6 @@
             <Image Source="{x:Bind Words.RandomWordFromFourRandomWords.Image}"
                    Opacity=".5"
                    Stretch="UniformToFill"
-                   Width="680"
-                   Height="680" />
-        </Border>
-        <Border>
-            <Border.Background>
-                <media:AcrylicBrush TintColor="Transparent"
-                                    TintLuminosityOpacity="0" />
-            </Border.Background>
-        </Border>
-        <Border CornerRadius="360"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center">
-            <Image Source="{x:Bind Words.RandomWordFromFourRandomWords.Image}"
-                   Opacity=".5"
-                   Stretch="UniformToFill"
                    Width="600"
                    Height="600" />
         </Border>

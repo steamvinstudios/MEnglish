@@ -20,7 +20,7 @@ namespace MEnglish
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            GenPointFrame.Navigate(typeof(AboutPage));
+            GenPointFrame.Navigate(typeof(AboutPage), null, new DrillInNavigationTransitionInfo());
         }
 
         private void PickerButton_Click(object sender, RoutedEventArgs e)
@@ -52,12 +52,12 @@ namespace MEnglish
 
         private void WriterButton_Click(object sender, RoutedEventArgs e)
         {
-            GenPointFrame.Navigate(typeof(MainPage), ViewModel.Words);
+            GenPointFrame.Navigate(typeof(MainPage), ViewModel.Words, new DrillInNavigationTransitionInfo());
         }
 
         private void ProfilePageButton_Click(object sender, RoutedEventArgs e)
         {
-            GenPointFrame.Navigate(typeof(Views.ProfilePage));
+            GenPointFrame.Navigate(typeof(Views.ProfilePage), null, new DrillInNavigationTransitionInfo());
         }
     }
 }
