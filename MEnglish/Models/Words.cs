@@ -9,10 +9,10 @@ namespace MEnglish.Models
 {
     public class Words
     {
-        public Word RandomWordFromFourRandomWords { get; set; } =
-            new Word();
+        public Word RandomWordFromFourRandomWords { get; set; } = new Word();
         public ObservableCollection<Word> FourRandomWords { get; set; } =
             new ObservableCollection<Word>();
+        #region Words Collection
         public ObservableCollection<Word> All { get; set; } = new ObservableCollection<Word>
         {
             new Word
@@ -339,30 +339,174 @@ namespace MEnglish.Models
                 RussianForms = new List<string> { "проверить", "выписаться" },
                 Image = "/ArrayPics/checkout.jpg"
             },
+            new Word
+            {
+                EnglishForms = new List<string> { "call back" },
+                RussianForms = new List<string> { "проверить", "выписаться" },
+                Image = "/ArrayPics/checkout.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "check out" },
+                RussianForms = new List<string> { "перезвонить" },
+                Image = "/ArrayPics/callback.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "keep away" },
+                RussianForms = new List<string> { "не подходите" },
+                Image = "/ArrayPics/keepaway.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "wake up" },
+                RussianForms = new List<string> { "будить", "просыпаться", "бодрствовать" },
+                Image = "/ArrayPics/wakeup.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "watch out" },
+                RussianForms = new List<string> { "осторожно", "быть начеку", "настороже" },
+                Image = "/ArrayPics/watchout.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "work off" },
+                RussianForms = new List<string> { "отработать", "отделаться", "освободиться" },
+                Image = "/ArrayPics/workoff.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "work out" },
+                RussianForms = new List<string> { "определить", "вычислить", "добиться", "получаться", "тренироваться" },
+                Image = "/ArrayPics/workout.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "write down" },
+                RussianForms = new List<string> { "записать на бумаге" },
+                Image = "/ArrayPics/writedown.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "write up" },
+                RussianForms = new List<string> { "дописать", "придать законченный вид" },
+                Image = "/ArrayPics/writeup.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "tends" },
+                RussianForms = new List<string> { "как правило" },
+                Image = "/ArrayPics/tends.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "often" },
+                RussianForms = new List<string> { "довольно часто" },
+                Image = "/ArrayPics/often.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "entirely" },
+                RussianForms = new List<string> { "полностью" },
+                Image = "/ArrayPics/entirely.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "miscellaneous" },
+                RussianForms = new List<string> { "разное" },
+                Image = "/ArrayPics/oftmiscellaneousen.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "split" },
+                RussianForms = new List<string> { "разделенный" },
+                Image = "/ArrayPics/split.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "proper" },
+                RussianForms = new List<string> { "правильный" },
+                Image = "/ArrayPics/proper.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "amount" },
+                RussianForms = new List<string> { "количество" },
+                Image = "/ArrayPics/amount.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "contributor" },
+                RussianForms = new List<string> { "участник" },
+                Image = "/ArrayPics/contributor.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "issue" },
+                RussianForms = new List<string> { "проблема" },
+                Image = "/ArrayPics/issue.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "beware" },
+                RussianForms = new List<string> { "остерегаться" },
+                Image = "/ArrayPics/beware.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "milk" },
+                RussianForms = new List<string> { "молоко" },
+                Image = "/ArrayPics/milk.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "sound" },
+                RussianForms = new List<string> { "звук" },
+                Image = "/ArrayPics/sound.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "shows off" },
+                RussianForms = new List<string> { "красоваться" },
+                Image = "/ArrayPics/showsoff.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "further delays" },
+                RussianForms = new List<string> { "дальнейшие задержки" },
+                Image = "/ArrayPics/furtherdelays.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "upcoming" },
+                RussianForms = new List<string> { "предстоящий" },
+                Image = "/ArrayPics/upcoming.jpg"
+            },
+            new Word
+            {
+                EnglishForms = new List<string> { "over here" },
+                RussianForms = new List<string> { "здесь, сюда" },
+                Image = "/ArrayPics/overhere.jpg"
+            },
         };
+        #endregion
 
         public Words()
         {
-            FourRandomWords.Add(All[new Random().Next(All.Count)]);
-            FourRandomWords.Add(All[new Random().Next(All.Count)]);
-            FourRandomWords.Add(All[new Random().Next(All.Count)]);
-            FourRandomWords.Add(All[new Random().Next(All.Count)]);
-            GetRandomWordFromFourRandomWords();
+            ShakeWords();
         }
 
         public void ShakeWords()
         {
             FourRandomWords.Clear();
-            FourRandomWords.Add(All[new Random().Next(All.Count)]);
-            FourRandomWords.Add(All[new Random().Next(All.Count)]);
-            FourRandomWords.Add(All[new Random().Next(All.Count)]);
-            FourRandomWords.Add(All[new Random().Next(All.Count)]);
+            for (int i = 0; i < 4; i++)
+                FourRandomWords.Add(All[new Random().Next(All.Count)]);
             GetRandomWordFromFourRandomWords();
         }
 
-        public void GetRandomWordFromFourRandomWords()
-        {
-            RandomWordFromFourRandomWords = FourRandomWords[new Random().Next(FourRandomWords.Count)];
-        }
+        public void GetRandomWordFromFourRandomWords() =>
+            RandomWordFromFourRandomWords =
+                FourRandomWords[new Random().Next(FourRandomWords.Count)];
     }
 }

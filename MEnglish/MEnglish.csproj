@@ -269,17 +269,11 @@
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="Assets\Windows Balloon.wav" />
-    <Content Include="GitHub_Logo.png" />
+    <Content Include="Images\GitHub_Logo.png" />
     <Content Include="Images\menglishlogonew.png" />
     <Content Include="MEnglish.csproj.user" />
-    <Content Include="VK_Blue_Logo_transparent.png" />
-    <Content Include="VK_Full_Logo.png" />
-    <None Include="EnDic.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="GbDic.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <Content Include="Images\VK_Blue_Logo_transparent.png" />
+    <Content Include="Images\VK_Full_Logo.png" />
     <None Include="MEnglish_TemporaryKey.pfx" />
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
@@ -292,9 +286,6 @@
     <Content Include="Assets\Square44x44Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
-    <None Include="RuDic.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

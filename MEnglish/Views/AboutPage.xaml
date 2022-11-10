@@ -134,7 +134,7 @@
                   HorizontalAlignment="Center">
                 <HyperlinkButton Canvas.ZIndex="1"
                                  NavigateUri="https://github.com/steamvinstudios/MEnglish">
-                    <Image Source="/GitHub_Logo.png"
+                    <Image Source="/Images/GitHub_Logo.png"
                            MaxHeight="100" />
                 </HyperlinkButton>
             </Grid>
@@ -148,7 +148,7 @@
                                  Canvas.ZIndex="1"
                                  CornerRadius="20">
                     <Image x:Name="VKLink"
-                           Source="/VK_Full_Logo.png" />
+                           Source="/Images/VK_Full_Logo.png" />
                 </HyperlinkButton>
             </Grid>
             <TextBlock Text="Обновление от: 06.11.2022"
