@@ -2,6 +2,7 @@
 using Microsoft.UI.Xaml.Controls;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -34,6 +35,7 @@ namespace MEnglish
     public sealed partial class MainPage : Page
     {
         public Words Words { get; set; }
+        public Stopwatch Stopwatch { get; set; } = new Stopwatch();
         public MainPage()
         {
             this.InitializeComponent();
@@ -44,10 +46,25 @@ namespace MEnglish
             base.OnNavigatedTo(e);
             Words = (Words)e.Parameter;
         }
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            CountTimeAsync();
+        }
 
         private void NextTrainerButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(PickFromFour), Words);
         }
+
+        private async void CountTimeAsync()
+        {
+            Stopwatch.Start();
+            while (true)
+            {
+                TimeAmountTextBlock.Text = Stopwatch.Elapsed.TotalSeconds.ToString();
+                await Task.Delay(1000);
+            }
+        }
+
     }
 }

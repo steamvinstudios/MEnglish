@@ -8,8 +8,8 @@
       xmlns:media="using:Microsoft.UI.Xaml.Media"
       mc:Ignorable="d"
       Background="{ThemeResource AppBarBackgroundThemeBrush}"
-      controls:BackdropMaterial.ApplyToRootOrPageBackground="True">
-
+      controls:BackdropMaterial.ApplyToRootOrPageBackground="True"
+      Loaded="Page_Loaded">
     <Grid>
         <StackPanel x:Name="CenterStack"
                     HorizontalAlignment="Center"
@@ -66,20 +66,15 @@
                         VerticalAlignment="Center"
                         Style="{ThemeResource ButtonRevealStyle}" />
             </StackPanel>
-
             <StackPanel x:Name="ButTips"
                         Orientation="Horizontal"
                         Spacing="8"
-                        HorizontalAlignment="Center">
-
-            </StackPanel>
-
+                        HorizontalAlignment="Center"></StackPanel>
             <controls:ProgressBar x:Name="BadGoodBar"
                                   Margin="0 10"
                                   Height="10"
                                   CornerRadius="4"
                                   Width="340" />
-
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center"
                         Margin="10"
@@ -98,7 +93,6 @@
                     </Border.BorderBrush>
                     <StackPanel HorizontalAlignment="Center"
                                 VerticalAlignment="Center">
-
                         <TextBlock Text="Ошибка"
                                    FontFamily="Bahnschrift" />
                         <TextBlock Name="FalseBar"
@@ -108,9 +102,7 @@
                                    FontSize="36" />
                     </StackPanel>
                 </Border>
-
                 <AppBarSeparator VerticalAlignment="Center" />
-
                 <Border CornerRadius="90"
                         BorderThickness="8"
                         Width="100"
@@ -134,9 +126,7 @@
                                    FontSize="36" />
                     </StackPanel>
                 </Border>
-
                 <AppBarSeparator VerticalAlignment="Center" />
-
                 <Border CornerRadius="90"
                         BorderThickness="8"
                         Width="100"
@@ -159,9 +149,7 @@
                                    HorizontalAlignment="Center"
                                    FontSize="36" />
                     </StackPanel>
-
                 </Border>
-
             </StackPanel>
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center">
@@ -176,10 +164,9 @@
                 </Border>
                 <Border CornerRadius="0 4 4 0"
                         Background="#55555555">
-
-                    <TextBlock Text="10"
+                    <TextBlock x:Name="TimeAmountTextBlock"
+                               Text="10"
                                Padding="4 4"
-                               x:Name="AppTimer"
                                FontSize="16"
                                FontWeight="Bold"
                                FontFamily="Bahnschrift"
