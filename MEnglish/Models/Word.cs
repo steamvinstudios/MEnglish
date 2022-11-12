@@ -8,6 +8,7 @@ namespace MEnglish.Models
 {
     public class Word
     {
+        public int WordId { get; set; }
         public List<string> EnglishForms { get; set; } = new List<string>();
         public List<string> RussianForms { get; set; } = new List<string>();
         public int Rating { get; set; } = new Random().Next(100);

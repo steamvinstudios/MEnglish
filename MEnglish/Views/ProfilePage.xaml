@@ -9,8 +9,19 @@
       xmlns:models="using:MEnglish.Models"
       mc:Ignorable="d"
       Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-      controls:BackdropMaterial.ApplyToRootOrPageBackground="True">
+      controls:BackdropMaterial.ApplyToRootOrPageBackground="True"
+      Loaded="Page_Loaded">
     <Grid>
+        <StackPanel Orientation="Horizontal"
+                    Spacing="8"
+                    VerticalAlignment="Top">
+            <Button x:Name="saveButton"
+                    Content="Добавить" Click="SaveButton_Click"/>
+            <Button x:Name="editButton"
+                    Content="Изменить" Click="EditButton_Click"/>
+            <Button x:Name="deleteButton"
+                    Content="Удалить" Click="DeleteButton_Click"/>
+        </StackPanel>
         <StackPanel>
             <TextBlock Text="Рейтинг слов"
                        FontSize="64"
@@ -18,7 +29,7 @@
                        FontFamily="Bahnschrift"
                        FontStretch="Condensed"
                        HorizontalAlignment="Center" />
-            <GridView ItemsSource="{x:Bind Words.All}"
+            <GridView x:Name="wordsList"
                       SelectionMode="None"
                       HorizontalAlignment="Center"
                       VerticalAlignment="Center">

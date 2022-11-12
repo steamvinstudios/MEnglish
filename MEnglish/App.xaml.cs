@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MEnglish.Models;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -33,6 +35,11 @@ namespace MEnglish
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
+            using (var db = new WordContext())
+            {
+                db.Database.Migrate();
+            }
         }
 
         /// <summary>

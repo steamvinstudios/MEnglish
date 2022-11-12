@@ -28,5 +28,28 @@ namespace MEnglish.Views
         {
             this.InitializeComponent();
         }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EditButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            using (WordContext db = new WordContext())
+            {
+                wordsList.ItemsSource = db.Words.ToList();
+            }
+        }
     }
 }
