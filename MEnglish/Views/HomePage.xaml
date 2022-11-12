@@ -10,17 +10,13 @@
     <Grid VerticalAlignment="Center">
         <StackPanel HorizontalAlignment="Center">
             <VariableSizedWrapGrid Orientation="Horizontal">
-                <VariableSizedWrapGrid.Transitions>
+                <VariableSizedWrapGrid.ChildrenTransitions>
                     <TransitionCollection>
-                        <ReorderThemeTransition />
+                        <RepositionThemeTransition />
                     </TransitionCollection>
-                </VariableSizedWrapGrid.Transitions>
-                <StackPanel Spacing="8">
-                    <StackPanel.Transitions>
-                        <TransitionCollection>
-                            <RepositionThemeTransition />
-                        </TransitionCollection>
-                    </StackPanel.Transitions>
+                </VariableSizedWrapGrid.ChildrenTransitions>
+                <StackPanel Spacing="8"
+                            MinHeight="572">
                     <Grid Background="#11555555"
                           CornerRadius="32"
                           Padding="8">
@@ -121,11 +117,6 @@
                 <StackPanel Grid.Column="1"
                             Margin="20"
                             Spacing="8">
-                    <StackPanel.Transitions>
-                        <TransitionCollection>
-                            <RepositionThemeTransition />
-                        </TransitionCollection>
-                    </StackPanel.Transitions>
                     <Grid Background="#11555555"
                           CornerRadius="32">
                         <StackPanel Spacing="8">
@@ -154,7 +145,6 @@
                                   CornerRadius="32"
                                   Padding="16">
                                 <TextBlock Text="Тренажер райтер представляет из себя механизм, позволяющий создать ассоциативную связь между английским словом и явлением или предметом, которое оно отображает. Это позволит вам понимать английскую речь напрямую без необходимости прямого перевода. Также в этом тренажере предлагается вручную вбивать перевод предлагаемого слова и его значений. Так вы будете знать, что в каждом частном случае может использоваться та же языковая конструкция, но несущая иной смысл."
-                                           Width="340"
                                            FontSize="16"
                                            FontFamily="Bahnschrift"
                                            TextWrapping="Wrap"
@@ -166,11 +156,6 @@
                 <StackPanel Grid.Column="2"
                             Margin="20"
                             Spacing="8">
-                    <StackPanel.Transitions>
-                        <TransitionCollection>
-                            <RepositionThemeTransition />
-                        </TransitionCollection>
-                    </StackPanel.Transitions>
                     <Grid Background="#11555555"
                           CornerRadius="32">
                         <StackPanel Spacing="16">
@@ -205,7 +190,6 @@
                             </StackPanel>
                         </StackPanel>
                     </Grid>
-                    <StackPanel></StackPanel>
                 </StackPanel>
             </VariableSizedWrapGrid>
         </StackPanel>

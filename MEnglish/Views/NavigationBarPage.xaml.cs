@@ -30,7 +30,7 @@ namespace MEnglish
 
         private void Button_Click_7(object sender, RoutedEventArgs e)
         {
-            GenPointFrame.Navigate(typeof(TrainerMode));
+            GenPointFrame.Navigate(typeof(TrainerMode), null, new DrillInNavigationTransitionInfo());
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
