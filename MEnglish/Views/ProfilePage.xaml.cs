@@ -28,6 +28,13 @@ namespace MEnglish.Views
         {
             this.InitializeComponent();
         }
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            using (WordContext db = new WordContext())
+            {
+                wordsList.ItemsSource = db.Words.ToList();
+            }
+        }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
@@ -44,11 +51,12 @@ namespace MEnglish.Views
 
         }
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
+        private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             using (WordContext db = new WordContext())
             {
-                wordsList.ItemsSource = db.Words.ToList();
+                db.Words.Add(new Word { IsLearned = true });
+                db.SaveChanges();
             }
         }
     }

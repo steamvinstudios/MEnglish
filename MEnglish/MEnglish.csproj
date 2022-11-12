@@ -135,8 +135,6 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Models\EnglishForms.cs" />
-    <Compile Include="Models\RussianForms.cs" />
     <Compile Include="Models\WordContext.cs" />
     <Compile Include="ViewModels\MVVMTestPageViewModel.cs" />
     <Compile Include="Views\AboutPage.xaml.cs">
