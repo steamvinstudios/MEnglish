@@ -18,20 +18,16 @@ namespace MEnglish
             this.InitializeComponent();
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void AboutPageButton_Click(object sender, RoutedEventArgs e)
         {
             GenPointFrame.Navigate(typeof(AboutPage), null, new DrillInNavigationTransitionInfo());
         }
 
-        private void PickerButton_Click(object sender, RoutedEventArgs e)
-        {
+        private void PickerPageButton_Click(object sender, RoutedEventArgs e) =>
             GenPointFrame.Navigate(typeof(PickFromFour), ViewModel.Words, new DrillInNavigationTransitionInfo());
-        }
 
-        private void Button_Click_7(object sender, RoutedEventArgs e)
-        {
+        private void HomePageButton_Click(object sender, RoutedEventArgs e) =>
             GenPointFrame.Navigate(typeof(TrainerMode), null, new DrillInNavigationTransitionInfo());
-        }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
@@ -50,10 +46,8 @@ namespace MEnglish
             navigationBarStack.Visibility = Visibility.Visible;
         }
 
-        private void WriterButton_Click(object sender, RoutedEventArgs e)
-        {
+        private void WriterPageButton_Click(object sender, RoutedEventArgs e) =>
             GenPointFrame.Navigate(typeof(MainPage), ViewModel.Words, new DrillInNavigationTransitionInfo());
-        }
 
         private void ProfilePageButton_Click(object sender, RoutedEventArgs e)
         {

@@ -39,9 +39,10 @@
                     </TransitionCollection>
                 </StackPanel.ChildrenTransitions>
                 <VariableSizedWrapGrid Orientation="Horizontal">
-                    <Button MinWidth="120"
+                    <Button x:Name="homePageButton"
+                            MinWidth="120"
                             Background="Transparent"
-                            Click="Button_Click_7"
+                            Click="HomePageButton_Click"
                             CornerRadius="20"
                             BorderThickness="1"
                             Style="{StaticResource ButtonRevealStyle}">
@@ -58,9 +59,10 @@
                                        FontFamily="Bahnschrift" />
                         </StackPanel>
                     </Button>
-                    <Button MinWidth="120"
+                    <Button x:Name="writerPageButton"
+                            MinWidth="120"
                             Background="Transparent"
-                            Click="WriterButton_Click"
+                            Click="WriterPageButton_Click"
                             CornerRadius="20"
                             BorderThickness="1"
                             Style="{StaticResource ButtonRevealStyle}">
@@ -77,10 +79,10 @@
                                        FontFamily="Bahnschrift" />
                         </StackPanel>
                     </Button>
-                    <Button x:Name="pickerButton"
+                    <Button x:Name="pickerPageButton"
                             MinWidth="120"
                             Background="Transparent"
-                            Click="PickerButton_Click"
+                            Click="PickerPageButton_Click"
                             Visibility="Visible"
                             CornerRadius="20"
                             BorderThickness="1"
@@ -98,9 +100,10 @@
                                        FontFamily="Bahnschrift" />
                         </StackPanel>
                     </Button>
-                    <Button MinWidth="120"
+                    <Button x:Name="aboutPageButton"
+                            MinWidth="120"
                             Background="Transparent"
-                            Click="Button_Click_2"
+                            Click="AboutPageButton_Click"
                             CornerRadius="20"
                             BorderThickness="1"
                             Style="{StaticResource ButtonRevealStyle}">

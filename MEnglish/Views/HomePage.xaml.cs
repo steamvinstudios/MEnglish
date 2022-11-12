@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Notifications;
 using System.Numerics;
+using Windows.UI.Xaml.Media.Animation;
 
 // Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -32,27 +33,27 @@ namespace MEnglish
         }
         private void ShortTrainBt_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage));
+            Frame.Navigate(typeof(MainPage), null, new DrillInNavigationTransitionInfo());
         }
 
         private void MidTrainBt_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage));
+            Frame.Navigate(typeof(MainPage), null, new DrillInNavigationTransitionInfo());
         }
 
         private void LongTrainBt_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage));
+            Frame.Navigate(typeof(MainPage), null, new DrillInNavigationTransitionInfo());
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage));
+            Frame.Navigate(typeof(MainPage), null, new DrillInNavigationTransitionInfo());
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(PickFromFour));
+            Frame.Navigate(typeof(PickFromFour), null, new DrillInNavigationTransitionInfo());
         }
     }
 }
