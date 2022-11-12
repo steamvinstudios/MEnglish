@@ -18,7 +18,7 @@ namespace MEnglish.Models
         // Figure out it
 
         //public string EnglishForm { get; set; } = string.Empty;
-        //public string RussianForm { get; set; } = string.Empty;
+        public string RussianForm { get; set; } = string.Empty;
         public int Rating { get; set; } = new Random().Next(100);
         public bool IsLearned { get; set; } = false;
         public DateTime LastRepeat { get; set; } = DateTime.Now;

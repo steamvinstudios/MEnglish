@@ -19,11 +19,14 @@
                     Content="Добавить"
                     Click="AddButton_Click" />
             <Button x:Name="saveButton"
-                    Content="Добавить" Click="SaveButton_Click"/>
+                    Content="Добавить"
+                    Click="SaveButton_Click" />
             <Button x:Name="editButton"
-                    Content="Изменить" Click="EditButton_Click"/>
+                    Content="Изменить"
+                    Click="EditButton_Click" />
             <Button x:Name="deleteButton"
-                    Content="Удалить" Click="DeleteButton_Click"/>
+                    Content="Удалить"
+                    Click="DeleteButton_Click" />
         </StackPanel>
         <StackPanel>
             <TextBlock Text="Рейтинг слов"
@@ -33,7 +36,6 @@
                        FontStretch="Condensed"
                        HorizontalAlignment="Center" />
             <GridView x:Name="wordsList"
-                      SelectionMode="None"
                       HorizontalAlignment="Center"
                       VerticalAlignment="Center">
                 <GridView.ItemTemplate>

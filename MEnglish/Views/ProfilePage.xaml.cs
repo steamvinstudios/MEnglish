@@ -48,7 +48,19 @@ namespace MEnglish.Views
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (wordsList.SelectedItem != null)
+            {
+                Word word = wordsList.SelectedItem as Word;
+                if (word != null)
+                {
+                    using (WordContext db = new WordContext())
+                    {
+                        db.Words.Remove(word);
+                        db.SaveChanges();
+                        wordsList.ItemsSource = db.Words.ToList();
+                    }
+                }
+            }
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
@@ -57,6 +69,7 @@ namespace MEnglish.Views
             {
                 db.Words.Add(new Word { IsLearned = true });
                 db.SaveChanges();
+                wordsList.ItemsSource = db.Words.ToList();
             }
         }
     }
