@@ -13,15 +13,11 @@ namespace MEnglish
     {
         public ViewModels.MVVMTestPageViewModel ViewModel { get; set; } =
             new ViewModels.MVVMTestPageViewModel();
-        public GenPoint()
-        {
+        public GenPoint() =>
             this.InitializeComponent();
-        }
 
-        private void AboutPageButton_Click(object sender, RoutedEventArgs e)
-        {
+        private void AboutPageButton_Click(object sender, RoutedEventArgs e) =>
             GenPointFrame.Navigate(typeof(AboutPage), null, new DrillInNavigationTransitionInfo());
-        }
 
         private void PickerPageButton_Click(object sender, RoutedEventArgs e) =>
             GenPointFrame.Navigate(typeof(PickFromFour), ViewModel.Words, new DrillInNavigationTransitionInfo());
@@ -29,10 +25,8 @@ namespace MEnglish
         private void HomePageButton_Click(object sender, RoutedEventArgs e) =>
             GenPointFrame.Navigate(typeof(TrainerMode), null, new DrillInNavigationTransitionInfo());
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            GenPointFrame.Navigate(typeof(TrainerMode));
-        }
+        private void Page_Loaded(object sender, RoutedEventArgs e) =>
+            GenPointFrame.Navigate(typeof(TrainerMode), null, new DrillInNavigationTransitionInfo());
 
         private void HideNavigationBarButton_Click(object sender, RoutedEventArgs e)
         {
@@ -49,9 +43,7 @@ namespace MEnglish
         private void WriterPageButton_Click(object sender, RoutedEventArgs e) =>
             GenPointFrame.Navigate(typeof(MainPage), ViewModel.Words, new DrillInNavigationTransitionInfo());
 
-        private void ProfilePageButton_Click(object sender, RoutedEventArgs e)
-        {
+        private void ProfilePageButton_Click(object sender, RoutedEventArgs e) =>
             GenPointFrame.Navigate(typeof(Views.ProfilePage), null, new DrillInNavigationTransitionInfo());
-        }
     }
 }
