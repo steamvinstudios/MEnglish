@@ -10,33 +10,7 @@
 
     <Grid>
         <ListView HorizontalAlignment="Center"
-                  VerticalAlignment="Center"
-                  ItemsSource="{x:Bind ViewModel.Words.All}">
-            <ListView.ItemTemplate>
-                <DataTemplate x:DataType="models:Word">
-                    <StackPanel>
-                        <Border CornerRadius="28">
-                            <Image Height="120"
-                                   HorizontalAlignment="Left"
-                                   Source="{x:Bind Image}" />
-                        </Border>
-                        
-                        <TextBlock Text="{x:Bind EnglishForms[0]}" />
-                        <TextBlock Text="{x:Bind RussianForms[0]}" />
-                        <TextBlock Text="{x:Bind IsLearned}" />
-                        <TextBlock Text="{x:Bind Rating}" />
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        <StackPanel>
-            <Image Height="120"
-                   HorizontalAlignment="Left"
-                   Source="{x:Bind ViewModel.Words.All[0].Image}" />
-            <TextBlock Text="{x:Bind ViewModel.Words.All[0].EnglishForms[0]}" />
-            <TextBlock Text="{x:Bind ViewModel.Words.All[0].RussianForms[0]}" />
-            <TextBlock Text="{x:Bind ViewModel.Words.All[0].IsLearned}" />
-            <TextBlock Text="{x:Bind ViewModel.Words.All[0].Rating}" />
-        </StackPanel>
+                  VerticalAlignment="Center"></ListView>
+        <StackPanel></StackPanel>
     </Grid>
 </Page>

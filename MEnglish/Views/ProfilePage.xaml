@@ -57,19 +57,19 @@
                                         </LinearGradientBrush>
                                     </ProgressBar.Foreground>
                                 </ProgressBar>
-                                <TextBlock Text="{x:Bind EnglishForms[0]}"
+                                <TextBlock Text=""
                                            FontSize="28"
                                            FontWeight="Bold"
                                            FontFamily="Bahnschrift"
                                            FontStretch="Condensed"
                                            Margin="10 8 0 0" />
-                                <TextBlock Text="{x:Bind RussianForms[0]}"
+                                <TextBlock Text=""
                                            FontSize="20"
                                            FontFamily="Bahnschrift"
                                            FontStretch="Condensed"
                                            Margin="10 0"
                                            Opacity=".7" />
-                                <TextBlock Text="{x:Bind IsLearned}"
+                                <TextBlock Text=""
                                            Margin="10 0 0 16" />
                             </StackPanel>
                         </Grid>

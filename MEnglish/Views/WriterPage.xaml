@@ -28,22 +28,8 @@
                   Height="240"
                   CornerRadius="40"
                   Margin="8">
-                <Image Width="280"
-                       Height="280"
-                       Source="{x:Bind Words.All[0].Image}"
-                       Stretch="UniformToFill"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center" />
-                <Border Width="280"
-                        Height="280">
-                    <Border.Background>
-                        <media:AcrylicBrush TintColor="Transparent"
-                                            TintLuminosityOpacity="0" />
-                    </Border.Background>
-                </Border>
                 <Image Width="240"
                        Height="240"
-                       Source="{x:Bind Words.All[0].Image}"
                        Stretch="UniformToFill"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center" />

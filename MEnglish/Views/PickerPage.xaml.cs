@@ -41,7 +41,7 @@ namespace MEnglish
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            Words.ShakeWords();
+            //Words.ShakeWords();
         }
 
         private void AnswerButton1_Click(object sender, RoutedEventArgs e)

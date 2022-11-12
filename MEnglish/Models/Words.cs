@@ -13,7 +13,7 @@ namespace MEnglish.Models
         public ObservableCollection<Word> FourRandomWords { get; set; } =
             new ObservableCollection<Word>();
         #region Words Collection
-        public ObservableCollection<Word> All { get; set; } = new ObservableCollection<Word>
+        /*public ObservableCollection<Word> All { get; set; } = new ObservableCollection<Word>
         {
             new Word
             {
@@ -489,21 +489,21 @@ namespace MEnglish.Models
                 RussianForms = new List<string> { "здесь, сюда" },
                 Image = "/ArrayPics/overhere.jpg"
             },
-        };
+        };*/
         #endregion
 
         public Words()
         {
-            ShakeWords();
+            //ShakeWords();
         }
 
-        public void ShakeWords()
+        /*public void ShakeWords()
         {
             FourRandomWords.Clear();
             for (int i = 0; i < 4; i++)
                 FourRandomWords.Add(All[new Random().Next(All.Count)]);
             GetRandomWordFromFourRandomWords();
-        }
+        }*/
 
         public void GetRandomWordFromFourRandomWords() =>
             RandomWordFromFourRandomWords =

@@ -27,14 +27,14 @@
             <TextBlock FontSize="36"
                        FontWeight="Bold"
                        FontFamily="Bahnschrift"
-                       Text="{x:Bind Words.RandomWordFromFourRandomWords.RussianForms[0]}"
+                       Text=""
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        Margin="20"
                        TextWrapping="Wrap" />
             <Button x:Name="answerButton1"
                     FontFamily="Bahnschrift"
-                    Content="{x:Bind Words.FourRandomWords[0].EnglishForms[0]}"
+                    Content=""
                     Margin="4"
                     CornerRadius="20"
                     MinWidth="120"
@@ -44,7 +44,7 @@
                     Style="{ThemeResource ButtonRevealStyle}"
                     Click="AnswerButton1_Click" />
             <Button FontFamily="Bahnschrift"
-                    Content="{x:Bind Words.FourRandomWords[1].EnglishForms[0]}"
+                    Content=""
                     Margin="4"
                     CornerRadius="20"
                     MinWidth="120"
@@ -53,7 +53,7 @@
                     FontSize="20"
                     Style="{ThemeResource ButtonRevealStyle}" />
             <Button FontFamily="Bahnschrift"
-                    Content="{x:Bind Words.FourRandomWords[2].EnglishForms[0]}"
+                    Content=""
                     Margin="4"
                     CornerRadius="20"
                     MinWidth="120"
@@ -62,7 +62,7 @@
                     FontSize="20"
                     Style="{ThemeResource ButtonRevealStyle}" />
             <Button FontFamily="Bahnschrift"
-                    Content="{x:Bind Words.FourRandomWords[3].EnglishForms[0]}"
+                    Content=""
                     Margin="4"
                     CornerRadius="20"
                     MinWidth="120"

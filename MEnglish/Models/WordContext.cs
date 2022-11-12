@@ -11,10 +11,14 @@ namespace MEnglish.Models
     {
         public DbSet<Word> Words { get; set; }
 
-        public WordContext() =>
+        public WordContext()
+        {
             Database.EnsureCreated();
+        }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
             optionsBuilder.UseSqlite("Filename=Word.db");
+        }
     }
 }
