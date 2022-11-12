@@ -67,7 +67,7 @@ namespace MEnglish.Views
         {
             using (WordContext db = new WordContext())
             {
-                db.Words.Add(new Word { IsLearned = true });
+                db.Words.Add(new Word { EnglishForms = new List<EnglishForm> { new EnglishForm { Form = "carrot" } } });
                 db.SaveChanges();
                 wordsList.ItemsSource = db.Words.ToList();
             }

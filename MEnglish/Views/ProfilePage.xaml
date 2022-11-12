@@ -62,7 +62,7 @@
                                         </LinearGradientBrush>
                                     </ProgressBar.Foreground>
                                 </ProgressBar>
-                                <TextBlock Text="test"
+                                <TextBlock Text="{x:Bind EnglishForms[0].Form}"
                                            FontSize="28"
                                            FontWeight="Bold"
                                            FontFamily="Bahnschrift"
