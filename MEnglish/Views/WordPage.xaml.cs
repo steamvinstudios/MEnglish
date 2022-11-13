@@ -44,6 +44,9 @@ namespace MEnglish.Views
             {
                 //headerBlock.Text = "Редактирование компании";
                 imageBox.Text = word.Image;
+                dateBox.Date = word.LastRepeat;
+                ratingSlider.Value = word.Rating;
+                isLearnedToggle.IsOn = word.IsLearned;
             }
         }
 
@@ -54,11 +57,14 @@ namespace MEnglish.Views
                 if (word != null)
                 {
                     word.Image = imageBox.Text;
+                    word.LastRepeat = dateBox.Date.DateTime;
+                    word.Rating = (int)ratingSlider.Value;
+                    word.IsLearned = isLearnedToggle.IsOn;
                     db.Words.Update(word);
                 }
                 else
                 {
-                    db.Words.Add(new Word { Image = imageBox.Text });
+                    db.Words.Add(new Word { Image = imageBox.Text, LastRepeat = dateBox.Date.DateTime, Rating = (int)ratingSlider.Value, IsLearned = isLearnedToggle.IsOn });
                 }
                 db.SaveChanges();
             }

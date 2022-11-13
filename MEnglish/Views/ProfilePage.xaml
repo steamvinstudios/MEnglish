@@ -25,14 +25,10 @@
                 <GridView.ItemTemplate>
                     <DataTemplate x:DataType="models:Word">
                         <Grid>
-                            <StackPanel CornerRadius="32">
-                                <Border CornerRadius="32 32 0 0">
-                                    <Image Height="160"
-                                           Width="160"
-                                           HorizontalAlignment="Left"
-                                           Source="{x:Bind Image}"
-                                           Stretch="UniformToFill" />
-                                </Border>
+                            <StackPanel CornerRadius="32" Width="180">
+                                <Image Height="180" HorizontalAlignment="Left"
+                                       Source="{x:Bind Image}"
+                                       Stretch="UniformToFill" />
                                 <ProgressBar Value="{x:Bind Rating}"
                                              Height="10"
                                              HorizontalAlignment="Stretch">
@@ -68,6 +64,9 @@
                                            Margin="10 0 0 16"
                                            FontWeight="Bold"
                                            FontFamily="Bahnschrift" />
+                                <ToggleSwitch OffContent="Учится"
+                                              OnContent="Изучено"
+                                              IsOn="{x:Bind IsLearned}" />
                                 <TextBlock Text="{x:Bind Image}"
                                            Margin="10 0 0 16"
                                            FontFamily="Bahnschrift"
@@ -81,6 +80,7 @@
         <StackPanel Spacing="8"
                     Padding="8"
                     Orientation="Horizontal"
+                    HorizontalAlignment="Center"
                     VerticalAlignment="Top">
             <StackPanel.Background>
                 <media:AcrylicBrush TintColor="Transparent"

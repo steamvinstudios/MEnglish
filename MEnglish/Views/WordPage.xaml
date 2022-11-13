@@ -9,20 +9,32 @@
       Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
       controls:BackdropMaterial.ApplyToRootOrPageBackground="True">
     <Grid>
-        <StackPanel Padding="8" Spacing="8">
-            <TextBox Header="Английское слово"/>
-            <TextBox Header="Русский перевод"/>
-            <Slider Header="Рейтинг"/>
-            <ToggleSwitch Header="Изучено?" OffContent="Нет" OnContent="Да"/>
-            <DatePicker Header="Последнее повторение"/>
-            <TextBox x:Name="imageBox" Header="Путь к картинке" />
+        <StackPanel Padding="8"
+                    Spacing="8">
+            <TextBox Header="Английское слово" />
+            <TextBox Header="Русский перевод" />
+            <Slider x:Name="ratingSlider"
+                    Header="Рейтинг" />
+            <ToggleSwitch x:Name="isLearnedToggle"
+                          Header="Изучено?"
+                          OffContent="Нет"
+                          OnContent="Да" />
+            <DatePicker x:Name="dateBox"
+                        Header="Последнее повторение" />
+            <TextBox x:Name="imageBox"
+                     Header="Путь к картинке" />
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                <Button Content="Сохранить" Click="SaveButton_Click" HorizontalAlignment="Stretch"/>
-                <Button Content="Отмена" Click="CancelButton_Click" Grid.Column="1" HorizontalAlignment="Stretch"/>
+                <Button Content="Сохранить"
+                        Click="SaveButton_Click"
+                        HorizontalAlignment="Stretch" />
+                <Button Content="Отмена"
+                        Click="CancelButton_Click"
+                        Grid.Column="1"
+                        HorizontalAlignment="Stretch" />
             </Grid>
         </StackPanel>
     </Grid>
