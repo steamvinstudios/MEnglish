@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MEnglish.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,59 @@ namespace MEnglish.Views
     /// </summary>
     public sealed partial class WordPage : Page
     {
+        Word word;
         public WordPage()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (e.Parameter != null)
+            {
+                int id = (int)e.Parameter;
+                using (WordContext db = new WordContext())
+                {
+                    word = db.Words.FirstOrDefault(c => c.Id == id);
+                }
+            }
+
+            if (word != null)
+            {
+                //headerBlock.Text = "Редактирование компании";
+                imageBox.Text = word.Image;
+            }
+        }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (WordContext db = new WordContext())
+            {
+                if (word != null)
+                {
+                    word.Image = imageBox.Text;
+                    db.Words.Update(word);
+                }
+                else
+                {
+                    db.Words.Add(new Word { Image = imageBox.Text });
+                }
+                db.SaveChanges();
+            }
+            GoToMainPage();
+        }
+
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            GoToMainPage();
+        }
+
+        private void GoToMainPage()
+        {
+            if (Frame.CanGoBack)
+                Frame.GoBack();
+            else
+                Frame.Navigate(typeof(ProfilePage));
         }
     }
 }

@@ -10,5 +10,8 @@ namespace MEnglish.Models
     {
         public int Id { get; set; }
         public string Form { get; set; }
+
+        public int WordId { get; set; }
+        public Word Word { get; set; }
     }
 }

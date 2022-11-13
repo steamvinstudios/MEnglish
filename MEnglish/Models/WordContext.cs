@@ -10,6 +10,8 @@ namespace MEnglish.Models
     public class WordContext : DbContext
     {
         public DbSet<Word> Words { get; set; }
+        public DbSet<EnglishForm> EnglishForms { get; set; }
+        public DbSet<RussianForm> RussianForms { get; set; }
         public WordContext()
         {
             Database.EnsureCreated();

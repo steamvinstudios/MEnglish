@@ -12,7 +12,6 @@
       controls:BackdropMaterial.ApplyToRootOrPageBackground="True"
       Loaded="Page_Loaded">
     <Grid>
-        
         <StackPanel>
             <TextBlock Text="Рейтинг слов"
                        FontSize="64"
@@ -59,14 +58,20 @@
                                            FontFamily="Bahnschrift"
                                            FontStretch="Condensed"
                                            Margin="10 8 0 0" />
-                                <TextBlock Text="{Binding Rating}"
+                                <TextBlock Text="{x:Bind RatingFull()}"
                                            FontSize="20"
                                            FontFamily="Bahnschrift"
                                            FontStretch="Condensed"
                                            Margin="10 0"
                                            Opacity=".7" />
-                                <TextBlock Text="{x:Bind Id}"
-                                           Margin="10 0 0 16" />
+                                <TextBlock Text="{x:Bind IdFull()}"
+                                           Margin="10 0 0 16"
+                                           FontWeight="Bold"
+                                           FontFamily="Bahnschrift" />
+                                <TextBlock Text="{x:Bind Image}"
+                                           Margin="10 0 0 16"
+                                           FontFamily="Bahnschrift"
+                                           FontStretch="Condensed" />
                             </StackPanel>
                         </Grid>
                     </DataTemplate>
@@ -74,8 +79,13 @@
             </GridView>
         </StackPanel>
         <StackPanel Spacing="8"
+                    Padding="8"
                     Orientation="Horizontal"
                     VerticalAlignment="Top">
+            <StackPanel.Background>
+                <media:AcrylicBrush TintColor="Transparent"
+                                    TintLuminosityOpacity="0" />
+            </StackPanel.Background>
             <Button x:Name="addButton"
                     Content="Добавить"
                     Click="AddButton_Click" />
