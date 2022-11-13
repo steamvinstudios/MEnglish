@@ -13,7 +13,7 @@ namespace MEnglish.Models
         public ObservableCollection<Word> FourRandomWords { get; set; } =
             new ObservableCollection<Word>();
         #region Words Collection
-        public ObservableCollection<Word> All { get; set; } = new ObservableCollection<Word>
+        /*public ObservableCollection<Word> All { get; set; } = new ObservableCollection<Word>
         {
             new Word
             {
@@ -483,7 +483,7 @@ namespace MEnglish.Models
                 RussianForms = new List < RussianForm > { new RussianForm { Form = "здесь, сюда" } },
                 Image = "/ArrayPics/overhere.jpg"
             },
-        };
+        };*/
         #endregion
 
         public Words()

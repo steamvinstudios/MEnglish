@@ -12,22 +12,7 @@
       controls:BackdropMaterial.ApplyToRootOrPageBackground="True"
       Loaded="Page_Loaded">
     <Grid>
-        <StackPanel Orientation="Horizontal"
-                    Spacing="8"
-                    VerticalAlignment="Top">
-            <Button x:Name="addButton"
-                    Content="Добавить"
-                    Click="AddButton_Click" />
-            <Button x:Name="saveButton"
-                    Content="Сохранить"
-                    Click="SaveButton_Click" />
-            <Button x:Name="editButton"
-                    Content="Изменить"
-                    Click="EditButton_Click" />
-            <Button x:Name="deleteButton"
-                    Content="Удалить"
-                    Click="DeleteButton_Click" />
-        </StackPanel>
+        
         <StackPanel>
             <TextBlock Text="Рейтинг слов"
                        FontSize="64"
@@ -62,25 +47,51 @@
                                         </LinearGradientBrush>
                                     </ProgressBar.Foreground>
                                 </ProgressBar>
-                                <TextBlock Text="{x:Bind EnglishForms[0].Form}"
+                                <TextBlock Text="{Binding LastRepeat}"
                                            FontSize="28"
                                            FontWeight="Bold"
                                            FontFamily="Bahnschrift"
                                            FontStretch="Condensed"
                                            Margin="10 8 0 0" />
-                                <TextBlock Text="test"
+                                <TextBlock Text="{Binding EnglishForms[0].Form}"
+                                           FontSize="28"
+                                           FontWeight="Bold"
+                                           FontFamily="Bahnschrift"
+                                           FontStretch="Condensed"
+                                           Margin="10 8 0 0" />
+                                <TextBlock Text="{Binding Rating}"
                                            FontSize="20"
                                            FontFamily="Bahnschrift"
                                            FontStretch="Condensed"
                                            Margin="10 0"
                                            Opacity=".7" />
-                                <TextBlock Text="test"
+                                <TextBlock Text="{x:Bind Id}"
                                            Margin="10 0 0 16" />
                             </StackPanel>
                         </Grid>
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>
+        </StackPanel>
+        <StackPanel Spacing="8"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Top">
+            <Button x:Name="addButton"
+                    Content="Добавить"
+                    Click="AddButton_Click" />
+            <Button x:Name="saveButton"
+                    Content="Сохранить"
+                    Click="SaveButton_Click" />
+            <Button x:Name="editButton"
+                    Content="Изменить"
+                    Click="EditButton_Click" />
+            <Button x:Name="deleteButton"
+                    Content="Удалить"
+                    Click="DeleteButton_Click" />
+            <Button x:Name="loadDatabaseButton"
+                    Content="Загрузить базу данных"
+                    Style="{ThemeResource AccentButtonStyle}"
+                    Click="LoadDatabaseButton_Click" />
         </StackPanel>
     </Grid>
 </Page>

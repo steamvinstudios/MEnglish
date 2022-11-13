@@ -31,16 +31,24 @@ namespace MEnglish.Views
         }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            using (WordContext db = new WordContext())
-            {
-                //wordsList.ItemsSource = db.Words.ToList();
-                wordsList.ItemsSource = Words.All;
-            }
+
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-
+            var oneWord = new Word
+            {
+                LastRepeat = DateTime.Now,
+                Rating = new Random().Next(101),
+                IsLearned = true
+            };
+            oneWord.EnglishForms.Add(new EnglishForm { Form = "asdasdasdsa" });
+            using (WordContext db = new WordContext())
+            {
+                db.Words.Add(oneWord);
+                db.SaveChanges();
+                wordsList.ItemsSource = db.Words.ToList();
+            }
         }
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
@@ -56,6 +64,14 @@ namespace MEnglish.Views
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(WordPage), null, new DrillInNavigationTransitionInfo());
+        }
+
+        private void LoadDatabaseButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (WordContext db = new WordContext())
+            {
+                wordsList.ItemsSource = db.Words.ToList();
+            }
         }
     }
 }

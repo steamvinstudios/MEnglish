@@ -8,12 +8,12 @@ namespace MEnglish.Models
 {
     public class Word
     {
-        public int WordId { get; set; }
+        public int Id { get; set; }
         public List<EnglishForm> EnglishForms { get; set; } = new List<EnglishForm>();
         public List<RussianForm> RussianForms { get; set; } = new List<RussianForm>();
-        public int Rating { get; set; } = new Random().Next(100);
-        public bool IsLearned { get; set; } = false;
-        public DateTime LastRepeat { get; set; } = DateTime.Now;
+        public int Rating { get; set; }
+        public bool IsLearned { get; set; }
+        public DateTime LastRepeat { get; set; }
         public string Image { get; set; } = "/ArrayPics/hello.jpg";
     }
 }
