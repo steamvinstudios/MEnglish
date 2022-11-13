@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 
 // Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
@@ -32,7 +33,8 @@ namespace MEnglish.Views
         {
             using (WordContext db = new WordContext())
             {
-                wordsList.ItemsSource = db.Words.ToList();
+                //wordsList.ItemsSource = db.Words.ToList();
+                wordsList.ItemsSource = Words.All;
             }
         }
 
@@ -48,29 +50,12 @@ namespace MEnglish.Views
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            if (wordsList.SelectedItem != null)
-            {
-                Word word = wordsList.SelectedItem as Word;
-                if (word != null)
-                {
-                    using (WordContext db = new WordContext())
-                    {
-                        db.Words.Remove(word);
-                        db.SaveChanges();
-                        wordsList.ItemsSource = db.Words.ToList();
-                    }
-                }
-            }
+
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            using (WordContext db = new WordContext())
-            {
-                db.Words.Add(new Word { EnglishForms = new List<EnglishForm> { new EnglishForm { Form = "carrot" } } });
-                db.SaveChanges();
-                wordsList.ItemsSource = db.Words.ToList();
-            }
+            Frame.Navigate(typeof(WordPage), null, new DrillInNavigationTransitionInfo());
         }
     }
 }

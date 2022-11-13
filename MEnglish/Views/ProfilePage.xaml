@@ -19,7 +19,7 @@
                     Content="Добавить"
                     Click="AddButton_Click" />
             <Button x:Name="saveButton"
-                    Content="Добавить"
+                    Content="Сохранить"
                     Click="SaveButton_Click" />
             <Button x:Name="editButton"
                     Content="Изменить"

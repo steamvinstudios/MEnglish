@@ -13,483 +13,477 @@ namespace MEnglish.Models
         public ObservableCollection<Word> FourRandomWords { get; set; } =
             new ObservableCollection<Word>();
         #region Words Collection
-        /*public ObservableCollection<Word> All { get; set; } = new ObservableCollection<Word>
+        public ObservableCollection<Word> All { get; set; } = new ObservableCollection<Word>
         {
             new Word
             {
-                EnglishForms = new List<string> { "hello" },
-                RussianForms = new List<string> { "привет" },
+                EnglishForms = new List<EnglishForm> { new EnglishForm { Form = "hello" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "привет" } },
                 Image = "/ArrayPics/hello.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "apple" },
-                RussianForms = new List<string> { "яблоко" },
+                EnglishForms = new List<EnglishForm> { new EnglishForm { Form = "apple" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "яблоко" } },
                 Image = "/ArrayPics/apple.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "bye" },
-                RussianForms = new List<string> { "пока" },
+                EnglishForms = new List<EnglishForm> { new EnglishForm { Form = "bye" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "пока" } },
                 Image = "/ArrayPics/bye.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "bridge" },
-                RussianForms = new List<string> { "мост" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "bridge" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "мост" } },
                 Image = "/ArrayPics/bridge.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "jungle" },
-                RussianForms = new List<string> { "джунгли" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "jungle" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "джунгли" } },
                 Image = "/ArrayPics/jungle.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "forest" },
-                RussianForms = new List<string> { "лес" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "forest" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "лес" } },
                 Image = "/ArrayPics/forest.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "animal" },
-                RussianForms = new List<string> { "животное" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "animal" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "животное" } },
                 Image = "/ArrayPics/animal.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "area" },
-                RussianForms = new List<string> { "зона" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "area" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "зона" } },
                 Image = "/ArrayPics/area.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "book" },
-                RussianForms = new List<string> { "книга" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "book" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "книга" } },
                 Image = "/ArrayPics/book.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "camera" },
-                RussianForms = new List<string> { "камера" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "camera" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "камера" } },
                 Image = "/ArrayPics/camera.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "coffee" },
-                RussianForms = new List<string> { "кофе" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "coffee" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "кофе" } },
                 Image = "/ArrayPics/coffee.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "end" },
-                RussianForms = new List<string> { "конец" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "end" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "конец" } },
                 Image = "/ArrayPics/end.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "eye" },
-                RussianForms = new List<string> { "глаз" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "eye" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "глаз" } },
                 Image = "/ArrayPics/eye.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "farm" },
-                RussianForms = new List<string> { "ферма" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "farm" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "ферма" } },
                 Image = "/ArrayPics/farm.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "feet" },
-                RussianForms = new List<string> { "ноги" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "feet" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "ноги" } },
                 Image = "/ArrayPics/feet.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "fire" },
-                RussianForms = new List<string> { "огонь" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "fire" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "огонь" } },
                 Image = "/ArrayPics/fire.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "food" },
-                RussianForms = new List<string> { "еда" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "food" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "еда" } },
                 Image = "/ArrayPics/food.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "grow" },
-                RussianForms = new List<string> { "расти" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "grow" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "расти" } },
                 Image = "/ArrayPics/grow.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "half" },
-                RussianForms = new List<string> { "половина" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "half" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "половина" } },
                 Image = "/ArrayPics/half.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "hand" },
-                RussianForms = new List<string> { "рука" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "hand" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "рука" } },
                 Image = "/ArrayPics/hand.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "help" },
-                RussianForms = new List<string> { "помощь" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "help" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "помощь" } },
                 Image = "/ArrayPics/help.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "horse" },
-                RussianForms = new List<string> { "лошадь" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "horse" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "лошадь" } },
                 Image = "/ArrayPics/horse.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "idea" },
-                RussianForms = new List<string> { "идея" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "idea" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "идея" } },
                 Image = "/ArrayPics/idea.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "land" },
-                RussianForms = new List<string> { "земля" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "land" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "земля" } },
                 Image = "/ArrayPics/land.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "letter" },
-                RussianForms = new List<string> { "письмо" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "letter" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "письмо" } },
                 Image = "/ArrayPics/letter.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "mint" },
-                RussianForms = new List<string> { "мята" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "mint" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "мята" } },
                 Image = "/ArrayPics/mint.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "near" },
-                RussianForms = new List<string> { "близко" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "near" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "близко" } },
                 Image = "/ArrayPics/near.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "need" },
-                RussianForms = new List<string> { "необходимость" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "need" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "необходимость" } },
                 Image = "/ArrayPics/need.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "order" },
-                RussianForms = new List<string> { "порядок" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "order" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "порядок" } },
                 Image = "/ArrayPics/order.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "part" },
-                RussianForms = new List<string> { "часть" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "part" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "часть" } },
                 Image = "/ArrayPics/part.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "plant" },
-                RussianForms = new List<string> { "растение" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "plant" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "растение" } },
                 Image = "/ArrayPics/plant.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "round" },
-                RussianForms = new List<string> { "круглый" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "round" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "круглый" } },
                 Image = "/ArrayPics/round.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "sea" },
-                RussianForms = new List<string> { "море" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "sea" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "море" } },
                 Image = "/ArrayPics/sea.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "small" },
-                RussianForms = new List<string> { "маленький" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "small" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "маленький" } },
                 Image = "/ArrayPics/small.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "star" },
-                RussianForms = new List<string> { "звезда" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "star" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "звезда" } },
                 Image = "/ArrayPics/star.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "strawberry" },
-                RussianForms = new List<string> { "клубника" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "strawberry" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "клубника" } },
                 Image = "/ArrayPics/strawberry.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "study" },
-                RussianForms = new List<string> { "изучать" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "study" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "изучать" } },
                 Image = "/ArrayPics/study.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "surface" },
-                RussianForms = new List<string> { "поверхность" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "surface" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "поверхность" } },
                 Image = "/ArrayPics/surface.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "table" },
-                RussianForms = new List<string> { "стол" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "table" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "стол" } },
                 Image = "/ArrayPics/table.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "tea" },
-                RussianForms = new List<string> { "чай" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "tea" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "чай" } },
                 Image = "/ArrayPics/tea.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "time" },
-                RussianForms = new List<string> { "время" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "time" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "время" } },
                 Image = "/ArrayPics/time.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "walk" },
-                RussianForms = new List<string> { "прогулка" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "walk" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "прогулка" } },
                 Image = "/ArrayPics/walk.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "watch" },
-                RussianForms = new List<string> { "часы" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "watch" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "часы" } },
                 Image = "/ArrayPics/watch.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "way" },
-                RussianForms = new List<string> { "путь" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "way" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "путь" } },
                 Image = "/ArrayPics/way.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "wind" },
-                RussianForms = new List<string> { "ветер" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "wind" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "ветер" } },
                 Image = "/ArrayPics/wind.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "write" },
-                RussianForms = new List<string> { "писать" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "write" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "писать" } },
                 Image = "/ArrayPics/write.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "ask for" },
-                RussianForms = new List<string> { "просить", "спрашивать", "требовать" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "ask for" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "просить" } },
                 Image = "/ArrayPics/askfor.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "be out" },
-                RussianForms = new List<string> { "отсутствовать" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "be out" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "отсутствовать" } },
                 Image = "/ArrayPics/beout.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "break down" },
-                RussianForms = new List<string> { "сломать", "сломаться", "перестать работать" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "break down" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "сломать" },new RussianForm { Form = "сломаться" }, new RussianForm { Form = "перестать работать" } },
                 Image = "/ArrayPics/breakdown.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "break into" },
-                RussianForms = new List<string> { "врываться", "вломиться" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "break into" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "врываться" }, new RussianForm { Form = "вломиться" } },
                 Image = "/ArrayPics/breakinto.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "burst out" },
-                RussianForms = new List<string> { "окликнуть", "разразиться смехом", "внезапно начинаться" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "burst out" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "окликнуть" }, new RussianForm { Form = "разразиться смехом" }, new RussianForm { Form = "внезапно начинаться" } },
                 Image = "/ArrayPics/burstout.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "clean up" },
-                RussianForms = new List<string> { "чистить", "убирать", "приводить в порядок" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "clean up" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "чистить" }, new RussianForm { Form = "убирать" },new RussianForm { Form = "приводить в порядок" } },
                 Image = "/ArrayPics/cleanup.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "check in" },
-                RussianForms = new List<string> { "зарегистрироваться" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "check in" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "зарегистрироваться" } },
                 Image = "/ArrayPics/checkin.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "check out" },
-                RussianForms = new List<string> { "проверить", "выписаться" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "check out" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "проверить" }, new RussianForm { Form = "выписаться" } },
                 Image = "/ArrayPics/checkout.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "call back" },
-                RussianForms = new List<string> { "проверить", "выписаться" },
-                Image = "/ArrayPics/checkout.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List<string> { "check out" },
-                RussianForms = new List<string> { "перезвонить" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "check out" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "перезвонить" } },
                 Image = "/ArrayPics/callback.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "keep away" },
-                RussianForms = new List<string> { "не подходите" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "keep away" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "не подходите" } },
                 Image = "/ArrayPics/keepaway.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "wake up" },
-                RussianForms = new List<string> { "будить", "просыпаться", "бодрствовать" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "wake up" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "будить" }, new RussianForm { Form = "просыпаться" }, new RussianForm { Form = "бодрствовать" } },
                 Image = "/ArrayPics/wakeup.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "watch out" },
-                RussianForms = new List<string> { "осторожно", "быть начеку", "настороже" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "watch out" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "осторожно" }, new RussianForm { Form = "быть начеку" },new RussianForm { Form = "настороже" } },
                 Image = "/ArrayPics/watchout.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "work off" },
-                RussianForms = new List<string> { "отработать", "отделаться", "освободиться" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "work off" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "отработать" }, new RussianForm { Form = "отделаться" },new RussianForm { Form = "освободиться" } },
                 Image = "/ArrayPics/workoff.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "work out" },
-                RussianForms = new List<string> { "определить", "вычислить", "добиться", "получаться", "тренироваться" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "work out" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "определить" }, new RussianForm { Form = "вычислить" }, new RussianForm { Form = "добиться" },new RussianForm { Form = "получаться" },new RussianForm { Form = "тренироваться" } },
                 Image = "/ArrayPics/workout.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "write down" },
-                RussianForms = new List<string> { "записать на бумаге" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "write down" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "записать на бумаге" } },
                 Image = "/ArrayPics/writedown.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "write up" },
-                RussianForms = new List<string> { "дописать", "придать законченный вид" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "write up" } },
+                RussianForms = new List<RussianForm> { new RussianForm { Form = "дописать" }, new RussianForm { Form = "придать законченный вид" } },
                 Image = "/ArrayPics/writeup.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "tends" },
-                RussianForms = new List<string> { "как правило" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "tends" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "как правило" } },
                 Image = "/ArrayPics/tends.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "often" },
-                RussianForms = new List<string> { "довольно часто" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "often" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "довольно часто" } },
                 Image = "/ArrayPics/often.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "entirely" },
-                RussianForms = new List<string> { "полностью" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "entirely" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "полностью" } },
                 Image = "/ArrayPics/entirely.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "miscellaneous" },
-                RussianForms = new List<string> { "разное" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "miscellaneous" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "разное" } },
                 Image = "/ArrayPics/oftmiscellaneousen.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "split" },
-                RussianForms = new List<string> { "разделенный" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "split" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "разделенный" } },
                 Image = "/ArrayPics/split.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "proper" },
-                RussianForms = new List<string> { "правильный" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "proper" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "правильный" } },
                 Image = "/ArrayPics/proper.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "amount" },
-                RussianForms = new List<string> { "количество" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "amount" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "количество" } },
                 Image = "/ArrayPics/amount.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "contributor" },
-                RussianForms = new List<string> { "участник" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "contributor" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "участник" } },
                 Image = "/ArrayPics/contributor.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "issue" },
-                RussianForms = new List<string> { "проблема" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "issue" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "проблема" } },
                 Image = "/ArrayPics/issue.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "beware" },
-                RussianForms = new List<string> { "остерегаться" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "beware" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "остерегаться" } },
                 Image = "/ArrayPics/beware.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "milk" },
-                RussianForms = new List<string> { "молоко" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "milk" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "молоко" } },
                 Image = "/ArrayPics/milk.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "sound" },
-                RussianForms = new List<string> { "звук" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "sound" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "звук" } },
                 Image = "/ArrayPics/sound.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "shows off" },
-                RussianForms = new List<string> { "красоваться" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "shows off" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "красоваться" } },
                 Image = "/ArrayPics/showsoff.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "further delays" },
-                RussianForms = new List<string> { "дальнейшие задержки" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "further delays" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "дальнейшие задержки" } },
                 Image = "/ArrayPics/furtherdelays.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "upcoming" },
-                RussianForms = new List<string> { "предстоящий" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "upcoming" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "предстоящий" } },
                 Image = "/ArrayPics/upcoming.jpg"
             },
             new Word
             {
-                EnglishForms = new List<string> { "over here" },
-                RussianForms = new List<string> { "здесь, сюда" },
+                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "over here" } },
+                RussianForms = new List < RussianForm > { new RussianForm { Form = "здесь, сюда" } },
                 Image = "/ArrayPics/overhere.jpg"
             },
-        };*/
+        };
         #endregion
 
         public Words()
