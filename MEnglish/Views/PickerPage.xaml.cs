@@ -25,18 +25,21 @@ namespace MEnglish
     /// <summary>
     /// Пустая страница, которую можно использовать саму по себе или для перехода внутри фрейма.
     /// </summary>
-    public sealed partial class PickFromFour : Page
+    public sealed partial class PickerPage : Page
     {
         public List<Word> Words { get; set; }
         public List<Word> TrainerWords { get; set; } = new List<Word>();
-        public PickFromFour()
+        public PickerPage()
         {
             this.InitializeComponent();
+
             using (WordContext db = new WordContext())
             {
                 Words = db.Words.ToList();
             }
+
             TrainerWords.Clear();
+
             for (int i = 0; i < 4; i++)
             {
                 TrainerWords.Add(Words[new Random().Next(Words.Count - 1)]);

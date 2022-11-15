@@ -31,7 +31,7 @@ namespace MEnglish
         async void GoToTheNext()
         {
             await Task.Delay(2000);
-            Frame.Navigate(typeof(TrainerMode));
+            Frame.Navigate(typeof(HomePage));
         }
 
         private void gJob_Loaded(object sender, RoutedEventArgs e)

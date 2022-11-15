@@ -105,6 +105,10 @@
                 <media:AcrylicBrush TintColor="Transparent"
                                     TintLuminosityOpacity="0" />
             </StackPanel.Background>
+            <Button x:Name="addStartWordsButton"
+                    Content="Добавить стартовый набор слов"
+                    Style="{ThemeResource AccentButtonStyle}"
+                    Click="AddStartWordsButton_Click" />
             <Button x:Name="addButton"
                     Content="Добавить"
                     Click="AddButton_Click" />

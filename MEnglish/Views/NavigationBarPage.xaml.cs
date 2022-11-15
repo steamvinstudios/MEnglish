@@ -9,24 +9,24 @@ namespace MEnglish
     /// <summary>
     /// Пустая страница, которую можно использовать саму по себе или для перехода внутри фрейма.
     /// </summary>
-    public sealed partial class GenPoint : Page
+    public sealed partial class NavigationBarPage : Page
     {
         public ViewModels.MVVMTestPageViewModel ViewModel { get; set; } =
             new ViewModels.MVVMTestPageViewModel();
-        public GenPoint() =>
+        public NavigationBarPage() =>
             this.InitializeComponent();
 
         private void AboutPageButton_Click(object sender, RoutedEventArgs e) =>
             GenPointFrame.Navigate(typeof(AboutPage), null, new DrillInNavigationTransitionInfo());
 
         private void PickerPageButton_Click(object sender, RoutedEventArgs e) =>
-            GenPointFrame.Navigate(typeof(PickFromFour), ViewModel.Words, new DrillInNavigationTransitionInfo());
+            GenPointFrame.Navigate(typeof(PickerPage), ViewModel.Words, new DrillInNavigationTransitionInfo());
 
         private void HomePageButton_Click(object sender, RoutedEventArgs e) =>
-            GenPointFrame.Navigate(typeof(TrainerMode), null, new DrillInNavigationTransitionInfo());
+            GenPointFrame.Navigate(typeof(HomePage), null, new DrillInNavigationTransitionInfo());
 
         private void Page_Loaded(object sender, RoutedEventArgs e) =>
-            GenPointFrame.Navigate(typeof(TrainerMode), null, new DrillInNavigationTransitionInfo());
+            GenPointFrame.Navigate(typeof(HomePage), null, new DrillInNavigationTransitionInfo());
 
         private void HideNavigationBarButton_Click(object sender, RoutedEventArgs e)
         {
@@ -41,7 +41,7 @@ namespace MEnglish
         }
 
         private void WriterPageButton_Click(object sender, RoutedEventArgs e) =>
-            GenPointFrame.Navigate(typeof(MainPage), ViewModel.Words, new DrillInNavigationTransitionInfo());
+            GenPointFrame.Navigate(typeof(WriterPage), ViewModel.Words, new DrillInNavigationTransitionInfo());
 
         private void ProfilePageButton_Click(object sender, RoutedEventArgs e) =>
             GenPointFrame.Navigate(typeof(Views.ProfilePage), null, new DrillInNavigationTransitionInfo());

@@ -32,11 +32,11 @@ namespace MEnglish
     /// <summary>
     /// Пустая страница, которую можно использовать саму по себе или для перехода внутри фрейма.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class WriterPage : Page
     {
         public Words Words { get; set; }
         public Stopwatch Stopwatch { get; set; } = new Stopwatch();
-        public MainPage()
+        public WriterPage()
         {
             this.InitializeComponent();
         }
@@ -53,7 +53,7 @@ namespace MEnglish
 
         private void NextTrainerButton_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(PickFromFour), Words);
+            Frame.Navigate(typeof(PickerPage), Words);
         }
 
         private async void CountTimeAsync()

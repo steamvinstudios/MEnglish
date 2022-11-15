@@ -25,35 +25,35 @@ namespace MEnglish
     /// <summary>
     /// Пустая страница, которую можно использовать саму по себе или для перехода внутри фрейма.
     /// </summary>
-    public sealed partial class TrainerMode : Page
+    public sealed partial class HomePage : Page
     {
-        public TrainerMode()
+        public HomePage()
         {
             this.InitializeComponent();
         }
         private void ShortTrainBt_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage), null, new DrillInNavigationTransitionInfo());
+            Frame.Navigate(typeof(WriterPage), null, new DrillInNavigationTransitionInfo());
         }
 
         private void MidTrainBt_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage), null, new DrillInNavigationTransitionInfo());
+            Frame.Navigate(typeof(WriterPage), null, new DrillInNavigationTransitionInfo());
         }
 
         private void LongTrainBt_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage), null, new DrillInNavigationTransitionInfo());
+            Frame.Navigate(typeof(WriterPage), null, new DrillInNavigationTransitionInfo());
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage), null, new DrillInNavigationTransitionInfo());
+            Frame.Navigate(typeof(WriterPage), null, new DrillInNavigationTransitionInfo());
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(PickFromFour), null, new DrillInNavigationTransitionInfo());
+            Frame.Navigate(typeof(PickerPage), null, new DrillInNavigationTransitionInfo());
         }
     }
 }

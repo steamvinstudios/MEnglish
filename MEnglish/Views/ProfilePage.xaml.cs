@@ -26,6 +26,9 @@ namespace MEnglish.Views
     /// </summary>
     public sealed partial class ProfilePage : Page
     {
+        // тестовое
+        public Words LocalWords { get; set; } = new Words();
+        //
         public Words Words { get; set; } = new Words();
         public ProfilePage()
         {
@@ -120,11 +123,19 @@ namespace MEnglish.Views
 
                 var result = await contentDialog.ShowAsync();
             }
+        }
 
+        private void AddStartWordsButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (WordContext db = new WordContext())
+            {
+                foreach (var word in LocalWords.All)
+                {
+                    db.Words.Add(word);
+                }
 
-
-
-
+                db.SaveChanges();
+            }
         }
     }
 }

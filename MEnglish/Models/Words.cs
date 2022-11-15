@@ -13,105 +13,105 @@ namespace MEnglish.Models
         public ObservableCollection<Word> FourRandomWords { get; set; } =
             new ObservableCollection<Word>();
         #region Words Collection
-        /*public ObservableCollection<Word> All { get; set; } = new ObservableCollection<Word>
+        public ObservableCollection<Word> All { get; set; } = new ObservableCollection<Word>
         {
             new Word
             {
-                EnglishForms = new List<EnglishForm> { new EnglishForm { Form = "hello" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "привет" } },
+                EnglishForm = "hello",
+                RussianForm = "привет",
                 Image = "/ArrayPics/hello.jpg"
             },
             new Word
             {
-                EnglishForms = new List<EnglishForm> { new EnglishForm { Form = "apple" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "яблоко" } },
+                EnglishForm = "apple",
+                RussianForm = "яблоко",
                 Image = "/ArrayPics/apple.jpg"
             },
             new Word
             {
-                EnglishForms = new List<EnglishForm> { new EnglishForm { Form = "bye" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "пока" } },
+                EnglishForm = "bye",
+                RussianForm = "пока",
                 Image = "/ArrayPics/bye.jpg"
             },
             new Word
             {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "bridge" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "мост" } },
+                EnglishForm = "bridge",
+                RussianForm = "мост",
                 Image = "/ArrayPics/bridge.jpg"
             },
             new Word
             {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "jungle" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "джунгли" } },
+                EnglishForm = "jungle",
+                RussianForm = "джунгли",
                 Image = "/ArrayPics/jungle.jpg"
             },
             new Word
             {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "forest" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "лес" } },
+                EnglishForm = "forest",
+                RussianForm = "лес",
                 Image = "/ArrayPics/forest.jpg"
             },
             new Word
             {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "animal" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "животное" } },
+                EnglishForm = "animal",
+                RussianForm = "животное",
                 Image = "/ArrayPics/animal.jpg"
             },
             new Word
             {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "area" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "зона" } },
+                EnglishForm = "area",
+                RussianForm = "зона",
                 Image = "/ArrayPics/area.jpg"
             },
             new Word
             {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "book" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "книга" } },
+                EnglishForm = "book",
+                RussianForm = "книга",
                 Image = "/ArrayPics/book.jpg"
             },
             new Word
             {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "camera" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "камера" } },
+                EnglishForm = "camera",
+                RussianForm = "камера",
                 Image = "/ArrayPics/camera.jpg"
             },
             new Word
             {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "coffee" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "кофе" } },
+                EnglishForm = "coffee",
+                RussianForm = "кофе",
                 Image = "/ArrayPics/coffee.jpg"
             },
             new Word
             {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "end" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "конец" } },
+                EnglishForm = "end",
+                RussianForm = "конец",
                 Image = "/ArrayPics/end.jpg"
             },
             new Word
             {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "eye" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "глаз" } },
+                EnglishForm = "eye",
+                RussianForm = "глаз",
                 Image = "/ArrayPics/eye.jpg"
             },
             new Word
             {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "farm" } },
-                RussianForms = new List < RussianForm > { new RussianForm { Form = "ферма" } },
+                EnglishForm = "farm",
+                RussianForm = "ферма",
                 Image = "/ArrayPics/farm.jpg"
             },
             new Word
             {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "feet" } },
-                RussianForms = new List < RussianForm > { new RussianForm { Form = "ноги" } },
+                EnglishForm = "feet",
+                RussianForm = "ноги",
                 Image = "/ArrayPics/feet.jpg"
             },
             new Word
             {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "fire" } },
-                RussianForms = new List < RussianForm > { new RussianForm { Form = "огонь" } },
+                EnglishForm = "fire",
+                RussianForm = "огонь",
                 Image = "/ArrayPics/fire.jpg"
             },
-            new Word
+            /*new Word
             {
                 EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "food" } },
                 RussianForms = new List < RussianForm > { new RussianForm { Form = "еда" } },
@@ -482,8 +482,8 @@ namespace MEnglish.Models
                 EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "over here" } },
                 RussianForms = new List < RussianForm > { new RussianForm { Form = "здесь, сюда" } },
                 Image = "/ArrayPics/overhere.jpg"
-            },
-        };*/
+            },*/
+        };
         #endregion
 
         public Words()
