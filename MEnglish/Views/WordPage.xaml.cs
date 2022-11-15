@@ -48,12 +48,15 @@ namespace MEnglish.Views
                 dateBox.Date = word.LastRepeat;
                 ratingSlider.Value = word.Rating;
                 isLearnedToggle.IsOn = word.IsLearned;
-                //englishWordBox.Text = word.EnglishForms[0].Form;
+                englishWordBox.Text = word.EnglishForm;
+                russianWordBox.Text = word.RussianForm;
             }
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+
+
             using (WordContext db = new WordContext())
             {
                 if (word != null)
@@ -62,7 +65,9 @@ namespace MEnglish.Views
                     word.LastRepeat = dateBox.Date.DateTime;
                     word.Rating = (int)ratingSlider.Value;
                     word.IsLearned = isLearnedToggle.IsOn;
-                    //word.EnglishForms[0].Form = englishWordBox.Text;
+                    word.EnglishForm = englishWordBox.Text;
+                    word.RussianForm = russianWordBox.Text;
+
                     db.Words.Update(word);
                 }
                 else
@@ -73,7 +78,8 @@ namespace MEnglish.Views
                         LastRepeat = dateBox.Date.DateTime,
                         Rating = (int)ratingSlider.Value,
                         IsLearned = isLearnedToggle.IsOn,
-                        //EnglishForms = new List<EnglishForm> { new EnglishForm { Form = englishWordBox.Text } }
+                        EnglishForm = englishWordBox.Text,
+                        RussianForm = russianWordBox.Text
                     });
                 }
                 db.SaveChanges();

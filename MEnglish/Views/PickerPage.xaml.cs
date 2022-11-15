@@ -27,21 +27,29 @@ namespace MEnglish
     /// </summary>
     public sealed partial class PickFromFour : Page
     {
-        public Words Words { get; set; }
+        public List<Word> Words { get; set; }
+        public List<Word> TrainerWords { get; set; } = new List<Word>();
         public PickFromFour()
         {
             this.InitializeComponent();
-        }
-
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            base.OnNavigatedTo(e);
-            Words = (Words)e.Parameter;
+            using (WordContext db = new WordContext())
+            {
+                Words = db.Words.ToList();
+            }
+            TrainerWords.Clear();
+            for (int i = 0; i < 4; i++)
+            {
+                TrainerWords.Add(Words[new Random().Next(Words.Count - 1)]);
+            }
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            //Words.ShakeWords();
+            
+            answerButton1.Content = TrainerWords[0].EnglishForm;
+            answerButton2.Content = TrainerWords[1].EnglishForm;
+            answerButton3.Content = TrainerWords[2].EnglishForm;
+            answerButton4.Content = TrainerWords[3].EnglishForm;
         }
 
         private void AnswerButton1_Click(object sender, RoutedEventArgs e)

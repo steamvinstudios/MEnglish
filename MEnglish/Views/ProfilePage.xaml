@@ -44,35 +44,52 @@
                                         </LinearGradientBrush>
                                     </ProgressBar.Foreground>
                                 </ProgressBar>
-                                <TextBlock Text="{Binding LastRepeat}"
-                                           FontSize="28"
-                                           FontWeight="Bold"
-                                           FontFamily="Bahnschrift"
-                                           FontStretch="Condensed"
-                                           Margin="10 8 0 0" />
-                                <TextBlock Text="{Binding EnglishForms[0].Form}"
-                                           FontSize="28"
-                                           FontWeight="Bold"
-                                           FontFamily="Bahnschrift"
-                                           FontStretch="Condensed"
-                                           Margin="10 8 0 0" />
-                                <TextBlock Text="{x:Bind RatingFull()}"
-                                           FontSize="20"
-                                           FontFamily="Bahnschrift"
-                                           FontStretch="Condensed"
-                                           Margin="10 0"
-                                           Opacity=".7" />
-                                <TextBlock Text="{x:Bind IdFull()}"
-                                           Margin="10 0 0 16"
-                                           FontWeight="Bold"
-                                           FontFamily="Bahnschrift" />
-                                <ToggleSwitch OffContent="Учится"
-                                              OnContent="Изучено"
-                                              IsOn="{x:Bind IsLearned}" />
-                                <TextBlock Text="{x:Bind Image}"
-                                           Margin="10 0 0 16"
-                                           FontFamily="Bahnschrift"
-                                           FontStretch="Condensed" />
+                                <StackPanel Padding="4">
+                                    <TextBlock Text="Последнее повторение"
+                                               FontSize="20"
+                                               FontFamily="Bahnschrift"
+                                               FontStretch="Condensed"
+                                               TextWrapping="Wrap" />
+                                    <TextBlock Text="{Binding LastRepeat}"
+                                               FontSize="28"
+                                               FontWeight="Bold"
+                                               FontFamily="Bahnschrift"
+                                               FontStretch="Condensed"
+                                               Opacity=".4" />
+                                    <Grid>
+                                        <StackPanel>
+                                            <TextBlock Text="{x:Bind EnglishForm}"
+                                                       FontSize="32"
+                                                       FontWeight="Bold"
+                                                       FontFamily="Bahnschrift"
+                                                       FontStretch="Condensed" />
+                                            <TextBlock Text="{x:Bind RussianForm}"
+                                                       FontSize="28"
+                                                       FontFamily="Bahnschrift"
+                                                       FontStretch="Condensed"
+                                                       Opacity=".7" />
+                                        </StackPanel>
+                                        <StackPanel HorizontalAlignment="Right"
+                                                    VerticalAlignment="Center">
+                                            <TextBlock Text="{x:Bind RatingFull()}"
+                                                       FontSize="20"
+                                                       FontFamily="Bahnschrift"
+                                                       FontStretch="Condensed"
+                                                       Opacity=".7" />
+                                            <TextBlock Text="{x:Bind IdFull()}"
+                                                       FontWeight="Bold"
+                                                       FontFamily="Bahnschrift" />
+                                        </StackPanel>
+                                    </Grid>
+                                    <ToggleSwitch OffContent="Учится"
+                                                  OnContent="Изучено"
+                                                  IsOn="{x:Bind IsLearned}" />
+                                    <TextBlock Text="{x:Bind Image}"
+                                               HorizontalAlignment="Center"
+                                               FontFamily="Bahnschrift"
+                                               FontStretch="Condensed" />
+                                </StackPanel>
+                                
                             </StackPanel>
                         </Grid>
                     </DataTemplate>

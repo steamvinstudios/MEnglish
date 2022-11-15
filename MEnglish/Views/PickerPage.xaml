@@ -14,7 +14,7 @@
         <Border CornerRadius="360"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center">
-            <Image Source="{x:Bind Words.RandomWordFromFourRandomWords.Image}"
+            <Image Source="{x:Bind TrainerWords[0].Image}"
                    Opacity=".5"
                    Stretch="UniformToFill"
                    Width="600"
@@ -43,7 +43,8 @@
                     FontSize="20"
                     Style="{ThemeResource ButtonRevealStyle}"
                     Click="AnswerButton1_Click" />
-            <Button FontFamily="Bahnschrift"
+            <Button x:Name="answerButton2"
+                    FontFamily="Bahnschrift"
                     Content=""
                     Margin="4"
                     CornerRadius="20"
@@ -52,7 +53,8 @@
                     HorizontalAlignment="Center"
                     FontSize="20"
                     Style="{ThemeResource ButtonRevealStyle}" />
-            <Button FontFamily="Bahnschrift"
+            <Button x:Name="answerButton3"
+                    FontFamily="Bahnschrift"
                     Content=""
                     Margin="4"
                     CornerRadius="20"
@@ -61,7 +63,8 @@
                     HorizontalAlignment="Center"
                     FontSize="20"
                     Style="{ThemeResource ButtonRevealStyle}" />
-            <Button FontFamily="Bahnschrift"
+            <Button x:Name="answerButton4"
+                    FontFamily="Bahnschrift"
                     Content=""
                     Margin="4"
                     CornerRadius="20"
