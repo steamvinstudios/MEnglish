@@ -31,6 +31,7 @@ namespace MEnglish
         /// Инициализирует одноэлементный объект приложения. Это первая выполняемая строка разрабатываемого
         /// кода, поэтому она является логическим эквивалентом main() или WinMain().
         /// </summary>
+        Words words = new Words();
         public App()
         {
             this.InitializeComponent();
@@ -39,6 +40,18 @@ namespace MEnglish
             using (var db = new WordContext())
             {
                 db.Database.Migrate();
+
+                var wordsFromDatabase = db.Words.ToList();
+
+                if (wordsFromDatabase.Count == 0)
+                {
+                    foreach (var word in words.All)
+                    {
+                        db.Words.Add(word);
+                    }
+
+                    db.SaveChanges();
+                }
             }
         }
 
