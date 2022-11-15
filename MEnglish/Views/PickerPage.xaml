@@ -52,7 +52,8 @@
                     Padding="20"
                     HorizontalAlignment="Center"
                     FontSize="20"
-                    Style="{ThemeResource ButtonRevealStyle}" />
+                    Style="{ThemeResource ButtonRevealStyle}"
+                    Click="AnswerButton2_Click" />
             <Button x:Name="answerButton3"
                     FontFamily="Bahnschrift"
                     Content=""
@@ -62,7 +63,8 @@
                     Padding="20"
                     HorizontalAlignment="Center"
                     FontSize="20"
-                    Style="{ThemeResource ButtonRevealStyle}" />
+                    Style="{ThemeResource ButtonRevealStyle}"
+                    Click="AnswerButton3_Click" />
             <Button x:Name="answerButton4"
                     FontFamily="Bahnschrift"
                     Content=""
@@ -72,7 +74,8 @@
                     Padding="20"
                     HorizontalAlignment="Center"
                     FontSize="20"
-                    Style="{ThemeResource ButtonRevealStyle}" />
+                    Style="{ThemeResource ButtonRevealStyle}"
+                    Click="AnswerButton4_Click" />
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center"
                         Margin="0 40"

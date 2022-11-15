@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading;
 using System.Threading.Tasks;
@@ -60,7 +61,53 @@ namespace MEnglish
 
         private void AnswerButton1_Click(object sender, RoutedEventArgs e)
         {
+            CheckWords(sender);
+        }
 
+        private void AnswerButton2_Click(object sender, RoutedEventArgs e)
+        {
+            CheckWords(sender);
+        }
+
+        private void AnswerButton3_Click(object sender, RoutedEventArgs e)
+        {
+            CheckWords(sender);
+        }
+
+        private void AnswerButton4_Click(object sender, RoutedEventArgs e)
+        {
+            CheckWords(sender);
+        }
+
+        async void CheckWords(object sender)
+        {
+            if ((sender as Button).Content.ToString().Equals(RandomWord.EnglishForm))
+            {
+                var contentDialog = new ContentDialog
+                {
+                    Title = "Верно",
+                    CloseButtonText = "Закрыть"
+                };
+
+                var result = await contentDialog.ShowAsync();
+
+                using (WordContext db = new WordContext())
+                {
+                    RandomWord.Rating += 5;
+                    db.Words.Update(RandomWord);
+                    db.SaveChanges();
+                }
+            }
+            else
+            {
+                var contentDialog = new ContentDialog
+                {
+                    Title = "Ошибка",
+                    CloseButtonText = "Закрыть"
+                };
+
+                var result = await contentDialog.ShowAsync();
+            }
         }
     }
 }
