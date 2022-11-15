@@ -27,6 +27,7 @@ namespace MEnglish
     /// </summary>
     public sealed partial class PickerPage : Page
     {
+        public Word RandomWord { get; set; }
         public List<Word> Words { get; set; }
         public List<Word> TrainerWords { get; set; } = new List<Word>();
         public PickerPage()
@@ -44,6 +45,8 @@ namespace MEnglish
             {
                 TrainerWords.Add(Words[new Random().Next(Words.Count - 1)]);
             }
+
+            RandomWord = TrainerWords[new Random().Next(TrainerWords.Count - 1)];
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
