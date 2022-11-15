@@ -11,8 +11,10 @@
     <Grid>
         <StackPanel Padding="8"
                     Spacing="8">
-            <TextBox Header="Английское слово" />
-            <TextBox Header="Русский перевод" />
+            <TextBox x:Name="englishWordBox"
+                     Header="Английское слово" />
+            <TextBox x:Name="russianWordBox"
+                     Header="Русский перевод" />
             <Slider x:Name="ratingSlider"
                     Header="Рейтинг" />
             <ToggleSwitch x:Name="isLearnedToggle"

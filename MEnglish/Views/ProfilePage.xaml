@@ -25,8 +25,10 @@
                 <GridView.ItemTemplate>
                     <DataTemplate x:DataType="models:Word">
                         <Grid>
-                            <StackPanel CornerRadius="32" Width="180">
-                                <Image Height="180" HorizontalAlignment="Left"
+                            <StackPanel CornerRadius="32"
+                                        Width="180">
+                                <Image Height="180"
+                                       HorizontalAlignment="Left"
                                        Source="{x:Bind Image}"
                                        Stretch="UniformToFill" />
                                 <ProgressBar Value="{x:Bind Rating}"
@@ -103,5 +105,10 @@
                     Style="{ThemeResource AccentButtonStyle}"
                     Click="LoadDatabaseButton_Click" />
         </StackPanel>
+        <Button Content="HttpClient"
+                Style="{ThemeResource AccentButtonStyle}"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Click="Button_Click" />
     </Grid>
 </Page>

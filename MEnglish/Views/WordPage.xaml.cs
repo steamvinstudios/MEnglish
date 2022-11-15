@@ -1,4 +1,5 @@
-﻿using MEnglish.Models;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using MEnglish.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -47,6 +48,7 @@ namespace MEnglish.Views
                 dateBox.Date = word.LastRepeat;
                 ratingSlider.Value = word.Rating;
                 isLearnedToggle.IsOn = word.IsLearned;
+                //englishWordBox.Text = word.EnglishForms[0].Form;
             }
         }
 
@@ -60,11 +62,19 @@ namespace MEnglish.Views
                     word.LastRepeat = dateBox.Date.DateTime;
                     word.Rating = (int)ratingSlider.Value;
                     word.IsLearned = isLearnedToggle.IsOn;
+                    //word.EnglishForms[0].Form = englishWordBox.Text;
                     db.Words.Update(word);
                 }
                 else
                 {
-                    db.Words.Add(new Word { Image = imageBox.Text, LastRepeat = dateBox.Date.DateTime, Rating = (int)ratingSlider.Value, IsLearned = isLearnedToggle.IsOn });
+                    db.Words.Add(new Word
+                    {
+                        Image = imageBox.Text,
+                        LastRepeat = dateBox.Date.DateTime,
+                        Rating = (int)ratingSlider.Value,
+                        IsLearned = isLearnedToggle.IsOn,
+                        //EnglishForms = new List<EnglishForm> { new EnglishForm { Form = englishWordBox.Text } }
+                    });
                 }
                 db.SaveChanges();
             }

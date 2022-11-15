@@ -3,7 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -72,13 +74,54 @@ namespace MEnglish.Views
             }
         }
 
-
         private void LoadDatabaseButton_Click(object sender, RoutedEventArgs e)
         {
             using (WordContext db = new WordContext())
             {
                 wordsList.ItemsSource = db.Words.ToList();
             }
+        }
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var httpClient = new HttpClient();
+                var httpResponseMessage = await httpClient.GetAsync("https://steamvinstudios.github.io/");
+                var responseBody = httpResponseMessage.Content.ReadAsStringAsync();
+
+                var contentDialog = new ContentDialog
+                {
+                    Title = "С гитхаба",
+                    Content = responseBody.Result,
+                    CloseButtonText = "Закрыть",
+                };
+
+                var result = await contentDialog.ShowAsync();
+            }
+            catch (HttpRequestException h)
+            {
+                var contentDialog = new ContentDialog
+                {
+                    Title = "С гитхаба",
+                    Content = new StackPanel
+                    {
+                        Children =
+                        {
+                            new TextBlock { Text = "Ошибка получения данных" },
+                            new TextBlock { Text = h.Message, TextWrapping = TextWrapping.Wrap }
+                        }
+                    },
+                    CloseButtonText = "Закрыть"
+                };
+
+                var result = await contentDialog.ShowAsync();
+            }
+
+
+
+
+
         }
     }
 }
