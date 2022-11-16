@@ -126,10 +126,5 @@
                     Style="{ThemeResource AccentButtonStyle}"
                     Click="LoadDatabaseButton_Click" />
         </StackPanel>
-        <Button Content="HttpClient"
-                Style="{ThemeResource AccentButtonStyle}"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Center"
-                Click="Button_Click" />
     </Grid>
 </Page>
