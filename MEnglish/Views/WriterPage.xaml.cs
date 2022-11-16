@@ -1,4 +1,5 @@
-﻿using MEnglish.Models;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using MEnglish.Models;
 using Microsoft.UI.Xaml.Controls;
 using System;
 using System.Collections.Generic;
@@ -34,36 +35,29 @@ namespace MEnglish
     /// </summary>
     public sealed partial class WriterPage : Page
     {
-        public Words Words { get; set; }
-        public Stopwatch Stopwatch { get; set; } = new Stopwatch();
+        public TrainerStopwatch TrainerStopwatch { get; set; } = new TrainerStopwatch();
+        public Word RandomWord { get; set; }
+        public List<Word> Words { get; set; }
         public WriterPage()
         {
             this.InitializeComponent();
+
+            using (WordContext db = new WordContext())
+            {
+                Words = db.Words.ToList();
+            }
+
+            RandomWord = Words[new Random().Next(Words.Count - 1)];
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            base.OnNavigatedTo(e);
-            Words = (Words)e.Parameter;
-        }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            CountTimeAsync();
+
         }
 
         private void NextTrainerButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(PickerPage), Words);
-        }
-
-        private async void CountTimeAsync()
-        {
-            Stopwatch.Start();
-            while (true)
-            {
-                TimeAmountTextBlock.Text = Stopwatch.Elapsed.TotalSeconds.ToString();
-                await Task.Delay(1000);
-            }
         }
 
     }

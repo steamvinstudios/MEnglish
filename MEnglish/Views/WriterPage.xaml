@@ -18,8 +18,8 @@
                        FontSize="36"
                        HorizontalAlignment="Center"
                        FontFamily="Bahnschrift" />
-            <TextBlock x:Name="EngWord"
-                       Text=""
+            <TextBlock x:Name="englishWordTextBlock"
+                       Text="{x:Bind RandomWord.EnglishForm}"
                        FontSize="36"
                        FontWeight="Bold"
                        HorizontalAlignment="Center"
@@ -28,7 +28,8 @@
                   Height="240"
                   CornerRadius="40"
                   Margin="8">
-                <Image Width="240"
+                <Image Source="{x:Bind RandomWord.Image}"
+                       Width="240"
                        Height="240"
                        Stretch="UniformToFill"
                        HorizontalAlignment="Center"
@@ -150,8 +151,8 @@
                 </Border>
                 <Border CornerRadius="0 4 4 0"
                         Background="#55555555">
-                    <TextBlock x:Name="TimeAmountTextBlock"
-                               Text="10"
+                    <TextBlock x:Name="trainerStopwatchTextBlock"
+                               Text="{x:Bind TrainerStopwatch.StopwatchResultEverySecond, Mode=OneWay}"
                                Padding="4 4"
                                FontSize="16"
                                FontWeight="Bold"
