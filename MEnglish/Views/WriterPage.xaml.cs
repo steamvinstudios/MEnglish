@@ -55,5 +55,14 @@ namespace MEnglish
 
         }
 
+        private void englishWordTextBlock_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            wordInfoTeachingTip.IsOpen = true;
+        }
+
+        private void englishWordTextBlock_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            wordInfoTeachingTip.IsOpen = false;
+        }
     }
 }
