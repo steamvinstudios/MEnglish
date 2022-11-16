@@ -28,6 +28,7 @@ namespace MEnglish
     /// </summary>
     public sealed partial class PickerPage : Page
     {
+        public TrainerStopwatch TrainerStopwatch { get; set; } = new TrainerStopwatch();
         public Word RandomWord { get; set; }
         public List<Word> Words { get; set; }
         public List<Word> TrainerWords { get; set; } = new List<Word>();

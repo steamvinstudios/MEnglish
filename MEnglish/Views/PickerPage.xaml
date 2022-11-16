@@ -152,6 +152,28 @@
                     </StackPanel>
                 </Border>
             </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                <Border Background="#33555555"
+                        CornerRadius="4 0 0 4"
+                        Padding="10 4">
+                    <TextBlock Text="Время:"
+                               FontSize="16"
+                               FontFamily="Bahnschrift"
+                               Foreground="#FF515151"
+                               VerticalAlignment="Center" />
+                </Border>
+                <Border CornerRadius="0 4 4 0"
+                        Background="#55555555">
+                    <TextBlock x:Name="trainerStopwatchTextBlock"
+                               Text="{x:Bind TrainerStopwatch.StopwatchResultEverySecond, Mode=OneWay}"
+                               Padding="4 4"
+                               FontSize="16"
+                               FontWeight="Bold"
+                               FontFamily="Bahnschrift"
+                               VerticalAlignment="Center" />
+                </Border>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>
