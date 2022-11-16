@@ -91,6 +91,8 @@ namespace MEnglish
 
                 var result = await contentDialog.ShowAsync();
 
+                RandomWord.LastRepeat = DateTime.Now;
+
                 using (WordContext db = new WordContext())
                 {
                     RandomWord.Rating += 5;
@@ -107,6 +109,14 @@ namespace MEnglish
                 };
 
                 var result = await contentDialog.ShowAsync();
+
+                RandomWord.LastRepeat = DateTime.Now;
+
+                using (WordContext db = new WordContext())
+                {
+                    db.Words.Update(RandomWord);
+                    db.SaveChanges();
+                }
             }
         }
     }
