@@ -55,10 +55,5 @@ namespace MEnglish
 
         }
 
-        private void NextTrainerButton_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(PickerPage), Words);
-        }
-
     }
 }

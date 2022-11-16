@@ -160,9 +160,6 @@
                                VerticalAlignment="Center" />
                 </Border>
             </StackPanel>
-            <Button x:Name="NextTrainerButton"
-                    Content="Next Trainer"
-                    Click="NextTrainerButton_Click" />
         </StackPanel>
     </Grid>
 </Page>
