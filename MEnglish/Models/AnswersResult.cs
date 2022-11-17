@@ -24,7 +24,7 @@ namespace MEnglish.Models
         private int mistakes;
         public int Mistakes
         {
-            get => all;
+            get => mistakes;
             set => SetProperty(ref mistakes, value);
         }
     }
