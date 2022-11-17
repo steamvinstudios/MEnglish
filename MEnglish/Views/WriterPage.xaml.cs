@@ -73,6 +73,16 @@ namespace MEnglish
                 using (WordContext db = new WordContext())
                 {
                     RandomWord.Word.Rating += 10;
+
+                    if (RandomWord.Word.Rating >= 100)
+                    {
+                        RandomWord.Word.IsLearned = true;
+                    }
+                    else
+                    {
+                        RandomWord.Word.IsLearned = false;
+                    }
+
                     db.Update(RandomWord.Word);
                     db.SaveChanges();
                 }
@@ -91,6 +101,8 @@ namespace MEnglish
 
                 AnswersResult.All++;
                 AnswersResult.Correct++;
+
+                wordInfoTeachingTip.IsOpen = false;
             }
             else
             {
@@ -110,6 +122,8 @@ namespace MEnglish
 
                 AnswersResult.All++;
                 AnswersResult.Mistakes++;
+
+                wordInfoTeachingTip.IsOpen = true;
             }
         }
     }

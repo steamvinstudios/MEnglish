@@ -1,6 +1,7 @@
 ﻿using MEnglish.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -28,11 +29,11 @@ namespace MEnglish
     /// </summary>
     public sealed partial class PickerPage : Page
     {
+        public RandomWordPicker RandomWordPicker { get; set; } = new RandomWordPicker();
+        public FourRandomWords FourRandomWords { get; set; }
         public AnswersResult AnswersResult { get; set; } = new AnswersResult();
         public TrainerStopwatch TrainerStopwatch { get; set; } = new TrainerStopwatch();
-        public Word RandomWord { get; set; }
         public List<Word> Words { get; set; }
-        public List<Word> TrainerWords { get; set; } = new List<Word>();
         public PickerPage()
         {
             this.InitializeComponent();
@@ -42,23 +43,13 @@ namespace MEnglish
                 Words = db.Words.ToList();
             }
 
-            TrainerWords.Clear();
-
-            for (int i = 0; i < 4; i++)
-            {
-                TrainerWords.Add(Words[new Random().Next(Words.Count - 1)]);
-            }
-
-            RandomWord = TrainerWords[new Random().Next(TrainerWords.Count - 1)];
+            FourRandomWords = new FourRandomWords();
+            RandomWordPicker.Word = FourRandomWords.Words[new Random().Next(FourRandomWords.Words.Count - 1)];
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
 
-            answerButton1.Content = TrainerWords[0].EnglishForm;
-            answerButton2.Content = TrainerWords[1].EnglishForm;
-            answerButton3.Content = TrainerWords[2].EnglishForm;
-            answerButton4.Content = TrainerWords[3].EnglishForm;
         }
 
         private void AnswerButton1_Click(object sender, RoutedEventArgs e)
@@ -83,27 +74,41 @@ namespace MEnglish
 
         async void CheckWords(object sender)
         {
-            if ((sender as Button).Content.ToString().Equals(RandomWord.EnglishForm))
+            if ((sender as Button).Content.ToString().Equals(RandomWordPicker.Word.EnglishForm))
             {
-                var contentDialog = new ContentDialog
-                {
-                    Title = "Верно",
-                    CloseButtonText = "Закрыть"
-                };
-
-                var result = await contentDialog.ShowAsync();
-
-                RandomWord.LastRepeat = DateTime.Now;
+                RandomWordPicker.Word.LastRepeat = DateTime.Now;
 
                 using (WordContext db = new WordContext())
                 {
-                    RandomWord.Rating += 5;
-                    db.Words.Update(RandomWord);
+                    RandomWordPicker.Word.Rating += 40;
+
+                    if (RandomWordPicker.Word.Rating >= 100 && RandomWordPicker.Word.IsLearned == false)
+                    {
+                        RandomWordPicker.Word.IsLearned = true;
+                        wordProgressTeachingTip.IsOpen = true;
+                        await Task.Delay(2000);
+                        wordProgressTeachingTip.IsOpen = false;
+                        await Task.Delay(1000);
+                    }
+
+                    db.Words.Update(RandomWordPicker.Word);
                     db.SaveChanges();
                 }
 
                 AnswersResult.All++;
                 AnswersResult.Correct++;
+
+                using (WordContext db = new WordContext())
+                {
+                    Words = db.Words.ToList();
+                }
+
+                for (var i = 0; i < 4; i++)
+                {
+                    FourRandomWords.Words[i] = Words[new Random().Next(Words.Count - 1)];
+                }
+
+                RandomWordPicker.Word = FourRandomWords.Words[new Random().Next(FourRandomWords.Words.Count - 1)];
             }
             else
             {
@@ -115,11 +120,11 @@ namespace MEnglish
 
                 var result = await contentDialog.ShowAsync();
 
-                RandomWord.LastRepeat = DateTime.Now;
+                RandomWordPicker.Word.LastRepeat = DateTime.Now;
 
                 using (WordContext db = new WordContext())
                 {
-                    db.Words.Update(RandomWord);
+                    db.Words.Update(RandomWordPicker.Word);
                     db.SaveChanges();
                 }
 
