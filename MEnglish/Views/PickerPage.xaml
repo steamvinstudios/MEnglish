@@ -97,7 +97,7 @@
                         <TextBlock Text="Ошибка"
                                    FontFamily="Bahnschrift" />
                         <TextBlock Name="FalseBar"
-                                   Text="0"
+                                   Text="{x:Bind AnswersResult.Mistakes, Mode=OneWay}"
                                    FontFamily="Bahnschrift"
                                    HorizontalAlignment="Center"
                                    FontSize="36" />
@@ -121,7 +121,7 @@
                         <TextBlock Text="Всего"
                                    FontFamily="Bahnschrift" />
                         <TextBlock Name="MaxOfBar"
-                                   Text="0"
+                                   Text="{x:Bind AnswersResult.All, Mode=OneWay}"
                                    FontFamily="Bahnschrift"
                                    HorizontalAlignment="Center"
                                    FontSize="36" />
@@ -145,7 +145,7 @@
                         <TextBlock Text="Успех"
                                    FontFamily="Bahnschrift" />
                         <TextBlock Name="TrueBar"
-                                   Text="0"
+                                   Text="{x:Bind AnswersResult.Correct, Mode=OneWay}"
                                    FontFamily="Bahnschrift"
                                    HorizontalAlignment="Center"
                                    FontSize="36" />

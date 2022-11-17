@@ -28,6 +28,7 @@ namespace MEnglish
     /// </summary>
     public sealed partial class PickerPage : Page
     {
+        public AnswersResult AnswersResult { get; set; } = new AnswersResult();
         public TrainerStopwatch TrainerStopwatch { get; set; } = new TrainerStopwatch();
         public Word RandomWord { get; set; }
         public List<Word> Words { get; set; }
@@ -53,7 +54,7 @@ namespace MEnglish
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            
+
             answerButton1.Content = TrainerWords[0].EnglishForm;
             answerButton2.Content = TrainerWords[1].EnglishForm;
             answerButton3.Content = TrainerWords[2].EnglishForm;
@@ -100,6 +101,9 @@ namespace MEnglish
                     db.Words.Update(RandomWord);
                     db.SaveChanges();
                 }
+
+                AnswersResult.All++;
+                AnswersResult.Correct++;
             }
             else
             {
@@ -118,6 +122,9 @@ namespace MEnglish
                     db.Words.Update(RandomWord);
                     db.SaveChanges();
                 }
+
+                AnswersResult.All++;
+                AnswersResult.Mistakes++;
             }
         }
     }
