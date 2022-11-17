@@ -36,7 +36,8 @@
                                         FontFamily="Bahnschrift"
                                         CornerRadius="32"
                                         FontStretch="Condensed"
-                                        FontSize="20">
+                                        FontSize="20"
+                                        IsEnabled="False">
                                     <Button.Shadow>
                                         <ThemeShadow />
                                     </Button.Shadow>
@@ -57,7 +58,8 @@
                                         FontFamily="Bahnschrift"
                                         CornerRadius="32"
                                         FontStretch="Condensed"
-                                        FontSize="20">
+                                        FontSize="20"
+                                        IsEnabled="False">
                                     <Button.Background>
                                         <LinearGradientBrush EndPoint="0.5,1"
                                                              StartPoint="0.5,0">
@@ -75,7 +77,8 @@
                                         FontFamily="Bahnschrift"
                                         CornerRadius="32"
                                         FontStretch="Condensed"
-                                        FontSize="20">
+                                        FontSize="20"
+                                        IsEnabled="False">
                                     <Button.Background>
                                         <LinearGradientBrush EndPoint="0.5,1"
                                                              StartPoint="0.5,0">
@@ -90,27 +93,47 @@
                     </Grid>
                     <Grid x:Name="backLandGrid"
                           Background="#11555555"
-                          CornerRadius="32"
-                          Padding="8">
+                          CornerRadius="32">
                         <Grid.Shadow>
                             <ThemeShadow />
                         </Grid.Shadow>
-                        <StackPanel Spacing="8">
+                        <StackPanel>
                             <TextBlock Text="Режим тренировки"
+                                       FontSize="32"
+                                       Padding="8"
                                        HorizontalAlignment="Center"
-                                       FontSize="24"
                                        FontFamily="Bahnschrift"
+                                       FontStretch="Condensed"
                                        FontWeight="Bold" />
-                            <Grid Background="#11555555"
-                                  CornerRadius="32"
-                                  Padding="8">
-                                <TextBlock Text="Режим тренировки сочетает в себе все наши полезные, удобные и развивающие тренажеры. Выберете то, что подходит вам прямо сейчас, будь-то короткая, средняя или длинная тренировка. Со временем он будет обрастать новыми и полезными функциями, охватывать больше тем и быть лучше с каждым днем. На носу пара сюрпризов для вас. Обязательно ждите."
+                            <StackPanel Background="#11555555"
+                                        CornerRadius="32"
+                                        Padding="8">
+                                <TextBlock Text="На реставрации. Крупные обновления требуют большой работы. Оставьте свои отзывы и предложения на странице в Microsoft Store"
                                            Width="340"
                                            FontSize="16"
                                            FontFamily="Bahnschrift"
                                            TextWrapping="Wrap"
                                            HorizontalAlignment="Center" />
-                            </Grid>
+                                <TextBlock Text="Последние новости"
+                                           Width="340"
+                                           FontSize="32"
+                                           FontFamily="Bahnschrift"
+                                           FontStretch="Condensed"
+                                           TextWrapping="Wrap"
+                                           HorizontalAlignment="Center" />
+                                <TextBlock Text="Теперь в разделе [🥇Профиль] можно просматривать прогресс изучения слов. В приложение интегрирована база данных - обеспечено сохранение прогресса на диск. Также, по клику можно добавлять свои собственные, либо изменять и удалять существующие слова. Путь к картинке можно вставлять по ссылке из интернета"
+                                           Width="340"
+                                           FontSize="16"
+                                           FontFamily="Bahnschrift"
+                                           TextWrapping="Wrap"
+                                           HorizontalAlignment="Center" />
+                                <TextBlock Text="В следующем обновлении будет добавлено больше слов и откалиброваны настройки тренажеров. Сейчас главное протестировать общую работоспособность и получить отзывы"
+                                           Width="340"
+                                           FontSize="16"
+                                           FontFamily="Bahnschrift"
+                                           TextWrapping="Wrap"
+                                           HorizontalAlignment="Center" />
+                            </StackPanel>
                         </StackPanel>
                     </Grid>
                 </StackPanel>
@@ -139,12 +162,13 @@
                                        FontSize="32"
                                        Padding="8"
                                        FontFamily="Bahnschrift"
+                                       FontStretch="Condensed"
                                        FontWeight="Bold"
                                        HorizontalAlignment="Center" />
                             <Grid Background="#11555555"
                                   CornerRadius="32"
                                   Padding="16">
-                                <TextBlock Text="Тренажер райтер представляет из себя механизм, позволяющий создать ассоциативную связь между английским словом и явлением или предметом, которое оно отображает. Это позволит вам понимать английскую речь напрямую без необходимости прямого перевода. Также в этом тренажере предлагается вручную вбивать перевод предлагаемого слова и его значений. Так вы будете знать, что в каждом частном случае может использоваться та же языковая конструкция, но несущая иной смысл."
+                                <TextBlock Text="Тренируй мышечную память"
                                            FontSize="16"
                                            FontFamily="Bahnschrift"
                                            TextWrapping="Wrap"
@@ -177,12 +201,13 @@
                             <TextBlock Text="Тренажер пикер"
                                        FontSize="32"
                                        FontFamily="Bahnschrift"
+                                       FontStretch="Condensed"
                                        FontWeight="Bold"
                                        HorizontalAlignment="Center" />
                             <StackPanel Background="#11555555"
                                         CornerRadius="32"
                                         Padding="16">
-                                <TextBlock Text="Тренажер пикер или ленивый тренажер предлагает вам русское слово и 4 варианта ответа. Своебразный тест, в которым вы оттачиваете свои навыки. Еле видимая картинка на фоне закрепляет ассоциативную связку и выступает своего рода подсказкой, которой вы всегда можете воспользоваться."
+                                <TextBlock Text="Выбирай из 4 предложенных вариантов"
                                            FontSize="16"
                                            FontFamily="Bahnschrift"
                                            TextWrapping="Wrap"

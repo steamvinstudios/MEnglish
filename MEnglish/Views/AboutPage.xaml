@@ -151,11 +151,11 @@
                            Source="/Images/VK_Full_Logo.png" />
                 </HyperlinkButton>
             </Grid>
-            <TextBlock Text="Обновление от: 06.11.2022"
+            <TextBlock Text="Обновление от: 17.11.2022"
                        FontSize="14"
                        FontFamily="Bahnschrift"
                        HorizontalAlignment="Center" />
-            <TextBlock Text="Версия: 11.0 Store Edition"
+            <TextBlock Text="Версия: 11.1 Store Edition"
                        FontSize="14"
                        FontFamily="Bahnschrift"
                        HorizontalAlignment="Center" />
