@@ -21,7 +21,9 @@
                        HorizontalAlignment="Center" />
             <GridView x:Name="wordsList"
                       HorizontalAlignment="Center"
-                      VerticalAlignment="Center">
+                      VerticalAlignment="Center"
+                      ItemClick="wordsList_ItemClick"
+                      IsItemClickEnabled="True">
                 <GridView.ItemTemplate>
                     <DataTemplate x:DataType="models:Word">
                         <Grid>
@@ -89,42 +91,54 @@
                                                FontFamily="Bahnschrift"
                                                FontStretch="Condensed" />
                                 </StackPanel>
-                                
                             </StackPanel>
                         </Grid>
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>
         </StackPanel>
-        <StackPanel Spacing="8"
-                    Padding="8"
-                    Orientation="Horizontal"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Top">
-            <StackPanel.Background>
-                <media:AcrylicBrush TintColor="Transparent"
-                                    TintLuminosityOpacity="0" />
-            </StackPanel.Background>
-            <Button x:Name="addStartWordsButton"
-                    Content="Добавить стартовый набор слов"
-                    Style="{ThemeResource AccentButtonStyle}"
-                    Click="AddStartWordsButton_Click" />
-            <Button x:Name="addButton"
-                    Content="Добавить"
-                    Click="AddButton_Click" />
-            <Button x:Name="saveButton"
-                    Content="Сохранить"
-                    Click="SaveButton_Click" />
-            <Button x:Name="editButton"
-                    Content="Изменить"
-                    Click="EditButton_Click" />
-            <Button x:Name="deleteButton"
-                    Content="Удалить"
-                    Click="DeleteButton_Click" />
-            <Button x:Name="loadDatabaseButton"
-                    Content="Загрузить базу данных"
-                    Style="{ThemeResource AccentButtonStyle}"
-                    Click="LoadDatabaseButton_Click" />
-        </StackPanel>
+        <controls:TeachingTip x:Name="wordsManagerTeachingTip"
+                              PreferredPlacement="Center">
+            <StackPanel Spacing="8"
+                        Padding="8"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top">
+                <StackPanel.Background>
+                    <media:AcrylicBrush TintColor="Transparent"
+                                        TintLuminosityOpacity="0" />
+                </StackPanel.Background>
+                <TextBlock Text="Управление словом"
+                           FontSize="36"
+                           FontFamily="Bahnschrift"
+                           FontStretch="Condensed" />
+                <!--
+                <Button x:Name="addStartWordsButton"
+                        Content="Добавить стартовый набор слов"
+                        HorizontalAlignment="Stretch"
+                        Style="{ThemeResource AccentButtonStyle}"
+                        Click="AddStartWordsButton_Click" />
+                -->
+                <Button x:Name="addButton"
+                        Content="Добавить новое слово"
+                        Style="{ThemeResource AccentButtonStyle}"
+                        HorizontalAlignment="Stretch"
+                        Click="AddButton_Click" />
+                <Button x:Name="editButton"
+                        Content="Изменить"
+                        HorizontalAlignment="Stretch"
+                        Click="EditButton_Click" />
+                <Button x:Name="deleteButton"
+                        Content="Удалить"
+                        HorizontalAlignment="Stretch"
+                        Click="DeleteButton_Click" />
+                <!--
+                <Button x:Name="loadDatabaseButton"
+                        Content="Загрузить базу данных"
+                        HorizontalAlignment="Stretch"
+                        Style="{ThemeResource AccentButtonStyle}"
+                        Click="LoadDatabaseButton_Click" />
+                -->
+            </StackPanel>
+        </controls:TeachingTip>
     </Grid>
 </Page>

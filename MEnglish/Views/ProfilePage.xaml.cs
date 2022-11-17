@@ -101,5 +101,10 @@ namespace MEnglish.Views
                 db.SaveChanges();
             }
         }
+
+        private void wordsList_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            wordsManagerTeachingTip.IsOpen = true;
+        }
     }
 }
