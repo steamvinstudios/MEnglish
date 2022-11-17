@@ -214,5 +214,48 @@
                 </Border>
             </Grid>
         </controls:TeachingTip>
+        <controls:TeachingTip x:Name="wordProgressTeachingTip"
+                              PreferredPlacement="TopRight">
+            <Grid>
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="Изучено слово"
+                               FontSize="24"
+                               FontFamily="Bahnschrift"
+                               FontStretch="Condensed" />
+                    <TextBlock Text="{x:Bind RandomWord.Word.EnglishForm, Mode=OneWay}"
+                               FontSize="32"
+                               FontFamily="Bahnschrift"
+                               FontStretch="Condensed"
+                               FontWeight="Bold" />
+                    <TextBlock Text="{x:Bind RandomWord.Word.RussianForm, Mode=OneWay}"
+                               FontSize="24"
+                               Opacity=".7"
+                               FontFamily="Bahnschrift"
+                               FontStretch="Condensed" />
+                </StackPanel>
+                <TextBlock Text="🥇"
+                           FontSize="64"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Top"
+                           FontFamily="Bahnschrift"
+                           FontStretch="Condensed" />
+                <ProgressBar Value="{x:Bind RandomWord.Word.Rating, Mode=OneWay}"
+                             Height="10"
+                             Width="100"
+                             CornerRadius="5"
+                             HorizontalAlignment="Right"
+                             VerticalAlignment="Bottom">
+                    <ProgressBar.Foreground>
+                        <LinearGradientBrush>
+                            <GradientStop Color="LightSeaGreen" />
+                            <GradientStop Color="LightGreen"
+                                          Offset=".5" />
+                            <GradientStop Color="GreenYellow"
+                                          Offset="1" />
+                        </LinearGradientBrush>
+                    </ProgressBar.Foreground>
+                </ProgressBar>
+            </Grid>
+        </controls:TeachingTip>
     </Grid>
 </Page>

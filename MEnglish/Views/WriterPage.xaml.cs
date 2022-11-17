@@ -72,28 +72,20 @@ namespace MEnglish
             {
                 using (WordContext db = new WordContext())
                 {
-                    RandomWord.Word.Rating += 10;
+                    RandomWord.Word.Rating += 50;
 
-                    if (RandomWord.Word.Rating >= 100)
+                    if (RandomWord.Word.Rating >= 100 && RandomWord.Word.IsLearned == false)
                     {
                         RandomWord.Word.IsLearned = true;
-                    }
-                    else
-                    {
-                        RandomWord.Word.IsLearned = false;
+                        wordProgressTeachingTip.IsOpen = true;
+                        await Task.Delay(2000);
+                        wordProgressTeachingTip.IsOpen = false;
+                        await Task.Delay(1000);
                     }
 
                     db.Update(RandomWord.Word);
                     db.SaveChanges();
                 }
-
-                var contentDialog = new ContentDialog
-                {
-                    Title = "Верно",
-                    CloseButtonText = "Закрыть"
-                };
-
-                var result = await contentDialog.ShowAsync();
 
                 RandomWord.Word = Words[new Random().Next(Words.Count - 1)];
 
