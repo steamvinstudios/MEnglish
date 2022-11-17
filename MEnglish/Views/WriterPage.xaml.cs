@@ -35,8 +35,9 @@ namespace MEnglish
     /// </summary>
     public sealed partial class WriterPage : Page
     {
+        public AnswersResult AnswersResult { get; set; } = new AnswersResult();
         public TrainerStopwatch TrainerStopwatch { get; set; } = new TrainerStopwatch();
-        public Word RandomWord { get; set; }
+        public RandomWord RandomWord { get; set; } = new RandomWord();
         public List<Word> Words { get; set; }
         public WriterPage()
         {
@@ -47,7 +48,7 @@ namespace MEnglish
                 Words = db.Words.ToList();
             }
 
-            RandomWord = Words[new Random().Next(Words.Count - 1)];
+            RandomWord.Word = Words[new Random().Next(Words.Count - 1)];
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -67,12 +68,12 @@ namespace MEnglish
 
         private async void CheckAnswerButton_ClickAsync(object sender, RoutedEventArgs e)
         {
-            if (answerTextBox.Text.ToLower().Equals(RandomWord.RussianForm))
+            if (answerTextBox.Text.ToLower().Equals(RandomWord.Word.RussianForm))
             {
                 using (WordContext db = new WordContext())
                 {
-                    RandomWord.Rating += 10;
-                    db.Update(RandomWord);
+                    RandomWord.Word.Rating += 10;
+                    db.Update(RandomWord.Word);
                     db.SaveChanges();
                 }
 
@@ -83,12 +84,19 @@ namespace MEnglish
                 };
 
                 var result = await contentDialog.ShowAsync();
+
+                RandomWord.Word = Words[new Random().Next(Words.Count - 1)];
+
+                answerTextBox.Text = "";
+
+                AnswersResult.All++;
+                AnswersResult.Correct++;
             }
             else
             {
                 using (WordContext db = new WordContext())
                 {
-                    db.Update(RandomWord);
+                    db.Update(RandomWord.Word);
                     db.SaveChanges();
                 }
 
@@ -99,6 +107,9 @@ namespace MEnglish
                 };
 
                 var result = await contentDialog.ShowAsync();
+
+                AnswersResult.All++;
+                AnswersResult.Mistakes++;
             }
         }
     }

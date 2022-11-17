@@ -135,6 +135,8 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Models\AnswersResult.cs" />
+    <Compile Include="Models\RandomWord.cs" />
     <Compile Include="Models\TrainerStopwatch.cs" />
     <Compile Include="Models\WordContext.cs" />
     <Compile Include="ViewModels\MVVMTestPageViewModel.cs" />

@@ -19,7 +19,7 @@
                        HorizontalAlignment="Center"
                        FontFamily="Bahnschrift" />
             <TextBlock x:Name="englishWordTextBlock"
-                       Text="{x:Bind RandomWord.EnglishForm}"
+                       Text="{x:Bind RandomWord.Word.EnglishForm, Mode=OneWay}"
                        FontSize="36"
                        FontWeight="Bold"
                        HorizontalAlignment="Center"
@@ -30,7 +30,7 @@
                   Height="240"
                   CornerRadius="40"
                   Margin="8">
-                <Image Source="{x:Bind RandomWord.Image}"
+                <Image Source="{x:Bind RandomWord.Word.Image, Mode=OneWay}"
                        Width="240"
                        Height="240"
                        Stretch="UniformToFill"
@@ -86,7 +86,7 @@
                         <TextBlock Text="Ошибка"
                                    FontFamily="Bahnschrift" />
                         <TextBlock Name="FalseBar"
-                                   Text="0"
+                                   Text="{x:Bind AnswersResult.Mistakes, Mode=OneWay}"
                                    FontFamily="Bahnschrift"
                                    HorizontalAlignment="Center"
                                    FontSize="36" />
@@ -110,7 +110,7 @@
                         <TextBlock Text="Всего"
                                    FontFamily="Bahnschrift" />
                         <TextBlock Name="MaxOfBar"
-                                   Text="0"
+                                   Text="{x:Bind AnswersResult.All, Mode=OneWay}"
                                    FontFamily="Bahnschrift"
                                    HorizontalAlignment="Center"
                                    FontSize="36" />
@@ -134,7 +134,7 @@
                         <TextBlock Text="Успех"
                                    FontFamily="Bahnschrift" />
                         <TextBlock Name="TrueBar"
-                                   Text="0"
+                                   Text="{x:Bind AnswersResult.Correct, Mode=OneWay}"
                                    FontFamily="Bahnschrift"
                                    HorizontalAlignment="Center"
                                    FontSize="36" />
@@ -170,22 +170,22 @@
                               VerticalAlignment="Center">
             <Grid>
                 <StackPanel VerticalAlignment="Center">
-                    <TextBlock Text="{x:Bind RandomWord.RussianForm}"
+                    <TextBlock Text="{x:Bind RandomWord.Word.RussianForm, Mode=OneWay}"
                                FontSize="36"
                                FontWeight="Bold"
                                FontFamily="Bahnschrift"
                                FontStretch="Condensed" />
-                    <TextBlock Text="{x:Bind RandomWord.EnglishForm}"
+                    <TextBlock Text="{x:Bind RandomWord.Word.EnglishForm, Mode=OneWay}"
                                FontSize="32"
                                FontFamily="Bahnschrift"
                                FontStretch="Condensed"
                                Opacity=".7" />
-                    <TextBlock Text="{x:Bind RandomWord.RatingFull()}"
+                    <TextBlock Text="{x:Bind RandomWord.Word.RatingFull(), Mode=OneWay}"
                                FontSize="16"
                                FontFamily="Bahnschrift"
                                FontStretch="Condensed"
                                Opacity=".7" />
-                    <ProgressBar Value="{x:Bind RandomWord.Rating}"
+                    <ProgressBar Value="{x:Bind RandomWord.Word.Rating, Mode=OneWay}"
                                  Height="10"
                                  Margin="0 8"
                                  CornerRadius="5"
@@ -205,7 +205,7 @@
                         Margin="0 8"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Top">
-                    <Image Source="{x:Bind RandomWord.Image}"
+                    <Image Source="{x:Bind RandomWord.Word.Image, Mode=OneWay}"
                            Height="90"
                            Width="160"
                            Stretch="UniformToFill"
