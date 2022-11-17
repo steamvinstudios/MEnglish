@@ -55,14 +55,51 @@ namespace MEnglish
 
         }
 
-        private void englishWordTextBlock_PointerEntered(object sender, PointerRoutedEventArgs e)
+        private void EnglishWordTextBlock_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
             wordInfoTeachingTip.IsOpen = true;
         }
 
-        private void englishWordTextBlock_PointerExited(object sender, PointerRoutedEventArgs e)
+        private void EnglishWordTextBlock_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             wordInfoTeachingTip.IsOpen = false;
+        }
+
+        private async void CheckAnswerButton_ClickAsync(object sender, RoutedEventArgs e)
+        {
+            if (answerTextBox.Text.ToLower().Equals(RandomWord.RussianForm))
+            {
+                using (WordContext db = new WordContext())
+                {
+                    RandomWord.Rating += 10;
+                    db.Update(RandomWord);
+                    db.SaveChanges();
+                }
+
+                var contentDialog = new ContentDialog
+                {
+                    Title = "Верно",
+                    CloseButtonText = "Закрыть"
+                };
+
+                var result = await contentDialog.ShowAsync();
+            }
+            else
+            {
+                using (WordContext db = new WordContext())
+                {
+                    db.Update(RandomWord);
+                    db.SaveChanges();
+                }
+
+                var contentDialog = new ContentDialog
+                {
+                    Title = "Ошибка",
+                    CloseButtonText = "Закрыть"
+                };
+
+                var result = await contentDialog.ShowAsync();
+            }
         }
     }
 }
