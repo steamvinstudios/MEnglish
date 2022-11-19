@@ -26,7 +26,7 @@
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <GenerateTestArtifacts>True</GenerateTestArtifacts>
     <AppxBundle>Always</AppxBundle>
-    <AppxBundlePlatforms>x64</AppxBundlePlatforms>
+    <AppxBundlePlatforms>x86|x64|arm|arm64</AppxBundlePlatforms>
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
     <AppxPackageDir>C:\Users\Steam\Downloads\MeBuilds\</AppxPackageDir>
   </PropertyGroup>
@@ -141,6 +141,7 @@
     <Compile Include="Models\RandomWordPicker.cs" />
     <Compile Include="Models\TrainerStopwatch.cs" />
     <Compile Include="Models\WordContext.cs" />
+    <Compile Include="ViewModels\AboutPageViewModel.cs" />
     <Compile Include="ViewModels\MVVMTestPageViewModel.cs" />
     <Compile Include="Views\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>

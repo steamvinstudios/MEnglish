@@ -1,8 +1,10 @@
-﻿using System;
+﻿using MEnglish.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.ServiceModel.Channels;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -24,27 +26,14 @@ namespace MEnglish
     /// </summary>
     public sealed partial class AboutPage : Page
     {
+        private AboutPageViewModel viewModel = new AboutPageViewModel();
         public AboutPage()
         {
             this.InitializeComponent();
         }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            RectangleAnimation();
-        }
-
-        private async void RectangleAnimation()
-        {
-            while (true)
-            {
-                await Task.Delay(1000);
-                rectangle.Rotation = new Random().Next(360);
-                rectangle1.Rotation = new Random().Next(360);
-                rectangle2.Rotation = new Random().Next(360);
-                rectangle3.Rotation = new Random().Next(360);
-                rectangle4.Rotation = new Random().Next(360);
-                rectangle5.Rotation = new Random().Next(360);
-            }
+            viewModel.StartRectanglesAnimationAsync();
         }
     }
 }
