@@ -43,15 +43,23 @@ namespace MEnglish
 
                 var wordsFromDatabase = db.Words.ToList();
 
-                if (wordsFromDatabase.Count == 0)
+                foreach (var word in wordsFromDatabase)
                 {
-                    foreach (var word in words.All)
+                    if (word != null)
                     {
-                        db.Words.Add(word);
+                        db.Remove(word);
                     }
-
-                    db.SaveChanges();
                 }
+                db.SaveChanges();
+
+                foreach (var word in words.All)
+                {
+                    db.Words.Update(word);
+                }
+
+                db.SaveChanges();
+
+
             }
         }
 
@@ -63,8 +71,6 @@ namespace MEnglish
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
-            
-
             // Не повторяйте инициализацию приложения, если в окне уже имеется содержимое,
             // только обеспечьте активность окна
             if (rootFrame == null)

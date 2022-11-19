@@ -27,13 +27,8 @@ namespace MEnglish
     public sealed partial class AboutPage : Page
     {
         private AboutPageViewModel viewModel = new AboutPageViewModel();
-        public AboutPage()
-        {
-            this.InitializeComponent();
-        }
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
+        public AboutPage() => this.InitializeComponent();
+        private void Page_Loaded(object sender, RoutedEventArgs e) =>
             viewModel.StartRectanglesAnimationAsync();
-        }
     }
 }
