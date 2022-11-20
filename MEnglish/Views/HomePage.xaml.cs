@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Navigation;
 using Windows.UI.Notifications;
 using System.Numerics;
 using Windows.UI.Xaml.Media.Animation;
+using MEnglish.ViewModels;
 
 // Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -27,6 +28,7 @@ namespace MEnglish
     /// </summary>
     public sealed partial class HomePage : Page
     {
+        private HomePageViewModel viewModel = new HomePageViewModel();
         public HomePage()
         {
             this.InitializeComponent();

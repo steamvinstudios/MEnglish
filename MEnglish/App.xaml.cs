@@ -2,22 +2,14 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Core;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 namespace MEnglish
@@ -40,25 +32,6 @@ namespace MEnglish
             using (var db = new WordContext())
             {
                 db.Database.Migrate();
-
-                var wordsFromDatabase = db.Words.ToList();
-
-                foreach (var word in wordsFromDatabase)
-                {
-                    if (word != null)
-                    {
-                        db.Remove(word);
-                    }
-                }
-                db.SaveChanges();
-
-                foreach (var word in words.All)
-                {
-                    db.Words.Update(word);
-                }
-
-                db.SaveChanges();
-
 
             }
         }

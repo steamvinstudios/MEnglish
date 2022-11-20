@@ -1,15 +1,16 @@
-﻿using MEnglish.Models;
+﻿using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using Windows.UI.Xaml.Controls;
 
 namespace MEnglish.ViewModels
 {
-    public class MVVMTestPageViewModel
+    public class HomePageViewModel
     {
-        public Words Words { get; set; } = new Words();
+
     }
 }

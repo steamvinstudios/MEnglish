@@ -11,8 +11,6 @@ namespace MEnglish
     /// </summary>
     public sealed partial class NavigationBarPage : Page
     {
-        public ViewModels.MVVMTestPageViewModel ViewModel { get; set; } =
-            new ViewModels.MVVMTestPageViewModel();
         public NavigationBarPage() =>
             this.InitializeComponent();
 
@@ -20,7 +18,7 @@ namespace MEnglish
             GenPointFrame.Navigate(typeof(AboutPage), null, new DrillInNavigationTransitionInfo());
 
         private void PickerPageButton_Click(object sender, RoutedEventArgs e) =>
-            GenPointFrame.Navigate(typeof(PickerPage), ViewModel.Words, new DrillInNavigationTransitionInfo());
+            GenPointFrame.Navigate(typeof(PickerPage), null, new DrillInNavigationTransitionInfo());
 
         private void HomePageButton_Click(object sender, RoutedEventArgs e) =>
             GenPointFrame.Navigate(typeof(HomePage), null, new DrillInNavigationTransitionInfo());
@@ -41,7 +39,7 @@ namespace MEnglish
         }
 
         private void WriterPageButton_Click(object sender, RoutedEventArgs e) =>
-            GenPointFrame.Navigate(typeof(WriterPage), ViewModel.Words, new DrillInNavigationTransitionInfo());
+            GenPointFrame.Navigate(typeof(WriterPage), null, new DrillInNavigationTransitionInfo());
 
         private void ProfilePageButton_Click(object sender, RoutedEventArgs e) =>
             GenPointFrame.Navigate(typeof(Views.ProfilePage), null, new DrillInNavigationTransitionInfo());
