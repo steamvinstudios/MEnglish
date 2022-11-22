@@ -27,10 +27,9 @@ namespace MEnglish.Views
     /// </summary>
     public sealed partial class ProfilePage : Page
     {
-        // тестовое
         public Words LocalWords { get; set; } = new Words();
-        //
         public Words Words { get; set; } = new Words();
+
         public ProfilePage()
         {
             this.InitializeComponent();
@@ -42,6 +41,7 @@ namespace MEnglish.Views
                 wordsList.ItemsSource = db.Words.ToList();
             }
         }
+
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(WordPage), null, new DrillInNavigationTransitionInfo());
@@ -78,27 +78,6 @@ namespace MEnglish.Views
                         wordsList.ItemsSource = db.Words.ToList();
                     }
                 }
-            }
-        }
-
-        private void LoadDatabaseButton_Click(object sender, RoutedEventArgs e)
-        {
-            using (WordContext db = new WordContext())
-            {
-                wordsList.ItemsSource = db.Words.ToList();
-            }
-        }
-
-        private void AddStartWordsButton_Click(object sender, RoutedEventArgs e)
-        {
-            using (WordContext db = new WordContext())
-            {
-                foreach (var word in LocalWords.All)
-                {
-                    db.Words.Add(word);
-                }
-
-                db.SaveChanges();
             }
         }
 
