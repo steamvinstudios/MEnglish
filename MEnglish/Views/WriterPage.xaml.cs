@@ -51,20 +51,11 @@ namespace MEnglish
             RandomWord.Word = Words[new Random().Next(Words.Count - 1)];
         }
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void EnglishWordTextBlock_PointerEntered(object sender, PointerRoutedEventArgs e)
-        {
+        private void EnglishWordTextBlock_PointerEntered(object sender, PointerRoutedEventArgs e) =>
             wordInfoTeachingTip.IsOpen = true;
-        }
 
-        private void EnglishWordTextBlock_PointerExited(object sender, PointerRoutedEventArgs e)
-        {
+        private void EnglishWordTextBlock_PointerExited(object sender, PointerRoutedEventArgs e) =>
             wordInfoTeachingTip.IsOpen = false;
-        }
 
         private async void CheckAnswerButton_ClickAsync(object sender, RoutedEventArgs e)
         {

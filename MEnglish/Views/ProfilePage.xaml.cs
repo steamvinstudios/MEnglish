@@ -1,4 +1,5 @@
 ﻿using MEnglish.Models;
+using MEnglish.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -27,8 +28,7 @@ namespace MEnglish.Views
     /// </summary>
     public sealed partial class ProfilePage : Page
     {
-        public Words LocalWords { get; set; } = new Words();
-        public Words Words { get; set; } = new Words();
+        private ProfilePageViewModel viewModel = new ProfilePageViewModel();
 
         public ProfilePage()
         {
@@ -42,15 +42,8 @@ namespace MEnglish.Views
             }
         }
 
-        private void AddButton_Click(object sender, RoutedEventArgs e)
-        {
+        private void AddButton_Click(object sender, RoutedEventArgs e) =>
             Frame.Navigate(typeof(WordPage), null, new DrillInNavigationTransitionInfo());
-        }
-
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
