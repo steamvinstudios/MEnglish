@@ -22,7 +22,8 @@
                           OffContent="Нет"
                           OnContent="Да" />
             <DatePicker x:Name="dateBox"
-                        Header="Последнее повторение" />
+                        Header="Последнее повторение"
+                        Date="{x:Bind dateTime}" />
             <TextBox x:Name="imageBox"
                      Header="Путь к картинке" />
             <Grid>
