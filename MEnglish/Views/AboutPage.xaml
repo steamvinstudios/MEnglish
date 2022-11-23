@@ -139,19 +139,6 @@
                            MaxHeight="100" />
                 </HyperlinkButton>
             </Grid>
-            <Grid x:Name="VkSize"
-                  HorizontalAlignment="Center"
-                  Width="320"
-                  CornerRadius="20">
-                <HyperlinkButton NavigateUri="https://vk.com/public198072202"
-                                 MaxHeight="100"
-                                 HorizontalAlignment="Center"
-                                 Canvas.ZIndex="1"
-                                 CornerRadius="20">
-                    <Image x:Name="VKLink"
-                           Source="/Images/VK_Full_Logo.png" />
-                </HyperlinkButton>
-            </Grid>
             <TextBlock Text="{x:Bind viewModel.LastUpdate}"
                        FontSize="14"
                        FontFamily="Bahnschrift"
