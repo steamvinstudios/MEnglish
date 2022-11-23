@@ -63,7 +63,7 @@ namespace MEnglish
             {
                 using (WordContext db = new WordContext())
                 {
-                    RandomWord.Word.Rating += 50;
+                    RandomWord.Word.Rating += 10;
 
                     if (RandomWord.Word.Rating >= 100 && RandomWord.Word.IsLearned == false)
                     {

@@ -80,7 +80,7 @@ namespace MEnglish
 
                 using (WordContext db = new WordContext())
                 {
-                    RandomWordPicker.Word.Rating += 40;
+                    RandomWordPicker.Word.Rating += 10;
 
                     if (RandomWordPicker.Word.Rating >= 100 && RandomWordPicker.Word.IsLearned == false)
                     {
