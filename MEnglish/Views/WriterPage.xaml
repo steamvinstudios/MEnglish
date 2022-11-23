@@ -8,8 +8,7 @@
       xmlns:media="using:Microsoft.UI.Xaml.Media"
       mc:Ignorable="d"
       Background="{ThemeResource AppBarBackgroundThemeBrush}"
-      controls:BackdropMaterial.ApplyToRootOrPageBackground="True"
-      Loaded="Page_Loaded">
+      controls:BackdropMaterial.ApplyToRootOrPageBackground="True">
     <Grid>
         <StackPanel x:Name="CenterStack"
                     HorizontalAlignment="Center"

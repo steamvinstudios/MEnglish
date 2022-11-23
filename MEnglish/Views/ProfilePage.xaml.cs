@@ -78,5 +78,25 @@ namespace MEnglish.Views
         {
             wordsManagerTeachingTip.IsOpen = true;
         }
+
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (WordContext db = new WordContext())
+            {
+                var tmpWords = db.Words.ToList();
+
+                foreach (var word in tmpWords)
+                    db.Words.Remove(word);
+
+                db.SaveChanges();
+
+                foreach (var word in viewModel.AppWords.All)
+                    db.Add(word);
+
+                db.SaveChanges();
+
+                wordsList.ItemsSource = db.Words.ToList();
+            }
+        }
     }
 }

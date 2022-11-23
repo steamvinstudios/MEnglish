@@ -139,8 +139,10 @@
     <Compile Include="Models\FourRandomWords.cs" />
     <Compile Include="Models\RandomWord.cs" />
     <Compile Include="Models\RandomWordPicker.cs" />
+    <Compile Include="Models\Trainer.cs" />
     <Compile Include="Models\TrainerStopwatch.cs" />
     <Compile Include="Models\WordContext.cs" />
+    <Compile Include="Models\WriterTrainer.cs" />
     <Compile Include="ViewModels\AboutPageViewModel.cs" />
     <Compile Include="ViewModels\HomePageViewModel.cs" />
     <Compile Include="ViewModels\ProfilePageViewModel.cs" />

@@ -124,6 +124,10 @@
                         Content="Удалить"
                         HorizontalAlignment="Stretch"
                         Click="DeleteButton_Click" />
+                <Button x:Name="resetButton"
+                        Content="Сбросить слова"
+                        HorizontalAlignment="Stretch"
+                        Click="ResetButton_Click" />
             </StackPanel>
         </controls:TeachingTip>
     </Grid>

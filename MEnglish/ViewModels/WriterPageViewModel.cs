@@ -10,6 +10,7 @@ namespace MEnglish.ViewModels
 {
     public class WriterPageViewModel : ObservableObject
     {
+        public WriterTrainer WriterTrainer { get; set; } = new WriterTrainer();
         private Words words = new Words();
         public Words Words
         {
