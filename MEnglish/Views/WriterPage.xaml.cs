@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using MEnglish.Models;
+using MEnglish.ViewModels;
 using Microsoft.UI.Xaml.Controls;
 using System;
 using System.Collections.Generic;
@@ -35,6 +36,7 @@ namespace MEnglish
     /// </summary>
     public sealed partial class WriterPage : Page
     {
+        private WriterPageViewModel viewModel = new WriterPageViewModel();
         public AnswersResult AnswersResult { get; set; } = new AnswersResult();
         public TrainerStopwatch TrainerStopwatch { get; set; } = new TrainerStopwatch();
         public RandomWord RandomWord { get; set; } = new RandomWord();

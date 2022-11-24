@@ -85,7 +85,7 @@
                         <TextBlock Text="Ошибка"
                                    FontFamily="Bahnschrift" />
                         <TextBlock Name="FalseBar"
-                                   Text="{x:Bind AnswersResult.Mistakes, Mode=OneWay}"
+                                   Text="{x:Bind viewModel.WriterTrainer.AnswersResult.Mistakes, Mode=OneWay}"
                                    FontFamily="Bahnschrift"
                                    HorizontalAlignment="Center"
                                    FontSize="36" />
@@ -109,7 +109,7 @@
                         <TextBlock Text="Всего"
                                    FontFamily="Bahnschrift" />
                         <TextBlock Name="MaxOfBar"
-                                   Text="{x:Bind AnswersResult.All, Mode=OneWay}"
+                                   Text="{x:Bind viewModel.WriterTrainer.AnswersResult.All, Mode=OneWay}"
                                    FontFamily="Bahnschrift"
                                    HorizontalAlignment="Center"
                                    FontSize="36" />
@@ -133,7 +133,7 @@
                         <TextBlock Text="Успех"
                                    FontFamily="Bahnschrift" />
                         <TextBlock Name="TrueBar"
-                                   Text="{x:Bind AnswersResult.Correct, Mode=OneWay}"
+                                   Text="{x:Bind viewModel.WriterTrainer.AnswersResult.Correct, Mode=OneWay}"
                                    FontFamily="Bahnschrift"
                                    HorizontalAlignment="Center"
                                    FontSize="36" />
@@ -154,7 +154,7 @@
                 <Border CornerRadius="0 4 4 0"
                         Background="#55555555">
                     <TextBlock x:Name="trainerStopwatchTextBlock"
-                               Text="{x:Bind TrainerStopwatch.StopwatchResultEverySecond, Mode=OneWay}"
+                               Text="{x:Bind viewModel.WriterTrainer.TrainerStopwatch.StopwatchResultEverySecond, Mode=OneWay}"
                                Padding="4 4"
                                FontSize="16"
                                FontWeight="Bold"

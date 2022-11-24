@@ -10,8 +10,18 @@ namespace MEnglish.Models
 {
     public class Trainer : ObservableObject
     {
-        public AnswersResult AnswersResult { get; set; }
-        public TrainerStopwatch TrainerStopwatch { get; set; }
+        private AnswersResult answersResult = new AnswersResult();
+        public AnswersResult AnswersResult
+        {
+            get => answersResult;
+            set => SetProperty(ref answersResult, value);
+        }
+        private TrainerStopwatch trainerStopwatch = new TrainerStopwatch();
+        public TrainerStopwatch TrainerStopwatch
+        {
+            get => trainerStopwatch;
+            set => SetProperty(ref trainerStopwatch, value);
+        }
         private List<Word> words;
         public List<Word> Words
         {
