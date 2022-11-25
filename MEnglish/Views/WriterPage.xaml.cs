@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using MEnglish.Models;
 using MEnglish.ViewModels;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.UI.Xaml.Controls;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ using Windows.Foundation.Collections;
 using Windows.Media.Core;
 using Windows.Media.Playback;
 using Windows.Networking.Sockets;
+using Windows.System;
 using Windows.UI.Text;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -59,7 +61,16 @@ namespace MEnglish
         private void EnglishWordTextBlock_PointerExited(object sender, PointerRoutedEventArgs e) =>
             wordInfoTeachingTip.IsOpen = false;
 
-        private async void CheckAnswerButton_ClickAsync(object sender, RoutedEventArgs e)
+        private async void CheckAnswerButton_ClickAsync(object sender, RoutedEventArgs e) =>
+            CheckAnswerAsync();
+
+        private void AnswerTextBox_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == VirtualKey.Enter)
+                CheckAnswerAsync();
+        }
+
+        private async void CheckAnswerAsync()
         {
             if (answerTextBox.Text.ToLower().Equals(RandomWord.Word.RussianForm))
             {

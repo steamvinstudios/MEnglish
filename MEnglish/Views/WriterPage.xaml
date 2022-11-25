@@ -44,7 +44,12 @@
                          BorderThickness="1"
                          Width="300"
                          Height="32"
-                         VerticalAlignment="Center" />
+                         VerticalAlignment="Center"
+                         KeyDown="AnswerTextBox_KeyDown">
+                    <TextBox.KeyboardAccelerators>
+                        <KeyboardAccelerator Key="Enter"/>
+                    </TextBox.KeyboardAccelerators>
+                </TextBox>
                 <Button Name="checkAnswerButton"
                         Content="→"
                         FontWeight="Bold"
@@ -214,7 +219,9 @@
             </Grid>
         </controls:TeachingTip>
         <controls:TeachingTip x:Name="wordProgressTeachingTip"
-                              PreferredPlacement="TopRight">
+                              PreferredPlacement="TopRight"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center">
             <Grid>
                 <StackPanel VerticalAlignment="Center">
                     <TextBlock Text="Изучено слово"
