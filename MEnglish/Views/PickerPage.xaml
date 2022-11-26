@@ -27,21 +27,34 @@
             <Image x:Name="randomWordImage"
                    Source="{x:Bind RandomWordPicker.Word.Image, Mode=OneWay}"
                    Stretch="UniformToFill"
+                   Opacity=".5"
                    MaxHeight="800" />
         </Border>
         <StackPanel HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Orientation="Vertical"
                     Width="400">
-            <TextBlock x:Name="randomWordRussianFormTextBlock"
-                       FontSize="36"
-                       FontWeight="Bold"
-                       FontFamily="Bahnschrift"
-                       Text="{x:Bind RandomWordPicker.Word.RussianForm, Mode=OneWay}"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"
-                       Margin="20"
-                       TextWrapping="Wrap" />
+            <Border HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    CornerRadius="180"
+                    BorderThickness="4"
+                    Width="240"
+                    Height="240">
+                <Border.Background>
+                    <media:AcrylicBrush TintColor="Transparent"
+                                        TintLuminosityOpacity=".3" />
+                </Border.Background>
+                <TextBlock x:Name="randomWordRussianFormTextBlock"
+                           FontSize="36"
+                           FontWeight="Bold"
+                           FontFamily="Bahnschrift"
+                           Padding="20 8"
+                           Text="{x:Bind RandomWordPicker.Word.RussianForm, Mode=OneWay}"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           TextWrapping="Wrap" />
+            </Border>
+            <AppBarSeparator />
             <Button x:Name="answerButton1"
                     FontFamily="Bahnschrift"
                     Content="{x:Bind FourRandomWords.Words[0].EnglishForm, Mode=OneWay}"
@@ -57,7 +70,7 @@
                     Click="AnswerButton1_Click">
                 <Button.Background>
                     <media:AcrylicBrush TintColor="Transparent"
-                                        TintLuminosityOpacity=".2" />
+                                        TintLuminosityOpacity=".3" />
                 </Button.Background>
             </Button>
             <Button x:Name="answerButton2"
@@ -75,7 +88,7 @@
                     Click="AnswerButton2_Click">
                 <Button.Background>
                     <media:AcrylicBrush TintColor="Transparent"
-                                        TintLuminosityOpacity=".2" />
+                                        TintLuminosityOpacity=".3" />
                 </Button.Background>
             </Button>
             <Button x:Name="answerButton3"
@@ -93,7 +106,7 @@
                     Click="AnswerButton3_Click">
                 <Button.Background>
                     <media:AcrylicBrush TintColor="Transparent"
-                                        TintLuminosityOpacity=".2" />
+                                        TintLuminosityOpacity=".3" />
                 </Button.Background>
             </Button>
             <Button x:Name="answerButton4"
@@ -111,13 +124,17 @@
                     Click="AnswerButton4_Click">
                 <Button.Background>
                     <media:AcrylicBrush TintColor="Transparent"
-                                        TintLuminosityOpacity=".2" />
+                                        TintLuminosityOpacity=".3" />
                 </Button.Background>
             </Button>
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center"
                         Margin="0 40"
-                        Spacing="8">
+                        Spacing="8" CornerRadius="60" Padding="8">
+                <StackPanel.Background>
+                    <media:AcrylicBrush TintColor="#1111"
+                                        TintLuminosityOpacity=".1" />
+                </StackPanel.Background>
                 <Border CornerRadius="90"
                         BorderThickness="8"
                         Width="100"
@@ -197,7 +214,8 @@
                         BorderBrush="{ThemeResource SystemControlBackgroundAccentRevealBorderBrush}"
                         BorderThickness="2">
                 <StackPanel.Background>
-                    <media:AcrylicBrush TintColor="Transparent" />
+                    <media:AcrylicBrush TintColor="Transparent"
+                                        TintLuminosityOpacity=".4" />
                 </StackPanel.Background>
                 <Border Padding="10 4">
                     <TextBlock Text="Время:"
