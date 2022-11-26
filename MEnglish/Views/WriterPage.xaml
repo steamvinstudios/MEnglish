@@ -47,7 +47,7 @@
                          VerticalAlignment="Center"
                          KeyDown="AnswerTextBox_KeyDown">
                     <TextBox.KeyboardAccelerators>
-                        <KeyboardAccelerator Key="Enter"/>
+                        <KeyboardAccelerator Key="Enter" />
                     </TextBox.KeyboardAccelerators>
                 </TextBox>
                 <Button Name="checkAnswerButton"
@@ -146,20 +146,23 @@
                 </Border>
             </StackPanel>
             <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Center">
-                <Border Background="#33555555"
-                        CornerRadius="4 0 0 4"
-                        Padding="10 4">
+                        HorizontalAlignment="Center"
+                        CornerRadius="16"
+                        Padding="12 0"
+                        BorderBrush="{ThemeResource SystemControlBackgroundAccentRevealBorderBrush}"
+                        BorderThickness="2">
+                <StackPanel.Background>
+                    <media:AcrylicBrush TintColor="Transparent" />
+                </StackPanel.Background>
+                <Border Padding="10 4">
                     <TextBlock Text="Время:"
                                FontSize="16"
                                FontFamily="Bahnschrift"
-                               Foreground="#FF515151"
                                VerticalAlignment="Center" />
                 </Border>
-                <Border CornerRadius="0 4 4 0"
-                        Background="#55555555">
+                <Border>
                     <TextBlock x:Name="trainerStopwatchTextBlock"
-                               Text="{x:Bind viewModel.WriterTrainer.TrainerStopwatch.StopwatchResultEverySecond, Mode=OneWay}"
+                               Text="{x:Bind TrainerStopwatch.StopwatchResultEverySecond, Mode=OneWay}"
                                Padding="4 4"
                                FontSize="16"
                                FontWeight="Bold"

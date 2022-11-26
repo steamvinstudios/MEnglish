@@ -155,18 +155,21 @@
                 </Border>
             </StackPanel>
             <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Center">
-                <Border Background="#33555555"
-                        CornerRadius="4 0 0 4"
-                        Padding="10 4">
+                        HorizontalAlignment="Center"
+                        CornerRadius="16"
+                        Padding="12 0"
+                        BorderBrush="{ThemeResource SystemControlBackgroundAccentRevealBorderBrush}"
+                        BorderThickness="2">
+                <StackPanel.Background>
+                    <media:AcrylicBrush TintColor="Transparent" />
+                </StackPanel.Background>
+                <Border Padding="10 4">
                     <TextBlock Text="Время:"
                                FontSize="16"
                                FontFamily="Bahnschrift"
-                               Foreground="#FF515151"
                                VerticalAlignment="Center" />
                 </Border>
-                <Border CornerRadius="0 4 4 0"
-                        Background="#55555555">
+                <Border>
                     <TextBlock x:Name="trainerStopwatchTextBlock"
                                Text="{x:Bind TrainerStopwatch.StopwatchResultEverySecond, Mode=OneWay}"
                                Padding="4 4"
@@ -178,7 +181,9 @@
             </StackPanel>
         </StackPanel>
         <controls:TeachingTip x:Name="wordProgressTeachingTip"
-                              PreferredPlacement="TopRight">
+                              PreferredPlacement="TopRight"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center">
             <Grid>
                 <StackPanel VerticalAlignment="Center">
                     <TextBlock Text="Изучено слово"
