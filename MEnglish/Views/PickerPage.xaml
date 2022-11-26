@@ -11,15 +11,23 @@
       controls:BackdropMaterial.ApplyToRootOrPageBackground="True"
       Loaded="Page_Loaded">
     <Grid>
-        <Border CornerRadius="360"
-                HorizontalAlignment="Center"
+        <Image Source="{x:Bind RandomWordPicker.Word.Image, Mode=OneWay}"
+               Opacity=".5"
+               Stretch="UniformToFill"
+               Margin="-40"
+               MaxHeight="800" />
+        <Border Margin="-40">
+            <Border.Background>
+                <media:AcrylicBrush TintColor="Transparent"
+                                    TintLuminosityOpacity="0" />
+            </Border.Background>
+        </Border>
+        <Border HorizontalAlignment="Center"
                 VerticalAlignment="Center">
             <Image x:Name="randomWordImage"
                    Source="{x:Bind RandomWordPicker.Word.Image, Mode=OneWay}"
-                   Opacity=".5"
                    Stretch="UniformToFill"
-                   Width="600"
-                   Height="600" />
+                   MaxHeight="800" />
         </Border>
         <StackPanel HorizontalAlignment="Center"
                     VerticalAlignment="Center"
@@ -41,10 +49,17 @@
                     CornerRadius="20"
                     MinWidth="120"
                     Padding="20"
-                    HorizontalAlignment="Center"
+                    HorizontalAlignment="Stretch"
                     FontSize="20"
                     Style="{ThemeResource ButtonRevealStyle}"
-                    Click="AnswerButton1_Click" />
+                    BorderBrush="{ThemeResource SystemControlBackgroundBaseHighRevealBorderBrush}"
+                    BorderThickness="2"
+                    Click="AnswerButton1_Click">
+                <Button.Background>
+                    <media:AcrylicBrush TintColor="Transparent"
+                                        TintLuminosityOpacity=".2" />
+                </Button.Background>
+            </Button>
             <Button x:Name="answerButton2"
                     FontFamily="Bahnschrift"
                     Content="{x:Bind FourRandomWords.Words[1].EnglishForm, Mode=OneWay}"
@@ -52,10 +67,17 @@
                     CornerRadius="20"
                     MinWidth="120"
                     Padding="20"
-                    HorizontalAlignment="Center"
+                    HorizontalAlignment="Stretch"
                     FontSize="20"
                     Style="{ThemeResource ButtonRevealStyle}"
-                    Click="AnswerButton2_Click" />
+                    BorderBrush="{ThemeResource SystemControlBackgroundBaseHighRevealBorderBrush}"
+                    BorderThickness="2"
+                    Click="AnswerButton2_Click">
+                <Button.Background>
+                    <media:AcrylicBrush TintColor="Transparent"
+                                        TintLuminosityOpacity=".2" />
+                </Button.Background>
+            </Button>
             <Button x:Name="answerButton3"
                     FontFamily="Bahnschrift"
                     Content="{x:Bind FourRandomWords.Words[2].EnglishForm, Mode=OneWay}"
@@ -63,10 +85,17 @@
                     CornerRadius="20"
                     MinWidth="120"
                     Padding="20"
-                    HorizontalAlignment="Center"
+                    HorizontalAlignment="Stretch"
                     FontSize="20"
                     Style="{ThemeResource ButtonRevealStyle}"
-                    Click="AnswerButton3_Click" />
+                    BorderBrush="{ThemeResource SystemControlBackgroundBaseHighRevealBorderBrush}"
+                    BorderThickness="2"
+                    Click="AnswerButton3_Click">
+                <Button.Background>
+                    <media:AcrylicBrush TintColor="Transparent"
+                                        TintLuminosityOpacity=".2" />
+                </Button.Background>
+            </Button>
             <Button x:Name="answerButton4"
                     FontFamily="Bahnschrift"
                     Content="{x:Bind FourRandomWords.Words[3].EnglishForm, Mode=OneWay}"
@@ -74,10 +103,17 @@
                     CornerRadius="20"
                     MinWidth="120"
                     Padding="20"
-                    HorizontalAlignment="Center"
+                    HorizontalAlignment="Stretch"
                     FontSize="20"
                     Style="{ThemeResource ButtonRevealStyle}"
-                    Click="AnswerButton4_Click" />
+                    BorderBrush="{ThemeResource SystemControlBackgroundBaseHighRevealBorderBrush}"
+                    BorderThickness="2"
+                    Click="AnswerButton4_Click">
+                <Button.Background>
+                    <media:AcrylicBrush TintColor="Transparent"
+                                        TintLuminosityOpacity=".2" />
+                </Button.Background>
+            </Button>
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center"
                         Margin="0 40"
@@ -105,7 +141,7 @@
                                    FontSize="36" />
                     </StackPanel>
                 </Border>
-                <AppBarSeparator VerticalAlignment="Center" />
+                <AppBarSeparator />
                 <Border CornerRadius="90"
                         BorderThickness="8"
                         Width="100"
@@ -129,7 +165,7 @@
                                    FontSize="36" />
                     </StackPanel>
                 </Border>
-                <AppBarSeparator VerticalAlignment="Center" />
+                <AppBarSeparator />
                 <Border CornerRadius="90"
                         BorderThickness="8"
                         Width="100"
