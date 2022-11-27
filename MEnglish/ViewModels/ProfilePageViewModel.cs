@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MEnglish.ViewModels
 {
-    public class ProfilePageViewModel : ObservableObject
+    public class ProfilePageViewModel : BaseViewModel
     {
         public Words AppWords { get; set; } = new Words();
     }

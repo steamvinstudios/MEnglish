@@ -8,19 +8,13 @@ using System.Threading.Tasks;
 
 namespace MEnglish.ViewModels
 {
-    public class WriterPageViewModel : ObservableObject
+    public class WriterPageViewModel : BaseViewModel
     {
         private WriterTrainer writerTrainer = new WriterTrainer();
         public WriterTrainer WriterTrainer
         {
             get => writerTrainer;
             set => SetProperty(ref writerTrainer, value);
-        }
-        private Words words = new Words();
-        public Words Words
-        {
-            get => words;
-            set => SetProperty(ref words, value);
         }
     }
 }

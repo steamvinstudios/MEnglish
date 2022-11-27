@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MEnglish.ViewModels
 {
-    public class AboutPageViewModel : ObservableObject
+    public class AboutPageViewModel : BaseViewModel
     {
         public string LastUpdate { get; } = "Обновление от: 23.11.2022";
         public string AppVersion { get; } = "Версия: 11.1 Store Edition";

@@ -132,7 +132,7 @@
                         Margin="0 40"
                         Spacing="8" CornerRadius="60" Padding="8">
                 <StackPanel.Background>
-                    <media:AcrylicBrush TintColor="#1111"
+                    <media:AcrylicBrush TintColor="Transparent"
                                         TintLuminosityOpacity=".1" />
                 </StackPanel.Background>
                 <Border CornerRadius="90"
