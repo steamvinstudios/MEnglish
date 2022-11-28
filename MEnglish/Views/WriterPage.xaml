@@ -18,7 +18,7 @@
                        HorizontalAlignment="Center"
                        FontFamily="Bahnschrift" />
             <TextBlock x:Name="englishWordTextBlock"
-                       Text="{x:Bind RandomWord.Word.EnglishForm, Mode=OneWay}"
+                       Text="{x:Bind viewModel.WriterTrainer.RandomWord.EnglishForm, Mode=OneWay}"
                        FontSize="36"
                        FontWeight="Bold"
                        HorizontalAlignment="Center"
@@ -29,7 +29,7 @@
                   Height="240"
                   CornerRadius="40"
                   Margin="8">
-                <Image Source="{x:Bind RandomWord.Word.Image, Mode=OneWay}"
+                <Image Source="{x:Bind viewModel.WriterTrainer.RandomWord.Image, Mode=OneWay}"
                        Width="240"
                        Height="240"
                        Stretch="UniformToFill"
@@ -40,7 +40,7 @@
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center">
                 <TextBox Name="answerTextBox"
-                         PlaceholderText=""
+                         Text="{x:Bind viewModel.WriterTrainer.AnswerTextBoxText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                          CornerRadius="4 0 0 4"
                          BorderThickness="1"
                          Width="300"
@@ -59,7 +59,7 @@
                         Margin="0"
                         VerticalAlignment="Center"
                         Style="{ThemeResource ButtonRevealStyle}"
-                        Click="CheckAnswerButton_ClickAsync" />
+                        Click="CheckAnswerButton_Click" />
             </StackPanel>
             <AppBarSeparator />
             <StackPanel Orientation="Horizontal"
@@ -156,7 +156,7 @@
                 </Border>
                 <Border>
                     <TextBlock x:Name="trainerStopwatchTextBlock"
-                               Text="{x:Bind TrainerStopwatch.StopwatchResultEverySecond, Mode=OneWay}"
+                               Text="{x:Bind viewModel.WriterTrainer.TrainerStopwatch.StopwatchResultEverySecond, Mode=OneWay}"
                                Padding="4 4"
                                FontSize="16"
                                FontWeight="Bold"
@@ -168,25 +168,26 @@
         <controls:TeachingTip x:Name="wordInfoTeachingTip"
                               Target="{x:Bind englishWordTextBlock}"
                               HorizontalAlignment="Center"
-                              VerticalAlignment="Center">
+                              VerticalAlignment="Center"
+                              IsOpen="{x:Bind viewModel.WriterTrainer.WordInfoTeachingTipIsOpen, Mode=OneWay}">
             <Grid>
                 <StackPanel VerticalAlignment="Center">
-                    <TextBlock Text="{x:Bind RandomWord.Word.RussianForm, Mode=OneWay}"
+                    <TextBlock Text="{x:Bind viewModel.WriterTrainer.RandomWord.RussianForm, Mode=OneWay}"
                                FontSize="36"
                                FontWeight="Bold"
                                FontFamily="Bahnschrift"
                                FontStretch="Condensed" />
-                    <TextBlock Text="{x:Bind RandomWord.Word.EnglishForm, Mode=OneWay}"
+                    <TextBlock Text="{x:Bind viewModel.WriterTrainer.RandomWord.EnglishForm, Mode=OneWay}"
                                FontSize="32"
                                FontFamily="Bahnschrift"
                                FontStretch="Condensed"
                                Opacity=".7" />
-                    <TextBlock Text="{x:Bind RandomWord.Word.RatingFull(), Mode=OneWay}"
+                    <TextBlock Text="{x:Bind viewModel.WriterTrainer.RandomWord.RatingFull(), Mode=OneWay}"
                                FontSize="16"
                                FontFamily="Bahnschrift"
                                FontStretch="Condensed"
                                Opacity=".7" />
-                    <ProgressBar Value="{x:Bind RandomWord.Word.Rating, Mode=OneWay}"
+                    <ProgressBar Value="{x:Bind viewModel.WriterTrainer.RandomWord.Rating, Mode=OneWay}"
                                  Height="10"
                                  Margin="0 8"
                                  CornerRadius="5"
@@ -206,7 +207,7 @@
                         Margin="0 8"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Top">
-                    <Image Source="{x:Bind RandomWord.Word.Image, Mode=OneWay}"
+                    <Image Source="{x:Bind viewModel.WriterTrainer.RandomWord.Image, Mode=OneWay}"
                            Height="90"
                            Width="160"
                            Stretch="UniformToFill"
@@ -218,19 +219,20 @@
         <controls:TeachingTip x:Name="wordProgressTeachingTip"
                               PreferredPlacement="TopRight"
                               HorizontalAlignment="Center"
-                              VerticalAlignment="Center">
+                              VerticalAlignment="Center"
+                              IsOpen="{x:Bind viewModel.WriterTrainer.WordProgressTeachingTipIsOpen, Mode=OneWay}">
             <Grid>
                 <StackPanel VerticalAlignment="Center">
                     <TextBlock Text="Изучено слово"
                                FontSize="24"
                                FontFamily="Bahnschrift"
                                FontStretch="Condensed" />
-                    <TextBlock Text="{x:Bind RandomWord.Word.EnglishForm, Mode=OneWay}"
+                    <TextBlock Text="{x:Bind viewModel.WriterTrainer.RandomWord.EnglishForm, Mode=OneWay}"
                                FontSize="32"
                                FontFamily="Bahnschrift"
                                FontStretch="Condensed"
                                FontWeight="Bold" />
-                    <TextBlock Text="{x:Bind RandomWord.Word.RussianForm, Mode=OneWay}"
+                    <TextBlock Text="{x:Bind viewModel.WriterTrainer.RandomWord.RussianForm, Mode=OneWay}"
                                FontSize="24"
                                Opacity=".7"
                                FontFamily="Bahnschrift"
@@ -242,7 +244,7 @@
                            VerticalAlignment="Top"
                            FontFamily="Bahnschrift"
                            FontStretch="Condensed" />
-                <ProgressBar Value="{x:Bind RandomWord.Word.Rating, Mode=OneWay}"
+                <ProgressBar Value="{x:Bind viewModel.WriterTrainer.RandomWord.Rating, Mode=OneWay}"
                              Height="10"
                              Width="100"
                              CornerRadius="5"

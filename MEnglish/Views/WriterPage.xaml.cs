@@ -39,88 +39,22 @@ namespace MEnglish
     public sealed partial class WriterPage : Page
     {
         private WriterPageViewModel viewModel = new WriterPageViewModel();
-        public AnswersResult AnswersResult { get; set; } = new AnswersResult();
-        public TrainerStopwatch TrainerStopwatch { get; set; } = new TrainerStopwatch();
-        public RandomWord RandomWord { get; set; } = new RandomWord();
-        public List<Word> Words { get; set; }
-        public WriterPage()
-        {
+        public WriterPage() =>
             this.InitializeComponent();
 
-            using (WordContext db = new WordContext())
-            {
-                Words = db.Words.ToList();
-            }
-
-            RandomWord.Word = Words[new Random().Next(Words.Count - 1)];
-        }
-
         private void EnglishWordTextBlock_PointerEntered(object sender, PointerRoutedEventArgs e) =>
-            wordInfoTeachingTip.IsOpen = true;
+            viewModel.WriterTrainer.WordInfoTeachingTipIsOpen = true;
 
         private void EnglishWordTextBlock_PointerExited(object sender, PointerRoutedEventArgs e) =>
-            wordInfoTeachingTip.IsOpen = false;
+            viewModel.WriterTrainer.WordInfoTeachingTipIsOpen = false;
 
-        private async void CheckAnswerButton_ClickAsync(object sender, RoutedEventArgs e) =>
-            CheckAnswerAsync();
+        private void CheckAnswerButton_Click(object sender, RoutedEventArgs e) =>
+            viewModel.WriterTrainer.CheckAnswerAsync();
 
         private void AnswerTextBox_KeyDown(object sender, KeyRoutedEventArgs e)
         {
             if (e.Key == VirtualKey.Enter)
-                CheckAnswerAsync();
-        }
-
-        private async void CheckAnswerAsync()
-        {
-            if (answerTextBox.Text.ToLower().Equals(RandomWord.Word.RussianForm))
-            {
-                using (WordContext db = new WordContext())
-                {
-                    RandomWord.Word.Rating += 10;
-
-                    if (RandomWord.Word.Rating >= 100 && RandomWord.Word.IsLearned == false)
-                    {
-                        RandomWord.Word.IsLearned = true;
-                        wordProgressTeachingTip.IsOpen = true;
-                        await Task.Delay(2000);
-                        wordProgressTeachingTip.IsOpen = false;
-                        await Task.Delay(1000);
-                    }
-
-                    db.Update(RandomWord.Word);
-                    db.SaveChanges();
-                }
-
-                RandomWord.Word = Words[new Random().Next(Words.Count - 1)];
-
-                answerTextBox.Text = "";
-
-                AnswersResult.All++;
-                AnswersResult.Correct++;
-
-                wordInfoTeachingTip.IsOpen = false;
-            }
-            else
-            {
-                using (WordContext db = new WordContext())
-                {
-                    db.Update(RandomWord.Word);
-                    db.SaveChanges();
-                }
-
-                var contentDialog = new ContentDialog
-                {
-                    Title = "Ошибка",
-                    CloseButtonText = "Закрыть"
-                };
-
-                var result = await contentDialog.ShowAsync();
-
-                AnswersResult.All++;
-                AnswersResult.Mistakes++;
-
-                wordInfoTeachingTip.IsOpen = true;
-            }
+                viewModel.WriterTrainer.CheckAnswerAsync();
         }
     }
 }

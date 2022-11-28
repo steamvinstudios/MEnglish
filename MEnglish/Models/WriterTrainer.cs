@@ -27,15 +27,19 @@ namespace MEnglish.Models
             get => randomWord;
             set => SetProperty(ref randomWord, value);
         }
-        private string answerTextBoxText = "No Data";
+        private string answerTextBoxText = "";
         public string AnswerTextBoxText
         {
             get => answerTextBoxText;
             set => SetProperty(ref answerTextBoxText, value);
         }
-        private async void CheckAnswerAsync()
+        public WriterTrainer()
         {
-            if (answerTextBoxText.ToLower().Equals(RandomWord.RussianForm))
+            RandomWord = Words[new Random().Next(Words.Count - 1)];
+        }
+        public async void CheckAnswerAsync()
+        {
+            if (AnswerTextBoxText.ToLower().Equals(RandomWord.RussianForm))
             {
                 using (WordContext db = new WordContext())
                 {
@@ -44,9 +48,9 @@ namespace MEnglish.Models
                     if (RandomWord.Rating >= 100 && RandomWord.IsLearned == false)
                     {
                         RandomWord.IsLearned = true;
-                        wordProgressTeachingTipIsOpen = true;
+                        WordProgressTeachingTipIsOpen = true;
                         await Task.Delay(2000);
-                        wordProgressTeachingTipIsOpen = false;
+                        WordProgressTeachingTipIsOpen = false;
                         await Task.Delay(1000);
                     }
 
@@ -56,12 +60,12 @@ namespace MEnglish.Models
 
                 RandomWord = Words[new Random().Next(Words.Count - 1)];
 
-                answerTextBoxText = "";
+                AnswerTextBoxText = "";
 
                 AnswersResult.All++;
                 AnswersResult.Correct++;
 
-                wordInfoTeachingTipIsOpen = false;
+                WordInfoTeachingTipIsOpen = false;
             }
             else
             {
@@ -82,7 +86,7 @@ namespace MEnglish.Models
                 AnswersResult.All++;
                 AnswersResult.Mistakes++;
 
-                wordInfoTeachingTipIsOpen = true;
+                WordInfoTeachingTipIsOpen = true;
             }
         }
     }
