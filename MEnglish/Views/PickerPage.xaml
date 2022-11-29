@@ -6,12 +6,12 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:controls="using:Microsoft.UI.Xaml.Controls"
       xmlns:media="using:Microsoft.UI.Xaml.Media"
+      xmlns:models="using:MEnglish.Models"
       mc:Ignorable="d"
       Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-      controls:BackdropMaterial.ApplyToRootOrPageBackground="True"
-      Loaded="Page_Loaded">
+      controls:BackdropMaterial.ApplyToRootOrPageBackground="True">
     <Grid>
-        <Image Source="{x:Bind RandomWordPicker.Word.Image, Mode=OneWay}"
+        <Image Source="{x:Bind viewModel.PickerTrainer.RandomWord.Image, Mode=OneWay}"
                Opacity=".5"
                Stretch="UniformToFill"
                Margin="-40"
@@ -25,7 +25,7 @@
         <Border HorizontalAlignment="Center"
                 VerticalAlignment="Center">
             <Image x:Name="randomWordImage"
-                   Source="{x:Bind RandomWordPicker.Word.Image, Mode=OneWay}"
+                   Source="{x:Bind viewModel.PickerTrainer.RandomWord.Image, Mode=OneWay}"
                    Stretch="UniformToFill"
                    Opacity=".5"
                    MaxHeight="800" />
@@ -49,7 +49,7 @@
                            FontWeight="Bold"
                            FontFamily="Bahnschrift"
                            Padding="20 8"
-                           Text="{x:Bind RandomWordPicker.Word.RussianForm, Mode=OneWay}"
+                           Text="{x:Bind viewModel.PickerTrainer.RandomWord.RussianForm, Mode=OneWay}"
                            VerticalAlignment="Center"
                            HorizontalAlignment="Center"
                            TextWrapping="Wrap" />
@@ -57,7 +57,7 @@
             <AppBarSeparator />
             <Button x:Name="answerButton1"
                     FontFamily="Bahnschrift"
-                    Content="{x:Bind FourRandomWords.Words[0].EnglishForm, Mode=OneWay}"
+                    Content="{x:Bind viewModel.PickerTrainer.FourRandomWords[0].EnglishForm, Mode=OneWay}"
                     Margin="4"
                     CornerRadius="20"
                     MinWidth="120"
@@ -75,7 +75,7 @@
             </Button>
             <Button x:Name="answerButton2"
                     FontFamily="Bahnschrift"
-                    Content="{x:Bind FourRandomWords.Words[1].EnglishForm, Mode=OneWay}"
+                    Content="{x:Bind viewModel.PickerTrainer.FourRandomWords[1].EnglishForm, Mode=OneWay}"
                     Margin="4"
                     CornerRadius="20"
                     MinWidth="120"
@@ -93,7 +93,7 @@
             </Button>
             <Button x:Name="answerButton3"
                     FontFamily="Bahnschrift"
-                    Content="{x:Bind FourRandomWords.Words[2].EnglishForm, Mode=OneWay}"
+                    Content="{x:Bind viewModel.PickerTrainer.FourRandomWords[2].EnglishForm, Mode=OneWay}"
                     Margin="4"
                     CornerRadius="20"
                     MinWidth="120"
@@ -111,7 +111,7 @@
             </Button>
             <Button x:Name="answerButton4"
                     FontFamily="Bahnschrift"
-                    Content="{x:Bind FourRandomWords.Words[3].EnglishForm, Mode=OneWay}"
+                    Content="{x:Bind viewModel.PickerTrainer.FourRandomWords[3].EnglishForm, Mode=OneWay}"
                     Margin="4"
                     CornerRadius="20"
                     MinWidth="120"
@@ -130,7 +130,9 @@
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center"
                         Margin="0 40"
-                        Spacing="8" CornerRadius="60" Padding="8">
+                        Spacing="8"
+                        CornerRadius="60"
+                        Padding="8">
                 <StackPanel.Background>
                     <media:AcrylicBrush TintColor="Transparent"
                                         TintLuminosityOpacity=".1" />
@@ -152,7 +154,7 @@
                         <TextBlock Text="Ошибка"
                                    FontFamily="Bahnschrift" />
                         <TextBlock Name="FalseBar"
-                                   Text="{x:Bind AnswersResult.Mistakes, Mode=OneWay}"
+                                   Text="{x:Bind viewModel.PickerTrainer.AnswersResult.Mistakes, Mode=OneWay}"
                                    FontFamily="Bahnschrift"
                                    HorizontalAlignment="Center"
                                    FontSize="36" />
@@ -176,7 +178,7 @@
                         <TextBlock Text="Всего"
                                    FontFamily="Bahnschrift" />
                         <TextBlock Name="MaxOfBar"
-                                   Text="{x:Bind AnswersResult.All, Mode=OneWay}"
+                                   Text="{x:Bind viewModel.PickerTrainer.AnswersResult.All, Mode=OneWay}"
                                    FontFamily="Bahnschrift"
                                    HorizontalAlignment="Center"
                                    FontSize="36" />
@@ -200,7 +202,7 @@
                         <TextBlock Text="Успех"
                                    FontFamily="Bahnschrift" />
                         <TextBlock Name="TrueBar"
-                                   Text="{x:Bind AnswersResult.Correct, Mode=OneWay}"
+                                   Text="{x:Bind viewModel.PickerTrainer.AnswersResult.Correct, Mode=OneWay}"
                                    FontFamily="Bahnschrift"
                                    HorizontalAlignment="Center"
                                    FontSize="36" />
@@ -225,7 +227,7 @@
                 </Border>
                 <Border>
                     <TextBlock x:Name="trainerStopwatchTextBlock"
-                               Text="{x:Bind TrainerStopwatch.StopwatchResultEverySecond, Mode=OneWay}"
+                               Text="{x:Bind viewModel.PickerTrainer.TrainerStopwatch.StopwatchResultEverySecond, Mode=OneWay}"
                                Padding="4 4"
                                FontSize="16"
                                FontWeight="Bold"
@@ -244,12 +246,12 @@
                                FontSize="24"
                                FontFamily="Bahnschrift"
                                FontStretch="Condensed" />
-                    <TextBlock Text="{x:Bind RandomWordPicker.Word.EnglishForm, Mode=OneWay}"
+                    <TextBlock Text="{x:Bind viewModel.PickerTrainer.RandomWord.EnglishForm, Mode=OneWay}"
                                FontSize="32"
                                FontFamily="Bahnschrift"
                                FontStretch="Condensed"
                                FontWeight="Bold" />
-                    <TextBlock Text="{x:Bind RandomWordPicker.Word.RussianForm, Mode=OneWay}"
+                    <TextBlock Text="{x:Bind viewModel.PickerTrainer.RandomWord.RussianForm, Mode=OneWay}"
                                FontSize="24"
                                Opacity=".7"
                                FontFamily="Bahnschrift"
@@ -261,7 +263,7 @@
                            VerticalAlignment="Top"
                            FontFamily="Bahnschrift"
                            FontStretch="Condensed" />
-                <ProgressBar Value="{x:Bind RandomWordPicker.Word.Rating, Mode=OneWay}"
+                <ProgressBar Value="{x:Bind viewModel.PickerTrainer.RandomWord.Rating, Mode=OneWay}"
                              Height="10"
                              Width="100"
                              CornerRadius="5"
