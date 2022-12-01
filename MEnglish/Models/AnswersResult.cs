@@ -27,5 +27,9 @@ namespace MEnglish.Models
             get => mistakes;
             set => SetProperty(ref mistakes, value);
         }
+
+        public void IncreaseAll() => All++;
+        public void IncreaseCorrect() => Correct++;
+        public void IncreaseMistakes() => Mistakes++;
     }
 }

@@ -62,8 +62,8 @@ namespace MEnglish.Models
 
                 AnswerTextBoxText = "";
 
-                AnswersResult.All++;
-                AnswersResult.Correct++;
+                AnswersResult.IncreaseAll();
+                AnswersResult.IncreaseCorrect();
 
                 WordInfoTeachingTipIsOpen = false;
             }
@@ -83,8 +83,8 @@ namespace MEnglish.Models
 
                 var result = await contentDialog.ShowAsync();
 
-                AnswersResult.All++;
-                AnswersResult.Mistakes++;
+                AnswersResult.IncreaseAll();
+                AnswersResult.IncreaseMistakes();
 
                 WordInfoTeachingTipIsOpen = true;
             }

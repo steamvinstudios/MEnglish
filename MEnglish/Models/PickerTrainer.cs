@@ -38,10 +38,8 @@ namespace MEnglish.Models
                 FourRandomWords[i] = Words[new Random().Next(Words.Count - 1)];
         }
 
-        private void AddRandomWord()
-        {
+        private void AddRandomWord() =>
             RandomWord = FourRandomWords[new Random().Next(FourRandomWords.Count - 1)];
-        }
 
         public async void CheckWords(object sender)
         {
@@ -66,8 +64,8 @@ namespace MEnglish.Models
                     db.SaveChanges();
                 }
 
-                AnswersResult.All++;
-                AnswersResult.Correct++;
+                AnswersResult.IncreaseAll();
+                AnswersResult.IncreaseCorrect();
 
                 using (WordContext db = new WordContext())
                 {
@@ -95,8 +93,8 @@ namespace MEnglish.Models
                     db.SaveChanges();
                 }
 
-                AnswersResult.All++;
-                AnswersResult.Mistakes++;
+                AnswersResult.IncreaseAll();
+                AnswersResult.IncreaseMistakes();
             }
         }
     }
