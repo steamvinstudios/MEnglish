@@ -19,14 +19,8 @@ namespace MEnglish.ViewModels
         // from ProfilePage
         // адаптировать для ViewModel
         // ------------------------------------------------------------------------------
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            using (WordContext db = new WordContext())
-            {
-                wordsList.ItemsSource = db.Words.ToList();
-            }
-        }
-
+        
+        /*
         private void AddButton_Click(object sender, RoutedEventArgs e) =>
             Frame.Navigate(typeof(WordPage), null, new DrillInNavigationTransitionInfo());
 
@@ -84,5 +78,6 @@ namespace MEnglish.ViewModels
             }
         }
         // ------------------------------------------------------------------------------
+        */
     }
 }

@@ -9,7 +9,7 @@ namespace MEnglish.ViewModels
 {
     public class AboutPageViewModel : BaseViewModel
     {
-        public string LastUpdate { get; } = "Обновление от: 28.11.2022";
+        public string LastUpdate { get; } = "Обновление от: 02.12.2022";
         public string AppVersion { get; } = "Версия: 11.1 Store Edition";
         private int rectanleRotation;
         public int RectanleRotation

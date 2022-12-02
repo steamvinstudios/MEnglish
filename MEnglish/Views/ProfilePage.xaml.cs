@@ -36,6 +36,7 @@ namespace MEnglish.Views
         }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            // вынести в отдельный метод
             using (WordContext db = new WordContext())
             {
                 wordsList.ItemsSource = db.Words.ToList();

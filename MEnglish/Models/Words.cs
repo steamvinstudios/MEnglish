@@ -300,6 +300,18 @@ namespace MEnglish.Models
                 RussianForm = "отсутствовать",
                 Image = "/ArrayPics/beout.jpg"
             },
+            new Word
+            {
+                EnglishForm = "cake",
+                RussianForm = "торт",
+                Image = "/ArrayPics/cake.jpg"
+            },
+            new Word
+            {
+                EnglishForm = "honey",
+                RussianForm = "мёд",
+                Image = "/ArrayPics/honey.jpg"
+            },
           /*  new Word
             {
                 EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "break down" } },

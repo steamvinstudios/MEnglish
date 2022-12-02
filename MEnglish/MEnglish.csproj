@@ -185,9 +185,12 @@
     <Content Include="ArrayPics\animal.jpg" />
     <Content Include="ArrayPics\apple.jpg" />
     <Content Include="ArrayPics\area.jpg" />
+    <Content Include="ArrayPics\askfor.jpg" />
+    <Content Include="ArrayPics\beout.jpg" />
     <Content Include="ArrayPics\book.jpg" />
     <Content Include="ArrayPics\bridge.jpg" />
     <Content Include="ArrayPics\bye.jpg" />
+    <Content Include="ArrayPics\cake.jpg" />
     <Content Include="ArrayPics\camera.jpg" />
     <Content Include="ArrayPics\check out.jpg" />
     <Content Include="ArrayPics\coffee.jpg" />
@@ -203,6 +206,7 @@
     <Content Include="ArrayPics\hand.jpg" />
     <Content Include="ArrayPics\hello.jpg" />
     <Content Include="ArrayPics\help.jpg" />
+    <Content Include="ArrayPics\honey.jpg" />
     <Content Include="ArrayPics\horse.jpg" />
     <Content Include="ArrayPics\house.jpg" />
     <Content Include="ArrayPics\idea.jpg" />
