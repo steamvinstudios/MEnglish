@@ -312,6 +312,37 @@ namespace MEnglish.Models
                 RussianForm = "мёд",
                 Image = "/ArrayPics/honey.jpg"
             },
+            // добавить картинки словам ниже
+            new Word
+            {
+                EnglishForm = "winter",
+                RussianForm = "зима",
+                Image = "/ArrayPics/honey.jpg"
+            },
+            new Word
+            {
+                EnglishForm = "snowball",
+                RussianForm = "снежок",
+                Image = "/ArrayPics/honey.jpg"
+            },
+            new Word
+            {
+                EnglishForm = "snowman",
+                RussianForm = "снеговик",
+                Image = "/ArrayPics/honey.jpg"
+            },
+            new Word
+            {
+                EnglishForm = "ice",
+                RussianForm = "лёд",
+                Image = "/ArrayPics/honey.jpg"
+            },
+            new Word
+            {
+                EnglishForm = "window",
+                RussianForm = "окно",
+                Image = "/ArrayPics/honey.jpg"
+            },
           /*  new Word
             {
                 EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "break down" } },

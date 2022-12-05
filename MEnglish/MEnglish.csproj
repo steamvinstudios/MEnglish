@@ -136,10 +136,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Models\AnswersResult.cs" />
-    <Compile Include="Models\FourRandomWords.cs" />
     <Compile Include="Models\PickerTrainer.cs" />
-    <Compile Include="Models\RandomWord.cs" />
-    <Compile Include="Models\RandomWordPicker.cs" />
     <Compile Include="Models\Trainer.cs" />
     <Compile Include="Models\TrainerStopwatch.cs" />
     <Compile Include="Models\WordContext.cs" />

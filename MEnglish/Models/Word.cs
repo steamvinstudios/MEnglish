@@ -12,7 +12,7 @@ namespace MEnglish.Models
         public int Id { get; set; }
         public string EnglishForm { get; set; } = "No Data";
         public string RussianForm { get; set; } = "No Data";
-        public int Rating { get; set; } = 0;
+        public int Rating { get; set; }
         public bool IsLearned { get; set; } = false;
         public DateTime LastRepeat { get; set; } = DateTime.Now;
         public string Image { get; set; } = "/ArrayPics/food.jpg";
