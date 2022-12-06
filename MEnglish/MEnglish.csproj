@@ -206,6 +206,7 @@
     <Content Include="ArrayPics\honey.jpg" />
     <Content Include="ArrayPics\horse.jpg" />
     <Content Include="ArrayPics\house.jpg" />
+    <Content Include="ArrayPics\ice.jpg" />
     <Content Include="ArrayPics\idea.jpg" />
     <Content Include="ArrayPics\jungle.jpg" />
     <Content Include="ArrayPics\keep away.jpg" />
@@ -221,6 +222,8 @@
     <Content Include="ArrayPics\round.jpg" />
     <Content Include="ArrayPics\sea.jpg" />
     <Content Include="ArrayPics\small.jpg" />
+    <Content Include="ArrayPics\snowball.jpg" />
+    <Content Include="ArrayPics\snowman.jpg" />
     <Content Include="ArrayPics\star.jpg" />
     <Content Include="ArrayPics\strawberry.jpg" />
     <Content Include="ArrayPics\study.jpg" />
@@ -233,6 +236,8 @@
     <Content Include="ArrayPics\watch.jpg" />
     <Content Include="ArrayPics\way.jpg" />
     <Content Include="ArrayPics\wind.jpg" />
+    <Content Include="ArrayPics\window.jpg" />
+    <Content Include="ArrayPics\winter.jpg" />
     <Content Include="ArrayPics\write.jpg" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-125.png" />

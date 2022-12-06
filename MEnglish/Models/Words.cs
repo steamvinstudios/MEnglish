@@ -317,31 +317,31 @@ namespace MEnglish.Models
             {
                 EnglishForm = "winter",
                 RussianForm = "зима",
-                Image = "/ArrayPics/honey.jpg"
+                Image = "/ArrayPics/winter.jpg"
             },
             new Word
             {
                 EnglishForm = "snowball",
                 RussianForm = "снежок",
-                Image = "/ArrayPics/honey.jpg"
+                Image = "/ArrayPics/snowball.jpg"
             },
             new Word
             {
                 EnglishForm = "snowman",
                 RussianForm = "снеговик",
-                Image = "/ArrayPics/honey.jpg"
+                Image = "/ArrayPics/snowman.jpg"
             },
             new Word
             {
                 EnglishForm = "ice",
                 RussianForm = "лёд",
-                Image = "/ArrayPics/honey.jpg"
+                Image = "/ArrayPics/ice.jpg"
             },
             new Word
             {
                 EnglishForm = "window",
                 RussianForm = "окно",
-                Image = "/ArrayPics/honey.jpg"
+                Image = "/ArrayPics/window.jpg"
             },
           /*  new Word
             {
