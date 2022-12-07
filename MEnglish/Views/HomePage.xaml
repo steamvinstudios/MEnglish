@@ -121,6 +121,46 @@
                                            FontStretch="Condensed"
                                            TextWrapping="Wrap"
                                            HorizontalAlignment="Center" />
+                                <TextBlock Text="7 декабря 2022"
+                                           Width="340"
+                                           FontSize="20"
+                                           FontFamily="Bahnschrift"
+                                           TextWrapping="Wrap"
+                                           HorizontalAlignment="Center">
+                                    <TextBlock.Foreground>
+                                        <LinearGradientBrush>
+                                            <GradientStop Color="{ThemeResource SystemAccentColorLight2}" />
+                                            <GradientStop Color="{ThemeResource SystemAccentColor}"
+                                                          Offset="1" />
+                                        </LinearGradientBrush>
+                                    </TextBlock.Foreground></TextBlock>
+                                <TextBlock Text="Добавлены новые слова. Теперь приложение подстраивается под Вас. Знает, какие слова Вам лучше изучить/повторить сейчас, а какие оставить на потом"
+                                           Width="340"
+                                           FontSize="16"
+                                           FontFamily="Bahnschrift"
+                                           TextWrapping="Wrap"
+                                           HorizontalAlignment="Center" />
+                                <TextBlock Text="Для обновления слов зайдите в раздел [🥇Профиль], кликните по любому слову и нажмите [Сбросить слова]"
+                                           Width="340"
+                                           FontSize="16"
+                                           FontFamily="Bahnschrift"
+                                           TextWrapping="Wrap"
+                                           HorizontalAlignment="Center"
+                                           Opacity=".5" />
+                                <AppBarSeparator />
+                                <TextBlock Text="2 декабря 2022"
+                                           Width="340"
+                                           FontSize="20"
+                                           FontFamily="Bahnschrift"
+                                           TextWrapping="Wrap"
+                                           HorizontalAlignment="Center">
+                                    <TextBlock.Foreground>
+                                        <LinearGradientBrush>
+                                            <GradientStop Color="{ThemeResource SystemAccentColorLight2}" />
+                                            <GradientStop Color="{ThemeResource SystemAccentColor}"
+                                                          Offset="1" />
+                                        </LinearGradientBrush>
+                                    </TextBlock.Foreground></TextBlock>
                                 <TextBlock Text="Теперь в разделе [🥇Профиль] можно просматривать прогресс изучения слов. В приложение интегрирована база данных - обеспечено сохранение прогресса на диск. Также, по клику можно добавлять свои собственные, либо изменять и удалять существующие слова. Путь к картинке можно вставлять по ссылке из интернета"
                                            Width="340"
                                            FontSize="16"

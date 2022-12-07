@@ -35,7 +35,11 @@ namespace MEnglish.Models
         }
         public WriterTrainer()
         {
-            RandomWord = Words[new Random().Next(Words.Count - 1)];
+            // сортировка коллекции слов по рейтингу
+            Words = Words.OrderBy(w => w.Rating).ToList(); // сортировка отрабатывает корректно
+
+            // добавляем наименее изученное слово
+            RandomWord = Words[0];
         }
         public async void CheckAnswerAsync()
         {
@@ -58,7 +62,11 @@ namespace MEnglish.Models
                     db.SaveChanges();
                 }
 
-                RandomWord = Words[new Random().Next(Words.Count - 1)];
+                // сортировка коллекции слов по рейтингу
+                Words = Words.OrderBy(w => w.Rating).ToList(); // сортировка отрабатывает корректно
+
+                // добавляем наименее изученное слово
+                RandomWord = Words[0];
 
                 AnswerTextBoxText = "";
 

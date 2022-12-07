@@ -26,16 +26,24 @@ namespace MEnglish.Models
 
         public PickerTrainer()
         {
+            // сортировка коллекции слов по рейтингу
+            Words = Words.OrderBy(w => w.Rating).ToList(); // сортировка отрабатывает корректно
+
+            // добавляем 4 наименее изученных слова
             for (int i = 0; i < 4; i++)
-                FourRandomWords.Add(Words[new Random().Next(Words.Count - 1)]);
+                FourRandomWords.Add(Words[i]);
 
             AddRandomWord();
         }
 
         private void AddFourRandomWords()
         {
+            // сортировка коллекции слов по рейтингу
+            Words = Words.OrderBy(w => w.Rating).ToList(); // сортировка отрабатывает корректно
+
+            // обновляем 4 наименее изученных слова
             for (int i = 0; i < 4; i++)
-                FourRandomWords[i] = Words[new Random().Next(Words.Count - 1)];
+                FourRandomWords[i] = Words[i];
         }
 
         private void AddRandomWord() =>
