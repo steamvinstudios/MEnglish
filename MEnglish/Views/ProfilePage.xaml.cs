@@ -69,7 +69,7 @@ namespace MEnglish.Views
                     {
                         db.Words.Remove(word);
                         db.SaveChanges();
-                        wordsList.ItemsSource = db.Words.ToList();
+                        wordsList.ItemsSource = db.Words.OrderByDescending(w => w.Rating).ToList();
                     }
                 }
             }
