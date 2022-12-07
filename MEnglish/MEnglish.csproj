@@ -208,6 +208,7 @@
     <Content Include="ArrayPics\house.jpg" />
     <Content Include="ArrayPics\ice.jpg" />
     <Content Include="ArrayPics\idea.jpg" />
+    <Content Include="ArrayPics\intend.jpg" />
     <Content Include="ArrayPics\jungle.jpg" />
     <Content Include="ArrayPics\keep away.jpg" />
     <Content Include="ArrayPics\land.jpg" />
@@ -224,6 +225,7 @@
     <Content Include="ArrayPics\small.jpg" />
     <Content Include="ArrayPics\snowball.jpg" />
     <Content Include="ArrayPics\snowman.jpg" />
+    <Content Include="ArrayPics\sound.jpg" />
     <Content Include="ArrayPics\star.jpg" />
     <Content Include="ArrayPics\strawberry.jpg" />
     <Content Include="ArrayPics\study.jpg" />

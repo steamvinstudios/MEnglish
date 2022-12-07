@@ -39,7 +39,7 @@ namespace MEnglish.Views
             // вынести в отдельный метод
             using (WordContext db = new WordContext())
             {
-                wordsList.ItemsSource = db.Words.ToList();
+                wordsList.ItemsSource = db.Words.OrderByDescending(w => w.Rating).ToList();
             }
         }
 

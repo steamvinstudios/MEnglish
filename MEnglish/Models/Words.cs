@@ -343,6 +343,24 @@ namespace MEnglish.Models
                 RussianForm = "окно",
                 Image = "/ArrayPics/window.jpg"
             },
+            new Word
+            {
+                EnglishForm = "intend",
+                RussianForm = "намереваться",
+                Image = "/ArrayPics/intend.jpg"
+            },
+            new Word
+            {
+                EnglishForm = "milk",
+                RussianForm = "молоко",
+                Image = "/ArrayPics/milk.jpg"
+            },
+            new Word
+            {
+                EnglishForm = "sound",
+                RussianForm = "звук",
+                Image = "/ArrayPics/sound.jpg"
+            },
           /*  new Word
             {
                 EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "break down" } },
@@ -486,18 +504,6 @@ namespace MEnglish.Models
                 EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "beware" } },
                 RussianForms = new List < RussianForm > { new RussianForm { Form = "остерегаться" } },
                 Image = "/ArrayPics/beware.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "milk" } },
-                RussianForms = new List < RussianForm > { new RussianForm { Form = "молоко" } },
-                Image = "/ArrayPics/milk.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "sound" } },
-                RussianForms = new List < RussianForm > { new RussianForm { Form = "звук" } },
-                Image = "/ArrayPics/sound.jpg"
             },
             new Word
             {
