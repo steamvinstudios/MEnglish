@@ -10,8 +10,8 @@ namespace MEnglish.Models
     public class Word
     {
         public int Id { get; set; }
-        public string EnglishForm { get; set; } = "No Data";
-        public string RussianForm { get; set; } = "No Data";
+        public string EnglishForm { get; set; } = "Нет данных";
+        public string RussianForm { get; set; } = "Нет данных";
         public int Rating { get; set; }
         public bool IsLearned { get; set; } = false;
         public DateTime LastRepeat { get; set; } = DateTime.Now;
