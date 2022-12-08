@@ -360,6 +360,14 @@ namespace MEnglish.Models
                 RussianForm = "звук",
                 Image = "/ArrayPics/sound.jpg"
             },
+
+            Word.CreateBuilder().SetEnglishForm("headphones")
+                                .SetRussianForm("наушники")
+                                .SetImage("/ArrayPics/headphones.jpg"),
+
+            Word.CreateBuilder().SetEnglishForm("mouse")
+                                .SetRussianForm("мышь")
+                                .SetImage("/ArrayPics/mouse.jpg"),
           /*  new Word
             {
                 EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "break down" } },

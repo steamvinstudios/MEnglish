@@ -10,6 +10,8 @@ namespace MEnglish.Models
 {
     public class Trainer : ObservableObject
     {
+        public int PositivePoints { get; set; } = 10;
+        public int NegativePoints { get; set; } = 5;
         private AnswersResult answersResult = new AnswersResult();
         public AnswersResult AnswersResult
         {

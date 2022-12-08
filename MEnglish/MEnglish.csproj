@@ -202,6 +202,7 @@
     <Content Include="ArrayPics\grow.jpg" />
     <Content Include="ArrayPics\half.jpg" />
     <Content Include="ArrayPics\hand.jpg" />
+    <Content Include="ArrayPics\headphones.jpg" />
     <Content Include="ArrayPics\hello.jpg" />
     <Content Include="ArrayPics\help.jpg" />
     <Content Include="ArrayPics\honey.jpg" />
@@ -216,6 +217,7 @@
     <Content Include="ArrayPics\letter.jpg" />
     <Content Include="ArrayPics\milk.jpg" />
     <Content Include="ArrayPics\mint.jpg" />
+    <Content Include="ArrayPics\mouse.jpg" />
     <Content Include="ArrayPics\near.jpg" />
     <Content Include="ArrayPics\need.jpg" />
     <Content Include="ArrayPics\order.jpg" />

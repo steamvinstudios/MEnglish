@@ -47,7 +47,7 @@ namespace MEnglish.Models
             {
                 using (WordContext db = new WordContext())
                 {
-                    RandomWord.Rating += 10;
+                    RandomWord.Rating += PositivePoints;
 
                     if (RandomWord.Rating >= 100 && RandomWord.IsLearned == false)
                     {
@@ -63,7 +63,7 @@ namespace MEnglish.Models
                 }
 
                 // сортировка коллекции слов по рейтингу
-                Words = Words.OrderBy(w => w.Rating).ToList(); // сортировка отрабатывает корректно
+                Words = Words.OrderBy(w => w.Rating).ToList();
 
                 // добавляем наименее изученное слово
                 RandomWord = Words[0];
@@ -77,6 +77,8 @@ namespace MEnglish.Models
             }
             else
             {
+                RandomWord.Rating -= NegativePoints;
+
                 using (WordContext db = new WordContext())
                 {
                     db.Update(RandomWord);
