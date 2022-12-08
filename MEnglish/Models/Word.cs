@@ -18,5 +18,6 @@ namespace MEnglish.Models
         public string Image { get; set; } = "/ArrayPics/food.jpg";
         public string RatingFull() => $"Рейтинг: {Rating}";
         public string IdFull() => $"ID в базе: {Id}";
+        public static WordBuilder CreateBuilder() => new WordBuilder();
     }
 }

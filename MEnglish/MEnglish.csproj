@@ -139,6 +139,7 @@
     <Compile Include="Models\PickerTrainer.cs" />
     <Compile Include="Models\Trainer.cs" />
     <Compile Include="Models\TrainerStopwatch.cs" />
+    <Compile Include="Models\WordBuilder.cs" />
     <Compile Include="Models\WordContext.cs" />
     <Compile Include="Models\WriterTrainer.cs" />
     <Compile Include="ViewModels\AboutPageViewModel.cs" />
