@@ -74,7 +74,15 @@ namespace MEnglish.Views
                 }
                 else
                 {
-                    db.Words.Add(new Word
+                    db.Words.Add(
+                        Word.CreateBuilder().SetEnglishForm(englishWordBox.Text)
+                                            .SetRussianForm(russianWordBox.Text)
+                                            .SetRating((int)ratingSlider.Value)
+                                            .SetIsLearned(isLearnedToggle.IsOn)
+                                            .SetLastRepeat(dateBox.Date.DateTime)
+                                            .SetImage(imageBox.Text)
+                        );
+                    /*db.Words.Add(new Word
                     {
                         Image = imageBox.Text,
                         LastRepeat = dateBox.Date.DateTime,
@@ -82,7 +90,7 @@ namespace MEnglish.Views
                         IsLearned = isLearnedToggle.IsOn,
                         EnglishForm = englishWordBox.Text,
                         RussianForm = russianWordBox.Text
-                    });
+                    });*/
                 }
                 db.SaveChanges();
             }
