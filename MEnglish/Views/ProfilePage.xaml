@@ -19,11 +19,17 @@
                        FontFamily="Bahnschrift"
                        FontStretch="Condensed"
                        HorizontalAlignment="Center" />
+            <TextBox x:Name="searchTextBox"
+                     Text="{x:Bind viewModel.SearchTextBoxText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     MaxWidth="800"
+                     Padding="10"
+                     Margin="20" />
             <GridView x:Name="wordsList"
                       HorizontalAlignment="Center"
                       VerticalAlignment="Center"
                       ItemClick="wordsList_ItemClick"
-                      IsItemClickEnabled="True">
+                      IsItemClickEnabled="True"
+                      ItemsSource="{x:Bind viewModel.WordListItemsSource, Mode=OneWay}">
                 <GridView.ItemTemplate>
                     <DataTemplate x:DataType="models:Word">
                         <Grid>

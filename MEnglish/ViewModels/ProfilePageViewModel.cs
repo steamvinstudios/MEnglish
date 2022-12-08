@@ -9,17 +9,49 @@ using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml;
+using System.Collections.ObjectModel;
 
 namespace MEnglish.ViewModels
 {
     public class ProfilePageViewModel : BaseViewModel
     {
+        private List<Word> wordListItemsSource;
+        public List<Word> WordListItemsSource
+        {
+            get => wordListItemsSource;
+            set => SetProperty(ref wordListItemsSource, value);
+        }
+        private string searchTextBoxText = string.Empty;
+        public string SearchTextBoxText
+        {
+            get => searchTextBoxText;
+            set
+            {
+                SetProperty(ref searchTextBoxText, value);
+                using (WordContext db = new WordContext())
+                {
+                    WordListItemsSource = db.Words.Where(w => w.EnglishForm == SearchTextBoxText).ToList();
+
+                    if (string.IsNullOrWhiteSpace(SearchTextBoxText))
+                    {
+                        WordListItemsSource = db.Words.OrderByDescending(w => w.Rating).ToList();
+                    }
+                }
+            }
+        }
         public Words AppWords { get; set; } = new Words();
+        public ProfilePageViewModel()
+        {
+            using (WordContext db = new WordContext())
+            {
+                WordListItemsSource = db.Words.OrderByDescending(w => w.Rating).ToList();
+            }
+        }
 
         // from ProfilePage
         // адаптировать для ViewModel
         // ------------------------------------------------------------------------------
-        
+
         /*
         private void AddButton_Click(object sender, RoutedEventArgs e) =>
             Frame.Navigate(typeof(WordPage), null, new DrillInNavigationTransitionInfo());
