@@ -27,7 +27,7 @@ namespace MEnglish.Models
         public PickerTrainer()
         {
             // сортировка коллекции слов по рейтингу
-            Words = Words.OrderBy(w => w.Rating).ToList(); // сортировка отрабатывает корректно
+            Words = Words.OrderBy(w => w.Rating).ToList();
 
             // добавляем 4 наименее изученных слова
             for (int i = 0; i < 4; i++)
@@ -39,7 +39,7 @@ namespace MEnglish.Models
         private void AddFourRandomWords()
         {
             // сортировка коллекции слов по рейтингу
-            Words = Words.OrderBy(w => w.Rating).ToList(); // сортировка отрабатывает корректно
+            Words = Words.OrderBy(w => w.Rating).ToList();
 
             // обновляем 4 наименее изученных слова
             for (int i = 0; i < 4; i++)
