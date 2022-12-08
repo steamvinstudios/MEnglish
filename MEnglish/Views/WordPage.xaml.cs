@@ -26,10 +26,7 @@ namespace MEnglish.Views
     {
         private DateTime dateTime = DateTime.Now;
         Word word;
-        public WordPage()
-        {
-            this.InitializeComponent();
-        }
+        public WordPage() => this.InitializeComponent();
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -44,7 +41,6 @@ namespace MEnglish.Views
 
             if (word != null)
             {
-                //headerBlock.Text = "Редактирование компании";
                 imageBox.Text = word.Image;
                 dateBox.Date = word.LastRepeat;
                 ratingSlider.Value = word.Rating;
@@ -82,32 +78,18 @@ namespace MEnglish.Views
                                             .SetLastRepeat(dateBox.Date.DateTime)
                                             .SetImage(imageBox.Text)
                         );
-                    /*db.Words.Add(new Word
-                    {
-                        Image = imageBox.Text,
-                        LastRepeat = dateBox.Date.DateTime,
-                        Rating = (int)ratingSlider.Value,
-                        IsLearned = isLearnedToggle.IsOn,
-                        EnglishForm = englishWordBox.Text,
-                        RussianForm = russianWordBox.Text
-                    });*/
                 }
                 db.SaveChanges();
             }
-            GoToMainPage();
+            GoToProfilePage();
         }
 
-        private void CancelButton_Click(object sender, RoutedEventArgs e)
-        {
-            GoToMainPage();
-        }
+        private void CancelButton_Click(object sender, RoutedEventArgs e) => GoToProfilePage();
 
-        private void GoToMainPage()
+        private void GoToProfilePage()
         {
-            if (Frame.CanGoBack)
-                Frame.GoBack();
-            else
-                Frame.Navigate(typeof(ProfilePage));
+            if (Frame.CanGoBack) Frame.GoBack();
+            else Frame.Navigate(typeof(ProfilePage));
         }
     }
 }
