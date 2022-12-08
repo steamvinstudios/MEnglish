@@ -121,6 +121,38 @@
                                            FontStretch="Condensed"
                                            TextWrapping="Wrap"
                                            HorizontalAlignment="Center" />
+                                <TextBlock Text="8 декабря 2022"
+                                           Width="340"
+                                           FontSize="20"
+                                           FontFamily="Bahnschrift"
+                                           TextWrapping="Wrap"
+                                           HorizontalAlignment="Center">
+                                    <TextBlock.Foreground>
+                                        <LinearGradientBrush>
+                                            <GradientStop Color="{ThemeResource SystemAccentColorLight2}" />
+                                            <GradientStop Color="{ThemeResource SystemAccentColor}"
+                                                          Offset="1" />
+                                        </LinearGradientBrush>
+                                    </TextBlock.Foreground></TextBlock>
+                                <TextBlock Text="Сброс слов в [🥇Профиль] больше не требуется для добавления слов, пришедших с обновлениями!"
+                                           Width="340"
+                                           FontSize="16"
+                                           FontFamily="Bahnschrift"
+                                           TextWrapping="Wrap"
+                                           HorizontalAlignment="Center" />
+                                <TextBlock Text="Это было очень непросто"
+                                           Width="340"
+                                           FontSize="16"
+                                           FontFamily="Bahnschrift"
+                                           TextWrapping="Wrap"
+                                           HorizontalAlignment="Center"
+                                           Opacity=".5" />
+                                <TextBlock Text="✨🎉🎊🎆"
+                                           Width="340"
+                                           FontSize="32"
+                                           FontFamily="Bahnschrift"
+                                           TextWrapping="Wrap"
+                                           HorizontalAlignment="Center" />
                                 <TextBlock Text="7 декабря 2022"
                                            Width="340"
                                            FontSize="20"
@@ -140,13 +172,14 @@
                                            FontFamily="Bahnschrift"
                                            TextWrapping="Wrap"
                                            HorizontalAlignment="Center" />
-                                <TextBlock Text="Для обновления слов зайдите в раздел [🥇Профиль], кликните по любому слову и нажмите [Сбросить слова]"
-                                           Width="340"
-                                           FontSize="16"
-                                           FontFamily="Bahnschrift"
-                                           TextWrapping="Wrap"
-                                           HorizontalAlignment="Center"
-                                           Opacity=".5" />
+                                <TextBlock  Text="Для обновления слов зайдите в раздел [🥇Профиль], кликните по любому слову и нажмите [Сбросить слова]"
+                                            TextDecorations="Strikethrough"
+                                            Width="340"
+                                            FontSize="16"
+                                            FontFamily="Bahnschrift"
+                                            TextWrapping="Wrap"
+                                            HorizontalAlignment="Center"
+                                            Opacity=".5" />
                                 <AppBarSeparator />
                                 <TextBlock Text="2 декабря 2022"
                                            Width="340"
