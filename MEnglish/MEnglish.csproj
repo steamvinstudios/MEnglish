@@ -241,6 +241,7 @@
     <Content Include="ArrayPics\wind.jpg" />
     <Content Include="ArrayPics\window.jpg" />
     <Content Include="ArrayPics\winter.jpg" />
+    <Content Include="ArrayPics\withoutimg.png" />
     <Content Include="ArrayPics\write.jpg" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-125.png" />

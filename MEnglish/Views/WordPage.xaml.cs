@@ -53,7 +53,7 @@ namespace MEnglish.Views
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(imageBox.Text))
-                imageBox.Text = "/ArrayPics/food.jpg";
+                imageBox.Text = "/ArrayPics/withoutimg.png";
 
             using (WordContext db = new WordContext())
             {

@@ -15,7 +15,7 @@ namespace MEnglish.Models
         public int Rating { get; set; }
         public bool IsLearned { get; set; } = false;
         public DateTime LastRepeat { get; set; } = DateTime.Now;
-        public string Image { get; set; } = "/ArrayPics/food.jpg";
+        public string Image { get; set; } = "/ArrayPics/withoutimg.png";
         public string RatingFull() => $"Рейтинг: {Rating}";
         public string IdFull() => $"ID в базе: {Id}";
         public static WordBuilder CreateBuilder() => new WordBuilder();
