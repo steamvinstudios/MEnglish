@@ -33,12 +33,24 @@ namespace MEnglish
             {
                 db.Database.Migrate();
 
-                var wordsFromDb = db.Words.ToList();
+                //var wordsFromDb = db.Words.ToList();
 
                 // напонение бд при старте, если пустая
-                if (wordsFromDb.Count == 0)
+                /*if (wordsFromDb.Count == 0)
                     foreach (var word in words.All)
-                        db.Add(word);
+                        db.Words.Add(word);*/
+
+                // добавление новых слов в бд, которые докидываются с обновами
+                var dbWords = db.Words.ToList();
+                var exceptedWords = new List<Word>();
+
+                // добавление слов, если не существуют в бд
+                exceptedWords = words.All.Where(x => !dbWords.Any(y => y.EnglishForm == x.EnglishForm)).ToList();
+
+                foreach (var word in exceptedWords)
+                {
+                    db.Words.Update(word);
+                }
 
                 db.SaveChanges();
             }

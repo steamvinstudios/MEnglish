@@ -312,7 +312,6 @@ namespace MEnglish.Models
                 RussianForm = "мёд",
                 Image = "/ArrayPics/honey.jpg"
             },
-            // добавить картинки словам ниже
             new Word
             {
                 EnglishForm = "winter",
