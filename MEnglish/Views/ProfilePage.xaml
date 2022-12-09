@@ -19,11 +19,42 @@
                        FontFamily="Bahnschrift"
                        FontStretch="Condensed"
                        HorizontalAlignment="Center" />
-            <TextBox x:Name="searchTextBox"
-                     Text="{x:Bind viewModel.SearchTextBoxText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                     MaxWidth="800"
-                     Padding="10"
-                     Margin="20" />
+            <Grid>
+                <TextBlock Text="🎁"
+                           FontSize="16"
+                           Margin="32 1 0 0"
+                           HorizontalAlignment="Center" />
+                <TextBlock Text="🎄"
+                           FontSize="100"
+                           Margin="-100"
+                           HorizontalAlignment="Center" />
+                <TextBlock Text="🎁"
+                           FontSize="24"
+                           Margin="-72 -8 0 0"
+                           HorizontalAlignment="Center" />
+                <TextBlock Text="🎁"
+                           FontSize="24"
+                           Margin="88 -8 0 0"
+                           HorizontalAlignment="Center" />
+                <TextBlock Text="🎁"
+                           FontSize="16"
+                           Margin="-20 1 0 0"
+                           HorizontalAlignment="Center" />
+                <TextBlock Text="🐈"
+                           FontSize="24"
+                           Margin="160 -8 0 0"
+                           HorizontalAlignment="Center" />
+                <TextBlock Text="🐕"
+                           FontSize="32"
+                           Margin="-160 -18 0 0"
+                           HorizontalAlignment="Center" />
+                <TextBox x:Name="searchTextBox"
+                         Text="{x:Bind viewModel.SearchTextBoxText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                         PlaceholderText="Поиск по слову/рейтингу"
+                         MaxWidth="800"
+                         Padding="10"
+                         Margin="20" />
+            </Grid>
             <GridView x:Name="wordsList"
                       HorizontalAlignment="Center"
                       VerticalAlignment="Center"

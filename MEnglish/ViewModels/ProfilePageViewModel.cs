@@ -10,6 +10,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml;
 using System.Collections.ObjectModel;
+using System.Reflection;
 
 namespace MEnglish.ViewModels
 {
@@ -30,7 +31,23 @@ namespace MEnglish.ViewModels
                 SetProperty(ref searchTextBoxText, value);
                 using (WordContext db = new WordContext())
                 {
-                    WordListItemsSource = db.Words.Where(w => w.EnglishForm == SearchTextBoxText).ToList();
+                    var suitableItems = new List<Word>();
+                    var splitText = SearchTextBoxText.ToLower().Split(" ");
+                    foreach (var word in db.Words)
+                    {
+                        var found = splitText.All((key) =>
+                        {
+                            var wordInfo = $"{word.EnglishForm} {word.RussianForm} {word.Rating}";
+                            return wordInfo.ToLower().Contains(key);
+                        });
+                        if (found)
+                        {
+                            suitableItems.Add(word);
+                        }
+                    }
+
+                    WordListItemsSource = suitableItems;
+
 
                     if (string.IsNullOrWhiteSpace(SearchTextBoxText))
                     {

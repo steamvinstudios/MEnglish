@@ -171,6 +171,17 @@
                               VerticalAlignment="Center"
                               IsOpen="{x:Bind viewModel.WriterTrainer.WordInfoTeachingTipIsOpen, Mode=OneWay}">
             <Grid>
+                <Border CornerRadius="8"
+                        Margin="0 8"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Top">
+                    <Image Source="{x:Bind viewModel.WriterTrainer.RandomWord.Image, Mode=OneWay}"
+                           Height="90"
+                           Width="160"
+                           Stretch="UniformToFill"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Top" />
+                </Border>
                 <StackPanel VerticalAlignment="Center">
                     <TextBlock Text="{x:Bind viewModel.WriterTrainer.RandomWord.RussianForm, Mode=OneWay}"
                                FontSize="36"
@@ -203,17 +214,6 @@
                         </ProgressBar.Foreground>
                     </ProgressBar>
                 </StackPanel>
-                <Border CornerRadius="8"
-                        Margin="0 8"
-                        HorizontalAlignment="Right"
-                        VerticalAlignment="Top">
-                    <Image Source="{x:Bind viewModel.WriterTrainer.RandomWord.Image, Mode=OneWay}"
-                           Height="90"
-                           Width="160"
-                           Stretch="UniformToFill"
-                           HorizontalAlignment="Right"
-                           VerticalAlignment="Top" />
-                </Border>
             </Grid>
         </controls:TeachingTip>
         <controls:TeachingTip x:Name="wordProgressTeachingTip"
