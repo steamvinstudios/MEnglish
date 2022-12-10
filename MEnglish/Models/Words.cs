@@ -9,7 +9,6 @@ namespace MEnglish.Models
 {
     public class Words
     {
-        #region Words Collection
         public ObservableCollection<Word> All { get; set; } = new ObservableCollection<Word>
         {
             new Word
@@ -368,180 +367,46 @@ namespace MEnglish.Models
             Word.CreateBuilder().SetEnglishForm("mouse")
                                 .SetRussianForm("мышь")
                                 .SetImage("/ArrayPics/mouse.jpg"),
-          /*  new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "break down" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "сломать" },new RussianForm { Form = "сломаться" }, new RussianForm { Form = "перестать работать" } },
-                Image = "/ArrayPics/breakdown.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "break into" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "врываться" }, new RussianForm { Form = "вломиться" } },
-                Image = "/ArrayPics/breakinto.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "burst out" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "окликнуть" }, new RussianForm { Form = "разразиться смехом" }, new RussianForm { Form = "внезапно начинаться" } },
-                Image = "/ArrayPics/burstout.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "clean up" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "чистить" }, new RussianForm { Form = "убирать" },new RussianForm { Form = "приводить в порядок" } },
-                Image = "/ArrayPics/cleanup.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "check in" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "зарегистрироваться" } },
-                Image = "/ArrayPics/checkin.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "check out" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "проверить" }, new RussianForm { Form = "выписаться" } },
-                Image = "/ArrayPics/checkout.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "check out" } },
-                RussianForms = new List < RussianForm > { new RussianForm { Form = "перезвонить" } },
-                Image = "/ArrayPics/callback.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "keep away" } },
-                RussianForms = new List < RussianForm > { new RussianForm { Form = "не подходите" } },
-                Image = "/ArrayPics/keepaway.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "wake up" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "будить" }, new RussianForm { Form = "просыпаться" }, new RussianForm { Form = "бодрствовать" } },
-                Image = "/ArrayPics/wakeup.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "watch out" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "осторожно" }, new RussianForm { Form = "быть начеку" },new RussianForm { Form = "настороже" } },
-                Image = "/ArrayPics/watchout.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "work off" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "отработать" }, new RussianForm { Form = "отделаться" },new RussianForm { Form = "освободиться" } },
-                Image = "/ArrayPics/workoff.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "work out" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "определить" }, new RussianForm { Form = "вычислить" }, new RussianForm { Form = "добиться" },new RussianForm { Form = "получаться" },new RussianForm { Form = "тренироваться" } },
-                Image = "/ArrayPics/workout.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "write down" } },
-                RussianForms = new List < RussianForm > { new RussianForm { Form = "записать на бумаге" } },
-                Image = "/ArrayPics/writedown.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "write up" } },
-                RussianForms = new List<RussianForm> { new RussianForm { Form = "дописать" }, new RussianForm { Form = "придать законченный вид" } },
-                Image = "/ArrayPics/writeup.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "tends" } },
-                RussianForms = new List < RussianForm > { new RussianForm { Form = "как правило" } },
-                Image = "/ArrayPics/tends.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "often" } },
-                RussianForms = new List < RussianForm > { new RussianForm { Form = "довольно часто" } },
-                Image = "/ArrayPics/often.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "entirely" } },
-                RussianForms = new List < RussianForm > { new RussianForm { Form = "полностью" } },
-                Image = "/ArrayPics/entirely.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "miscellaneous" } },
-                RussianForms = new List < RussianForm > { new RussianForm { Form = "разное" } },
-                Image = "/ArrayPics/oftmiscellaneousen.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "split" } },
-                RussianForms = new List < RussianForm > { new RussianForm { Form = "разделенный" } },
-                Image = "/ArrayPics/split.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "proper" } },
-                RussianForms = new List < RussianForm > { new RussianForm { Form = "правильный" } },
-                Image = "/ArrayPics/proper.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "amount" } },
-                RussianForms = new List < RussianForm > { new RussianForm { Form = "количество" } },
-                Image = "/ArrayPics/amount.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "contributor" } },
-                RussianForms = new List < RussianForm > { new RussianForm { Form = "участник" } },
-                Image = "/ArrayPics/contributor.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "issue" } },
-                RussianForms = new List < RussianForm > { new RussianForm { Form = "проблема" } },
-                Image = "/ArrayPics/issue.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "beware" } },
-                RussianForms = new List < RussianForm > { new RussianForm { Form = "остерегаться" } },
-                Image = "/ArrayPics/beware.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "shows off" } },
-                RussianForms = new List < RussianForm > { new RussianForm { Form = "красоваться" } },
-                Image = "/ArrayPics/showsoff.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "further delays" } },
-                RussianForms = new List < RussianForm > { new RussianForm { Form = "дальнейшие задержки" } },
-                Image = "/ArrayPics/furtherdelays.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "upcoming" } },
-                RussianForms = new List < RussianForm > { new RussianForm { Form = "предстоящий" } },
-                Image = "/ArrayPics/upcoming.jpg"
-            },
-            new Word
-            {
-                EnglishForms = new List < EnglishForm > { new EnglishForm { Form = "over here" } },
-                RussianForms = new List < RussianForm > { new RussianForm { Form = "здесь, сюда" } },
-                Image = "/ArrayPics/overhere.jpg"
-            },*/
+
+            Word.CreateBuilder().SetEnglishForm("celebrate")
+                                .SetRussianForm("праздновать")
+                                .SetImage("/ArrayPics/celebrate.jpg"),
+
+            Word.CreateBuilder().SetEnglishForm("check out")
+                                .SetRussianForm("выписаться")
+                                .SetImage("/ArrayPics/checkout.jpg"),
+
+            Word.CreateBuilder().SetEnglishForm("keep away")
+                                .SetRussianForm("не подходи")
+                                .SetImage("/ArrayPics/keepaway.jpg"),
+
+            Word.CreateBuilder().SetEnglishForm("watch out")
+                                .SetRussianForm("быть начеку")
+                                .SetImage("/ArrayPics/watchout.jpg"),
+
+            Word.CreateBuilder().SetEnglishForm("garland")
+                                .SetRussianForm("гирлянда")
+                                .SetImage("/ArrayPics/garland.jpg"),
+
+            Word.CreateBuilder().SetEnglishForm("tinsel")
+                                .SetRussianForm("мишура")
+                                .SetImage("/ArrayPics/tinsel.jpg"),
+
+            Word.CreateBuilder().SetEnglishForm("wreath")
+                                .SetRussianForm("венок")
+                                .SetImage("/ArrayPics/wreath.jpg"),
+
+            Word.CreateBuilder().SetEnglishForm("toys")
+                                .SetRussianForm("игрушки")
+                                .SetImage("/ArrayPics/toys.jpg"),
+
+            Word.CreateBuilder().SetEnglishForm("decoration")
+                                .SetRussianForm("украшение")
+                                .SetImage("/ArrayPics/decoration.jpg"),
+
+            Word.CreateBuilder().SetEnglishForm("ginger bread")
+                                .SetRussianForm("имбирный пряник")
+                                .SetImage("/ArrayPics/gingerbread.jpg"),
         };
-        #endregion
-
-        public Words()
-        {
-
-        }
     }
 }
