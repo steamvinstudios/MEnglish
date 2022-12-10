@@ -52,11 +52,11 @@
                             </TransitionCollection>
                         </Button.Transitions>
                         <StackPanel>
-                            <TextBlock Text="🏁"
-                                       HorizontalAlignment="Center"
-                                       FontSize="24" />
+                            <Image Source="/NavigationBarPageIcons/chequered_flag_3d.png"
+                                   Height="44" />
                             <TextBlock Text="Тренировка"
-                                       FontFamily="Bahnschrift" />
+                                       FontFamily="Bahnschrift"
+                                       HorizontalAlignment="Center" />
                         </StackPanel>
                     </Button>
                     <Button x:Name="writerPageButton"
@@ -72,11 +72,11 @@
                             </TransitionCollection>
                         </Button.Transitions>
                         <StackPanel>
-                            <TextBlock Text="🖋"
-                                       FontSize="24"
-                                       HorizontalAlignment="Center" />
+                            <Image Source="/NavigationBarPageIcons/black_nib_3d.png"
+                                   Height="44" />
                             <TextBlock Text="Райтер"
-                                       FontFamily="Bahnschrift" />
+                                       FontFamily="Bahnschrift"
+                                       HorizontalAlignment="Center" />
                         </StackPanel>
                     </Button>
                     <Button x:Name="pickerPageButton"
@@ -93,11 +93,11 @@
                             </TransitionCollection>
                         </Button.Transitions>
                         <StackPanel>
-                            <TextBlock Text="🗃"
-                                       HorizontalAlignment="Center"
-                                       FontSize="24" />
+                            <Image Source="/NavigationBarPageIcons/card_file_box_3d.png"
+                                   Height="44" />
                             <TextBlock Text="Пикер"
-                                       FontFamily="Bahnschrift" />
+                                       FontFamily="Bahnschrift"
+                                       HorizontalAlignment="Center" />
                         </StackPanel>
                     </Button>
                     <Button x:Name="aboutPageButton"
@@ -113,11 +113,11 @@
                             </TransitionCollection>
                         </Button.Transitions>
                         <StackPanel>
-                            <TextBlock Text="🎓"
-                                       HorizontalAlignment="Center"
-                                       FontSize="24" />
+                            <Image Source="/NavigationBarPageIcons/graduation_cap_3d.png"
+                                   Height="44" />
                             <TextBlock Text="About"
-                                       FontFamily="Bahnschrift" />
+                                       FontFamily="Bahnschrift"
+                                       HorizontalAlignment="Center" />
                         </StackPanel>
                     </Button>
                     <Button x:Name="profilePageButton"
@@ -133,11 +133,11 @@
                             </TransitionCollection>
                         </Button.Transitions>
                         <StackPanel>
-                            <TextBlock Text="🥇"
-                                       HorizontalAlignment="Center"
-                                       FontSize="24" />
+                            <Image Source="/NavigationBarPageIcons/1st_place_medal_3d.png"
+                                   Height="44" />
                             <TextBlock Text="Профиль"
-                                       FontFamily="Bahnschrift" />
+                                       FontFamily="Bahnschrift"
+                                       HorizontalAlignment="Center" />
                         </StackPanel>
                     </Button>
                     <Button x:Name="hideNavigationBarButton"
@@ -153,11 +153,11 @@
                             </TransitionCollection>
                         </Button.Transitions>
                         <StackPanel>
-                            <TextBlock Text="👀"
-                                       HorizontalAlignment="Center"
-                                       FontSize="24" />
+                            <Image Source="/NavigationBarPageIcons/eyes_3d.png"
+                                   Height="44" />
                             <TextBlock Text="Скрыть"
-                                       FontFamily="Bahnschrift" />
+                                       FontFamily="Bahnschrift"
+                                       HorizontalAlignment="Center" />
                         </StackPanel>
                     </Button>
                 </VariableSizedWrapGrid>
@@ -183,9 +183,8 @@
                                     TintColor="#11555555" />
             </Button.Background>
             <StackPanel>
-                <TextBlock Text="👀"
-                           HorizontalAlignment="Center"
-                           FontSize="24" />
+                <Image Source="/NavigationBarPageIcons/eyes_3d.png"
+                       Height="44" />
                 <TextBlock Text="Показать"
                            FontFamily="Bahnschrift" />
             </StackPanel>

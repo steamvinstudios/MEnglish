@@ -407,6 +407,22 @@ namespace MEnglish.Models
             Word.CreateBuilder().SetEnglishForm("ginger bread")
                                 .SetRussianForm("имбирный пряник")
                                 .SetImage("/ArrayPics/gingerbread.jpg"),
+
+            Word.CreateBuilder().SetEnglishForm("cranberry sauce")
+                                .SetRussianForm("клюквенный соус")
+                                .SetImage("/ArrayPics/cranberrysauce.jpg"),
+
+            Word.CreateBuilder().SetEnglishForm("gift")
+                                .SetRussianForm("подарок")
+                                .SetImage("/ArrayPics/gift.jpg"),
+
+            Word.CreateBuilder().SetEnglishForm("unwrap")
+                                .SetRussianForm("развёртывать")
+                                .SetImage("/ArrayPics/unwrap.jpg"),
+
+            Word.CreateBuilder().SetEnglishForm("sleigh")
+                                .SetRussianForm("сани")
+                                .SetImage("/ArrayPics/sleigh.jpg"),
         };
     }
 }

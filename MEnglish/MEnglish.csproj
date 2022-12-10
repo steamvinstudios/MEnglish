@@ -193,6 +193,7 @@
     <Content Include="ArrayPics\celebrate.jpg" />
     <Content Include="ArrayPics\checkout.jpg" />
     <Content Include="ArrayPics\coffee.jpg" />
+    <Content Include="ArrayPics\cranberrysauce.jpg" />
     <Content Include="ArrayPics\decoration.jpg" />
     <Content Include="ArrayPics\end.jpg" />
     <Content Include="ArrayPics\eye.jpg" />
@@ -202,6 +203,7 @@
     <Content Include="ArrayPics\food.jpg" />
     <Content Include="ArrayPics\forest.jpg" />
     <Content Include="ArrayPics\garland.jpg" />
+    <Content Include="ArrayPics\gift.jpg" />
     <Content Include="ArrayPics\gingerbread.jpg" />
     <Content Include="ArrayPics\grow.jpg" />
     <Content Include="ArrayPics\half.jpg" />
@@ -229,6 +231,7 @@
     <Content Include="ArrayPics\plant.jpg" />
     <Content Include="ArrayPics\round.jpg" />
     <Content Include="ArrayPics\sea.jpg" />
+    <Content Include="ArrayPics\sleigh.jpg" />
     <Content Include="ArrayPics\small.jpg" />
     <Content Include="ArrayPics\snowball.jpg" />
     <Content Include="ArrayPics\snowman.jpg" />
@@ -242,6 +245,7 @@
     <Content Include="ArrayPics\time.jpg" />
     <Content Include="ArrayPics\tinsel.jpg" />
     <Content Include="ArrayPics\toys.jpg" />
+    <Content Include="ArrayPics\unwrap.jpg" />
     <Content Include="ArrayPics\walk.jpg" />
     <Content Include="ArrayPics\watchout.jpg" />
     <Content Include="ArrayPics\watch.jpg" />
@@ -308,6 +312,12 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <None Include="Package.StoreAssociation.xml" />
+    <Content Include="NavigationBarPageIcons\1st_place_medal_3d.png" />
+    <Content Include="NavigationBarPageIcons\black_nib_3d.png" />
+    <Content Include="NavigationBarPageIcons\card_file_box_3d.png" />
+    <Content Include="NavigationBarPageIcons\chequered_flag_3d.png" />
+    <Content Include="NavigationBarPageIcons\eyes_3d.png" />
+    <Content Include="NavigationBarPageIcons\graduation_cap_3d.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

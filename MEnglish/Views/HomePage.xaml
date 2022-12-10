@@ -124,8 +124,7 @@
                     <Grid Background="#11555555"
                           CornerRadius="32">
                         <StackPanel Spacing="8">
-                            <Button Content="🖋"
-                                    Height="160"
+                            <Button Height="160"
                                     FontSize="72"
                                     CornerRadius="32"
                                     Click="Button_Click"
@@ -138,6 +137,8 @@
                                                       Offset="1" />
                                     </LinearGradientBrush>
                                 </Button.Background>
+                                <Image Source="/NavigationBarPageIcons/black_nib_3d.png"
+                                       Height="120" />
                             </Button>
                             <TextBlock Text="Тренажер райтер"
                                        FontSize="32"
@@ -164,7 +165,7 @@
                     <Grid Background="#11555555"
                           CornerRadius="32">
                         <StackPanel Spacing="16">
-                            <Button Content="🗃"
+                            <Button 
                                     HorizontalAlignment="Stretch"
                                     FontSize="72"
                                     Height="160"
@@ -178,6 +179,8 @@
                                                       Offset="1" />
                                     </LinearGradientBrush>
                                 </Button.Background>
+                                <Image Source="/NavigationBarPageIcons/card_file_box_3d.png"
+                                       Height="120" />
                             </Button>
                             <TextBlock Text="Тренажер пикер"
                                        FontSize="32"
@@ -222,6 +225,35 @@
                                TextWrapping="Wrap"
                                HorizontalAlignment="Center" />
                 </Grid>
+                <Border Background="#11555555"
+                        CornerRadius="32"
+                        Padding="8"
+                        Margin="4"
+                        BorderThickness="2"
+                        BorderBrush="{ThemeResource SystemControlBackgroundAccentRevealBorderBrush}">
+                    <StackPanel HorizontalAlignment="Center"
+                                VerticalAlignment="Center">
+                        <TextBlock Text="11 декабря 2022"
+                                   Width="340"
+                                   FontSize="20"
+                                   FontFamily="Bahnschrift"
+                                   TextWrapping="Wrap"
+                                   HorizontalAlignment="Center">
+                            <TextBlock.Foreground>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="{ThemeResource SystemAccentColorLight2}" />
+                                    <GradientStop Color="{ThemeResource SystemAccentColor}"
+                                                  Offset="1" />
+                                </LinearGradientBrush>
+                            </TextBlock.Foreground></TextBlock>
+                        <TextBlock Text="Обновлены иконки панели навигации, добавлены новые слова"
+                                   Width="340"
+                                   FontSize="16"
+                                   FontFamily="Bahnschrift"
+                                   TextWrapping="Wrap"
+                                   HorizontalAlignment="Center" />
+                    </StackPanel>
+                </Border>
                 <Border Background="#11555555"
                         CornerRadius="32"
                         Padding="8"
