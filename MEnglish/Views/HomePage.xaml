@@ -15,191 +15,208 @@
                         <RepositionThemeTransition />
                     </TransitionCollection>
                 </VariableSizedWrapGrid.ChildrenTransitions>
-                <StackPanel Spacing="8"
-                            MinHeight="572">
-                    <Grid Background="#11555555"
-                          CornerRadius="32"
-                          Padding="8">
-                        <StackPanel>
-                            <TextBlock Text="Выбери режим тренировки"
-                                       FontFamily="Bahnschrift"
-                                       HorizontalAlignment="Center"
-                                       FontSize="24"
-                                       FontWeight="Bold" />
-                            <StackPanel Orientation="Horizontal"
-                                        Spacing="4">
-                                <Button x:Name="ShortTrainBt"
-                                        Width="120"
-                                        Height="240"
-                                        Content="Короткая"
-                                        Click="ShortTrainBt_Click"
-                                        FontFamily="Bahnschrift"
+                <Border Background="#11555555"
+                        CornerRadius="32"
+                        Padding="8"
+                        Margin="4"
+                        BorderThickness="2">
+                    <StackPanel Spacing="8"
+                                MinHeight="572">
+                        <Grid Background="#11555555"
+                              CornerRadius="32"
+                              Padding="8">
+                            <StackPanel>
+                                <TextBlock Text="Выбери режим тренировки"
+                                           FontFamily="Bahnschrift"
+                                           HorizontalAlignment="Center"
+                                           FontSize="24"
+                                           FontWeight="Bold" />
+                                <StackPanel Orientation="Horizontal"
+                                            Spacing="4">
+                                    <Button x:Name="ShortTrainBt"
+                                            Width="120"
+                                            Height="240"
+                                            Content="Короткая"
+                                            Click="ShortTrainBt_Click"
+                                            FontFamily="Bahnschrift"
+                                            CornerRadius="32"
+                                            FontStretch="Condensed"
+                                            FontSize="20"
+                                            IsEnabled="False">
+                                        <Button.Shadow>
+                                            <ThemeShadow />
+                                        </Button.Shadow>
+                                        <Button.Background>
+                                            <LinearGradientBrush EndPoint="0.5,1"
+                                                                 StartPoint="0.5,0">
+                                                <GradientStop Color="#FF3285FF" />
+                                                <GradientStop Color="#FF89FF7D"
+                                                              Offset="1" />
+                                            </LinearGradientBrush>
+                                        </Button.Background>
+                                    </Button>
+                                    <Button x:Name="MidTrainBt"
+                                            Width="120"
+                                            Height="240"
+                                            Content="Средняя"
+                                            Click="MidTrainBt_Click"
+                                            FontFamily="Bahnschrift"
+                                            CornerRadius="32"
+                                            FontStretch="Condensed"
+                                            FontSize="20"
+                                            IsEnabled="False">
+                                        <Button.Background>
+                                            <LinearGradientBrush EndPoint="0.5,1"
+                                                                 StartPoint="0.5,0">
+                                                <GradientStop Color="#FF57FFFF" />
+                                                <GradientStop Color="#FFFF6EA3"
+                                                              Offset="1" />
+                                            </LinearGradientBrush>
+                                        </Button.Background>
+                                    </Button>
+                                    <Button x:Name="LongTrainBt"
+                                            Width="120"
+                                            Height="240"
+                                            Content="Длинная"
+                                            Click="LongTrainBt_Click"
+                                            FontFamily="Bahnschrift"
+                                            CornerRadius="32"
+                                            FontStretch="Condensed"
+                                            FontSize="20"
+                                            IsEnabled="False">
+                                        <Button.Background>
+                                            <LinearGradientBrush EndPoint="0.5,1"
+                                                                 StartPoint="0.5,0">
+                                                <GradientStop Color="#FFFF5198" />
+                                                <GradientStop Color="#FFFFDC3E"
+                                                              Offset="1" />
+                                            </LinearGradientBrush>
+                                        </Button.Background>
+                                    </Button>
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                        <Grid x:Name="backLandGrid"
+                              Background="#11555555"
+                              CornerRadius="32">
+                            <Grid.Shadow>
+                                <ThemeShadow />
+                            </Grid.Shadow>
+                            <StackPanel>
+                                <TextBlock Text="Режим тренировки"
+                                           FontSize="32"
+                                           Padding="8"
+                                           HorizontalAlignment="Center"
+                                           FontFamily="Bahnschrift"
+                                           FontStretch="Condensed"
+                                           FontWeight="Bold" />
+                                <StackPanel Background="#11555555"
+                                            CornerRadius="32"
+                                            Padding="8">
+                                    <TextBlock Text="На реставрации. Крупные обновления требуют большой работы. Оставьте свои отзывы и предложения на странице в Microsoft Store"
+                                               Width="340"
+                                               FontSize="16"
+                                               FontFamily="Bahnschrift"
+                                               TextWrapping="Wrap"
+                                               HorizontalAlignment="Center" />
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+                <Border Background="#11555555"
+                        CornerRadius="32"
+                        Padding="8"
+                        Margin="4"
+                        BorderThickness="2">
+                    <StackPanel Grid.Column="1"
+                                Margin="20"
+                                Spacing="8">
+                        <Grid Background="#11555555"
+                              CornerRadius="32">
+                            <StackPanel Spacing="8">
+                                <Button Height="160"
+                                        FontSize="72"
                                         CornerRadius="32"
-                                        FontStretch="Condensed"
-                                        FontSize="20"
-                                        IsEnabled="False">
-                                    <Button.Shadow>
-                                        <ThemeShadow />
-                                    </Button.Shadow>
+                                        Click="Button_Click"
+                                        HorizontalAlignment="Stretch">
                                     <Button.Background>
                                         <LinearGradientBrush EndPoint="0.5,1"
                                                              StartPoint="0.5,0">
-                                            <GradientStop Color="#FF3285FF" />
-                                            <GradientStop Color="#FF89FF7D"
+                                            <GradientStop Color="#FFFFE800" />
+                                            <GradientStop Color="#FFFF6800"
                                                           Offset="1" />
                                         </LinearGradientBrush>
                                     </Button.Background>
+                                    <Image Source="/NavigationBarPageIcons/black_nib_3d.png"
+                                           Height="120" />
                                 </Button>
-                                <Button x:Name="MidTrainBt"
-                                        Width="120"
-                                        Height="240"
-                                        Content="Средняя"
-                                        Click="MidTrainBt_Click"
-                                        FontFamily="Bahnschrift"
+                                <TextBlock Text="Тренажер райтер"
+                                           FontSize="32"
+                                           Padding="8"
+                                           FontFamily="Bahnschrift"
+                                           FontStretch="Condensed"
+                                           FontWeight="Bold"
+                                           HorizontalAlignment="Center" />
+                                <Grid Background="#11555555"
+                                      CornerRadius="32"
+                                      Padding="16">
+                                    <TextBlock Text="Тренируй мышечную память"
+                                               FontSize="16"
+                                               FontFamily="Bahnschrift"
+                                               TextWrapping="Wrap"
+                                               HorizontalAlignment="Center" />
+                                </Grid>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+                <Border Background="#11555555"
+                        CornerRadius="32"
+                        Padding="8"
+                        Margin="4"
+                        BorderThickness="2">
+                    <StackPanel Grid.Column="2"
+                                Margin="20"
+                                Spacing="8">
+                        <Grid Background="#11555555"
+                              CornerRadius="32">
+                            <StackPanel Spacing="16">
+                                <Button HorizontalAlignment="Stretch"
+                                        FontSize="72"
+                                        Height="160"
                                         CornerRadius="32"
-                                        FontStretch="Condensed"
-                                        FontSize="20"
-                                        IsEnabled="False">
+                                        Click="Button_Click_1">
                                     <Button.Background>
                                         <LinearGradientBrush EndPoint="0.5,1"
                                                              StartPoint="0.5,0">
-                                            <GradientStop Color="#FF57FFFF" />
-                                            <GradientStop Color="#FFFF6EA3"
+                                            <GradientStop Color="#FF00D1FF" />
+                                            <GradientStop Color="#FF00FFA2"
                                                           Offset="1" />
                                         </LinearGradientBrush>
                                     </Button.Background>
+                                    <Image Source="/NavigationBarPageIcons/card_file_box_3d.png"
+                                           Height="120" />
                                 </Button>
-                                <Button x:Name="LongTrainBt"
-                                        Width="120"
-                                        Height="240"
-                                        Content="Длинная"
-                                        Click="LongTrainBt_Click"
-                                        FontFamily="Bahnschrift"
-                                        CornerRadius="32"
-                                        FontStretch="Condensed"
-                                        FontSize="20"
-                                        IsEnabled="False">
-                                    <Button.Background>
-                                        <LinearGradientBrush EndPoint="0.5,1"
-                                                             StartPoint="0.5,0">
-                                            <GradientStop Color="#FFFF5198" />
-                                            <GradientStop Color="#FFFFDC3E"
-                                                          Offset="1" />
-                                        </LinearGradientBrush>
-                                    </Button.Background>
-                                </Button>
-                            </StackPanel>
-                        </StackPanel>
-                    </Grid>
-                    <Grid x:Name="backLandGrid"
-                          Background="#11555555"
-                          CornerRadius="32">
-                        <Grid.Shadow>
-                            <ThemeShadow />
-                        </Grid.Shadow>
-                        <StackPanel>
-                            <TextBlock Text="Режим тренировки"
-                                       FontSize="32"
-                                       Padding="8"
-                                       HorizontalAlignment="Center"
-                                       FontFamily="Bahnschrift"
-                                       FontStretch="Condensed"
-                                       FontWeight="Bold" />
-                            <StackPanel Background="#11555555"
-                                        CornerRadius="32"
-                                        Padding="8">
-                                <TextBlock Text="На реставрации. Крупные обновления требуют большой работы. Оставьте свои отзывы и предложения на странице в Microsoft Store"
-                                           Width="340"
-                                           FontSize="16"
+                                <TextBlock Text="Тренажер пикер"
+                                           FontSize="32"
                                            FontFamily="Bahnschrift"
-                                           TextWrapping="Wrap"
+                                           FontStretch="Condensed"
+                                           FontWeight="Bold"
                                            HorizontalAlignment="Center" />
+                                <StackPanel Background="#11555555"
+                                            CornerRadius="32"
+                                            Padding="16">
+                                    <TextBlock Text="Выбирай из 4 предложенных вариантов"
+                                               FontSize="16"
+                                               FontFamily="Bahnschrift"
+                                               TextWrapping="Wrap"
+                                               HorizontalAlignment="Center" />
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </Grid>
-                </StackPanel>
-                <StackPanel Grid.Column="1"
-                            Margin="20"
-                            Spacing="8">
-                    <Grid Background="#11555555"
-                          CornerRadius="32">
-                        <StackPanel Spacing="8">
-                            <Button Height="160"
-                                    FontSize="72"
-                                    CornerRadius="32"
-                                    Click="Button_Click"
-                                    HorizontalAlignment="Stretch">
-                                <Button.Background>
-                                    <LinearGradientBrush EndPoint="0.5,1"
-                                                         StartPoint="0.5,0">
-                                        <GradientStop Color="#FFFFE800" />
-                                        <GradientStop Color="#FFFF6800"
-                                                      Offset="1" />
-                                    </LinearGradientBrush>
-                                </Button.Background>
-                                <Image Source="/NavigationBarPageIcons/black_nib_3d.png"
-                                       Height="120" />
-                            </Button>
-                            <TextBlock Text="Тренажер райтер"
-                                       FontSize="32"
-                                       Padding="8"
-                                       FontFamily="Bahnschrift"
-                                       FontStretch="Condensed"
-                                       FontWeight="Bold"
-                                       HorizontalAlignment="Center" />
-                            <Grid Background="#11555555"
-                                  CornerRadius="32"
-                                  Padding="16">
-                                <TextBlock Text="Тренируй мышечную память"
-                                           FontSize="16"
-                                           FontFamily="Bahnschrift"
-                                           TextWrapping="Wrap"
-                                           HorizontalAlignment="Center" />
-                            </Grid>
-                        </StackPanel>
-                    </Grid>
-                </StackPanel>
-                <StackPanel Grid.Column="2"
-                            Margin="20"
-                            Spacing="8">
-                    <Grid Background="#11555555"
-                          CornerRadius="32">
-                        <StackPanel Spacing="16">
-                            <Button 
-                                    HorizontalAlignment="Stretch"
-                                    FontSize="72"
-                                    Height="160"
-                                    CornerRadius="32"
-                                    Click="Button_Click_1">
-                                <Button.Background>
-                                    <LinearGradientBrush EndPoint="0.5,1"
-                                                         StartPoint="0.5,0">
-                                        <GradientStop Color="#FF00D1FF" />
-                                        <GradientStop Color="#FF00FFA2"
-                                                      Offset="1" />
-                                    </LinearGradientBrush>
-                                </Button.Background>
-                                <Image Source="/NavigationBarPageIcons/card_file_box_3d.png"
-                                       Height="120" />
-                            </Button>
-                            <TextBlock Text="Тренажер пикер"
-                                       FontSize="32"
-                                       FontFamily="Bahnschrift"
-                                       FontStretch="Condensed"
-                                       FontWeight="Bold"
-                                       HorizontalAlignment="Center" />
-                            <StackPanel Background="#11555555"
-                                        CornerRadius="32"
-                                        Padding="16">
-                                <TextBlock Text="Выбирай из 4 предложенных вариантов"
-                                           FontSize="16"
-                                           FontFamily="Bahnschrift"
-                                           TextWrapping="Wrap"
-                                           HorizontalAlignment="Center" />
-                            </StackPanel>
-                        </StackPanel>
-                    </Grid>
-                </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Border>
                 <Grid CornerRadius="32"
                       Padding="8"
                       Margin="4">
