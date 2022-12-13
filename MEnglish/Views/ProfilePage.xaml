@@ -48,12 +48,51 @@
                            FontSize="32"
                            Margin="-160 -18 0 0"
                            HorizontalAlignment="Center" />
-                <TextBox x:Name="searchTextBox"
-                         Text="{x:Bind viewModel.SearchTextBoxText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                         PlaceholderText="Поиск по слову/рейтингу"
-                         MaxWidth="800"
-                         Padding="10"
-                         Margin="20" />
+                <StackPanel Margin="20">
+                    <TextBox x:Name="searchTextBox"
+                             Text="{x:Bind viewModel.SearchTextBoxText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                             PlaceholderText="Поиск по слову/рейтингу"
+                             MaxWidth="800"
+                             Padding="20"
+                             Margin="20" />
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Button Content="Добавить новое слово"
+                                FontWeight="Bold"
+                                HorizontalAlignment="Stretch"
+                                CornerRadius="16"
+                                MaxWidth="400"
+                                Margin="12 0">
+                            <Button.Background>
+                                <LinearGradientBrush Opacity=".7">
+                                    <GradientStop Color="{ThemeResource SystemAccentColorLight1}" />
+                                    <GradientStop Color="{ThemeResource SystemAccentColorLight3}"
+                                                  Offset=".5" />
+                                    <GradientStop Color="{ThemeResource SystemAccentColorLight1}"
+                                                  Offset="1" />
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                        <Button Content="Сбросить все слова"
+                                Grid.Column="1"
+                                FontWeight="Bold"
+                                HorizontalAlignment="Stretch"
+                                CornerRadius="16"
+                                MaxWidth="400"
+                                Margin="12 0">
+                            <Button.Background>
+                                <LinearGradientBrush Opacity=".7">
+                                    <GradientStop Color="IndianRed"/>
+                                    <GradientStop Color="Orange" Offset=".5"/>
+                                    <GradientStop Color="IndianRed" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </Grid>
+                </StackPanel>
             </Grid>
             <GridView x:Name="wordsList"
                       HorizontalAlignment="Center"
