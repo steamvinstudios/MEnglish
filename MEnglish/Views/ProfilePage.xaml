@@ -65,7 +65,8 @@
                                 HorizontalAlignment="Stretch"
                                 CornerRadius="16"
                                 MaxWidth="400"
-                                Margin="12 0">
+                                Margin="12 0"
+                                Click="AddButton_Click">
                             <Button.Background>
                                 <LinearGradientBrush Opacity=".7">
                                     <GradientStop Color="{ThemeResource SystemAccentColorLight1}" />
@@ -82,7 +83,8 @@
                                 HorizontalAlignment="Stretch"
                                 CornerRadius="16"
                                 MaxWidth="400"
-                                Margin="12 0">
+                                Margin="12 0"
+                                Click="ResetButton_Click">
                             <Button.Background>
                                 <LinearGradientBrush Opacity=".7">
                                     <GradientStop Color="IndianRed"/>
