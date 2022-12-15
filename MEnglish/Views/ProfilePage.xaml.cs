@@ -1,4 +1,5 @@
-﻿using MEnglish.Models;
+﻿using CommunityToolkit.Mvvm.Input;
+using MEnglish.Models;
 using MEnglish.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -80,24 +81,37 @@ namespace MEnglish.Views
             wordsManagerTeachingTip.IsOpen = true;
         }
 
-        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        private async void ResetButton_Click(object sender, RoutedEventArgs e)
         {
-            using (WordContext db = new WordContext())
+            var contentDialog = new ContentDialog
             {
-                var tmpWords = db.Words.ToList();
+                Title = "Вы уверены?",
+                Content = "Это действие удалит все Ваши добавленные слова и сбросит рейтинг встроенных слов",
+                PrimaryButtonText = "Сбросить",
+                PrimaryButtonCommand = new RelayCommand(() =>
+                {
+                    using (WordContext db = new WordContext())
+                    {
+                        var tmpWords = db.Words.ToList();
 
-                foreach (var word in tmpWords)
-                    db.Words.Remove(word);
+                        foreach (var word in tmpWords)
+                            db.Words.Remove(word);
 
-                db.SaveChanges();
+                        db.SaveChanges();
 
-                foreach (var word in viewModel.AppWords.All)
-                    db.Add(word);
+                        foreach (var word in viewModel.AppWords.All)
+                            db.Add(word);
 
-                db.SaveChanges();
+                        db.SaveChanges();
 
-                wordsList.ItemsSource = db.Words.ToList();
-            }
+                        wordsList.ItemsSource = db.Words.ToList();
+                    }
+                }
+                ),
+                CloseButtonText = "Отмена"
+            };
+
+            await contentDialog.ShowAsync();
         }
     }
 }
