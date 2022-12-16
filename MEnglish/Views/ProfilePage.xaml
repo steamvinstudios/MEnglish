@@ -87,9 +87,11 @@
                                 Click="ResetButton_Click">
                             <Button.Background>
                                 <LinearGradientBrush Opacity=".7">
-                                    <GradientStop Color="IndianRed"/>
-                                    <GradientStop Color="Orange" Offset=".5"/>
-                                    <GradientStop Color="IndianRed" Offset="1"/>
+                                    <GradientStop Color="IndianRed" />
+                                    <GradientStop Color="Orange"
+                                                  Offset=".5" />
+                                    <GradientStop Color="IndianRed"
+                                                  Offset="1" />
                                 </LinearGradientBrush>
                             </Button.Background>
                         </Button>
@@ -106,7 +108,7 @@
                     <DataTemplate x:DataType="models:Word">
                         <Grid>
                             <StackPanel CornerRadius="32"
-                                        Width="180">
+                                        Width="240">
                                 <Image Height="180"
                                        HorizontalAlignment="Left"
                                        Source="{x:Bind Image}"
@@ -189,11 +191,6 @@
                            FontSize="36"
                            FontFamily="Bahnschrift"
                            FontStretch="Condensed" />
-                <Button x:Name="addButton"
-                        Content="Добавить новое слово"
-                        Style="{ThemeResource AccentButtonStyle}"
-                        HorizontalAlignment="Stretch"
-                        Click="AddButton_Click" />
                 <Button x:Name="editButton"
                         Content="Изменить"
                         HorizontalAlignment="Stretch"
@@ -202,10 +199,6 @@
                         Content="Удалить"
                         HorizontalAlignment="Stretch"
                         Click="DeleteButton_Click" />
-                <Button x:Name="resetButton"
-                        Content="Сбросить слова"
-                        HorizontalAlignment="Stretch"
-                        Click="ResetButton_Click" />
             </StackPanel>
         </controls:TeachingTip>
     </Grid>
