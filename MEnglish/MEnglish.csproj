@@ -138,6 +138,7 @@
     <Compile Include="Models\AnswersResult.cs" />
     <Compile Include="Models\PickerTrainer.cs" />
     <Compile Include="Models\Trainer.cs" />
+    <Compile Include="Models\TrainerManager.cs" />
     <Compile Include="Models\TrainerStopwatch.cs" />
     <Compile Include="Models\WordBuilder.cs" />
     <Compile Include="Models\WordContext.cs" />
@@ -147,6 +148,7 @@
     <Compile Include="ViewModels\HomePageViewModel.cs" />
     <Compile Include="ViewModels\PickerPageViewModel.cs" />
     <Compile Include="ViewModels\ProfilePageViewModel.cs" />
+    <Compile Include="ViewModels\TrainerManagerViewModel.cs" />
     <Compile Include="Views\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
@@ -161,6 +163,9 @@
     </Compile>
     <Compile Include="Views\GreatJobPage.xaml.cs">
       <DependentUpon>GreatJobPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TrainerManagerPage.xaml.cs">
+      <DependentUpon>TrainerManagerPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\WordPage.xaml.cs">
       <DependentUpon>WordPage.xaml</DependentUpon>
@@ -344,6 +349,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\GreatJobPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TrainerManagerPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
