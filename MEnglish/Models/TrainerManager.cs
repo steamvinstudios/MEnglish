@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace MEnglish.Models
 {
-    internal class TrainerManager
+    public class TrainerManager
     {
+        public List<Trainer> Trainers { get; set; }
+        public TrainerManager(List<Trainer> trainers)
+        {
+            Trainers = trainers;
+        }
     }
 }

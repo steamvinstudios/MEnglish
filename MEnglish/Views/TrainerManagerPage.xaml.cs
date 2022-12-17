@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MEnglish.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,6 +23,7 @@ namespace MEnglish.Views
     /// </summary>
     public sealed partial class TrainerManagerPage : Page
     {
+        private TrainerManagerViewModel viewModel = new TrainerManagerViewModel();
         public TrainerManagerPage()
         {
             this.InitializeComponent();
