@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -27,6 +28,23 @@ namespace MEnglish.Views
         public TrainerManagerPage()
         {
             this.InitializeComponent();
+            Content = viewModel.CurrentPageFrame;
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            NextTrainerPageEvery2Seconds();
+        }
+
+        private async void NextTrainerPageEvery2Seconds()
+        {
+            while (true)
+            {
+                await Task.Delay(3000);
+                viewModel.CurrentPageFrame.Content = viewModel.WriterPage;
+                await Task.Delay(3000);
+                viewModel.CurrentPageFrame.Content = viewModel.PickerPage;
+            }
         }
     }
 }

@@ -18,6 +18,8 @@ using Windows.UI.Notifications;
 using System.Numerics;
 using Windows.UI.Xaml.Media.Animation;
 using MEnglish.ViewModels;
+using MEnglish.Models;
+using MEnglish.Views;
 
 // Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -35,7 +37,7 @@ namespace MEnglish
         }
         private void ShortTrainBt_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(WriterPage), null, new DrillInNavigationTransitionInfo());
+            Frame.Navigate(typeof(TrainerManagerPage), null, new DrillInNavigationTransitionInfo());
         }
 
         private void MidTrainBt_Click(object sender, RoutedEventArgs e)

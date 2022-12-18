@@ -41,8 +41,7 @@
                                             FontFamily="Bahnschrift"
                                             CornerRadius="32"
                                             FontStretch="Condensed"
-                                            FontSize="20"
-                                            IsEnabled="False">
+                                            FontSize="20">
                                         <Button.Shadow>
                                             <ThemeShadow />
                                         </Button.Shadow>
