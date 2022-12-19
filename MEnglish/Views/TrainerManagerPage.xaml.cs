@@ -40,9 +40,9 @@ namespace MEnglish.Views
         {
             while (true)
             {
-                await Task.Delay(3000);
+                await Task.Delay(1000);
                 viewModel.CurrentPageFrame.Content = viewModel.WriterPage;
-                await Task.Delay(3000);
+                await Task.Delay(1000);
                 viewModel.CurrentPageFrame.Content = viewModel.PickerPage;
             }
         }
