@@ -28,23 +28,13 @@ namespace MEnglish.Views
         public TrainerManagerPage()
         {
             this.InitializeComponent();
+            viewModel.CurrentPageFrame.Content = viewModel.WriterPage;
             Content = viewModel.CurrentPageFrame;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            NextTrainerPageEvery2Seconds();
-        }
 
-        private async void NextTrainerPageEvery2Seconds()
-        {
-            while (true)
-            {
-                await Task.Delay(1000);
-                viewModel.CurrentPageFrame.Content = viewModel.WriterPage;
-                await Task.Delay(1000);
-                viewModel.CurrentPageFrame.Content = viewModel.PickerPage;
-            }
         }
     }
 }

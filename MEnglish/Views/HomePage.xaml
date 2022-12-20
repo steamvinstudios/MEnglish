@@ -62,8 +62,7 @@
                                             FontFamily="Bahnschrift"
                                             CornerRadius="32"
                                             FontStretch="Condensed"
-                                            FontSize="20"
-                                            IsEnabled="False">
+                                            FontSize="20">
                                         <Button.Background>
                                             <LinearGradientBrush EndPoint="0.5,1"
                                                                  StartPoint="0.5,0">
@@ -81,8 +80,7 @@
                                             FontFamily="Bahnschrift"
                                             CornerRadius="32"
                                             FontStretch="Condensed"
-                                            FontSize="20"
-                                            IsEnabled="False">
+                                            FontSize="20">
                                         <Button.Background>
                                             <LinearGradientBrush EndPoint="0.5,1"
                                                                  StartPoint="0.5,0">
