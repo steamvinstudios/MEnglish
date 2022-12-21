@@ -308,6 +308,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="Assets\Windows Balloon.wav" />
     <Content Include="Images\GitHub_Logo.png" />
+    <Content Include="Images\Logo.png" />
     <Content Include="Images\menglishlogonew.png" />
     <Content Include="MEnglish.csproj.user" />
     <Content Include="Images\VK_Blue_Logo_transparent.png" />
