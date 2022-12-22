@@ -48,8 +48,14 @@ namespace MEnglish
         private void EnglishWordTextBlock_PointerExited(object sender, PointerRoutedEventArgs e) =>
             viewModel.WriterTrainer.WordInfoTeachingTipIsOpen = false;
 
-        private void CheckAnswerButton_Click(object sender, RoutedEventArgs e) =>
+        private void CheckAnswerButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (viewModel.WriterTrainer.IsNextTrainer)
+            {
+                Frame.Navigate(typeof(PickerPage));
+            }
             viewModel.WriterTrainer.CheckAnswerAsync();
+        }
 
         private void AnswerTextBox_KeyDown(object sender, KeyRoutedEventArgs e)
         {

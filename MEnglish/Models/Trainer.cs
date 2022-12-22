@@ -10,6 +10,21 @@ namespace MEnglish.Models
 {
     public class Trainer : ObservableObject
     {
+        public bool IsNextTrainer { get; set; } = false;
+        private int nextTrainerCounter = 0;
+        public int NextTrainerCounter 
+        {
+            get => nextTrainerCounter; 
+            set
+            {
+                SetProperty(ref nextTrainerCounter, value);
+                if (nextTrainerCounter > 3)
+                {
+                    nextTrainerCounter = 0;
+                    IsNextTrainer= true;
+                }
+            }
+        }
         public int PositivePoints { get; set; } = 10;
         public int NegativePoints { get; set; } = 5;
         private AnswersResult answersResult = new AnswersResult();

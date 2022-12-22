@@ -10,6 +10,7 @@ namespace MEnglish.ViewModels
 {
     public class TrainerManagerViewModel : BaseViewModel
     {
+        public int NextPageSuccessCounter { get; set; } = 3;
         private Frame currentPageFrame = new Frame();
         public Frame CurrentPageFrame
         {
