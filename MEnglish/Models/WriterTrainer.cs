@@ -60,8 +60,6 @@ namespace MEnglish.Models
 
                     db.Update(RandomWord);
                     db.SaveChanges();
-
-                    NextTrainerCounter++;
                 }
 
                 // сортировка коллекции слов по рейтингу

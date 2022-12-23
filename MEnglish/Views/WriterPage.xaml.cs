@@ -50,10 +50,6 @@ namespace MEnglish
 
         private void CheckAnswerButton_Click(object sender, RoutedEventArgs e)
         {
-            if (viewModel.WriterTrainer.IsNextTrainer)
-            {
-                Frame.Navigate(typeof(PickerPage));
-            }
             viewModel.WriterTrainer.CheckAnswerAsync();
         }
 
