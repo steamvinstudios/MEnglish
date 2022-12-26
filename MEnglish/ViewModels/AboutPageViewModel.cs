@@ -9,7 +9,7 @@ namespace MEnglish.ViewModels
 {
     public class AboutPageViewModel : BaseViewModel
     {
-        public string LastUpdate { get; } = "Обновление от: 25.12.2022";
+        public string LastUpdate { get; } = "Обновление от: 26.12.2022";
         public string AppVersion { get; } = "Версия: 11.4 Store Edition";
         private int rectanleRotation;
         public int RectanleRotation
@@ -47,10 +47,7 @@ namespace MEnglish.ViewModels
             get => rectanle5Rotation;
             private set => SetProperty(ref rectanle5Rotation, value);
         }
-        public AboutPageViewModel()
-        {
-            StartRectanglesAnimationAsync();
-        }
+        public AboutPageViewModel() => StartRectanglesAnimationAsync();
         public async void StartRectanglesAnimationAsync()
         {
             while (true)

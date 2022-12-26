@@ -9,9 +9,6 @@ namespace MEnglish.Models
     public class TrainerManager
     {
         public List<Trainer> Trainers { get; set; }
-        public TrainerManager(List<Trainer> trainers)
-        {
-            Trainers = trainers;
-        }
+        public TrainerManager(List<Trainer> trainers) => Trainers = trainers;
     }
 }
