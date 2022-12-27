@@ -201,5 +201,32 @@
                         Click="DeleteButton_Click" />
             </StackPanel>
         </controls:TeachingTip>
+        <StackPanel Orientation="Horizontal"
+                    Spacing="8">
+            <StackPanel Orientation="Horizontal"
+                        Spacing="8"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Padding="12 4"
+                        CornerRadius="28"
+                        BorderThickness="2"
+                        Background="{ThemeResource SystemControlBackgroundTransparentRevealBorderBrush}"
+                        BorderBrush="{ThemeResource SystemControlBackgroundBaseMediumLowRevealBorderBrush}">
+                <TextBlock Text="🤖"
+                           FontSize="32" />
+                <TextBlock Text="Никнейм Пользователя"
+                           FontSize="16"
+                           FontWeight="Bold"
+                           VerticalAlignment="Center" />
+            </StackPanel>
+            <Button Content="✏️"
+                    FontSize="32"
+                    CornerRadius="28"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    BorderThickness="2"
+                    Background="{ThemeResource SystemControlBackgroundTransparentRevealBorderBrush}"
+                    BorderBrush="{ThemeResource SystemControlBackgroundBaseMediumLowRevealBorderBrush}" />
+        </StackPanel>
     </Grid>
 </Page>
