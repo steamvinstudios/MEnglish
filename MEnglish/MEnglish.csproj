@@ -161,9 +161,6 @@
     <Compile Include="Views\NavigationBarPage.xaml.cs">
       <DependentUpon>NavigationBarPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\GreatJobPage.xaml.cs">
-      <DependentUpon>GreatJobPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\TrainerManagerPage.xaml.cs">
       <DependentUpon>TrainerManagerPage.xaml</DependentUpon>
     </Compile>
@@ -346,10 +343,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\NavigationBarPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\GreatJobPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
