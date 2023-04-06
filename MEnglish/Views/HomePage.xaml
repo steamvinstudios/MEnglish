@@ -225,11 +225,11 @@
                                           Offset="1" />
                         </LinearGradientBrush>
                     </Grid.Background>
-                    <TextBlock Text="❄️🎄🎁🎅🎄❄️"
-                               FontSize="100"
-                               TextWrapping="Wrap"
-                               HorizontalAlignment="Center"
-                               VerticalAlignment="Center" />
+                    <Image Source="/Images/newspaper_3d.png"
+                           Height="256"
+                           Width="256"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center" />
                     <TextBlock Text="Последние новости"
                                Margin="0 40"
                                FontSize="44"

@@ -1,0 +1,56 @@
+﻿<Page
+    x:Class="MEnglish.Dictionary"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MEnglish"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d">
+
+    <Page.Background>
+        <AcrylicBrush BackgroundSource="HostBackdrop" TintOpacity="0.1" TintLuminosityOpacity="0.1"/>
+    </Page.Background>
+
+    <Grid x:Name="mGrid">
+        <StackPanel Margin="0 120 0 0">
+            
+            <AutoSuggestBox TextChanged="AutoSuggestBox_TextChanged"
+                            SuggestionChosen="AutoSuggestBox_SuggestionChosen"
+                            Width="300" 
+                            AutomationProperties.Name="Basic AutoSuggestBox"
+                            Margin="0 0 0 20"/>
+            
+            <ListView ItemsSource="{x:Bind Words.WordsArray}"
+                  HorizontalAlignment="Center" 
+                      VerticalAlignment="Center" 
+                      SelectionChanged="ListView_SelectionChanged">
+                
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="local:Word">
+                        <Grid MinWidth="320">
+                            <StackPanel Orientation="Horizontal" Margin="6">
+                                <Image Source="{x:Bind WordPic}" 
+                                       MaxWidth="40"
+                                       MaxHeight="40"/>
+                                <StackPanel Margin="8">
+                                    <TextBlock Text="{x:Bind OriginalWord}"
+                                               FontWeight="Bold"
+                                               FontSize="16"/>
+                                    <TextBlock Text="{x:Bind WordTranslation}"
+                                               FontSize="12"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+            </ListView>
+
+            <muxc:TeachingTip x:Name="ttip">
+            </muxc:TeachingTip>
+
+        </StackPanel>
+    </Grid>
+    
+</Page>

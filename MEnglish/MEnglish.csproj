@@ -18,7 +18,7 @@
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
     <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
-    <PackageCertificateThumbprint>B58D9A5C328146E4DB43DC3804966074FE4D2746</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>1B7491ADE76DC3A6754EF43CEFADBFB2698F1F7D</PackageCertificateThumbprint>
     <PackageCertificateKeyFile>
     </PackageCertificateKeyFile>
     <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
@@ -307,6 +307,7 @@
     <Content Include="Images\GitHub_Logo.png" />
     <Content Include="Images\Logo.png" />
     <Content Include="Images\menglishlogonew.png" />
+    <Content Include="Images\newspaper_3d.png" />
     <Content Include="MEnglish.csproj.user" />
     <Content Include="Images\VK_Blue_Logo_transparent.png" />
     <Content Include="Images\VK_Full_Logo.png" />
