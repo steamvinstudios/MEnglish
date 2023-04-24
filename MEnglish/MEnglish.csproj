@@ -137,6 +137,8 @@
   <ItemGroup>
     <Compile Include="Models\AnswersResult.cs" />
     <Compile Include="Models\PickerTrainer.cs" />
+    <Compile Include="Models\Sentence.cs" />
+    <Compile Include="Models\Sentences.cs" />
     <Compile Include="Models\Trainer.cs" />
     <Compile Include="Models\TrainerManager.cs" />
     <Compile Include="Models\TrainerStopwatch.cs" />
@@ -148,6 +150,7 @@
     <Compile Include="ViewModels\HomePageViewModel.cs" />
     <Compile Include="ViewModels\PickerPageViewModel.cs" />
     <Compile Include="ViewModels\ProfilePageViewModel.cs" />
+    <Compile Include="ViewModels\SentencesPageViewModel.cs" />
     <Compile Include="ViewModels\TrainerManagerViewModel.cs" />
     <Compile Include="Views\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
@@ -160,6 +163,9 @@
     </Compile>
     <Compile Include="Views\NavigationBarPage.xaml.cs">
       <DependentUpon>NavigationBarPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SentencesPage.xaml.cs">
+      <DependentUpon>SentencesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\TrainerManagerPage.xaml.cs">
       <DependentUpon>TrainerManagerPage.xaml</DependentUpon>
@@ -216,6 +222,7 @@
     <Content Include="ArrayPics\honey.jpg" />
     <Content Include="ArrayPics\horse.jpg" />
     <Content Include="ArrayPics\house.jpg" />
+    <Content Include="ArrayPics\i.jpg" />
     <Content Include="ArrayPics\ice.jpg" />
     <Content Include="ArrayPics\idea.jpg" />
     <Content Include="ArrayPics\intend.jpg" />
@@ -252,12 +259,14 @@
     <Content Include="ArrayPics\watchout.jpg" />
     <Content Include="ArrayPics\watch.jpg" />
     <Content Include="ArrayPics\way.jpg" />
+    <Content Include="ArrayPics\we.jpg" />
     <Content Include="ArrayPics\wind.jpg" />
     <Content Include="ArrayPics\window.jpg" />
     <Content Include="ArrayPics\winter.jpg" />
     <Content Include="ArrayPics\withoutimg.png" />
     <Content Include="ArrayPics\wreath.jpg" />
     <Content Include="ArrayPics\write.jpg" />
+    <Content Include="ArrayPics\you.jpg" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-125.png" />
     <Content Include="Assets\LargeTile.scale-150.png" />
@@ -344,6 +353,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\NavigationBarPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SentencesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -423,6 +423,18 @@ namespace MEnglish.Models
             Word.CreateBuilder().SetEnglishForm("sleigh")
                                 .SetRussianForm("сани")
                                 .SetImage("/ArrayPics/sleigh.jpg"),
+
+            Word.CreateBuilder().SetEnglishForm("you")
+                                .SetRussianForm("ты")
+                                .SetImage("/ArrayPics/you.jpg"),
+
+            Word.CreateBuilder().SetEnglishForm("i")
+                                .SetRussianForm("я")
+                                .SetImage("/ArrayPics/i.jpg"),
+
+            Word.CreateBuilder().SetEnglishForm("we")
+                                .SetRussianForm("мы")
+                                .SetImage("/ArrayPics/we.jpg"),
         };
     }
 }

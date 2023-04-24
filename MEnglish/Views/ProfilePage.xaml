@@ -20,34 +20,6 @@
                        FontStretch="Condensed"
                        HorizontalAlignment="Center" />
             <Grid>
-                <TextBlock Text="🎁"
-                           FontSize="16"
-                           Margin="32 1 0 0"
-                           HorizontalAlignment="Center" />
-                <TextBlock Text="🎄"
-                           FontSize="100"
-                           Margin="-100"
-                           HorizontalAlignment="Center" />
-                <TextBlock Text="🎁"
-                           FontSize="24"
-                           Margin="-72 -8 0 0"
-                           HorizontalAlignment="Center" />
-                <TextBlock Text="🎁"
-                           FontSize="24"
-                           Margin="88 -8 0 0"
-                           HorizontalAlignment="Center" />
-                <TextBlock Text="🎁"
-                           FontSize="16"
-                           Margin="-20 1 0 0"
-                           HorizontalAlignment="Center" />
-                <TextBlock Text="🐈"
-                           FontSize="24"
-                           Margin="160 -8 0 0"
-                           HorizontalAlignment="Center" />
-                <TextBlock Text="🐕"
-                           FontSize="32"
-                           Margin="-160 -18 0 0"
-                           HorizontalAlignment="Center" />
                 <StackPanel Margin="20">
                     <TextBox x:Name="searchTextBox"
                              Text="{x:Bind viewModel.SearchTextBoxText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
@@ -201,40 +173,5 @@
                         Click="DeleteButton_Click" />
             </StackPanel>
         </controls:TeachingTip>
-        <StackPanel Orientation="Horizontal"
-                    Spacing="8">
-            <StackPanel Orientation="Horizontal"
-                        Spacing="8"
-                        HorizontalAlignment="Left"
-                        VerticalAlignment="Top"
-                        Padding="12 0"
-                        CornerRadius="16"
-                        BorderThickness="1"
-                        BorderBrush="{ThemeResource SystemControlBackgroundBaseMediumLowRevealBorderBrush}">
-                <StackPanel.Background>
-                    <AcrylicBrush TintColor="Transparent"
-                                  TintLuminosityOpacity="0" />
-                </StackPanel.Background>
-                <TextBlock Text="🤖"
-                           FontSize="24" />
-                <TextBlock Text="Никнейм Пользователя"
-                           FontSize="12"
-                           FontWeight="Bold"
-                           VerticalAlignment="Center" />
-            </StackPanel>
-            <Button Content="✏️"
-                    FontSize="20"
-                    Padding="0"
-                    Height="35"
-                    Width="35"
-                    CornerRadius="90"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top">
-                <Button.Background>
-                    <AcrylicBrush TintColor="Transparent"
-                                  TintLuminosityOpacity="0" />
-                </Button.Background>
-            </Button>
-        </StackPanel>
     </Grid>
 </Page>
