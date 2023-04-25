@@ -1,4 +1,5 @@
-﻿using Windows.UI.Xaml;
+﻿using MEnglish.Views;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
 
@@ -43,5 +44,7 @@ namespace MEnglish
 
         private void ProfilePageButton_Click(object sender, RoutedEventArgs e) =>
             GenPointFrame.Navigate(typeof(Views.ProfilePage), null, new DrillInNavigationTransitionInfo());
+
+        private void SentencesPageButton_Click(object sender, RoutedEventArgs e) => GenPointFrame.Navigate(typeof(SentencesPage), null, new DrillInNavigationTransitionInfo());
     }
 }

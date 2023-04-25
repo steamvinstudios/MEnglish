@@ -331,6 +331,7 @@
     <Content Include="NavigationBarPageIcons\chequered_flag_3d.png" />
     <Content Include="NavigationBarPageIcons\eyes_3d.png" />
     <Content Include="NavigationBarPageIcons\graduation_cap_3d.png" />
+    <Content Include="NavigationBarPageIcons\writing_hand_3d_default.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -398,6 +399,12 @@
     </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.14</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI">
+      <Version>7.1.3</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls">
+      <Version>7.1.3</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.UI.Xaml">
       <Version>2.8.3</Version>

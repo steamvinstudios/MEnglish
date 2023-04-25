@@ -1,4 +1,5 @@
-﻿using MEnglish.ViewModels;
+﻿using MEnglish.Models;
+using MEnglish.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,9 +25,52 @@ namespace MEnglish.Views
     public sealed partial class SentencesPage : Page
     {
         private SentencesPageViewModel viewModel = new SentencesPageViewModel();
+        public Sentence Sentence { get; set; } = new Sentence();
+        public string EnSen { get; set; } = "i love you";
+        public List<string> EnSenSplited { get; set; } = new List<string>();
         public SentencesPage()
         {
             this.InitializeComponent();
+
+            Sentence = viewModel.Sentences.Collection[new Random().Next(viewModel.Sentences.Collection.Count)];
+
+            EnSenSplited = Sentence.English.Split(' ').ToList().OrderBy(x => new Random().Next()).ToList();
+
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            wordTextBox.Text += $"{(sender as Button).Content} ";
+        }
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (wordTextBox.Text.TrimEnd() == Sentence.English)
+            {
+                var contentDialog = new ContentDialog
+                {
+                    Title = "Отличный результат 💚",
+                    FontSize = 32,
+                    Content = $"{Sentence.Russian} - {Sentence.English}",
+                    CloseButtonText = "Закрыть"
+                };
+
+                var result = await contentDialog.ShowAsync();
+
+                Frame.Navigate(typeof(SentencesPage));
+            }
+            else
+            {
+                var contentDialog = new ContentDialog
+                {
+                    Title = "Подсказка",
+                    FontSize = 32,
+                    Content = $"{Sentence.Russian} - {Sentence.English}",
+                    CloseButtonText = "Попробовать еще"
+                };
+
+                var result = await contentDialog.ShowAsync();
+            }
         }
     }
 }
