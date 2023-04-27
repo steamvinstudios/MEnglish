@@ -13,7 +13,8 @@
                     CornerRadius="40"
                     Margin="20"
                     Spacing="4"
-                    Padding="40" BorderThickness="2"
+                    Padding="40"
+                    BorderThickness="2"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
             <StackPanel.BorderBrush>
@@ -40,12 +41,14 @@
                        HorizontalAlignment="Center">
                 <TextBlock.Foreground>
                     <LinearGradientBrush>
-                        <GradientStop Color="Orange" Offset="0"/>
-                        <GradientStop Color="OrangeRed" Offset=".5"/>
-                        <GradientStop Color="BlueViolet" Offset="1"/>
+                        <GradientStop Color="Orange"
+                                      Offset="0" />
+                        <GradientStop Color="OrangeRed"
+                                      Offset=".5" />
+                        <GradientStop Color="BlueViolet"
+                                      Offset="1" />
                     </LinearGradientBrush>
-                </TextBlock.Foreground>
-            </TextBlock>
+                </TextBlock.Foreground></TextBlock>
             <TextBox x:Name="wordTextBox"
                      Header="Собранное слово" />
             <Button Content="Ответить"

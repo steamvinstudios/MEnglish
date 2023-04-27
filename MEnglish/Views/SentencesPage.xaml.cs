@@ -47,6 +47,7 @@ namespace MEnglish.Views
         {
             if (wordTextBox.Text.TrimEnd() == Sentence.English)
             {
+                /*
                 var contentDialog = new ContentDialog
                 {
                     Title = "Отличный результат 💚",
@@ -56,7 +57,7 @@ namespace MEnglish.Views
                 };
 
                 var result = await contentDialog.ShowAsync();
-
+                */
                 Frame.Navigate(typeof(SentencesPage));
             }
             else
