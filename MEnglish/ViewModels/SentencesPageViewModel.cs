@@ -10,5 +10,6 @@ namespace MEnglish.ViewModels
     public class SentencesPageViewModel : BaseViewModel
     {
         public Sentences Sentences { get; set; } = new Sentences();
+        public PickerTrainer PickerTrainer { get; set; } = new PickerTrainer();
     }
 }

@@ -26,7 +26,6 @@ namespace MEnglish.Views
     {
         private SentencesPageViewModel viewModel = new SentencesPageViewModel();
         public Sentence Sentence { get; set; } = new Sentence();
-        public string EnSen { get; set; } = "i love you";
         public List<string> EnSenSplited { get; set; } = new List<string>();
         public SentencesPage()
         {
@@ -47,6 +46,9 @@ namespace MEnglish.Views
         {
             if (wordTextBox.Text.TrimEnd() == Sentence.English)
             {
+                viewModel.PickerTrainer.AnswersResult.IncreaseAll();
+                viewModel.PickerTrainer.AnswersResult.IncreaseCorrect();
+
                 /*
                 var contentDialog = new ContentDialog
                 {
@@ -58,10 +60,21 @@ namespace MEnglish.Views
 
                 var result = await contentDialog.ShowAsync();
                 */
-                Frame.Navigate(typeof(SentencesPage));
+
+                Sentence = viewModel.Sentences.Collection[new Random().Next(viewModel.Sentences.Collection.Count)];
+
+                EnSenSplited = Sentence.English.Split(' ').ToList().OrderBy(x => new Random().Next()).ToList();
+
+                buildWordTextBlock.Text = Sentence.Russian;
+                AnswersListView.ItemsSource = EnSenSplited.ToList();
+
+                wordTextBox.Text = "";
             }
             else
             {
+                viewModel.PickerTrainer.AnswersResult.IncreaseAll();
+                viewModel.PickerTrainer.AnswersResult.IncreaseMistakes();
+
                 var contentDialog = new ContentDialog
                 {
                     Title = "Подсказка",
@@ -71,6 +84,8 @@ namespace MEnglish.Views
                 };
 
                 var result = await contentDialog.ShowAsync();
+
+                wordTextBox.Text = "";
             }
         }
     }
