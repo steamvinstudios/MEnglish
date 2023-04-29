@@ -2,11 +2,13 @@
 using MEnglish.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Media.SpeechSynthesis;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -34,12 +36,22 @@ namespace MEnglish.Views
             Sentence = viewModel.Sentences.Collection[new Random().Next(viewModel.Sentences.Collection.Count)];
 
             EnSenSplited = Sentence.English.Split(' ').ToList().OrderBy(x => new Random().Next()).ToList();
-
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+        private async void Button_Click_3(object sender, RoutedEventArgs e)
         {
             wordTextBox.Text += $"{(sender as Button).Content} ";
+            
+            // tts, если установлен пакет английского языка в системе windows
+            /*
+            var synthesizer = new SpeechSynthesizer();
+            synthesizer.Voice = SpeechSynthesizer.AllVoices.First(v => v.Gender == VoiceGender.Female && v.Language == "en-US");
+            string text = (sender as Button).Content.ToString();
+            var stream = await synthesizer.SynthesizeTextToStreamAsync(text);
+            var mediaElement = new MediaElement();
+            mediaElement.SetSource(stream, stream.ContentType);
+            mediaElement.Play();
+            */
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)
