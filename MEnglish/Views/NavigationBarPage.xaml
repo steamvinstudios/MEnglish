@@ -100,6 +100,46 @@
                                        HorizontalAlignment="Center" />
                         </StackPanel>
                     </Button>
+                    <Button x:Name="sentencesPageButton"
+                            MinWidth="120"
+                            Background="Transparent"
+                            Click="SentencesPageButton_Click"
+                            CornerRadius="20"
+                            BorderThickness="1"
+                            Style="{StaticResource ButtonRevealStyle}">
+                        <Button.Transitions>
+                            <TransitionCollection>
+                                <RepositionThemeTransition />
+                            </TransitionCollection>
+                        </Button.Transitions>
+                        <StackPanel>
+                            <Image Source="/NavigationBarPageIcons/writing_hand_3d_default.png"
+                                   Height="44" />
+                            <TextBlock Text="Сентенсес"
+                                       FontFamily="Bahnschrift"
+                                       HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="verberPageButton"
+                            MinWidth="120"
+                            Background="Transparent"
+                            Click="VerbsPageButton_Click"
+                            CornerRadius="20"
+                            BorderThickness="1"
+                            Style="{StaticResource ButtonRevealStyle}">
+                        <Button.Transitions>
+                            <TransitionCollection>
+                                <RepositionThemeTransition />
+                            </TransitionCollection>
+                        </Button.Transitions>
+                        <StackPanel>
+                            <Image Source="/NavigationBarPageIcons/Snowboarder.png"
+                                   Height="44" />
+                            <TextBlock Text="Вербер"
+                                       FontFamily="Bahnschrift"
+                                       HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Button>
                     <Button x:Name="aboutPageButton"
                             MinWidth="120"
                             Background="Transparent"
@@ -120,26 +160,7 @@
                                        HorizontalAlignment="Center" />
                         </StackPanel>
                     </Button>
-                    <Button x:Name="sentencesPageButton"
-                            MinWidth="120"
-                            Background="Transparent"
-                            Click="SentencesPageButton_Click"
-                            CornerRadius="20"
-                            BorderThickness="1"
-                            Style="{StaticResource ButtonRevealStyle}">
-                        <Button.Transitions>
-                            <TransitionCollection>
-                                <RepositionThemeTransition />
-                            </TransitionCollection>
-                        </Button.Transitions>
-                        <StackPanel>
-                            <Image Source="/NavigationBarPageIcons/writing_hand_3d_default.png"
-                                   Height="44" />
-                            <TextBlock Text="Сентенсер"
-                                       FontFamily="Bahnschrift"
-                                       HorizontalAlignment="Center" />
-                        </StackPanel>
-                    </Button>
+                    
                     <Button x:Name="profilePageButton"
                             MinWidth="120"
                             Background="Transparent"

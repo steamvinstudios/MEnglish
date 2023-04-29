@@ -1,0 +1,155 @@
+﻿<Page x:Class="MEnglish.Views.VerberPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:MEnglish.Views"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:controls="using:Microsoft.UI.Xaml.Controls"
+      xmlns:media="using:Microsoft.UI.Xaml.Media"
+      xmlns:models="using:MEnglish.Models"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+      controls:BackdropMaterial.ApplyToRootOrPageBackground="True">
+    <Grid>
+        <StackPanel Background="#2888"
+                    CornerRadius="40"
+                    Margin="20"
+                    Spacing="4"
+                    Padding="40"
+                    BorderThickness="2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <StackPanel.BorderBrush>
+                <LinearGradientBrush>
+                    <GradientStop Color="#24F"
+                                  Offset="0" />
+                    <GradientStop Color="#A7F"
+                                  Offset=".5" />
+                    <GradientStop Color="#2FA"
+                                  Offset="1" />
+                </LinearGradientBrush>
+            </StackPanel.BorderBrush>
+            <TextBlock Text="Выбери правильный вариант"
+                       FontFamily="Bahnschrift"
+                       FontWeight="Bold"
+                       FontSize="24"
+                       HorizontalAlignment="Center" />
+            <TextBlock x:Name="buildWordTextBlock"
+                       Text="{x:Bind Verb.Russian, Mode=OneWay}"
+                       FontSize="64"
+                       FontWeight="Bold"
+                       FontFamily="Bahnschrift"
+                       FontStretch="Condensed"
+                       TextWrapping="WrapWholeWords"
+                       HorizontalTextAlignment="Center"
+                       HorizontalAlignment="Center">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#24F"
+                                      Offset="0" />
+                        <GradientStop Color="#A7F"
+                                      Offset=".5" />
+                        <GradientStop Color="#2FA"
+                                      Offset="1" />
+                    </LinearGradientBrush>
+                </TextBlock.Foreground></TextBlock>
+            <ListView x:Name="AnswersListView"
+                      HorizontalAlignment="Stretch"
+                      SelectionMode="None"
+                      ItemsSource="{x:Bind Verbs}">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Verb">
+                        <Button Content="{x:Bind English}"
+                                Margin="2"
+                                FontSize="20"
+                                FontStretch="Expanded"
+                                HorizontalAlignment="Stretch"
+                                Click="Button_Click_3" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Margin="0 40"
+                        Spacing="8"
+                        CornerRadius="60"
+                        Padding="8">
+                <StackPanel.Background>
+                    <media:AcrylicBrush TintColor="Transparent"
+                                        TintLuminosityOpacity=".1" />
+                </StackPanel.Background>
+                <Border CornerRadius="90"
+                        BorderThickness="8"
+                        Width="100"
+                        Height="100">
+                    <Border.BorderBrush>
+                        <LinearGradientBrush>
+                            <GradientStop Color="Yellow"
+                                          Offset="0" />
+                            <GradientStop Color="Red"
+                                          Offset="1" />
+                        </LinearGradientBrush>
+                    </Border.BorderBrush>
+                    <StackPanel HorizontalAlignment="Center"
+                                VerticalAlignment="Center">
+                        <TextBlock Text="Ошибка"
+                                   FontFamily="Bahnschrift" />
+                        <TextBlock Name="FalseBar"
+                                   Text="{x:Bind viewModel.PickerTrainer.AnswersResult.Mistakes, Mode=OneWay}"
+                                   FontFamily="Bahnschrift"
+                                   HorizontalAlignment="Center"
+                                   FontSize="36" />
+                    </StackPanel>
+                </Border>
+                <AppBarSeparator />
+                <Border CornerRadius="90"
+                        BorderThickness="8"
+                        Width="100"
+                        Height="100">
+                    <Border.BorderBrush>
+                        <LinearGradientBrush>
+                            <GradientStop Color="DeepSkyBlue"
+                                          Offset="0" />
+                            <GradientStop Color="Violet"
+                                          Offset="1" />
+                        </LinearGradientBrush>
+                    </Border.BorderBrush>
+                    <StackPanel VerticalAlignment="Center"
+                                HorizontalAlignment="Center">
+                        <TextBlock Text="Всего"
+                                   FontFamily="Bahnschrift" />
+                        <TextBlock Name="MaxOfBar"
+                                   Text="{x:Bind viewModel.PickerTrainer.AnswersResult.All, Mode=OneWay}"
+                                   FontFamily="Bahnschrift"
+                                   HorizontalAlignment="Center"
+                                   FontSize="36" />
+                    </StackPanel>
+                </Border>
+                <AppBarSeparator />
+                <Border CornerRadius="90"
+                        BorderThickness="8"
+                        Width="100"
+                        Height="100">
+                    <Border.BorderBrush>
+                        <LinearGradientBrush>
+                            <GradientStop Color="GreenYellow"
+                                          Offset="0" />
+                            <GradientStop Color="SeaGreen"
+                                          Offset="1" />
+                        </LinearGradientBrush>
+                    </Border.BorderBrush>
+                    <StackPanel VerticalAlignment="Center"
+                                HorizontalAlignment="Center">
+                        <TextBlock Text="Успех"
+                                   FontFamily="Bahnschrift" />
+                        <TextBlock Name="TrueBar"
+                                   Text="{x:Bind viewModel.PickerTrainer.AnswersResult.Correct, Mode=OneWay}"
+                                   FontFamily="Bahnschrift"
+                                   HorizontalAlignment="Center"
+                                   FontSize="36" />
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
