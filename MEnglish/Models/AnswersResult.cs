@@ -9,6 +9,8 @@ namespace MEnglish.Models
 {
     public class AnswersResult : ObservableObject
     {
+        public int Id { get; set; }
+        public History History { get; set; }
         private int all;
         public int All
         {

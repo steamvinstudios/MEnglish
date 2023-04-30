@@ -140,6 +140,26 @@
                                        HorizontalAlignment="Center" />
                         </StackPanel>
                     </Button>
+                    <Button x:Name="historyPageButton"
+                            MinWidth="120"
+                            Background="Transparent"
+                            Click="HistoryPageButton_Click"
+                            CornerRadius="20"
+                            BorderThickness="1"
+                            Style="{StaticResource ButtonRevealStyle}">
+                        <Button.Transitions>
+                            <TransitionCollection>
+                                <RepositionThemeTransition />
+                            </TransitionCollection>
+                        </Button.Transitions>
+                        <StackPanel>
+                            <Image Source="/NavigationBarPageIcons/Snowboarder.png"
+                                   Height="44" />
+                            <TextBlock Text="История"
+                                       FontFamily="Bahnschrift"
+                                       HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Button>
                     <Button x:Name="aboutPageButton"
                             MinWidth="120"
                             Background="Transparent"

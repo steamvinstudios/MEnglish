@@ -49,5 +49,7 @@ namespace MEnglish
         private void SentencesPageButton_Click(object sender, RoutedEventArgs e) => GenPointFrame.Navigate(typeof(SentencesPage), null, new DrillInNavigationTransitionInfo());
 
         private void VerbsPageButton_Click(object sender, RoutedEventArgs e) => GenPointFrame.Navigate(typeof(VerberPage), null, new DrillInNavigationTransitionInfo());
+
+        private void HistoryPageButton_Click(object sender, RoutedEventArgs e) => GenPointFrame.Navigate(typeof(HistoryPage), null, new DrillInNavigationTransitionInfo());
     }
 }

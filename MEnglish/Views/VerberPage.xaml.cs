@@ -38,6 +38,24 @@ namespace MEnglish.Views
             Verb = Verbs[new Random().Next(Verbs.Count)];
         }
 
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            base.OnNavigatedFrom(e);
+            using (var db = new HistoryContext())
+            {
+                var result = viewModel.PickerTrainer.AnswersResult;
+                db.Results.Add(result);
+                db.Histories.Add(new History
+                {
+                    Correct = result.Correct.ToString(),
+                    Mistakes = result.Mistakes.ToString(),
+                    All = result.All.ToString(),
+                    TrainerInfo = "Вербер"
+                });
+                db.SaveChanges();
+            }
+        }
+
         private async void Button_Click_3(object sender, RoutedEventArgs e)
         {
             viewModel.PickerTrainer.AnswersResult.IncreaseAll();

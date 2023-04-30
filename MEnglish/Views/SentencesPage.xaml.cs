@@ -38,7 +38,25 @@ namespace MEnglish.Views
             EnSenSplited = Sentence.English.Split(' ').ToList().OrderBy(x => new Random().Next()).ToList();
         }
 
-        private async void Button_Click_3(object sender, RoutedEventArgs e)
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            base.OnNavigatedFrom(e);
+            using (var db = new HistoryContext())
+            {
+                var result = viewModel.PickerTrainer.AnswersResult;
+                db.Results.Add(result);
+                db.Histories.Add(new History
+                {
+                    Correct = result.Correct.ToString(),
+                    Mistakes = result.Mistakes.ToString(),
+                    All = result.All.ToString(),
+                    TrainerInfo = "Сентенсес"
+                });
+                db.SaveChanges();
+            }
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             wordTextBox.Text += $"{(sender as Button).Content} ";
             
@@ -61,6 +79,7 @@ namespace MEnglish.Views
                 viewModel.PickerTrainer.AnswersResult.IncreaseAll();
                 viewModel.PickerTrainer.AnswersResult.IncreaseCorrect();
 
+                // положительная обратная связь
                 /*
                 var contentDialog = new ContentDialog
                 {

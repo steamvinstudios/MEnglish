@@ -1,0 +1,90 @@
+﻿<Page x:Class="MEnglish.Views.HistoryPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:MEnglish.Views"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:controls="using:Microsoft.UI.Xaml.Controls"
+      xmlns:models="using:MEnglish.Models"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+      controls:BackdropMaterial.ApplyToRootOrPageBackground="True">
+    <StackPanel Padding="20">
+        <TextBlock Text="История"
+                   HorizontalAlignment="Center"
+                   FontFamily="Bahnschrift"
+                   FontSize="32"
+                   FontWeight="Bold" />
+        <ListView ItemsSource="{x:Bind Answers}">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="models:History">
+                    <StackPanel Orientation="Horizontal"
+                                Spacing="20">
+                        <TextBlock Text="{x:Bind TrainerInfo}"
+                                   VerticalAlignment="Center"
+                                   FontFamily="Bahnschrift"
+                                   FontSize="24"
+                                   FontWeight="Bold" />
+                        <StackPanel Orientation="Horizontal"
+                                    Spacing="2"
+                                    Padding="12"
+                                    BorderThickness="4"
+                                    CornerRadius="24">
+                            <TextBlock Text="ошибка" />
+                            <TextBlock Text="{x:Bind Mistakes}" />
+                            <StackPanel.BorderBrush>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="OrangeRed"
+                                                  Offset="0" />
+                                    <GradientStop Color="Yellow"
+                                                  Offset=".5" />
+                                    <GradientStop Color="Red"
+                                                  Offset="1" />
+                                </LinearGradientBrush>
+                            </StackPanel.BorderBrush>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Spacing="2"
+                                    Padding="12"
+                                    BorderThickness="4"
+                                    CornerRadius="24">
+                            <TextBlock Text="всего" />
+                            <TextBlock Text="{x:Bind All}" />
+                            <StackPanel.BorderBrush>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="#24F"
+                                                  Offset="0" />
+                                    <GradientStop Color="SkyBlue"
+                                                  Offset=".5" />
+                                    <GradientStop Color="BlueViolet"
+                                                  Offset="1" />
+                                </LinearGradientBrush>
+                            </StackPanel.BorderBrush>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Spacing="2"
+                                    Padding="12"
+                                    BorderThickness="4"
+                                    CornerRadius="24">
+                            <TextBlock Text="правильно" />
+                            <TextBlock Text="{x:Bind Correct}" />
+                            <StackPanel.BorderBrush>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="GreenYellow"
+                                                  Offset="0" />
+                                    <GradientStop Color="DarkSeaGreen"
+                                                  Offset=".5" />
+                                    <GradientStop Color="#2FA"
+                                                  Offset="1" />
+                                </LinearGradientBrush>
+                            </StackPanel.BorderBrush>
+                        </StackPanel>
+                        <TextBlock Text="{x:Bind Date}"
+                                   VerticalAlignment="Center"
+                                   FontWeight="Bold" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
+</Page>
