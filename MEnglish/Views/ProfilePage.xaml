@@ -11,167 +11,169 @@
       Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
       controls:BackdropMaterial.ApplyToRootOrPageBackground="True"
       Loaded="Page_Loaded">
-    <Grid>
-        <StackPanel>
-            <TextBlock Text="Рейтинг слов"
-                       FontSize="64"
-                       FontWeight="Bold"
-                       FontFamily="Bahnschrift"
-                       FontStretch="Condensed"
-                       HorizontalAlignment="Center" />
-            <Grid>
-                <StackPanel Margin="20">
-                    <TextBox x:Name="searchTextBox"
-                             Text="{x:Bind viewModel.SearchTextBoxText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                             PlaceholderText="Поиск по слову/рейтингу"
-                             MaxWidth="800"
-                             Padding="20"
-                             Margin="20" />
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                            <ColumnDefinition />
-                        </Grid.ColumnDefinitions>
-                        <Button Content="Добавить новое слово"
-                                FontWeight="Bold"
-                                HorizontalAlignment="Stretch"
-                                CornerRadius="16"
-                                MaxWidth="400"
-                                Margin="12 0"
-                                Click="AddButton_Click">
-                            <Button.Background>
-                                <LinearGradientBrush Opacity=".7">
-                                    <GradientStop Color="{ThemeResource SystemAccentColorLight1}" />
-                                    <GradientStop Color="{ThemeResource SystemAccentColorLight3}"
-                                                  Offset=".5" />
-                                    <GradientStop Color="{ThemeResource SystemAccentColorLight1}"
-                                                  Offset="1" />
-                                </LinearGradientBrush>
-                            </Button.Background>
-                        </Button>
-                        <Button Content="Сбросить все слова"
-                                Grid.Column="1"
-                                FontWeight="Bold"
-                                HorizontalAlignment="Stretch"
-                                CornerRadius="16"
-                                MaxWidth="400"
-                                Margin="12 0"
-                                Click="ResetButton_Click">
-                            <Button.Background>
-                                <LinearGradientBrush Opacity=".7">
-                                    <GradientStop Color="IndianRed" />
-                                    <GradientStop Color="Orange"
-                                                  Offset=".5" />
-                                    <GradientStop Color="IndianRed"
-                                                  Offset="1" />
-                                </LinearGradientBrush>
-                            </Button.Background>
-                        </Button>
-                    </Grid>
-                </StackPanel>
-            </Grid>
-            <GridView x:Name="wordsList"
-                      HorizontalAlignment="Center"
-                      VerticalAlignment="Center"
-                      ItemClick="wordsList_ItemClick"
-                      IsItemClickEnabled="True"
-                      ItemsSource="{x:Bind viewModel.WordListItemsSource, Mode=OneWay}">
-                <GridView.ItemTemplate>
-                    <DataTemplate x:DataType="models:Word">
-                        <Grid>
-                            <StackPanel CornerRadius="32"
-                                        Width="240">
-                                <Image Height="180"
-                                       HorizontalAlignment="Left"
-                                       Source="{x:Bind Image}"
-                                       Stretch="UniformToFill" />
-                                <ProgressBar Value="{x:Bind Rating}"
-                                             Height="10"
-                                             HorizontalAlignment="Stretch">
-                                    <ProgressBar.Foreground>
-                                        <LinearGradientBrush>
-                                            <GradientStop Color="LightSeaGreen" />
-                                            <GradientStop Color="LightGreen"
-                                                          Offset=".5" />
-                                            <GradientStop Color="GreenYellow"
-                                                          Offset="1" />
-                                        </LinearGradientBrush>
-                                    </ProgressBar.Foreground>
-                                </ProgressBar>
-                                <StackPanel Padding="4">
-                                    <TextBlock Text="Последнее повторение"
-                                               FontSize="20"
-                                               FontFamily="Bahnschrift"
-                                               FontStretch="Condensed"
-                                               TextWrapping="Wrap" />
-                                    <TextBlock Text="{Binding LastRepeat}"
-                                               FontSize="28"
-                                               FontWeight="Bold"
-                                               FontFamily="Bahnschrift"
-                                               FontStretch="Condensed"
-                                               Opacity=".4" />
-                                    <Grid>
-                                        <StackPanel>
-                                            <TextBlock Text="{x:Bind EnglishForm}"
-                                                       FontSize="32"
-                                                       FontWeight="Bold"
-                                                       FontFamily="Bahnschrift"
-                                                       FontStretch="Condensed" />
-                                            <TextBlock Text="{x:Bind RussianForm}"
-                                                       FontSize="28"
-                                                       FontFamily="Bahnschrift"
-                                                       FontStretch="Condensed"
-                                                       Opacity=".7" />
-                                        </StackPanel>
-                                        <StackPanel HorizontalAlignment="Right"
-                                                    VerticalAlignment="Center">
-                                            <TextBlock Text="{x:Bind RatingFull()}"
-                                                       FontSize="20"
-                                                       FontFamily="Bahnschrift"
-                                                       FontStretch="Condensed"
-                                                       Opacity=".7" />
-                                            <TextBlock Text="{x:Bind IdFull()}"
-                                                       FontWeight="Bold"
-                                                       FontFamily="Bahnschrift" />
-                                        </StackPanel>
-                                    </Grid>
-                                    <ToggleSwitch OffContent="Учится"
-                                                  OnContent="Изучено"
-                                                  IsOn="{x:Bind IsLearned}" />
-                                    <TextBlock Text="{x:Bind Image}"
-                                               HorizontalAlignment="Center"
-                                               FontFamily="Bahnschrift"
-                                               FontStretch="Condensed" />
-                                </StackPanel>
-                            </StackPanel>
-                        </Grid>
-                    </DataTemplate>
-                </GridView.ItemTemplate>
-            </GridView>
-        </StackPanel>
-        <controls:TeachingTip x:Name="wordsManagerTeachingTip"
-                              PreferredPlacement="Center">
-            <StackPanel Spacing="8"
-                        Padding="8"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Top">
-                <StackPanel.Background>
-                    <media:AcrylicBrush TintColor="Transparent"
-                                        TintLuminosityOpacity="0" />
-                </StackPanel.Background>
-                <TextBlock Text="Управление словом"
-                           FontSize="36"
+    <ScrollViewer>
+        <Grid>
+            <StackPanel>
+                <TextBlock Text="Рейтинг слов"
+                           FontSize="64"
+                           FontWeight="Bold"
                            FontFamily="Bahnschrift"
-                           FontStretch="Condensed" />
-                <Button x:Name="editButton"
-                        Content="Изменить"
-                        HorizontalAlignment="Stretch"
-                        Click="EditButton_Click" />
-                <Button x:Name="deleteButton"
-                        Content="Удалить"
-                        HorizontalAlignment="Stretch"
-                        Click="DeleteButton_Click" />
+                           FontStretch="Condensed"
+                           HorizontalAlignment="Center" />
+                <Grid>
+                    <StackPanel Margin="20">
+                        <TextBox x:Name="searchTextBox"
+                                 Text="{x:Bind viewModel.SearchTextBoxText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                 PlaceholderText="Поиск по слову/рейтингу"
+                                 MaxWidth="800"
+                                 Padding="20"
+                                 Margin="20" />
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Button Content="Добавить новое слово"
+                                    FontWeight="Bold"
+                                    HorizontalAlignment="Stretch"
+                                    CornerRadius="16"
+                                    MaxWidth="400"
+                                    Margin="12 0"
+                                    Click="AddButton_Click">
+                                <Button.Background>
+                                    <LinearGradientBrush Opacity=".7">
+                                        <GradientStop Color="{ThemeResource SystemAccentColorLight1}" />
+                                        <GradientStop Color="{ThemeResource SystemAccentColorLight3}"
+                                                      Offset=".5" />
+                                        <GradientStop Color="{ThemeResource SystemAccentColorLight1}"
+                                                      Offset="1" />
+                                    </LinearGradientBrush>
+                                </Button.Background>
+                            </Button>
+                            <Button Content="Сбросить все слова"
+                                    Grid.Column="1"
+                                    FontWeight="Bold"
+                                    HorizontalAlignment="Stretch"
+                                    CornerRadius="16"
+                                    MaxWidth="400"
+                                    Margin="12 0"
+                                    Click="ResetButton_Click">
+                                <Button.Background>
+                                    <LinearGradientBrush Opacity=".7">
+                                        <GradientStop Color="IndianRed" />
+                                        <GradientStop Color="Orange"
+                                                      Offset=".5" />
+                                        <GradientStop Color="IndianRed"
+                                                      Offset="1" />
+                                    </LinearGradientBrush>
+                                </Button.Background>
+                            </Button>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+                <GridView x:Name="wordsList"
+                          HorizontalAlignment="Center"
+                          VerticalAlignment="Center"
+                          ItemClick="wordsList_ItemClick"
+                          IsItemClickEnabled="True"
+                          ItemsSource="{x:Bind viewModel.WordListItemsSource, Mode=OneWay}">
+                    <GridView.ItemTemplate>
+                        <DataTemplate x:DataType="models:Word">
+                            <Grid>
+                                <StackPanel CornerRadius="32"
+                                            Width="240">
+                                    <Image Height="180"
+                                           HorizontalAlignment="Left"
+                                           Source="{x:Bind Image}"
+                                           Stretch="UniformToFill" />
+                                    <ProgressBar Value="{x:Bind Rating}"
+                                                 Height="10"
+                                                 HorizontalAlignment="Stretch">
+                                        <ProgressBar.Foreground>
+                                            <LinearGradientBrush>
+                                                <GradientStop Color="LightSeaGreen" />
+                                                <GradientStop Color="LightGreen"
+                                                              Offset=".5" />
+                                                <GradientStop Color="GreenYellow"
+                                                              Offset="1" />
+                                            </LinearGradientBrush>
+                                        </ProgressBar.Foreground>
+                                    </ProgressBar>
+                                    <StackPanel Padding="4">
+                                        <TextBlock Text="Последнее повторение"
+                                                   FontSize="20"
+                                                   FontFamily="Bahnschrift"
+                                                   FontStretch="Condensed"
+                                                   TextWrapping="Wrap" />
+                                        <TextBlock Text="{Binding LastRepeat}"
+                                                   FontSize="28"
+                                                   FontWeight="Bold"
+                                                   FontFamily="Bahnschrift"
+                                                   FontStretch="Condensed"
+                                                   Opacity=".4" />
+                                        <Grid>
+                                            <StackPanel>
+                                                <TextBlock Text="{x:Bind EnglishForm}"
+                                                           FontSize="32"
+                                                           FontWeight="Bold"
+                                                           FontFamily="Bahnschrift"
+                                                           FontStretch="Condensed" />
+                                                <TextBlock Text="{x:Bind RussianForm}"
+                                                           FontSize="28"
+                                                           FontFamily="Bahnschrift"
+                                                           FontStretch="Condensed"
+                                                           Opacity=".7" />
+                                            </StackPanel>
+                                            <StackPanel HorizontalAlignment="Right"
+                                                        VerticalAlignment="Center">
+                                                <TextBlock Text="{x:Bind RatingFull()}"
+                                                           FontSize="20"
+                                                           FontFamily="Bahnschrift"
+                                                           FontStretch="Condensed"
+                                                           Opacity=".7" />
+                                                <TextBlock Text="{x:Bind IdFull()}"
+                                                           FontWeight="Bold"
+                                                           FontFamily="Bahnschrift" />
+                                            </StackPanel>
+                                        </Grid>
+                                        <ToggleSwitch OffContent="Учится"
+                                                      OnContent="Изучено"
+                                                      IsOn="{x:Bind IsLearned}" />
+                                        <TextBlock Text="{x:Bind Image}"
+                                                   HorizontalAlignment="Center"
+                                                   FontFamily="Bahnschrift"
+                                                   FontStretch="Condensed" />
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
             </StackPanel>
-        </controls:TeachingTip>
-    </Grid>
+            <controls:TeachingTip x:Name="wordsManagerTeachingTip"
+                                  PreferredPlacement="Center">
+                <StackPanel Spacing="8"
+                            Padding="8"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top">
+                    <StackPanel.Background>
+                        <media:AcrylicBrush TintColor="Transparent"
+                                            TintLuminosityOpacity="0" />
+                    </StackPanel.Background>
+                    <TextBlock Text="Управление словом"
+                               FontSize="36"
+                               FontFamily="Bahnschrift"
+                               FontStretch="Condensed" />
+                    <Button x:Name="editButton"
+                            Content="Изменить"
+                            HorizontalAlignment="Stretch"
+                            Click="EditButton_Click" />
+                    <Button x:Name="deleteButton"
+                            Content="Удалить"
+                            HorizontalAlignment="Stretch"
+                            Click="DeleteButton_Click" />
+                </StackPanel>
+            </controls:TeachingTip>
+        </Grid>
+    </ScrollViewer>
 </Page>

@@ -10,276 +10,278 @@
       mc:Ignorable="d"
       Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
       controls:BackdropMaterial.ApplyToRootOrPageBackground="True">
-    <Grid>
-        <Image Source="{x:Bind viewModel.PickerTrainer.RandomWord.Image, Mode=OneWay}"
-               Opacity=".5"
-               Stretch="UniformToFill"
-               Margin="-40"
-               MaxHeight="800" />
-        <Border Margin="-40">
-            <Border.Background>
-                <media:AcrylicBrush TintColor="Transparent"
-                                    TintLuminosityOpacity="0" />
-            </Border.Background>
-        </Border>
-        <Border HorizontalAlignment="Center"
-                VerticalAlignment="Center">
-            <Image x:Name="randomWordImage"
-                   Source="{x:Bind viewModel.PickerTrainer.RandomWord.Image, Mode=OneWay}"
-                   Stretch="UniformToFill"
+    <ScrollViewer>
+        <Grid>
+            <Image Source="{x:Bind viewModel.PickerTrainer.RandomWord.Image, Mode=OneWay}"
                    Opacity=".5"
+                   Stretch="UniformToFill"
+                   Margin="-40"
                    MaxHeight="800" />
-        </Border>
-        <StackPanel HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Orientation="Vertical"
-                    Width="400">
-            <Border HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    CornerRadius="180"
-                    BorderThickness="4"
-                    Width="240"
-                    Height="240">
+            <Border Margin="-40">
                 <Border.Background>
                     <media:AcrylicBrush TintColor="Transparent"
-                                        TintLuminosityOpacity=".3" />
+                                        TintLuminosityOpacity="0" />
                 </Border.Background>
-                <TextBlock x:Name="randomWordRussianFormTextBlock"
-                           FontSize="36"
-                           FontWeight="Bold"
-                           FontFamily="Bahnschrift"
-                           Padding="20 8"
-                           Text="{x:Bind viewModel.PickerTrainer.RandomWord.RussianForm, Mode=OneWay}"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Center"
-                           TextWrapping="Wrap" />
             </Border>
-            <AppBarSeparator />
-            <Button x:Name="answerButton1"
-                    FontFamily="Bahnschrift"
-                    Content="{x:Bind viewModel.PickerTrainer.FourRandomWords[0].EnglishForm, Mode=OneWay}"
-                    Margin="4"
-                    CornerRadius="20"
-                    MinWidth="120"
-                    Padding="20"
-                    HorizontalAlignment="Stretch"
-                    FontSize="20"
-                    Style="{ThemeResource ButtonRevealStyle}"
-                    BorderBrush="{ThemeResource SystemControlBackgroundBaseHighRevealBorderBrush}"
-                    BorderThickness="2"
-                    Click="AnswerButton1_Click">
-                <Button.Background>
-                    <media:AcrylicBrush TintColor="Transparent"
-                                        TintLuminosityOpacity=".3" />
-                </Button.Background>
-            </Button>
-            <Button x:Name="answerButton2"
-                    FontFamily="Bahnschrift"
-                    Content="{x:Bind viewModel.PickerTrainer.FourRandomWords[1].EnglishForm, Mode=OneWay}"
-                    Margin="4"
-                    CornerRadius="20"
-                    MinWidth="120"
-                    Padding="20"
-                    HorizontalAlignment="Stretch"
-                    FontSize="20"
-                    Style="{ThemeResource ButtonRevealStyle}"
-                    BorderBrush="{ThemeResource SystemControlBackgroundBaseHighRevealBorderBrush}"
-                    BorderThickness="2"
-                    Click="AnswerButton2_Click">
-                <Button.Background>
-                    <media:AcrylicBrush TintColor="Transparent"
-                                        TintLuminosityOpacity=".3" />
-                </Button.Background>
-            </Button>
-            <Button x:Name="answerButton3"
-                    FontFamily="Bahnschrift"
-                    Content="{x:Bind viewModel.PickerTrainer.FourRandomWords[2].EnglishForm, Mode=OneWay}"
-                    Margin="4"
-                    CornerRadius="20"
-                    MinWidth="120"
-                    Padding="20"
-                    HorizontalAlignment="Stretch"
-                    FontSize="20"
-                    Style="{ThemeResource ButtonRevealStyle}"
-                    BorderBrush="{ThemeResource SystemControlBackgroundBaseHighRevealBorderBrush}"
-                    BorderThickness="2"
-                    Click="AnswerButton3_Click">
-                <Button.Background>
-                    <media:AcrylicBrush TintColor="Transparent"
-                                        TintLuminosityOpacity=".3" />
-                </Button.Background>
-            </Button>
-            <Button x:Name="answerButton4"
-                    FontFamily="Bahnschrift"
-                    Content="{x:Bind viewModel.PickerTrainer.FourRandomWords[3].EnglishForm, Mode=OneWay}"
-                    Margin="4"
-                    CornerRadius="20"
-                    MinWidth="120"
-                    Padding="20"
-                    HorizontalAlignment="Stretch"
-                    FontSize="20"
-                    Style="{ThemeResource ButtonRevealStyle}"
-                    BorderBrush="{ThemeResource SystemControlBackgroundBaseHighRevealBorderBrush}"
-                    BorderThickness="2"
-                    Click="AnswerButton4_Click">
-                <Button.Background>
-                    <media:AcrylicBrush TintColor="Transparent"
-                                        TintLuminosityOpacity=".3" />
-                </Button.Background>
-            </Button>
-            <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Center"
-                        Margin="0 40"
-                        Spacing="8"
-                        CornerRadius="60"
-                        Padding="8">
-                <StackPanel.Background>
-                    <media:AcrylicBrush TintColor="Transparent"
-                                        TintLuminosityOpacity=".1" />
-                </StackPanel.Background>
-                <Border CornerRadius="90"
-                        BorderThickness="8"
-                        Width="100"
-                        Height="100">
-                    <Border.BorderBrush>
-                        <LinearGradientBrush>
-                            <GradientStop Color="Yellow"
-                                          Offset="0" />
-                            <GradientStop Color="Red"
-                                          Offset="1" />
-                        </LinearGradientBrush>
-                    </Border.BorderBrush>
-                    <StackPanel HorizontalAlignment="Center"
-                                VerticalAlignment="Center">
-                        <TextBlock Text="Ошибка"
-                                   FontFamily="Bahnschrift" />
-                        <TextBlock Name="FalseBar"
-                                   Text="{x:Bind viewModel.PickerTrainer.AnswersResult.Mistakes, Mode=OneWay}"
-                                   FontFamily="Bahnschrift"
-                                   HorizontalAlignment="Center"
-                                   FontSize="36" />
-                    </StackPanel>
-                </Border>
-                <AppBarSeparator />
-                <Border CornerRadius="90"
-                        BorderThickness="8"
-                        Width="100"
-                        Height="100">
-                    <Border.BorderBrush>
-                        <LinearGradientBrush>
-                            <GradientStop Color="DeepSkyBlue"
-                                          Offset="0" />
-                            <GradientStop Color="Violet"
-                                          Offset="1" />
-                        </LinearGradientBrush>
-                    </Border.BorderBrush>
-                    <StackPanel VerticalAlignment="Center"
-                                HorizontalAlignment="Center">
-                        <TextBlock Text="Всего"
-                                   FontFamily="Bahnschrift" />
-                        <TextBlock Name="MaxOfBar"
-                                   Text="{x:Bind viewModel.PickerTrainer.AnswersResult.All, Mode=OneWay}"
-                                   FontFamily="Bahnschrift"
-                                   HorizontalAlignment="Center"
-                                   FontSize="36" />
-                    </StackPanel>
-                </Border>
-                <AppBarSeparator />
-                <Border CornerRadius="90"
-                        BorderThickness="8"
-                        Width="100"
-                        Height="100">
-                    <Border.BorderBrush>
-                        <LinearGradientBrush>
-                            <GradientStop Color="GreenYellow"
-                                          Offset="0" />
-                            <GradientStop Color="SeaGreen"
-                                          Offset="1" />
-                        </LinearGradientBrush>
-                    </Border.BorderBrush>
-                    <StackPanel VerticalAlignment="Center"
-                                HorizontalAlignment="Center">
-                        <TextBlock Text="Успех"
-                                   FontFamily="Bahnschrift" />
-                        <TextBlock Name="TrueBar"
-                                   Text="{x:Bind viewModel.PickerTrainer.AnswersResult.Correct, Mode=OneWay}"
-                                   FontFamily="Bahnschrift"
-                                   HorizontalAlignment="Center"
-                                   FontSize="36" />
-                    </StackPanel>
-                </Border>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Center"
-                        CornerRadius="16"
-                        Padding="12 0"
-                        BorderBrush="{ThemeResource SystemControlBackgroundAccentRevealBorderBrush}"
-                        BorderThickness="2">
-                <StackPanel.Background>
-                    <media:AcrylicBrush TintColor="Transparent"
-                                        TintLuminosityOpacity=".4" />
-                </StackPanel.Background>
-                <Border Padding="10 4">
-                    <TextBlock Text="Время:"
-                               FontSize="16"
-                               FontFamily="Bahnschrift"
-                               VerticalAlignment="Center" />
-                </Border>
-                <Border>
-                    <TextBlock x:Name="trainerStopwatchTextBlock"
-                               Text="{x:Bind viewModel.PickerTrainer.TrainerStopwatch.StopwatchResultEverySecond, Mode=OneWay}"
-                               Padding="4 4"
-                               FontSize="16"
+            <Border HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+                <Image x:Name="randomWordImage"
+                       Source="{x:Bind viewModel.PickerTrainer.RandomWord.Image, Mode=OneWay}"
+                       Stretch="UniformToFill"
+                       Opacity=".5"
+                       MaxHeight="800" />
+            </Border>
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Orientation="Vertical"
+                        Width="400">
+                <Border HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        CornerRadius="180"
+                        BorderThickness="4"
+                        Width="240"
+                        Height="240">
+                    <Border.Background>
+                        <media:AcrylicBrush TintColor="Transparent"
+                                            TintLuminosityOpacity=".3" />
+                    </Border.Background>
+                    <TextBlock x:Name="randomWordRussianFormTextBlock"
+                               FontSize="36"
                                FontWeight="Bold"
                                FontFamily="Bahnschrift"
-                               VerticalAlignment="Center" />
+                               Padding="20 8"
+                               Text="{x:Bind viewModel.PickerTrainer.RandomWord.RussianForm, Mode=OneWay}"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               TextWrapping="Wrap" />
                 </Border>
-            </StackPanel>
-        </StackPanel>
-        <controls:TeachingTip x:Name="wordProgressTeachingTip"
-                              PreferredPlacement="TopRight"
-                              HorizontalAlignment="Center"
-                              VerticalAlignment="Center">
-            <Grid>
-                <StackPanel VerticalAlignment="Center">
-                    <TextBlock Text="Изучено слово"
-                               FontSize="24"
-                               FontFamily="Bahnschrift"
-                               FontStretch="Condensed" />
-                    <TextBlock Text="{x:Bind viewModel.PickerTrainer.RandomWord.EnglishForm, Mode=OneWay}"
-                               FontSize="32"
-                               FontFamily="Bahnschrift"
-                               FontStretch="Condensed"
-                               FontWeight="Bold" />
-                    <TextBlock Text="{x:Bind viewModel.PickerTrainer.RandomWord.RussianForm, Mode=OneWay}"
-                               FontSize="24"
-                               Opacity=".7"
-                               FontFamily="Bahnschrift"
-                               FontStretch="Condensed" />
+                <AppBarSeparator />
+                <Button x:Name="answerButton1"
+                        FontFamily="Bahnschrift"
+                        Content="{x:Bind viewModel.PickerTrainer.FourRandomWords[0].EnglishForm, Mode=OneWay}"
+                        Margin="4"
+                        CornerRadius="20"
+                        MinWidth="120"
+                        Padding="20"
+                        HorizontalAlignment="Stretch"
+                        FontSize="20"
+                        Style="{ThemeResource ButtonRevealStyle}"
+                        BorderBrush="{ThemeResource SystemControlBackgroundBaseHighRevealBorderBrush}"
+                        BorderThickness="2"
+                        Click="AnswerButton1_Click">
+                    <Button.Background>
+                        <media:AcrylicBrush TintColor="Transparent"
+                                            TintLuminosityOpacity=".3" />
+                    </Button.Background>
+                </Button>
+                <Button x:Name="answerButton2"
+                        FontFamily="Bahnschrift"
+                        Content="{x:Bind viewModel.PickerTrainer.FourRandomWords[1].EnglishForm, Mode=OneWay}"
+                        Margin="4"
+                        CornerRadius="20"
+                        MinWidth="120"
+                        Padding="20"
+                        HorizontalAlignment="Stretch"
+                        FontSize="20"
+                        Style="{ThemeResource ButtonRevealStyle}"
+                        BorderBrush="{ThemeResource SystemControlBackgroundBaseHighRevealBorderBrush}"
+                        BorderThickness="2"
+                        Click="AnswerButton2_Click">
+                    <Button.Background>
+                        <media:AcrylicBrush TintColor="Transparent"
+                                            TintLuminosityOpacity=".3" />
+                    </Button.Background>
+                </Button>
+                <Button x:Name="answerButton3"
+                        FontFamily="Bahnschrift"
+                        Content="{x:Bind viewModel.PickerTrainer.FourRandomWords[2].EnglishForm, Mode=OneWay}"
+                        Margin="4"
+                        CornerRadius="20"
+                        MinWidth="120"
+                        Padding="20"
+                        HorizontalAlignment="Stretch"
+                        FontSize="20"
+                        Style="{ThemeResource ButtonRevealStyle}"
+                        BorderBrush="{ThemeResource SystemControlBackgroundBaseHighRevealBorderBrush}"
+                        BorderThickness="2"
+                        Click="AnswerButton3_Click">
+                    <Button.Background>
+                        <media:AcrylicBrush TintColor="Transparent"
+                                            TintLuminosityOpacity=".3" />
+                    </Button.Background>
+                </Button>
+                <Button x:Name="answerButton4"
+                        FontFamily="Bahnschrift"
+                        Content="{x:Bind viewModel.PickerTrainer.FourRandomWords[3].EnglishForm, Mode=OneWay}"
+                        Margin="4"
+                        CornerRadius="20"
+                        MinWidth="120"
+                        Padding="20"
+                        HorizontalAlignment="Stretch"
+                        FontSize="20"
+                        Style="{ThemeResource ButtonRevealStyle}"
+                        BorderBrush="{ThemeResource SystemControlBackgroundBaseHighRevealBorderBrush}"
+                        BorderThickness="2"
+                        Click="AnswerButton4_Click">
+                    <Button.Background>
+                        <media:AcrylicBrush TintColor="Transparent"
+                                            TintLuminosityOpacity=".3" />
+                    </Button.Background>
+                </Button>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            Margin="0 40"
+                            Spacing="8"
+                            CornerRadius="60"
+                            Padding="8">
+                    <StackPanel.Background>
+                        <media:AcrylicBrush TintColor="Transparent"
+                                            TintLuminosityOpacity=".1" />
+                    </StackPanel.Background>
+                    <Border CornerRadius="90"
+                            BorderThickness="8"
+                            Width="100"
+                            Height="100">
+                        <Border.BorderBrush>
+                            <LinearGradientBrush>
+                                <GradientStop Color="Yellow"
+                                              Offset="0" />
+                                <GradientStop Color="Red"
+                                              Offset="1" />
+                            </LinearGradientBrush>
+                        </Border.BorderBrush>
+                        <StackPanel HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <TextBlock Text="Ошибка"
+                                       FontFamily="Bahnschrift" />
+                            <TextBlock Name="FalseBar"
+                                       Text="{x:Bind viewModel.PickerTrainer.AnswersResult.Mistakes, Mode=OneWay}"
+                                       FontFamily="Bahnschrift"
+                                       HorizontalAlignment="Center"
+                                       FontSize="36" />
+                        </StackPanel>
+                    </Border>
+                    <AppBarSeparator />
+                    <Border CornerRadius="90"
+                            BorderThickness="8"
+                            Width="100"
+                            Height="100">
+                        <Border.BorderBrush>
+                            <LinearGradientBrush>
+                                <GradientStop Color="DeepSkyBlue"
+                                              Offset="0" />
+                                <GradientStop Color="Violet"
+                                              Offset="1" />
+                            </LinearGradientBrush>
+                        </Border.BorderBrush>
+                        <StackPanel VerticalAlignment="Center"
+                                    HorizontalAlignment="Center">
+                            <TextBlock Text="Всего"
+                                       FontFamily="Bahnschrift" />
+                            <TextBlock Name="MaxOfBar"
+                                       Text="{x:Bind viewModel.PickerTrainer.AnswersResult.All, Mode=OneWay}"
+                                       FontFamily="Bahnschrift"
+                                       HorizontalAlignment="Center"
+                                       FontSize="36" />
+                        </StackPanel>
+                    </Border>
+                    <AppBarSeparator />
+                    <Border CornerRadius="90"
+                            BorderThickness="8"
+                            Width="100"
+                            Height="100">
+                        <Border.BorderBrush>
+                            <LinearGradientBrush>
+                                <GradientStop Color="GreenYellow"
+                                              Offset="0" />
+                                <GradientStop Color="SeaGreen"
+                                              Offset="1" />
+                            </LinearGradientBrush>
+                        </Border.BorderBrush>
+                        <StackPanel VerticalAlignment="Center"
+                                    HorizontalAlignment="Center">
+                            <TextBlock Text="Успех"
+                                       FontFamily="Bahnschrift" />
+                            <TextBlock Name="TrueBar"
+                                       Text="{x:Bind viewModel.PickerTrainer.AnswersResult.Correct, Mode=OneWay}"
+                                       FontFamily="Bahnschrift"
+                                       HorizontalAlignment="Center"
+                                       FontSize="36" />
+                        </StackPanel>
+                    </Border>
                 </StackPanel>
-                <TextBlock Text="🥇"
-                           FontSize="64"
-                           HorizontalAlignment="Right"
-                           VerticalAlignment="Top"
-                           FontFamily="Bahnschrift"
-                           FontStretch="Condensed" />
-                <ProgressBar Value="{x:Bind viewModel.PickerTrainer.RandomWord.Rating, Mode=OneWay}"
-                             Height="10"
-                             Width="100"
-                             CornerRadius="5"
-                             HorizontalAlignment="Right"
-                             VerticalAlignment="Bottom">
-                    <ProgressBar.Foreground>
-                        <LinearGradientBrush>
-                            <GradientStop Color="LightSeaGreen" />
-                            <GradientStop Color="LightGreen"
-                                          Offset=".5" />
-                            <GradientStop Color="GreenYellow"
-                                          Offset="1" />
-                        </LinearGradientBrush>
-                    </ProgressBar.Foreground>
-                </ProgressBar>
-            </Grid>
-        </controls:TeachingTip>
-    </Grid>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            CornerRadius="16"
+                            Padding="12 0"
+                            BorderBrush="{ThemeResource SystemControlBackgroundAccentRevealBorderBrush}"
+                            BorderThickness="2">
+                    <StackPanel.Background>
+                        <media:AcrylicBrush TintColor="Transparent"
+                                            TintLuminosityOpacity=".4" />
+                    </StackPanel.Background>
+                    <Border Padding="10 4">
+                        <TextBlock Text="Время:"
+                                   FontSize="16"
+                                   FontFamily="Bahnschrift"
+                                   VerticalAlignment="Center" />
+                    </Border>
+                    <Border>
+                        <TextBlock x:Name="trainerStopwatchTextBlock"
+                                   Text="{x:Bind viewModel.PickerTrainer.TrainerStopwatch.StopwatchResultEverySecond, Mode=OneWay}"
+                                   Padding="4 4"
+                                   FontSize="16"
+                                   FontWeight="Bold"
+                                   FontFamily="Bahnschrift"
+                                   VerticalAlignment="Center" />
+                    </Border>
+                </StackPanel>
+            </StackPanel>
+            <controls:TeachingTip x:Name="wordProgressTeachingTip"
+                                  PreferredPlacement="TopRight"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center">
+                <Grid>
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="Изучено слово"
+                                   FontSize="24"
+                                   FontFamily="Bahnschrift"
+                                   FontStretch="Condensed" />
+                        <TextBlock Text="{x:Bind viewModel.PickerTrainer.RandomWord.EnglishForm, Mode=OneWay}"
+                                   FontSize="32"
+                                   FontFamily="Bahnschrift"
+                                   FontStretch="Condensed"
+                                   FontWeight="Bold" />
+                        <TextBlock Text="{x:Bind viewModel.PickerTrainer.RandomWord.RussianForm, Mode=OneWay}"
+                                   FontSize="24"
+                                   Opacity=".7"
+                                   FontFamily="Bahnschrift"
+                                   FontStretch="Condensed" />
+                    </StackPanel>
+                    <TextBlock Text="🥇"
+                               FontSize="64"
+                               HorizontalAlignment="Right"
+                               VerticalAlignment="Top"
+                               FontFamily="Bahnschrift"
+                               FontStretch="Condensed" />
+                    <ProgressBar Value="{x:Bind viewModel.PickerTrainer.RandomWord.Rating, Mode=OneWay}"
+                                 Height="10"
+                                 Width="100"
+                                 CornerRadius="5"
+                                 HorizontalAlignment="Right"
+                                 VerticalAlignment="Bottom">
+                        <ProgressBar.Foreground>
+                            <LinearGradientBrush>
+                                <GradientStop Color="LightSeaGreen" />
+                                <GradientStop Color="LightGreen"
+                                              Offset=".5" />
+                                <GradientStop Color="GreenYellow"
+                                              Offset="1" />
+                            </LinearGradientBrush>
+                        </ProgressBar.Foreground>
+                    </ProgressBar>
+                </Grid>
+            </controls:TeachingTip>
+        </Grid>
+    </ScrollViewer>
 </Page>

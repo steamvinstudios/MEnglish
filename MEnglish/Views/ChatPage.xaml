@@ -6,60 +6,60 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:controls="using:Microsoft.UI.Xaml.Controls"
       mc:Ignorable="d"
+      x:Name="mainPage"
       Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
       controls:BackdropMaterial.ApplyToRootOrPageBackground="True">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
-            <RowDefinition Height="auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Frame>
-            <ListView ItemsSource="{x:Bind Messages, Mode=OneWay}">
-                <ListView.ItemTemplate>
-                    <DataTemplate x:DataType="local:Message">
-                        <Grid Height="Auto"
-                              Margin="4"
-                              HorizontalAlignment="{x:Bind MsgAlignment}">
-                            <StackPanel MinHeight="75"
-                                        Background="#3888"
-                                        Padding="20"
-                                        CornerRadius="40 40 4 40">
-                                <TextBlock Text="{x:Bind MsgText}"
-                                           Padding="0, 10, 0, 0"
-                                           TextWrapping="Wrap"
-                                           FontSize="32" />
-                                <Border CornerRadius="20" HorizontalAlignment="Left" VerticalAlignment="Top">
-                                    <Image Source="{x:Bind Img}"
-                                           HorizontalAlignment="Left"
-                                           MaxWidth="600"
-                                           MaxHeight="400" />
-                                </Border>
-                                <TextBlock Text="{x:Bind MsgDateTime}"
-                                           Padding="0, 0, 0, 10"
-                                           FontSize="15" />
-                            </StackPanel>
-                        </Grid>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-                <ListView.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <ItemsStackPanel ItemsUpdatingScrollMode="KeepLastItemInView"
-                                         VerticalAlignment="Bottom" />
-                    </ItemsPanelTemplate>
-                </ListView.ItemsPanel>
-            </ListView>
-        </Frame>
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition Width="auto" />
-            </Grid.ColumnDefinitions>
-            <TextBox x:Name="userMsg" />
-            <Button Grid.Column="1"
-                    Content="Отправить"
-                    Padding="40"
+        <ListView Grid.Row="0"
+                  ItemsSource="{x:Bind Messages, Mode=OneWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:Message">
+                    <Grid Height="Auto"
+                          Margin="4"
+                          HorizontalAlignment="{x:Bind MsgAlignment}">
+                        <StackPanel MinHeight="75"
+                                    Background="#3888"
+                                    Padding="20"
+                                    CornerRadius="40 40 4 40">
+                            <TextBlock Text="{x:Bind MsgText}"
+                                       Padding="0, 10, 0, 0"
+                                       TextWrapping="Wrap"
+                                       FontSize="32" />
+                            <Border CornerRadius="20"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top">
+                                <Image Source="{x:Bind Img}"
+                                       HorizontalAlignment="Left"
+                                       MaxWidth="600"
+                                       MaxHeight="400" />
+                            </Border>
+                            <TextBlock Text="{x:Bind MsgDateTime}"
+                                       Padding="0, 0, 0, 10"
+                                       FontSize="15" />
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsStackPanel ItemsUpdatingScrollMode="KeepLastItemInView"
+                                     VerticalAlignment="Bottom" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+        </ListView>
+        <StackPanel Grid.Row="1"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <TextBox x:Name="userMsg"
+                     Width="200" />
+            <Button Content="Отправить"
                     Style="{ThemeResource AccentButtonStyle}"
                     Click="Button_Click" />
-        </Grid>
+        </StackPanel>
     </Grid>
 </Page>

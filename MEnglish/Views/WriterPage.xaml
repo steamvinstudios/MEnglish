@@ -9,200 +9,248 @@
       mc:Ignorable="d"
       Background="{ThemeResource AppBarBackgroundThemeBrush}"
       controls:BackdropMaterial.ApplyToRootOrPageBackground="True">
-    <Grid>
-        <StackPanel x:Name="CenterStack"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center">
-            <TextBlock Text="Переведи слово"
-                       FontSize="36"
-                       HorizontalAlignment="Center"
-                       FontFamily="Bahnschrift" />
-            <TextBlock x:Name="englishWordTextBlock"
-                       Text="{x:Bind viewModel.WriterTrainer.RandomWord.EnglishForm, Mode=OneWay}"
-                       FontSize="36"
-                       FontWeight="Bold"
-                       HorizontalAlignment="Center"
-                       FontFamily="Bahnschrift"
-                       PointerEntered="EnglishWordTextBlock_PointerEntered"
-                       PointerExited="EnglishWordTextBlock_PointerExited" />
-            <Grid Width="240"
-                  Height="240"
-                  CornerRadius="40"
-                  Margin="8">
-                <Image Source="{x:Bind viewModel.WriterTrainer.RandomWord.Image, Mode=OneWay}"
-                       Width="240"
-                       Height="240"
-                       Stretch="UniformToFill"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center" />
-            </Grid>
-            <AppBarSeparator />
-            <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Center">
-                <TextBox Name="answerTextBox"
-                         Text="{x:Bind viewModel.WriterTrainer.AnswerTextBoxText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                         CornerRadius="4 0 0 4"
-                         BorderThickness="1"
-                         Width="300"
-                         Height="32"
-                         VerticalAlignment="Center"
-                         KeyDown="AnswerTextBox_KeyDown">
-                    <TextBox.KeyboardAccelerators>
-                        <KeyboardAccelerator Key="Enter" />
-                    </TextBox.KeyboardAccelerators>
-                </TextBox>
-                <Button Name="checkAnswerButton"
-                        Content="→"
-                        FontWeight="Bold"
+    <ScrollViewer>
+        <Grid>
+            <StackPanel x:Name="CenterStack"
                         HorizontalAlignment="Center"
-                        CornerRadius="0 4 4 0"
-                        Margin="0"
-                        VerticalAlignment="Center"
-                        Style="{ThemeResource ButtonRevealStyle}"
-                        Click="CheckAnswerButton_Click" />
-            </StackPanel>
-            <AppBarSeparator />
-            <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Center"
-                        Margin="10"
-                        Spacing="8">
-                <Border CornerRadius="90"
-                        BorderThickness="8"
-                        Width="100"
-                        Height="100">
-                    <Border.BorderBrush>
-                        <LinearGradientBrush>
-                            <GradientStop Color="Yellow"
-                                          Offset="0" />
-                            <GradientStop Color="Red"
-                                          Offset="1" />
-                        </LinearGradientBrush>
-                    </Border.BorderBrush>
-                    <StackPanel HorizontalAlignment="Center"
-                                VerticalAlignment="Center">
-                        <TextBlock Text="Ошибка"
-                                   FontFamily="Bahnschrift" />
-                        <TextBlock Name="FalseBar"
-                                   Text="{x:Bind viewModel.WriterTrainer.AnswersResult.Mistakes, Mode=OneWay}"
-                                   FontFamily="Bahnschrift"
-                                   HorizontalAlignment="Center"
-                                   FontSize="36" />
-                    </StackPanel>
-                </Border>
-                <AppBarSeparator />
-                <Border CornerRadius="90"
-                        BorderThickness="8"
-                        Width="100"
-                        Height="100">
-                    <Border.BorderBrush>
-                        <LinearGradientBrush>
-                            <GradientStop Color="DeepSkyBlue"
-                                          Offset="0" />
-                            <GradientStop Color="Violet"
-                                          Offset="1" />
-                        </LinearGradientBrush>
-                    </Border.BorderBrush>
-                    <StackPanel VerticalAlignment="Center"
-                                HorizontalAlignment="Center">
-                        <TextBlock Text="Всего"
-                                   FontFamily="Bahnschrift" />
-                        <TextBlock Name="MaxOfBar"
-                                   Text="{x:Bind viewModel.WriterTrainer.AnswersResult.All, Mode=OneWay}"
-                                   FontFamily="Bahnschrift"
-                                   HorizontalAlignment="Center"
-                                   FontSize="36" />
-                    </StackPanel>
-                </Border>
-                <AppBarSeparator />
-                <Border CornerRadius="90"
-                        BorderThickness="8"
-                        Width="100"
-                        Height="100">
-                    <Border.BorderBrush>
-                        <LinearGradientBrush>
-                            <GradientStop Color="GreenYellow"
-                                          Offset="0" />
-                            <GradientStop Color="SeaGreen"
-                                          Offset="1" />
-                        </LinearGradientBrush>
-                    </Border.BorderBrush>
-                    <StackPanel VerticalAlignment="Center"
-                                HorizontalAlignment="Center">
-                        <TextBlock Text="Успех"
-                                   FontFamily="Bahnschrift" />
-                        <TextBlock Name="TrueBar"
-                                   Text="{x:Bind viewModel.WriterTrainer.AnswersResult.Correct, Mode=OneWay}"
-                                   FontFamily="Bahnschrift"
-                                   HorizontalAlignment="Center"
-                                   FontSize="36" />
-                    </StackPanel>
-                </Border>
-            </StackPanel>
-            <AppBarSeparator />
-            <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Center"
-                        CornerRadius="16"
-                        Padding="12 0"
-                        BorderBrush="{ThemeResource SystemControlBackgroundAccentRevealBorderBrush}"
-                        BorderThickness="2">
-                <StackPanel.Background>
-                    <media:AcrylicBrush TintColor="Transparent" />
-                </StackPanel.Background>
-                <Border Padding="10 4">
-                    <TextBlock Text="Время:"
-                               FontSize="16"
-                               FontFamily="Bahnschrift"
-                               VerticalAlignment="Center" />
-                </Border>
-                <Border>
-                    <TextBlock x:Name="trainerStopwatchTextBlock"
-                               Text="{x:Bind viewModel.WriterTrainer.TrainerStopwatch.StopwatchResultEverySecond, Mode=OneWay}"
-                               Padding="4 4"
-                               FontSize="16"
-                               FontWeight="Bold"
-                               FontFamily="Bahnschrift"
-                               VerticalAlignment="Center" />
-                </Border>
-            </StackPanel>
-        </StackPanel>
-        <controls:TeachingTip x:Name="wordInfoTeachingTip"
-                              Target="{x:Bind englishWordTextBlock}"
-                              HorizontalAlignment="Center"
-                              VerticalAlignment="Center"
-                              IsOpen="{x:Bind viewModel.WriterTrainer.WordInfoTeachingTipIsOpen, Mode=OneWay}">
-            <Grid>
-                <Border CornerRadius="8"
-                        Margin="0 8"
-                        HorizontalAlignment="Right"
-                        VerticalAlignment="Top">
+                        VerticalAlignment="Center">
+                <TextBlock Text="Переведи слово"
+                           FontSize="36"
+                           HorizontalAlignment="Center"
+                           FontFamily="Bahnschrift" />
+                <TextBlock x:Name="englishWordTextBlock"
+                           Text="{x:Bind viewModel.WriterTrainer.RandomWord.EnglishForm, Mode=OneWay}"
+                           FontSize="36"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"
+                           FontFamily="Bahnschrift"
+                           PointerEntered="EnglishWordTextBlock_PointerEntered"
+                           PointerExited="EnglishWordTextBlock_PointerExited" />
+                <Grid Width="240"
+                      Height="240"
+                      CornerRadius="40"
+                      Margin="8">
                     <Image Source="{x:Bind viewModel.WriterTrainer.RandomWord.Image, Mode=OneWay}"
-                           Height="90"
-                           Width="160"
+                           Width="240"
+                           Height="240"
                            Stretch="UniformToFill"
-                           HorizontalAlignment="Right"
-                           VerticalAlignment="Top" />
-                </Border>
-                <StackPanel VerticalAlignment="Center">
-                    <TextBlock Text="{x:Bind viewModel.WriterTrainer.RandomWord.RussianForm, Mode=OneWay}"
-                               FontSize="36"
-                               FontWeight="Bold"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center" />
+                </Grid>
+                <AppBarSeparator />
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <TextBox Name="answerTextBox"
+                             Text="{x:Bind viewModel.WriterTrainer.AnswerTextBoxText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                             CornerRadius="4 0 0 4"
+                             BorderThickness="1"
+                             Width="300"
+                             Height="32"
+                             VerticalAlignment="Center"
+                             KeyDown="AnswerTextBox_KeyDown">
+                        <TextBox.KeyboardAccelerators>
+                            <KeyboardAccelerator Key="Enter" />
+                        </TextBox.KeyboardAccelerators>
+                    </TextBox>
+                    <Button Name="checkAnswerButton"
+                            Content="→"
+                            FontWeight="Bold"
+                            HorizontalAlignment="Center"
+                            CornerRadius="0 4 4 0"
+                            Margin="0"
+                            VerticalAlignment="Center"
+                            Style="{ThemeResource ButtonRevealStyle}"
+                            Click="CheckAnswerButton_Click" />
+                </StackPanel>
+                <AppBarSeparator />
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            Margin="10"
+                            Spacing="8">
+                    <Border CornerRadius="90"
+                            BorderThickness="8"
+                            Width="100"
+                            Height="100">
+                        <Border.BorderBrush>
+                            <LinearGradientBrush>
+                                <GradientStop Color="Yellow"
+                                              Offset="0" />
+                                <GradientStop Color="Red"
+                                              Offset="1" />
+                            </LinearGradientBrush>
+                        </Border.BorderBrush>
+                        <StackPanel HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <TextBlock Text="Ошибка"
+                                       FontFamily="Bahnschrift" />
+                            <TextBlock Name="FalseBar"
+                                       Text="{x:Bind viewModel.WriterTrainer.AnswersResult.Mistakes, Mode=OneWay}"
+                                       FontFamily="Bahnschrift"
+                                       HorizontalAlignment="Center"
+                                       FontSize="36" />
+                        </StackPanel>
+                    </Border>
+                    <AppBarSeparator />
+                    <Border CornerRadius="90"
+                            BorderThickness="8"
+                            Width="100"
+                            Height="100">
+                        <Border.BorderBrush>
+                            <LinearGradientBrush>
+                                <GradientStop Color="DeepSkyBlue"
+                                              Offset="0" />
+                                <GradientStop Color="Violet"
+                                              Offset="1" />
+                            </LinearGradientBrush>
+                        </Border.BorderBrush>
+                        <StackPanel VerticalAlignment="Center"
+                                    HorizontalAlignment="Center">
+                            <TextBlock Text="Всего"
+                                       FontFamily="Bahnschrift" />
+                            <TextBlock Name="MaxOfBar"
+                                       Text="{x:Bind viewModel.WriterTrainer.AnswersResult.All, Mode=OneWay}"
+                                       FontFamily="Bahnschrift"
+                                       HorizontalAlignment="Center"
+                                       FontSize="36" />
+                        </StackPanel>
+                    </Border>
+                    <AppBarSeparator />
+                    <Border CornerRadius="90"
+                            BorderThickness="8"
+                            Width="100"
+                            Height="100">
+                        <Border.BorderBrush>
+                            <LinearGradientBrush>
+                                <GradientStop Color="GreenYellow"
+                                              Offset="0" />
+                                <GradientStop Color="SeaGreen"
+                                              Offset="1" />
+                            </LinearGradientBrush>
+                        </Border.BorderBrush>
+                        <StackPanel VerticalAlignment="Center"
+                                    HorizontalAlignment="Center">
+                            <TextBlock Text="Успех"
+                                       FontFamily="Bahnschrift" />
+                            <TextBlock Name="TrueBar"
+                                       Text="{x:Bind viewModel.WriterTrainer.AnswersResult.Correct, Mode=OneWay}"
+                                       FontFamily="Bahnschrift"
+                                       HorizontalAlignment="Center"
+                                       FontSize="36" />
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+                <AppBarSeparator />
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            CornerRadius="16"
+                            Padding="12 0"
+                            BorderBrush="{ThemeResource SystemControlBackgroundAccentRevealBorderBrush}"
+                            BorderThickness="2">
+                    <StackPanel.Background>
+                        <media:AcrylicBrush TintColor="Transparent" />
+                    </StackPanel.Background>
+                    <Border Padding="10 4">
+                        <TextBlock Text="Время:"
+                                   FontSize="16"
+                                   FontFamily="Bahnschrift"
+                                   VerticalAlignment="Center" />
+                    </Border>
+                    <Border>
+                        <TextBlock x:Name="trainerStopwatchTextBlock"
+                                   Text="{x:Bind viewModel.WriterTrainer.TrainerStopwatch.StopwatchResultEverySecond, Mode=OneWay}"
+                                   Padding="4 4"
+                                   FontSize="16"
+                                   FontWeight="Bold"
+                                   FontFamily="Bahnschrift"
+                                   VerticalAlignment="Center" />
+                    </Border>
+                </StackPanel>
+            </StackPanel>
+            <controls:TeachingTip x:Name="wordInfoTeachingTip"
+                                  Target="{x:Bind englishWordTextBlock}"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"
+                                  IsOpen="{x:Bind viewModel.WriterTrainer.WordInfoTeachingTipIsOpen, Mode=OneWay}">
+                <Grid>
+                    <Border CornerRadius="8"
+                            Margin="0 8"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top">
+                        <Image Source="{x:Bind viewModel.WriterTrainer.RandomWord.Image, Mode=OneWay}"
+                               Height="90"
+                               Width="160"
+                               Stretch="UniformToFill"
+                               HorizontalAlignment="Right"
+                               VerticalAlignment="Top" />
+                    </Border>
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="{x:Bind viewModel.WriterTrainer.RandomWord.RussianForm, Mode=OneWay}"
+                                   FontSize="36"
+                                   FontWeight="Bold"
+                                   FontFamily="Bahnschrift"
+                                   FontStretch="Condensed" />
+                        <TextBlock Text="{x:Bind viewModel.WriterTrainer.RandomWord.EnglishForm, Mode=OneWay}"
+                                   FontSize="32"
+                                   FontFamily="Bahnschrift"
+                                   FontStretch="Condensed"
+                                   Opacity=".7" />
+                        <TextBlock Text="{x:Bind viewModel.WriterTrainer.RandomWord.RatingFull(), Mode=OneWay}"
+                                   FontSize="16"
+                                   FontFamily="Bahnschrift"
+                                   FontStretch="Condensed"
+                                   Opacity=".7" />
+                        <ProgressBar Value="{x:Bind viewModel.WriterTrainer.RandomWord.Rating, Mode=OneWay}"
+                                     Height="10"
+                                     Margin="0 8"
+                                     CornerRadius="5"
+                                     HorizontalAlignment="Stretch">
+                            <ProgressBar.Foreground>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="LightSeaGreen" />
+                                    <GradientStop Color="LightGreen"
+                                                  Offset=".5" />
+                                    <GradientStop Color="GreenYellow"
+                                                  Offset="1" />
+                                </LinearGradientBrush>
+                            </ProgressBar.Foreground>
+                        </ProgressBar>
+                    </StackPanel>
+                </Grid>
+            </controls:TeachingTip>
+            <controls:TeachingTip x:Name="wordProgressTeachingTip"
+                                  PreferredPlacement="TopRight"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"
+                                  IsOpen="{x:Bind viewModel.WriterTrainer.WordProgressTeachingTipIsOpen, Mode=OneWay}">
+                <Grid>
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="Изучено слово"
+                                   FontSize="24"
+                                   FontFamily="Bahnschrift"
+                                   FontStretch="Condensed" />
+                        <TextBlock Text="{x:Bind viewModel.WriterTrainer.RandomWord.EnglishForm, Mode=OneWay}"
+                                   FontSize="32"
+                                   FontFamily="Bahnschrift"
+                                   FontStretch="Condensed"
+                                   FontWeight="Bold" />
+                        <TextBlock Text="{x:Bind viewModel.WriterTrainer.RandomWord.RussianForm, Mode=OneWay}"
+                                   FontSize="24"
+                                   Opacity=".7"
+                                   FontFamily="Bahnschrift"
+                                   FontStretch="Condensed" />
+                    </StackPanel>
+                    <TextBlock Text="🥇"
+                               FontSize="64"
+                               HorizontalAlignment="Right"
+                               VerticalAlignment="Top"
                                FontFamily="Bahnschrift"
                                FontStretch="Condensed" />
-                    <TextBlock Text="{x:Bind viewModel.WriterTrainer.RandomWord.EnglishForm, Mode=OneWay}"
-                               FontSize="32"
-                               FontFamily="Bahnschrift"
-                               FontStretch="Condensed"
-                               Opacity=".7" />
-                    <TextBlock Text="{x:Bind viewModel.WriterTrainer.RandomWord.RatingFull(), Mode=OneWay}"
-                               FontSize="16"
-                               FontFamily="Bahnschrift"
-                               FontStretch="Condensed"
-                               Opacity=".7" />
                     <ProgressBar Value="{x:Bind viewModel.WriterTrainer.RandomWord.Rating, Mode=OneWay}"
                                  Height="10"
-                                 Margin="0 8"
+                                 Width="100"
                                  CornerRadius="5"
-                                 HorizontalAlignment="Stretch">
+                                 HorizontalAlignment="Right"
+                                 VerticalAlignment="Bottom">
                         <ProgressBar.Foreground>
                             <LinearGradientBrush>
                                 <GradientStop Color="LightSeaGreen" />
@@ -213,54 +261,8 @@
                             </LinearGradientBrush>
                         </ProgressBar.Foreground>
                     </ProgressBar>
-                </StackPanel>
-            </Grid>
-        </controls:TeachingTip>
-        <controls:TeachingTip x:Name="wordProgressTeachingTip"
-                              PreferredPlacement="TopRight"
-                              HorizontalAlignment="Center"
-                              VerticalAlignment="Center"
-                              IsOpen="{x:Bind viewModel.WriterTrainer.WordProgressTeachingTipIsOpen, Mode=OneWay}">
-            <Grid>
-                <StackPanel VerticalAlignment="Center">
-                    <TextBlock Text="Изучено слово"
-                               FontSize="24"
-                               FontFamily="Bahnschrift"
-                               FontStretch="Condensed" />
-                    <TextBlock Text="{x:Bind viewModel.WriterTrainer.RandomWord.EnglishForm, Mode=OneWay}"
-                               FontSize="32"
-                               FontFamily="Bahnschrift"
-                               FontStretch="Condensed"
-                               FontWeight="Bold" />
-                    <TextBlock Text="{x:Bind viewModel.WriterTrainer.RandomWord.RussianForm, Mode=OneWay}"
-                               FontSize="24"
-                               Opacity=".7"
-                               FontFamily="Bahnschrift"
-                               FontStretch="Condensed" />
-                </StackPanel>
-                <TextBlock Text="🥇"
-                           FontSize="64"
-                           HorizontalAlignment="Right"
-                           VerticalAlignment="Top"
-                           FontFamily="Bahnschrift"
-                           FontStretch="Condensed" />
-                <ProgressBar Value="{x:Bind viewModel.WriterTrainer.RandomWord.Rating, Mode=OneWay}"
-                             Height="10"
-                             Width="100"
-                             CornerRadius="5"
-                             HorizontalAlignment="Right"
-                             VerticalAlignment="Bottom">
-                    <ProgressBar.Foreground>
-                        <LinearGradientBrush>
-                            <GradientStop Color="LightSeaGreen" />
-                            <GradientStop Color="LightGreen"
-                                          Offset=".5" />
-                            <GradientStop Color="GreenYellow"
-                                          Offset="1" />
-                        </LinearGradientBrush>
-                    </ProgressBar.Foreground>
-                </ProgressBar>
-            </Grid>
-        </controls:TeachingTip>
-    </Grid>
+                </Grid>
+            </controls:TeachingTip>
+        </Grid>
+    </ScrollViewer>
 </Page>

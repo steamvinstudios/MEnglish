@@ -10,161 +10,163 @@
       mc:Ignorable="d"
       controls:BackdropMaterial.ApplyToRootOrPageBackground="True"
       Loaded="Page_Loaded">
-    <Grid Margin="0 -40 0 0">
-        <Border VerticalAlignment="Top"
-                HorizontalAlignment="Center"
-                Margin="40">
-            <Image Source="/Images/menglishlogonew.png"
-                   Width="120" />
-        </Border>
-        <Border>
-            <Border.Background>
-                <media:AcrylicBrush TintColor="Transparent"
-                                    TintLuminosityOpacity="0" />
-            </Border.Background>
-        </Border>
-        <Border VerticalAlignment="Top"
-                HorizontalAlignment="Center">
-            <Image Source="/Images/menglishlogonew.png"
-                   Width="100"
-                   Margin="40" />
-        </Border>
-        <Rectangle x:Name="rectangle"
-                   Width="150"
-                   Height="150"
-                   HorizontalAlignment="Left"
-                   VerticalAlignment="Bottom"
-                   Margin="40"
-                   Opacity=".5"
-                   Rotation="{x:Bind viewModel.RectanleRotation, Mode=OneWay}">
-            <Rectangle.Fill>
-                <LinearGradientBrush>
-                    <GradientStop Color="{ThemeResource SystemAccentColorDark1}" />
-                    <GradientStop Color="{ThemeResource SystemAccentColorLight3}"
-                                  Offset="1" />
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle1"
-                   Width="120"
-                   Height="120"
-                   HorizontalAlignment="Left"
-                   VerticalAlignment="Bottom"
-                   Margin="100"
-                   Opacity=".4"
-                   Rotation="{x:Bind viewModel.Rectanle1Rotation, Mode=OneWay}">
-            <Rectangle.Fill>
-                <LinearGradientBrush>
-                    <GradientStop Color="{ThemeResource SystemAccentColorDark1}" />
-                    <GradientStop Color="{ThemeResource SystemAccentColorLight3}"
-                                  Offset="1" />
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle2"
-                   Width="80"
-                   Height="80"
-                   HorizontalAlignment="Left"
-                   VerticalAlignment="Bottom"
-                   Margin="164"
-                   Opacity=".3"
-                   Rotation="{x:Bind viewModel.Rectanle2Rotation, Mode=OneWay}">
-            <Rectangle.Fill>
-                <LinearGradientBrush>
-                    <GradientStop Color="{ThemeResource SystemAccentColorDark1}" />
-                    <GradientStop Color="{ThemeResource SystemAccentColorLight3}"
-                                  Offset="1" />
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle3"
-                   Width="150"
-                   Height="150"
-                   HorizontalAlignment="Right"
-                   VerticalAlignment="Bottom"
-                   Margin="40"
-                   Opacity=".5"
-                   Rotation="{x:Bind viewModel.Rectanle3Rotation, Mode=OneWay}">
-            <Rectangle.Fill>
-                <LinearGradientBrush>
-                    <GradientStop Color="{ThemeResource SystemAccentColorDark1}" />
-                    <GradientStop Color="{ThemeResource SystemAccentColorLight3}"
-                                  Offset="1" />
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle4"
-                   Width="120"
-                   Height="120"
-                   HorizontalAlignment="Right"
-                   VerticalAlignment="Bottom"
-                   Margin="100"
-                   Opacity=".4"
-                   Rotation="{x:Bind viewModel.Rectanle4Rotation, Mode=OneWay}">
-            <Rectangle.Fill>
-                <LinearGradientBrush>
-                    <GradientStop Color="{ThemeResource SystemAccentColorDark1}" />
-                    <GradientStop Color="{ThemeResource SystemAccentColorLight3}"
-                                  Offset="1" />
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle5"
-                   Width="80"
-                   Height="80"
-                   HorizontalAlignment="Right"
-                   VerticalAlignment="Bottom"
-                   Margin="164"
-                   Opacity=".3"
-                   Rotation="{x:Bind viewModel.Rectanle5Rotation, Mode=OneWay}">
-            <Rectangle.Fill>
-                <LinearGradientBrush>
-                    <GradientStop Color="{ThemeResource SystemAccentColorDark1}" />
-                    <GradientStop Color="{ThemeResource SystemAccentColorLight3}"
-                                  Offset="1" />
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <StackPanel x:Name="CenterStack"
+    <ScrollViewer>
+        <Grid Margin="0 -40 0 0">
+            <Border VerticalAlignment="Top"
                     HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Spacing="8">
-            <StackPanel Orientation="Horizontal">
-                <HyperlinkButton NavigateUri="https://t.me/AppMEnglish">
-                    <Image Source="/Images/Logo.png"
-                           MaxHeight="100" />
-                </HyperlinkButton>
-                <HyperlinkButton NavigateUri="https://github.com/steamvinstudios/MEnglish">
-                    <Image Source="/Images/GitHub_Logo.png"
-                           MaxHeight="100" />
-                </HyperlinkButton>
-            </StackPanel>
-            <TextBlock Text="{x:Bind viewModel.LastUpdate}"
-                       FontSize="14"
-                       FontFamily="Bahnschrift"
-                       HorizontalAlignment="Center" />
-            <TextBlock Text="{x:Bind viewModel.AppVersion}"
-                       FontSize="14"
-                       FontFamily="Bahnschrift"
-                       HorizontalAlignment="Center" />
-            <TextBlock x:Name="SteamvinStudios"
-                       Text="STEAMVIN STUDIOS"
-                       FontWeight="Bold"
-                       FontSize="20"
-                       FontFamily="Bahnschrift"
-                       HorizontalAlignment="Center" />
-            <HyperlinkButton NavigateUri="mailto:steamvinstudios@outlook.com"
-                             HorizontalAlignment="Center">
-                <TextBlock x:Name="email"
-                           Text="STEAMVINSTUDIOS@OUTLOOK.COM"
-                           FontSize="12"
+                    Margin="40">
+                <Image Source="/Images/menglishlogonew.png"
+                       Width="120" />
+            </Border>
+            <Border>
+                <Border.Background>
+                    <media:AcrylicBrush TintColor="Transparent"
+                                        TintLuminosityOpacity="0" />
+                </Border.Background>
+            </Border>
+            <Border VerticalAlignment="Top"
+                    HorizontalAlignment="Center">
+                <Image Source="/Images/menglishlogonew.png"
+                       Width="100"
+                       Margin="40" />
+            </Border>
+            <Rectangle x:Name="rectangle"
+                       Width="150"
+                       Height="150"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Bottom"
+                       Margin="40"
+                       Opacity=".5"
+                       Rotation="{x:Bind viewModel.RectanleRotation, Mode=OneWay}">
+                <Rectangle.Fill>
+                    <LinearGradientBrush>
+                        <GradientStop Color="{ThemeResource SystemAccentColorDark1}" />
+                        <GradientStop Color="{ThemeResource SystemAccentColorLight3}"
+                                      Offset="1" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="rectangle1"
+                       Width="120"
+                       Height="120"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Bottom"
+                       Margin="100"
+                       Opacity=".4"
+                       Rotation="{x:Bind viewModel.Rectanle1Rotation, Mode=OneWay}">
+                <Rectangle.Fill>
+                    <LinearGradientBrush>
+                        <GradientStop Color="{ThemeResource SystemAccentColorDark1}" />
+                        <GradientStop Color="{ThemeResource SystemAccentColorLight3}"
+                                      Offset="1" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="rectangle2"
+                       Width="80"
+                       Height="80"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Bottom"
+                       Margin="164"
+                       Opacity=".3"
+                       Rotation="{x:Bind viewModel.Rectanle2Rotation, Mode=OneWay}">
+                <Rectangle.Fill>
+                    <LinearGradientBrush>
+                        <GradientStop Color="{ThemeResource SystemAccentColorDark1}" />
+                        <GradientStop Color="{ThemeResource SystemAccentColorLight3}"
+                                      Offset="1" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="rectangle3"
+                       Width="150"
+                       Height="150"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Bottom"
+                       Margin="40"
+                       Opacity=".5"
+                       Rotation="{x:Bind viewModel.Rectanle3Rotation, Mode=OneWay}">
+                <Rectangle.Fill>
+                    <LinearGradientBrush>
+                        <GradientStop Color="{ThemeResource SystemAccentColorDark1}" />
+                        <GradientStop Color="{ThemeResource SystemAccentColorLight3}"
+                                      Offset="1" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="rectangle4"
+                       Width="120"
+                       Height="120"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Bottom"
+                       Margin="100"
+                       Opacity=".4"
+                       Rotation="{x:Bind viewModel.Rectanle4Rotation, Mode=OneWay}">
+                <Rectangle.Fill>
+                    <LinearGradientBrush>
+                        <GradientStop Color="{ThemeResource SystemAccentColorDark1}" />
+                        <GradientStop Color="{ThemeResource SystemAccentColorLight3}"
+                                      Offset="1" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="rectangle5"
+                       Width="80"
+                       Height="80"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Bottom"
+                       Margin="164"
+                       Opacity=".3"
+                       Rotation="{x:Bind viewModel.Rectanle5Rotation, Mode=OneWay}">
+                <Rectangle.Fill>
+                    <LinearGradientBrush>
+                        <GradientStop Color="{ThemeResource SystemAccentColorDark1}" />
+                        <GradientStop Color="{ThemeResource SystemAccentColorLight3}"
+                                      Offset="1" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <StackPanel x:Name="CenterStack"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Spacing="8">
+                <StackPanel Orientation="Horizontal">
+                    <HyperlinkButton NavigateUri="https://t.me/AppMEnglish">
+                        <Image Source="/Images/Logo.png"
+                               MaxHeight="100" />
+                    </HyperlinkButton>
+                    <HyperlinkButton NavigateUri="https://github.com/steamvinstudios/MEnglish">
+                        <Image Source="/Images/GitHub_Logo.png"
+                               MaxHeight="100" />
+                    </HyperlinkButton>
+                </StackPanel>
+                <TextBlock Text="{x:Bind viewModel.LastUpdate}"
+                           FontSize="14"
                            FontFamily="Bahnschrift"
                            HorizontalAlignment="Center" />
-            </HyperlinkButton>
-            <TextBlock Text="2023"
-                       FontSize="16"
-                       FontFamily="Bahnschrift"
-                       HorizontalAlignment="Center" />
-        </StackPanel>
-    </Grid>
+                <TextBlock Text="{x:Bind viewModel.AppVersion}"
+                           FontSize="14"
+                           FontFamily="Bahnschrift"
+                           HorizontalAlignment="Center" />
+                <TextBlock x:Name="SteamvinStudios"
+                           Text="STEAMVIN STUDIOS"
+                           FontWeight="Bold"
+                           FontSize="20"
+                           FontFamily="Bahnschrift"
+                           HorizontalAlignment="Center" />
+                <HyperlinkButton NavigateUri="mailto:steamvinstudios@outlook.com"
+                                 HorizontalAlignment="Center">
+                    <TextBlock x:Name="email"
+                               Text="STEAMVINSTUDIOS@OUTLOOK.COM"
+                               FontSize="12"
+                               FontFamily="Bahnschrift"
+                               HorizontalAlignment="Center" />
+                </HyperlinkButton>
+                <TextBlock Text="2023"
+                           FontSize="16"
+                           FontFamily="Bahnschrift"
+                           HorizontalAlignment="Center" />
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
 </Page>

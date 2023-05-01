@@ -7,417 +7,419 @@
       xmlns:controls="using:Microsoft.UI.Xaml.Controls"
       Background="Transparent"
       controls:BackdropMaterial.ApplyToRootOrPageBackground="True">
-    <Grid VerticalAlignment="Center">
-        <StackPanel HorizontalAlignment="Center">
-            <VariableSizedWrapGrid Orientation="Horizontal">
-                <VariableSizedWrapGrid.ChildrenTransitions>
-                    <TransitionCollection>
-                        <RepositionThemeTransition />
-                    </TransitionCollection>
-                </VariableSizedWrapGrid.ChildrenTransitions>
-                <Border Background="#11555555"
-                        CornerRadius="32"
-                        Padding="8"
-                        Margin="4"
-                        BorderThickness="2">
-                    <StackPanel Spacing="8"
-                                MinHeight="572">
-                        <Grid Background="#11555555"
-                              CornerRadius="32"
-                              Padding="8">
-                            <StackPanel>
-                                <TextBlock Text="Выбери режим тренировки"
-                                           FontFamily="Bahnschrift"
-                                           HorizontalAlignment="Center"
-                                           FontSize="24"
-                                           FontWeight="Bold" />
-                                <StackPanel Orientation="Horizontal"
-                                            Spacing="4">
-                                    <Button x:Name="ShortTrainBt"
-                                            Width="120"
-                                            Height="240"
-                                            Content="Короткая"
-                                            Click="ShortTrainBt_Click"
-                                            FontFamily="Bahnschrift"
+    <ScrollViewer>
+        <Grid VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center">
+                <VariableSizedWrapGrid Orientation="Horizontal">
+                    <VariableSizedWrapGrid.ChildrenTransitions>
+                        <TransitionCollection>
+                            <RepositionThemeTransition />
+                        </TransitionCollection>
+                    </VariableSizedWrapGrid.ChildrenTransitions>
+                    <Border Background="#11555555"
+                            CornerRadius="32"
+                            Padding="8"
+                            Margin="4"
+                            BorderThickness="2">
+                        <StackPanel Spacing="8"
+                                    MinHeight="572">
+                            <Grid Background="#11555555"
+                                  CornerRadius="32"
+                                  Padding="8">
+                                <StackPanel>
+                                    <TextBlock Text="Выбери режим тренировки"
+                                               FontFamily="Bahnschrift"
+                                               HorizontalAlignment="Center"
+                                               FontSize="24"
+                                               FontWeight="Bold" />
+                                    <StackPanel Orientation="Horizontal"
+                                                Spacing="4">
+                                        <Button x:Name="ShortTrainBt"
+                                                Width="120"
+                                                Height="240"
+                                                Content="Короткая"
+                                                Click="ShortTrainBt_Click"
+                                                FontFamily="Bahnschrift"
+                                                CornerRadius="32"
+                                                FontStretch="Condensed"
+                                                FontSize="20">
+                                            <Button.Shadow>
+                                                <ThemeShadow />
+                                            </Button.Shadow>
+                                            <Button.Background>
+                                                <LinearGradientBrush EndPoint="0.5,1"
+                                                                     StartPoint="0.5,0">
+                                                    <GradientStop Color="#FF3285FF" />
+                                                    <GradientStop Color="#FF89FF7D"
+                                                                  Offset="1" />
+                                                </LinearGradientBrush>
+                                            </Button.Background>
+                                        </Button>
+                                        <Button x:Name="MidTrainBt"
+                                                Width="120"
+                                                Height="240"
+                                                Content="Средняя"
+                                                Click="MidTrainBt_Click"
+                                                FontFamily="Bahnschrift"
+                                                CornerRadius="32"
+                                                FontStretch="Condensed"
+                                                FontSize="20">
+                                            <Button.Background>
+                                                <LinearGradientBrush EndPoint="0.5,1"
+                                                                     StartPoint="0.5,0">
+                                                    <GradientStop Color="#FF57FFFF" />
+                                                    <GradientStop Color="#FFFF6EA3"
+                                                                  Offset="1" />
+                                                </LinearGradientBrush>
+                                            </Button.Background>
+                                        </Button>
+                                        <Button x:Name="LongTrainBt"
+                                                Width="120"
+                                                Height="240"
+                                                Content="Длинная"
+                                                Click="LongTrainBt_Click"
+                                                FontFamily="Bahnschrift"
+                                                CornerRadius="32"
+                                                FontStretch="Condensed"
+                                                FontSize="20">
+                                            <Button.Background>
+                                                <LinearGradientBrush EndPoint="0.5,1"
+                                                                     StartPoint="0.5,0">
+                                                    <GradientStop Color="#FFFF5198" />
+                                                    <GradientStop Color="#FFFFDC3E"
+                                                                  Offset="1" />
+                                                </LinearGradientBrush>
+                                            </Button.Background>
+                                        </Button>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                            <Grid x:Name="backLandGrid"
+                                  Background="#11555555"
+                                  CornerRadius="32">
+                                <Grid.Shadow>
+                                    <ThemeShadow />
+                                </Grid.Shadow>
+                                <StackPanel>
+                                    <TextBlock Text="Режим тренировки"
+                                               FontSize="32"
+                                               Padding="8"
+                                               HorizontalAlignment="Center"
+                                               FontFamily="Bahnschrift"
+                                               FontStretch="Condensed"
+                                               FontWeight="Bold" />
+                                    <StackPanel Background="#11555555"
+                                                CornerRadius="32"
+                                                Padding="8">
+                                        <TextBlock Text="На реставрации. Крупные обновления требуют большой работы. Оставьте свои отзывы и предложения на странице в Microsoft Store"
+                                                   Width="340"
+                                                   FontSize="16"
+                                                   FontFamily="Bahnschrift"
+                                                   TextWrapping="Wrap"
+                                                   HorizontalAlignment="Center" />
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+                    <Border Background="#11555555"
+                            CornerRadius="32"
+                            Padding="8"
+                            Margin="4"
+                            BorderThickness="2">
+                        <StackPanel Grid.Column="1"
+                                    Margin="20"
+                                    Spacing="8">
+                            <Grid Background="#11555555"
+                                  CornerRadius="32">
+                                <StackPanel Spacing="8">
+                                    <Button Height="160"
+                                            FontSize="72"
                                             CornerRadius="32"
-                                            FontStretch="Condensed"
-                                            FontSize="20">
-                                        <Button.Shadow>
-                                            <ThemeShadow />
-                                        </Button.Shadow>
+                                            Click="Button_Click"
+                                            HorizontalAlignment="Stretch">
                                         <Button.Background>
                                             <LinearGradientBrush EndPoint="0.5,1"
                                                                  StartPoint="0.5,0">
-                                                <GradientStop Color="#FF3285FF" />
-                                                <GradientStop Color="#FF89FF7D"
+                                                <GradientStop Color="#FFFFE800" />
+                                                <GradientStop Color="#FFFF6800"
                                                               Offset="1" />
                                             </LinearGradientBrush>
                                         </Button.Background>
+                                        <Image Source="/NavigationBarPageIcons/black_nib_3d.png"
+                                               Height="120" />
                                     </Button>
-                                    <Button x:Name="MidTrainBt"
-                                            Width="120"
-                                            Height="240"
-                                            Content="Средняя"
-                                            Click="MidTrainBt_Click"
-                                            FontFamily="Bahnschrift"
+                                    <TextBlock Text="Тренажер райтер"
+                                               FontSize="32"
+                                               Padding="8"
+                                               FontFamily="Bahnschrift"
+                                               FontStretch="Condensed"
+                                               FontWeight="Bold"
+                                               HorizontalAlignment="Center" />
+                                    <Grid Background="#11555555"
+                                          CornerRadius="32"
+                                          Padding="16">
+                                        <TextBlock Text="Тренируй мышечную память"
+                                                   FontSize="16"
+                                                   FontFamily="Bahnschrift"
+                                                   TextWrapping="Wrap"
+                                                   HorizontalAlignment="Center" />
+                                    </Grid>
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+                    <Border Background="#11555555"
+                            CornerRadius="32"
+                            Padding="8"
+                            Margin="4"
+                            BorderThickness="2">
+                        <StackPanel Grid.Column="2"
+                                    Margin="20"
+                                    Spacing="8">
+                            <Grid Background="#11555555"
+                                  CornerRadius="32">
+                                <StackPanel Spacing="16">
+                                    <Button HorizontalAlignment="Stretch"
+                                            FontSize="72"
+                                            Height="160"
                                             CornerRadius="32"
-                                            FontStretch="Condensed"
-                                            FontSize="20">
+                                            Click="Button_Click_1">
                                         <Button.Background>
                                             <LinearGradientBrush EndPoint="0.5,1"
                                                                  StartPoint="0.5,0">
-                                                <GradientStop Color="#FF57FFFF" />
-                                                <GradientStop Color="#FFFF6EA3"
+                                                <GradientStop Color="#FF00D1FF" />
+                                                <GradientStop Color="#FF00FFA2"
                                                               Offset="1" />
                                             </LinearGradientBrush>
                                         </Button.Background>
+                                        <Image Source="/NavigationBarPageIcons/card_file_box_3d.png"
+                                               Height="120" />
                                     </Button>
-                                    <Button x:Name="LongTrainBt"
-                                            Width="120"
-                                            Height="240"
-                                            Content="Длинная"
-                                            Click="LongTrainBt_Click"
-                                            FontFamily="Bahnschrift"
-                                            CornerRadius="32"
-                                            FontStretch="Condensed"
-                                            FontSize="20">
-                                        <Button.Background>
-                                            <LinearGradientBrush EndPoint="0.5,1"
-                                                                 StartPoint="0.5,0">
-                                                <GradientStop Color="#FFFF5198" />
-                                                <GradientStop Color="#FFFFDC3E"
-                                                              Offset="1" />
-                                            </LinearGradientBrush>
-                                        </Button.Background>
-                                    </Button>
-                                </StackPanel>
-                            </StackPanel>
-                        </Grid>
-                        <Grid x:Name="backLandGrid"
-                              Background="#11555555"
-                              CornerRadius="32">
-                            <Grid.Shadow>
-                                <ThemeShadow />
-                            </Grid.Shadow>
-                            <StackPanel>
-                                <TextBlock Text="Режим тренировки"
-                                           FontSize="32"
-                                           Padding="8"
-                                           HorizontalAlignment="Center"
-                                           FontFamily="Bahnschrift"
-                                           FontStretch="Condensed"
-                                           FontWeight="Bold" />
-                                <StackPanel Background="#11555555"
-                                            CornerRadius="32"
-                                            Padding="8">
-                                    <TextBlock Text="На реставрации. Крупные обновления требуют большой работы. Оставьте свои отзывы и предложения на странице в Microsoft Store"
-                                               Width="340"
-                                               FontSize="16"
+                                    <TextBlock Text="Тренажер пикер"
+                                               FontSize="32"
                                                FontFamily="Bahnschrift"
-                                               TextWrapping="Wrap"
+                                               FontStretch="Condensed"
+                                               FontWeight="Bold"
                                                HorizontalAlignment="Center" />
+                                    <StackPanel Background="#11555555"
+                                                CornerRadius="32"
+                                                Padding="16">
+                                        <TextBlock Text="Выбирай из 4 предложенных вариантов"
+                                                   FontSize="16"
+                                                   FontFamily="Bahnschrift"
+                                                   TextWrapping="Wrap"
+                                                   HorizontalAlignment="Center" />
+                                    </StackPanel>
                                 </StackPanel>
-                            </StackPanel>
-                        </Grid>
-                    </StackPanel>
-                </Border>
-                <Border Background="#11555555"
-                        CornerRadius="32"
-                        Padding="8"
-                        Margin="4"
-                        BorderThickness="2">
-                    <StackPanel Grid.Column="1"
-                                Margin="20"
-                                Spacing="8">
-                        <Grid Background="#11555555"
-                              CornerRadius="32">
-                            <StackPanel Spacing="8">
-                                <Button Height="160"
-                                        FontSize="72"
-                                        CornerRadius="32"
-                                        Click="Button_Click"
-                                        HorizontalAlignment="Stretch">
-                                    <Button.Background>
-                                        <LinearGradientBrush EndPoint="0.5,1"
-                                                             StartPoint="0.5,0">
-                                            <GradientStop Color="#FFFFE800" />
-                                            <GradientStop Color="#FFFF6800"
-                                                          Offset="1" />
-                                        </LinearGradientBrush>
-                                    </Button.Background>
-                                    <Image Source="/NavigationBarPageIcons/black_nib_3d.png"
-                                           Height="120" />
-                                </Button>
-                                <TextBlock Text="Тренажер райтер"
-                                           FontSize="32"
-                                           Padding="8"
-                                           FontFamily="Bahnschrift"
-                                           FontStretch="Condensed"
-                                           FontWeight="Bold"
-                                           HorizontalAlignment="Center" />
-                                <Grid Background="#11555555"
-                                      CornerRadius="32"
-                                      Padding="16">
-                                    <TextBlock Text="Тренируй мышечную память"
-                                               FontSize="16"
-                                               FontFamily="Bahnschrift"
-                                               TextWrapping="Wrap"
-                                               HorizontalAlignment="Center" />
-                                </Grid>
-                            </StackPanel>
-                        </Grid>
-                    </StackPanel>
-                </Border>
-                <Border Background="#11555555"
-                        CornerRadius="32"
-                        Padding="8"
-                        Margin="4"
-                        BorderThickness="2">
-                    <StackPanel Grid.Column="2"
-                                Margin="20"
-                                Spacing="8">
-                        <Grid Background="#11555555"
-                              CornerRadius="32">
-                            <StackPanel Spacing="16">
-                                <Button HorizontalAlignment="Stretch"
-                                        FontSize="72"
-                                        Height="160"
-                                        CornerRadius="32"
-                                        Click="Button_Click_1">
-                                    <Button.Background>
-                                        <LinearGradientBrush EndPoint="0.5,1"
-                                                             StartPoint="0.5,0">
-                                            <GradientStop Color="#FF00D1FF" />
-                                            <GradientStop Color="#FF00FFA2"
-                                                          Offset="1" />
-                                        </LinearGradientBrush>
-                                    </Button.Background>
-                                    <Image Source="/NavigationBarPageIcons/card_file_box_3d.png"
-                                           Height="120" />
-                                </Button>
-                                <TextBlock Text="Тренажер пикер"
-                                           FontSize="32"
-                                           FontFamily="Bahnschrift"
-                                           FontStretch="Condensed"
-                                           FontWeight="Bold"
-                                           HorizontalAlignment="Center" />
-                                <StackPanel Background="#11555555"
-                                            CornerRadius="32"
-                                            Padding="16">
-                                    <TextBlock Text="Выбирай из 4 предложенных вариантов"
-                                               FontSize="16"
-                                               FontFamily="Bahnschrift"
-                                               TextWrapping="Wrap"
-                                               HorizontalAlignment="Center" />
-                                </StackPanel>
-                            </StackPanel>
-                        </Grid>
-                    </StackPanel>
-                </Border>
-                <Grid CornerRadius="32"
-                      Padding="8"
-                      Margin="4">
-                    <Grid.Background>
-                        <LinearGradientBrush EndPoint="0.5,1"
-                                             StartPoint="0.5,0">
-                            <GradientStop Color="DeepSkyBlue" />
-                            <GradientStop Color="#119"
-                                          Offset="1" />
-                        </LinearGradientBrush>
-                    </Grid.Background>
-                    <Image Source="/Images/newspaper_3d.png"
-                           Height="256"
-                           Width="256"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center" />
-                    <TextBlock Text="Последние новости"
-                               Margin="0 40"
-                               FontSize="44"
-                               FontFamily="Bahnschrift"
-                               FontStretch="Condensed"
-                               FontWeight="Bold"
-                               TextWrapping="Wrap"
-                               HorizontalAlignment="Center" />
-                </Grid>
-                <Border Background="#11555555"
-                        CornerRadius="32"
-                        Padding="8"
-                        Margin="4"
-                        BorderThickness="2"
-                        BorderBrush="{ThemeResource SystemControlBackgroundAccentRevealBorderBrush}">
-                    <StackPanel HorizontalAlignment="Center"
-                                VerticalAlignment="Center">
-                        <TextBlock Text="11 декабря 2022"
-                                   Width="340"
-                                   FontSize="20"
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+                    <Grid CornerRadius="32"
+                          Padding="8"
+                          Margin="4">
+                        <Grid.Background>
+                            <LinearGradientBrush EndPoint="0.5,1"
+                                                 StartPoint="0.5,0">
+                                <GradientStop Color="DeepSkyBlue" />
+                                <GradientStop Color="#119"
+                                              Offset="1" />
+                            </LinearGradientBrush>
+                        </Grid.Background>
+                        <Image Source="/Images/newspaper_3d.png"
+                               Height="256"
+                               Width="256"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center" />
+                        <TextBlock Text="Последние новости"
+                                   Margin="0 40"
+                                   FontSize="44"
                                    FontFamily="Bahnschrift"
-                                   TextWrapping="Wrap"
-                                   HorizontalAlignment="Center">
-                            <TextBlock.Foreground>
-                                <LinearGradientBrush>
-                                    <GradientStop Color="{ThemeResource SystemAccentColorLight2}" />
-                                    <GradientStop Color="{ThemeResource SystemAccentColor}"
-                                                  Offset="1" />
-                                </LinearGradientBrush>
-                            </TextBlock.Foreground></TextBlock>
-                        <TextBlock Text="Обновлены иконки панели навигации, добавлены новые слова"
-                                   Width="340"
-                                   FontSize="16"
-                                   FontFamily="Bahnschrift"
+                                   FontStretch="Condensed"
+                                   FontWeight="Bold"
                                    TextWrapping="Wrap"
                                    HorizontalAlignment="Center" />
-                    </StackPanel>
-                </Border>
-                <Border Background="#11555555"
-                        CornerRadius="32"
-                        Padding="8"
-                        Margin="4"
-                        BorderThickness="2"
-                        BorderBrush="{ThemeResource SystemControlBackgroundAccentRevealBorderBrush}">
-                    <StackPanel HorizontalAlignment="Center"
-                                VerticalAlignment="Center">
-                        <TextBlock Text="9 декабря 2022"
-                                   Width="340"
-                                   FontSize="20"
-                                   FontFamily="Bahnschrift"
-                                   TextWrapping="Wrap"
-                                   HorizontalAlignment="Center">
-                            <TextBlock.Foreground>
-                                <LinearGradientBrush>
-                                    <GradientStop Color="{ThemeResource SystemAccentColorLight2}" />
-                                    <GradientStop Color="{ThemeResource SystemAccentColor}"
-                                                  Offset="1" />
-                                </LinearGradientBrush>
-                            </TextBlock.Foreground></TextBlock>
-                        <TextBlock Text="Добавлен поиск по словам в [🥇Профиль]. Искать можно как по английскому/русскому слову, так и по рейтингу"
-                                   Width="340"
-                                   FontSize="16"
-                                   FontFamily="Bahnschrift"
-                                   TextWrapping="Wrap"
-                                   HorizontalAlignment="Center" />
-                        <TextBlock Text="Обновлен макет новостей на этой странице"
-                                   Width="340"
-                                   FontSize="16"
-                                   FontFamily="Bahnschrift"
-                                   TextWrapping="Wrap"
-                                   HorizontalAlignment="Center" />
-                    </StackPanel>
-                </Border>
-                <Border Background="#11555555"
-                        CornerRadius="32"
-                        Padding="8"
-                        Margin="4"
-                        BorderThickness="2"
-                        BorderBrush="{ThemeResource SystemControlBackgroundAccentRevealBorderBrush}">
-                    <StackPanel HorizontalAlignment="Center"
-                                VerticalAlignment="Center">
-                        <TextBlock Text="8 декабря 2022"
-                                   Width="340"
-                                   FontSize="20"
-                                   FontFamily="Bahnschrift"
-                                   TextWrapping="Wrap"
-                                   HorizontalAlignment="Center">
-                            <TextBlock.Foreground>
-                                <LinearGradientBrush>
-                                    <GradientStop Color="{ThemeResource SystemAccentColorLight2}" />
-                                    <GradientStop Color="{ThemeResource SystemAccentColor}"
-                                                  Offset="1" />
-                                </LinearGradientBrush>
-                            </TextBlock.Foreground></TextBlock>
-                        <TextBlock Text="Сброс слов в [🥇Профиль] больше не требуется для добавления слов, пришедших с обновлениями!"
-                                   Width="340"
-                                   FontSize="16"
-                                   FontFamily="Bahnschrift"
-                                   TextWrapping="Wrap"
-                                   HorizontalAlignment="Center" />
-                        <TextBlock Text="Это было очень непросто"
-                                   Width="340"
-                                   FontSize="16"
-                                   FontFamily="Bahnschrift"
-                                   TextWrapping="Wrap"
-                                   HorizontalAlignment="Center"
-                                   Opacity=".5" />
-                        <TextBlock Text="✨🎉🎊🎆"
-                                   Width="340"
-                                   FontSize="32"
-                                   FontFamily="Bahnschrift"
-                                   TextWrapping="Wrap"
-                                   HorizontalAlignment="Center" />
-                    </StackPanel>
-                </Border>
-                <Border Background="#11555555"
-                        CornerRadius="32"
-                        Padding="8"
-                        Margin="4"
-                        BorderThickness="2"
-                        BorderBrush="{ThemeResource SystemControlBackgroundAccentRevealBorderBrush}">
-                    <StackPanel HorizontalAlignment="Center"
-                                VerticalAlignment="Center">
-                        <TextBlock Text="7 декабря 2022"
-                                   Width="340"
-                                   FontSize="20"
-                                   FontFamily="Bahnschrift"
-                                   TextWrapping="Wrap"
-                                   HorizontalAlignment="Center">
-                            <TextBlock.Foreground>
-                                <LinearGradientBrush>
-                                    <GradientStop Color="{ThemeResource SystemAccentColorLight2}" />
-                                    <GradientStop Color="{ThemeResource SystemAccentColor}"
-                                                  Offset="1" />
-                                </LinearGradientBrush>
-                            </TextBlock.Foreground></TextBlock>
-                        <TextBlock Text="Добавлены новые слова. Теперь приложение подстраивается под Вас. Знает, какие слова Вам лучше изучить/повторить сейчас, а какие оставить на потом"
-                                   Width="340"
-                                   FontSize="16"
-                                   FontFamily="Bahnschrift"
-                                   TextWrapping="Wrap"
-                                   HorizontalAlignment="Center" />
-                        <TextBlock  Text="Для обновления слов зайдите в раздел [🥇Профиль], кликните по любому слову и нажмите [Сбросить слова]"
-                                    TextDecorations="Strikethrough"
-                                    Width="340"
-                                    FontSize="16"
-                                    FontFamily="Bahnschrift"
-                                    TextWrapping="Wrap"
-                                    HorizontalAlignment="Center"
-                                    Opacity=".5" />
-                    </StackPanel>
-                </Border>
-                <Border Background="#11555555"
-                        CornerRadius="32"
-                        Padding="8"
-                        Margin="4"
-                        BorderThickness="2"
-                        BorderBrush="{ThemeResource SystemControlBackgroundAccentRevealBorderBrush}">
-                    <StackPanel HorizontalAlignment="Center"
-                                VerticalAlignment="Center">
-                        <TextBlock Text="2 декабря 2022"
-                                   Width="340"
-                                   FontSize="20"
-                                   FontFamily="Bahnschrift"
-                                   TextWrapping="Wrap"
-                                   HorizontalAlignment="Center">
-                            <TextBlock.Foreground>
-                                <LinearGradientBrush>
-                                    <GradientStop Color="{ThemeResource SystemAccentColorLight2}" />
-                                    <GradientStop Color="{ThemeResource SystemAccentColor}"
-                                                  Offset="1" />
-                                </LinearGradientBrush>
-                            </TextBlock.Foreground></TextBlock>
-                        <TextBlock Text="Теперь в разделе [🥇Профиль] можно просматривать прогресс изучения слов. В приложение интегрирована база данных - обеспечено сохранение прогресса на диск. Также, по клику можно добавлять свои собственные, либо изменять и удалять существующие слова. Путь к картинке можно вставлять по ссылке из интернета"
-                                   Width="340"
-                                   FontSize="16"
-                                   FontFamily="Bahnschrift"
-                                   TextWrapping="Wrap"
-                                   HorizontalAlignment="Center" />
-                        <TextBlock Text="В следующем обновлении будет добавлено больше слов и откалиброваны настройки тренажеров. Сейчас главное протестировать общую работоспособность и получить отзывы"
-                                   Width="340"
-                                   FontSize="16"
-                                   FontFamily="Bahnschrift"
-                                   TextWrapping="Wrap"
-                                   HorizontalAlignment="Center" />
-                    </StackPanel>
-                </Border>
-            </VariableSizedWrapGrid>
-        </StackPanel>
-    </Grid>
+                    </Grid>
+                    <Border Background="#11555555"
+                            CornerRadius="32"
+                            Padding="8"
+                            Margin="4"
+                            BorderThickness="2"
+                            BorderBrush="{ThemeResource SystemControlBackgroundAccentRevealBorderBrush}">
+                        <StackPanel HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <TextBlock Text="11 декабря 2022"
+                                       Width="340"
+                                       FontSize="20"
+                                       FontFamily="Bahnschrift"
+                                       TextWrapping="Wrap"
+                                       HorizontalAlignment="Center">
+                                <TextBlock.Foreground>
+                                    <LinearGradientBrush>
+                                        <GradientStop Color="{ThemeResource SystemAccentColorLight2}" />
+                                        <GradientStop Color="{ThemeResource SystemAccentColor}"
+                                                      Offset="1" />
+                                    </LinearGradientBrush>
+                                </TextBlock.Foreground></TextBlock>
+                            <TextBlock Text="Обновлены иконки панели навигации, добавлены новые слова"
+                                       Width="340"
+                                       FontSize="16"
+                                       FontFamily="Bahnschrift"
+                                       TextWrapping="Wrap"
+                                       HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Border>
+                    <Border Background="#11555555"
+                            CornerRadius="32"
+                            Padding="8"
+                            Margin="4"
+                            BorderThickness="2"
+                            BorderBrush="{ThemeResource SystemControlBackgroundAccentRevealBorderBrush}">
+                        <StackPanel HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <TextBlock Text="9 декабря 2022"
+                                       Width="340"
+                                       FontSize="20"
+                                       FontFamily="Bahnschrift"
+                                       TextWrapping="Wrap"
+                                       HorizontalAlignment="Center">
+                                <TextBlock.Foreground>
+                                    <LinearGradientBrush>
+                                        <GradientStop Color="{ThemeResource SystemAccentColorLight2}" />
+                                        <GradientStop Color="{ThemeResource SystemAccentColor}"
+                                                      Offset="1" />
+                                    </LinearGradientBrush>
+                                </TextBlock.Foreground></TextBlock>
+                            <TextBlock Text="Добавлен поиск по словам в [🥇Профиль]. Искать можно как по английскому/русскому слову, так и по рейтингу"
+                                       Width="340"
+                                       FontSize="16"
+                                       FontFamily="Bahnschrift"
+                                       TextWrapping="Wrap"
+                                       HorizontalAlignment="Center" />
+                            <TextBlock Text="Обновлен макет новостей на этой странице"
+                                       Width="340"
+                                       FontSize="16"
+                                       FontFamily="Bahnschrift"
+                                       TextWrapping="Wrap"
+                                       HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Border>
+                    <Border Background="#11555555"
+                            CornerRadius="32"
+                            Padding="8"
+                            Margin="4"
+                            BorderThickness="2"
+                            BorderBrush="{ThemeResource SystemControlBackgroundAccentRevealBorderBrush}">
+                        <StackPanel HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <TextBlock Text="8 декабря 2022"
+                                       Width="340"
+                                       FontSize="20"
+                                       FontFamily="Bahnschrift"
+                                       TextWrapping="Wrap"
+                                       HorizontalAlignment="Center">
+                                <TextBlock.Foreground>
+                                    <LinearGradientBrush>
+                                        <GradientStop Color="{ThemeResource SystemAccentColorLight2}" />
+                                        <GradientStop Color="{ThemeResource SystemAccentColor}"
+                                                      Offset="1" />
+                                    </LinearGradientBrush>
+                                </TextBlock.Foreground></TextBlock>
+                            <TextBlock Text="Сброс слов в [🥇Профиль] больше не требуется для добавления слов, пришедших с обновлениями!"
+                                       Width="340"
+                                       FontSize="16"
+                                       FontFamily="Bahnschrift"
+                                       TextWrapping="Wrap"
+                                       HorizontalAlignment="Center" />
+                            <TextBlock Text="Это было очень непросто"
+                                       Width="340"
+                                       FontSize="16"
+                                       FontFamily="Bahnschrift"
+                                       TextWrapping="Wrap"
+                                       HorizontalAlignment="Center"
+                                       Opacity=".5" />
+                            <TextBlock Text="✨🎉🎊🎆"
+                                       Width="340"
+                                       FontSize="32"
+                                       FontFamily="Bahnschrift"
+                                       TextWrapping="Wrap"
+                                       HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Border>
+                    <Border Background="#11555555"
+                            CornerRadius="32"
+                            Padding="8"
+                            Margin="4"
+                            BorderThickness="2"
+                            BorderBrush="{ThemeResource SystemControlBackgroundAccentRevealBorderBrush}">
+                        <StackPanel HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <TextBlock Text="7 декабря 2022"
+                                       Width="340"
+                                       FontSize="20"
+                                       FontFamily="Bahnschrift"
+                                       TextWrapping="Wrap"
+                                       HorizontalAlignment="Center">
+                                <TextBlock.Foreground>
+                                    <LinearGradientBrush>
+                                        <GradientStop Color="{ThemeResource SystemAccentColorLight2}" />
+                                        <GradientStop Color="{ThemeResource SystemAccentColor}"
+                                                      Offset="1" />
+                                    </LinearGradientBrush>
+                                </TextBlock.Foreground></TextBlock>
+                            <TextBlock Text="Добавлены новые слова. Теперь приложение подстраивается под Вас. Знает, какие слова Вам лучше изучить/повторить сейчас, а какие оставить на потом"
+                                       Width="340"
+                                       FontSize="16"
+                                       FontFamily="Bahnschrift"
+                                       TextWrapping="Wrap"
+                                       HorizontalAlignment="Center" />
+                            <TextBlock  Text="Для обновления слов зайдите в раздел [🥇Профиль], кликните по любому слову и нажмите [Сбросить слова]"
+                                        TextDecorations="Strikethrough"
+                                        Width="340"
+                                        FontSize="16"
+                                        FontFamily="Bahnschrift"
+                                        TextWrapping="Wrap"
+                                        HorizontalAlignment="Center"
+                                        Opacity=".5" />
+                        </StackPanel>
+                    </Border>
+                    <Border Background="#11555555"
+                            CornerRadius="32"
+                            Padding="8"
+                            Margin="4"
+                            BorderThickness="2"
+                            BorderBrush="{ThemeResource SystemControlBackgroundAccentRevealBorderBrush}">
+                        <StackPanel HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <TextBlock Text="2 декабря 2022"
+                                       Width="340"
+                                       FontSize="20"
+                                       FontFamily="Bahnschrift"
+                                       TextWrapping="Wrap"
+                                       HorizontalAlignment="Center">
+                                <TextBlock.Foreground>
+                                    <LinearGradientBrush>
+                                        <GradientStop Color="{ThemeResource SystemAccentColorLight2}" />
+                                        <GradientStop Color="{ThemeResource SystemAccentColor}"
+                                                      Offset="1" />
+                                    </LinearGradientBrush>
+                                </TextBlock.Foreground></TextBlock>
+                            <TextBlock Text="Теперь в разделе [🥇Профиль] можно просматривать прогресс изучения слов. В приложение интегрирована база данных - обеспечено сохранение прогресса на диск. Также, по клику можно добавлять свои собственные, либо изменять и удалять существующие слова. Путь к картинке можно вставлять по ссылке из интернета"
+                                       Width="340"
+                                       FontSize="16"
+                                       FontFamily="Bahnschrift"
+                                       TextWrapping="Wrap"
+                                       HorizontalAlignment="Center" />
+                            <TextBlock Text="В следующем обновлении будет добавлено больше слов и откалиброваны настройки тренажеров. Сейчас главное протестировать общую работоспособность и получить отзывы"
+                                       Width="340"
+                                       FontSize="16"
+                                       FontFamily="Bahnschrift"
+                                       TextWrapping="Wrap"
+                                       HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Border>
+                </VariableSizedWrapGrid>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
 </Page>

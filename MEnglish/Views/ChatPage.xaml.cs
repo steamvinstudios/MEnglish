@@ -68,7 +68,7 @@ namespace MEnglish.Views
                 }
             }
 
-            var randomWord = words[new Random().Next(words.Count)];
+            var randomWord = words[new Random().Next(words.Count - 1)];
 
             Messages.Add(new Message
             {

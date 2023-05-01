@@ -200,7 +200,6 @@
                                        HorizontalAlignment="Center" />
                         </StackPanel>
                     </Button>
-                    
                     <Button x:Name="profilePageButton"
                             MinWidth="120"
                             Background="Transparent"
@@ -221,7 +220,6 @@
                                        HorizontalAlignment="Center" />
                         </StackPanel>
                     </Button>
-                    
                     <Button x:Name="hideNavigationBarButton"
                             MinWidth="120"
                             Background="Transparent"
@@ -245,10 +243,8 @@
                 </VariableSizedWrapGrid>
             </StackPanel>
         </StackPanel>
-        <ScrollViewer>
-            <Frame x:Name="GenPointFrame"
-                   Padding="0 40" />
-        </ScrollViewer>
+        <Frame x:Name="GenPointFrame"
+               Padding="0 40" />
         <Button x:Name="showNavigationBarButton"
                 CornerRadius="20"
                 HorizontalAlignment="Right"
