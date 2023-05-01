@@ -10,7 +10,7 @@
       controls:BackdropMaterial.ApplyToRootOrPageBackground="True">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="*" />
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
         <Frame>
@@ -21,13 +21,19 @@
                               Margin="4"
                               HorizontalAlignment="{x:Bind MsgAlignment}">
                             <StackPanel MinHeight="75"
-                                        Padding="10, 0, 0, 10"
-                                        Background="{x:Bind Color}"
+                                        Background="#3888"
+                                        Padding="20"
                                         CornerRadius="40 40 4 40">
                                 <TextBlock Text="{x:Bind MsgText}"
                                            Padding="0, 10, 0, 0"
                                            TextWrapping="Wrap"
-                                           FontSize="20" />
+                                           FontSize="32" />
+                                <Border CornerRadius="20" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                    <Image Source="{x:Bind Img}"
+                                           HorizontalAlignment="Left"
+                                           MaxWidth="600"
+                                           MaxHeight="400" />
+                                </Border>
                                 <TextBlock Text="{x:Bind MsgDateTime}"
                                            Padding="0, 0, 0, 10"
                                            FontSize="15" />

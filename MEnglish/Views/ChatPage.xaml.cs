@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
@@ -29,6 +30,13 @@ namespace MEnglish.Views
     {
         public ObservableCollection<Message> Messages { get; set; } = new ObservableCollection<Message>();
         public List<Word> Responses { get; set; } = new List<Word>();
+        public List<string> ResponseComments { get; set; } = new List<string>
+        {
+            "Вот мой ответ:",
+            "Хм, тогда так:",
+            "Мой ход:",
+            "Держи:",
+        };
 
         public ChatPage()
         {
@@ -60,15 +68,23 @@ namespace MEnglish.Views
                 }
             }
 
-            Messages.Add(new Message { MsgAlignment = HorizontalAlignment.Left, MsgText = words[new Random().Next(words.Count)].EnglishForm });
-        }
-    }
+            var randomWord = words[new Random().Next(words.Count)];
 
-    public class Message
-    {
-        public HorizontalAlignment MsgAlignment { get; set; } = HorizontalAlignment.Right;
-        public string MsgText { get; set; } = "ответ таков";
-        public DateTime MsgDateTime { get; set; } = DateTime.Now;
-        public SolidColorBrush Color { get; set; } = new SolidColorBrush(Colors.DeepSkyBlue);
-    }
+            Messages.Add(new Message
+            {
+                MsgAlignment = HorizontalAlignment.Left,
+                MsgText = $"{ResponseComments[new Random().Next(ResponseComments.Count)]} {randomWord.EnglishForm}. Кстати, слово переводится как {randomWord.RussianForm}",
+                Img = new BitmapImage(new Uri($"ms-appx:///ArrayPics/{randomWord.EnglishForm}.jpg"))
+        });
+        }
+}
+
+public class Message
+{
+    public HorizontalAlignment MsgAlignment { get; set; } = HorizontalAlignment.Right;
+    public string MsgText { get; set; } = "ответ таков";
+    public DateTime MsgDateTime { get; set; } = DateTime.Now;
+    public SolidColorBrush Color { get; set; } = new SolidColorBrush(Colors.DeepSkyBlue);
+        public ImageSource Img = new BitmapImage(new Uri($"ms-appx:///"));
+}
 }
