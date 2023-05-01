@@ -51,5 +51,7 @@ namespace MEnglish
         private void VerbsPageButton_Click(object sender, RoutedEventArgs e) => GenPointFrame.Navigate(typeof(VerberPage), null, new DrillInNavigationTransitionInfo());
 
         private void HistoryPageButton_Click(object sender, RoutedEventArgs e) => GenPointFrame.Navigate(typeof(HistoryPage), null, new DrillInNavigationTransitionInfo());
+
+        private void ChatPageButton_Click(object sender, RoutedEventArgs e) => GenPointFrame.Navigate(typeof(ChatPage), null, new DrillInNavigationTransitionInfo());
     }
 }
