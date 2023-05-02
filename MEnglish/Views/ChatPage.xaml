@@ -57,7 +57,7 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
             <TextBox x:Name="userMsg"
-                     Width="200" />
+                     Width="200" TextChanging="userMsg_TextChanging"/>
             <Button Content="Отправить"
                     Style="{ThemeResource AccentButtonStyle}"
                     Click="Button_Click" />

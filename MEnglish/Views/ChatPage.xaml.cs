@@ -6,6 +6,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -18,6 +19,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
+using static System.Net.Mime.MediaTypeNames;
 
 // Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -76,6 +78,30 @@ namespace MEnglish.Views
                 MsgText = $"{ResponseComments[new Random().Next(ResponseComments.Count)]} {randomWord.EnglishForm}. Кстати, слово переводится как {randomWord.RussianForm}",
                 Img = new BitmapImage(new Uri($"ms-appx:///ArrayPics/{randomWord.EnglishForm}.jpg"))
             });
+        }
+
+        private async void userMsg_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            if (!Regex.IsMatch(sender.Text, "^[a-zA-Z ]*$") && !String.IsNullOrWhiteSpace(userMsg.Text))
+            {
+                int pos = sender.SelectionStart - 1;
+                if (pos >= 0) // добавить эту проверку
+                {
+                    sender.Text = sender.Text.Remove(pos, 1);
+                    sender.SelectionStart = pos;
+
+                    var contentDialog = new ContentDialog
+                    {
+                        Title = "Только английские слова",
+                        Content = "Могут быть введены только английские буквы и слова",
+                        CloseButtonText = "Закрыть"
+                    };
+
+                    var result = await contentDialog.ShowAsync();
+
+                    userMsg.Text = "";
+                }
+            }
         }
     }
 
