@@ -132,7 +132,7 @@
                         Spacing="8">
                 <TextBlock Text="Список для программистов компаний, которые злостно отказывают в трудоустройстве:" FontSize="24" FontFamily="Bahnschrift" FontStretch="Condensed" MaxWidth="280" TextWrapping="WrapWholeWords" HorizontalAlignment="Center" TextAlignment="Center"/>
                 <StackPanel HorizontalAlignment="Center">
-                    <TextBlock Text="ООО ТБСС" FontSize="24"/>
+                    <TextBlock Text="ООО ТБСС - Янис Бакша" FontSize="24"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <HyperlinkButton NavigateUri="https://t.me/AppMEnglish">
