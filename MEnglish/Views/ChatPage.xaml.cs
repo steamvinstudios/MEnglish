@@ -75,16 +75,16 @@ namespace MEnglish.Views
                 MsgAlignment = HorizontalAlignment.Left,
                 MsgText = $"{ResponseComments[new Random().Next(ResponseComments.Count)]} {randomWord.EnglishForm}. Кстати, слово переводится как {randomWord.RussianForm}",
                 Img = new BitmapImage(new Uri($"ms-appx:///ArrayPics/{randomWord.EnglishForm}.jpg"))
-        });
+            });
         }
-}
+    }
 
-public class Message
-{
-    public HorizontalAlignment MsgAlignment { get; set; } = HorizontalAlignment.Right;
-    public string MsgText { get; set; } = "ответ таков";
-    public DateTime MsgDateTime { get; set; } = DateTime.Now;
-    public SolidColorBrush Color { get; set; } = new SolidColorBrush(Colors.DeepSkyBlue);
+    public class Message
+    {
+        public HorizontalAlignment MsgAlignment { get; set; } = HorizontalAlignment.Right;
+        public string MsgText { get; set; } = "ответ таков";
+        public DateTime MsgDateTime { get; set; } = DateTime.Now;
+        public SolidColorBrush Color { get; set; } = new SolidColorBrush(Colors.DeepSkyBlue);
         public ImageSource Img = new BitmapImage(new Uri($"ms-appx:///"));
-}
+    }
 }

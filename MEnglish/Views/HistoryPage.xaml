@@ -27,58 +27,80 @@
                                        FontSize="24"
                                        FontWeight="Bold" />
                             <StackPanel Orientation="Horizontal"
-                                        Spacing="2"
-                                        Padding="12"
-                                        BorderThickness="4"
-                                        CornerRadius="24">
-                                <TextBlock Text="ошибка" />
-                                <TextBlock Text="{x:Bind Mistakes}" />
-                                <StackPanel.BorderBrush>
-                                    <LinearGradientBrush>
-                                        <GradientStop Color="OrangeRed"
-                                                      Offset="0" />
-                                        <GradientStop Color="Yellow"
-                                                      Offset=".5" />
-                                        <GradientStop Color="Red"
-                                                      Offset="1" />
-                                    </LinearGradientBrush>
-                                </StackPanel.BorderBrush>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal"
-                                        Spacing="2"
-                                        Padding="12"
-                                        BorderThickness="4"
-                                        CornerRadius="24">
-                                <TextBlock Text="всего" />
-                                <TextBlock Text="{x:Bind All}" />
-                                <StackPanel.BorderBrush>
-                                    <LinearGradientBrush>
-                                        <GradientStop Color="#24F"
-                                                      Offset="0" />
-                                        <GradientStop Color="SkyBlue"
-                                                      Offset=".5" />
-                                        <GradientStop Color="BlueViolet"
-                                                      Offset="1" />
-                                    </LinearGradientBrush>
-                                </StackPanel.BorderBrush>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal"
-                                        Spacing="2"
-                                        Padding="12"
-                                        BorderThickness="4"
-                                        CornerRadius="24">
-                                <TextBlock Text="правильно" />
-                                <TextBlock Text="{x:Bind Correct}" />
-                                <StackPanel.BorderBrush>
-                                    <LinearGradientBrush>
-                                        <GradientStop Color="GreenYellow"
-                                                      Offset="0" />
-                                        <GradientStop Color="DarkSeaGreen"
-                                                      Offset=".5" />
-                                        <GradientStop Color="#2FA"
-                                                      Offset="1" />
-                                    </LinearGradientBrush>
-                                </StackPanel.BorderBrush>
+                                        HorizontalAlignment="Center"
+                                        Margin="10"
+                                        Spacing="8">
+                                <Border CornerRadius="90"
+                                        BorderThickness="8"
+                                        Width="100"
+                                        Height="100">
+                                    <Border.BorderBrush>
+                                        <LinearGradientBrush>
+                                            <GradientStop Color="Yellow"
+                                                          Offset="0" />
+                                            <GradientStop Color="Red"
+                                                          Offset="1" />
+                                        </LinearGradientBrush>
+                                    </Border.BorderBrush>
+                                    <StackPanel HorizontalAlignment="Center"
+                                                VerticalAlignment="Center">
+                                        <TextBlock Text="Ошибка"
+                                                   FontFamily="Bahnschrift" />
+                                        <TextBlock Name="FalseBar"
+                                                   Text="{x:Bind Mistakes, Mode=OneWay}"
+                                                   FontFamily="Bahnschrift"
+                                                   HorizontalAlignment="Center"
+                                                   FontSize="36" />
+                                    </StackPanel>
+                                </Border>
+                                <AppBarSeparator />
+                                <Border CornerRadius="90"
+                                        BorderThickness="8"
+                                        Width="100"
+                                        Height="100">
+                                    <Border.BorderBrush>
+                                        <LinearGradientBrush>
+                                            <GradientStop Color="DeepSkyBlue"
+                                                          Offset="0" />
+                                            <GradientStop Color="Violet"
+                                                          Offset="1" />
+                                        </LinearGradientBrush>
+                                    </Border.BorderBrush>
+                                    <StackPanel VerticalAlignment="Center"
+                                                HorizontalAlignment="Center">
+                                        <TextBlock Text="Всего"
+                                                   FontFamily="Bahnschrift" />
+                                        <TextBlock Name="MaxOfBar"
+                                                   Text="{x:Bind All, Mode=OneWay}"
+                                                   FontFamily="Bahnschrift"
+                                                   HorizontalAlignment="Center"
+                                                   FontSize="36" />
+                                    </StackPanel>
+                                </Border>
+                                <AppBarSeparator />
+                                <Border CornerRadius="90"
+                                        BorderThickness="8"
+                                        Width="100"
+                                        Height="100">
+                                    <Border.BorderBrush>
+                                        <LinearGradientBrush>
+                                            <GradientStop Color="GreenYellow"
+                                                          Offset="0" />
+                                            <GradientStop Color="SeaGreen"
+                                                          Offset="1" />
+                                        </LinearGradientBrush>
+                                    </Border.BorderBrush>
+                                    <StackPanel VerticalAlignment="Center"
+                                                HorizontalAlignment="Center">
+                                        <TextBlock Text="Успех"
+                                                   FontFamily="Bahnschrift" />
+                                        <TextBlock Name="TrueBar"
+                                                   Text="{x:Bind Correct, Mode=OneWay}"
+                                                   FontFamily="Bahnschrift"
+                                                   HorizontalAlignment="Center"
+                                                   FontSize="36" />
+                                    </StackPanel>
+                                </Border>
                             </StackPanel>
                             <TextBlock Text="{x:Bind Date}"
                                        VerticalAlignment="Center"
