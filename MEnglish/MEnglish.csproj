@@ -332,6 +332,7 @@
     <Content Include="Images\Logo.png" />
     <Content Include="Images\menglishlogonew.png" />
     <Content Include="Images\newspaper_3d.png" />
+    <Content Include="Images\Pencil.png" />
     <Content Include="MEnglish.csproj.user" />
     <Content Include="Images\VK_Blue_Logo_transparent.png" />
     <Content Include="Images\VK_Full_Logo.png" />

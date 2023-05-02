@@ -21,15 +21,16 @@
                 <DataTemplate x:DataType="local:Message">
                     <Grid Height="Auto"
                           Margin="4"
+                          MaxWidth="600"
                           HorizontalAlignment="{x:Bind MsgAlignment}">
                         <StackPanel MinHeight="75"
                                     Background="#3888"
                                     Padding="20"
-                                    CornerRadius="40 40 4 40">
+                                    CornerRadius="40">
                             <TextBlock Text="{x:Bind MsgText}"
                                        Padding="0, 10, 0, 0"
                                        TextWrapping="Wrap"
-                                       FontSize="32" />
+                                       FontSize="20" />
                             <Border CornerRadius="20"
                                     HorizontalAlignment="Left"
                                     VerticalAlignment="Top">
@@ -39,8 +40,8 @@
                                        MaxHeight="400" />
                             </Border>
                             <TextBlock Text="{x:Bind MsgDateTime}"
-                                       Padding="0, 0, 0, 10"
-                                       FontSize="15" />
+                                       Padding="0 20 0 0"
+                                       FontSize="12" />
                         </StackPanel>
                     </Grid>
                 </DataTemplate>
@@ -55,12 +56,16 @@
         <StackPanel Grid.Row="1"
                     Orientation="Horizontal"
                     HorizontalAlignment="Center"
+                    Spacing="2"
+                    Margin="20"
                     VerticalAlignment="Center">
             <TextBox x:Name="userMsg"
-                     Width="200" TextChanging="userMsg_TextChanging"/>
-            <Button Content="Отправить"
-                    Style="{ThemeResource AccentButtonStyle}"
-                    Click="Button_Click" />
+                     Width="200"
+                     TextChanging="userMsg_TextChanging" />
+            <Button Click="Button_Click">
+                <Image Source="/Images/Pencil.png"
+                       Width="40" />
+            </Button>
         </StackPanel>
     </Grid>
 </Page>

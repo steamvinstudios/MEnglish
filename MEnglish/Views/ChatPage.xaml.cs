@@ -48,17 +48,21 @@ namespace MEnglish.Views
             {
                 Responses = db.Words.ToList();
             }
+
+            Messages.Add(new Message { MsgAlignment = HorizontalAlignment.Left, MsgText = "Это тренажер Чат, который представляет собой мини-игру в слова. Ты пишешь любое слово на английском, а тебе чат-бот отвечает словом на последнюю буквы из твоего. И наоборот" });
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             Messages.Add(new Message { MsgText = userMsg.Text, Color = new SolidColorBrush(Colors.DarkOrange) });
 
-            await Task.Delay(1000);
-
             List<Word> words = new List<Word>();
 
             char lastLetter = userMsg.Text[userMsg.Text.Length - 1];
+
+            userMsg.Text = "";
+
+            await Task.Delay(2000);
 
             for (int i = 0; i < Responses.Count; i++)
             {
@@ -76,8 +80,17 @@ namespace MEnglish.Views
             {
                 MsgAlignment = HorizontalAlignment.Left,
                 MsgText = $"{ResponseComments[new Random().Next(ResponseComments.Count)]} {randomWord.EnglishForm}. Кстати, слово переводится как {randomWord.RussianForm}",
+            });
+
+            await Task.Delay(2000);
+
+            Messages.Add(new Message
+            {
+                MsgAlignment = HorizontalAlignment.Left,
                 Img = new BitmapImage(new Uri($"ms-appx:///ArrayPics/{randomWord.EnglishForm}.jpg"))
             });
+
+
         }
 
         private async void userMsg_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
@@ -108,7 +121,7 @@ namespace MEnglish.Views
     public class Message
     {
         public HorizontalAlignment MsgAlignment { get; set; } = HorizontalAlignment.Right;
-        public string MsgText { get; set; } = "ответ таков";
+        public string MsgText { get; set; } = "";
         public DateTime MsgDateTime { get; set; } = DateTime.Now;
         public SolidColorBrush Color { get; set; } = new SolidColorBrush(Colors.DeepSkyBlue);
         public ImageSource Img = new BitmapImage(new Uri($"ms-appx:///"));
