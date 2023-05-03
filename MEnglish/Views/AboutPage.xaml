@@ -147,6 +147,9 @@
                                FontSize="24" />
                     <TextBlock Text="Лаборатория Касперского - Алина Зудина"
                                FontSize="24" />
+                    <Image Source="/HRPhotos/AlinaZudina.jpeg"
+                           Height="480"
+                           HorizontalAlignment="Left" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <HyperlinkButton NavigateUri="https://t.me/AppMEnglish">
