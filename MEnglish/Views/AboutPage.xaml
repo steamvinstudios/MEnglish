@@ -143,6 +143,10 @@
                                FontSize="24" />
                     <TextBlock Text="ООО ПАГ - Назарова Алена Алексеевна"
                                FontSize="24" />
+                    <TextBlock Text="LAD labs Ltd - Ларская Анна"
+                               FontSize="24" />
+                    <TextBlock Text="Лаборатория Касперского - Алина Зудина"
+                               FontSize="24" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <HyperlinkButton NavigateUri="https://t.me/AppMEnglish">
