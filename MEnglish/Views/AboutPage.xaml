@@ -11,7 +11,7 @@
       controls:BackdropMaterial.ApplyToRootOrPageBackground="True"
       Loaded="Page_Loaded">
     <ScrollViewer>
-        <Grid Margin="0 -40 0 0">
+        <Grid>
             <Border VerticalAlignment="Top"
                     HorizontalAlignment="Center"
                     Margin="40">
@@ -127,6 +127,7 @@
                 </Rectangle.Fill>
             </Rectangle>
             <StackPanel x:Name="CenterStack"
+                        Margin="160"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         Spacing="8">
@@ -138,20 +139,7 @@
                            TextWrapping="WrapWholeWords"
                            HorizontalAlignment="Center"
                            TextAlignment="Center" />
-                <StackPanel HorizontalAlignment="Center">
-                    <TextBlock Text="ООО ТБСС - Янис Бакша"
-                               FontSize="24" />
-                    <TextBlock Text="ООО ПАГ - Назарова Алена Алексеевна"
-                               FontSize="24" />
-                    <TextBlock Text="LAD labs Ltd - Ларская Анна"
-                               FontSize="24" />
-                    <TextBlock Text="Лаборатория Касперского - Алина Зудина"
-                               FontSize="24" />
-                    <Image Source="/HRPhotos/AlinaZudina.jpeg"
-                           Height="480"
-                           HorizontalAlignment="Left" />
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <HyperlinkButton NavigateUri="https://t.me/AppMEnglish">
                         <Image Source="/Images/Logo.png"
                                MaxHeight="100" />
