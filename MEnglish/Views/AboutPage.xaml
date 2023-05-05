@@ -131,14 +131,6 @@
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         Spacing="8">
-                <TextBlock Text="Список для программистов компаний, которые злостно отказывают в трудоустройстве:"
-                           FontSize="24"
-                           FontFamily="Bahnschrift"
-                           FontStretch="Condensed"
-                           MaxWidth="280"
-                           TextWrapping="WrapWholeWords"
-                           HorizontalAlignment="Center"
-                           TextAlignment="Center" />
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <HyperlinkButton NavigateUri="https://t.me/AppMEnglish">
                         <Image Source="/Images/Logo.png"
