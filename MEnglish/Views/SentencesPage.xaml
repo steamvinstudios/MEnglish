@@ -7,7 +7,6 @@
       xmlns:controls="using:Microsoft.UI.Xaml.Controls"
       xmlns:media="using:Microsoft.UI.Xaml.Media"
       mc:Ignorable="d"
-      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
       controls:BackdropMaterial.ApplyToRootOrPageBackground="True">
     <ScrollViewer>
         <Grid>

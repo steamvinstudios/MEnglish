@@ -8,7 +8,6 @@
       xmlns:media="using:Microsoft.UI.Xaml.Media"
       xmlns:models="using:MEnglish.Models"
       mc:Ignorable="d"
-      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
       controls:BackdropMaterial.ApplyToRootOrPageBackground="True"
       Loaded="Page_Loaded">
     <ScrollViewer>
