@@ -6,10 +6,9 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:controls="using:Microsoft.UI.Xaml.Controls"
       xmlns:models="using:MEnglish.Models"
-      mc:Ignorable="d"
-      controls:BackdropMaterial.ApplyToRootOrPageBackground="True">
+      mc:Ignorable="d">
     <ScrollViewer>
-        <StackPanel Padding="20">
+        <Grid Padding="20">
             <TextBlock Text="История"
                        HorizontalAlignment="Center"
                        FontFamily="Bahnschrift"
@@ -108,6 +107,6 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </StackPanel>
+        </Grid>
     </ScrollViewer>
 </Page>

@@ -7,8 +7,7 @@
       xmlns:controls="using:Microsoft.UI.Xaml.Controls"
       xmlns:media="using:Microsoft.UI.Xaml.Media"
       xmlns:models="using:MEnglish.Models"
-      mc:Ignorable="d"
-      controls:BackdropMaterial.ApplyToRootOrPageBackground="True">
+      mc:Ignorable="d">
     <ScrollViewer>
         <Grid>
             <Image Source="{x:Bind viewModel.PickerTrainer.RandomWord.Image, Mode=OneWay}"

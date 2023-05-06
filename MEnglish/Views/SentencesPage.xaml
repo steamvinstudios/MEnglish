@@ -6,8 +6,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:controls="using:Microsoft.UI.Xaml.Controls"
       xmlns:media="using:Microsoft.UI.Xaml.Media"
-      mc:Ignorable="d"
-      controls:BackdropMaterial.ApplyToRootOrPageBackground="True">
+      mc:Ignorable="d">
     <ScrollViewer>
         <Grid>
             <StackPanel Background="#2888"

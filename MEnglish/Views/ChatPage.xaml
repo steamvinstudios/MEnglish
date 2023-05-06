@@ -6,8 +6,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:controls="using:Microsoft.UI.Xaml.Controls"
       mc:Ignorable="d"
-      x:Name="mainPage"
-      controls:BackdropMaterial.ApplyToRootOrPageBackground="True">
+      x:Name="mainPage">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
