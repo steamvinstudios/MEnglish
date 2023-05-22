@@ -435,6 +435,10 @@ namespace MEnglish.Models
             Word.CreateBuilder().SetEnglishForm("we")
                                 .SetRussianForm("мы")
                                 .SetImage("/ArrayPics/we.jpg"),
+
+            Word.CreateBuilder().SetEnglishForm("reliability")
+                                .SetRussianForm("надежность")
+                                .SetImage("/ArrayPics/reliability.jpg"),
         };
     }
 }

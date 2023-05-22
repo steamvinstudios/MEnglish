@@ -253,6 +253,7 @@
     <Content Include="ArrayPics\order.jpg" />
     <Content Include="ArrayPics\part.jpg" />
     <Content Include="ArrayPics\plant.jpg" />
+    <Content Include="ArrayPics\reliability.jpg" />
     <Content Include="ArrayPics\round.jpg" />
     <Content Include="ArrayPics\sea.jpg" />
     <Content Include="ArrayPics\sleigh.jpg" />
