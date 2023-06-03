@@ -152,7 +152,7 @@
                             </TransitionCollection>
                         </Button.Transitions>
                         <StackPanel>
-                            <Image Source="/NavigationBarPageIcons/Snowboarder.png"
+                            <Image Source="/NavigationBarPageIcons/Scroll.png"
                                    Height="44" />
                             <TextBlock Text="История"
                                        FontFamily="Bahnschrift"
@@ -172,7 +172,7 @@
                             </TransitionCollection>
                         </Button.Transitions>
                         <StackPanel>
-                            <Image Source="/NavigationBarPageIcons/Snowboarder.png"
+                            <Image Source="/NavigationBarPageIcons/GrinningCat.png"
                                    Height="44" />
                             <TextBlock Text="Чат"
                                        FontFamily="Bahnschrift"

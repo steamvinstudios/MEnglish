@@ -136,8 +136,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Models\AnswersResult.cs" />
+    <Compile Include="Models\Article.cs" />
     <Compile Include="Models\History.cs" />
     <Compile Include="Models\HistoryContext.cs" />
+    <Compile Include="Models\News.cs" />
     <Compile Include="Models\PickerTrainer.cs" />
     <Compile Include="Models\Sentence.cs" />
     <Compile Include="Models\Sentences.cs" />
@@ -348,6 +350,8 @@
     <Content Include="NavigationBarPageIcons\chequered_flag_3d.png" />
     <Content Include="NavigationBarPageIcons\eyes_3d.png" />
     <Content Include="NavigationBarPageIcons\graduation_cap_3d.png" />
+    <Content Include="NavigationBarPageIcons\GrinningCat.png" />
+    <Content Include="NavigationBarPageIcons\Scroll.png" />
     <Content Include="NavigationBarPageIcons\Snowboarder.png" />
     <Content Include="NavigationBarPageIcons\writing_hand_3d_default.png" />
     <Content Include="Properties\Default.rd.xml" />
@@ -431,7 +435,7 @@
       <Version>6.2.14</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.UI.Xaml">
-      <Version>2.8.3</Version>
+      <Version>2.8.4</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

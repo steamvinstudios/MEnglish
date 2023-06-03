@@ -43,15 +43,18 @@
                         <media:AcrylicBrush TintColor="Transparent"
                                             TintLuminosityOpacity=".3" />
                     </Border.Background>
-                    <TextBlock x:Name="randomWordRussianFormTextBlock"
-                               FontSize="36"
-                               FontWeight="Bold"
-                               FontFamily="Bahnschrift"
-                               Padding="20 8"
-                               Text="{x:Bind viewModel.PickerTrainer.RandomWord.RussianForm, Mode=OneWay}"
-                               VerticalAlignment="Center"
-                               HorizontalAlignment="Center"
-                               TextWrapping="Wrap" />
+                    <Viewbox>
+                        <TextBlock x:Name="randomWordRussianFormTextBlock"
+                                   FontSize="36"
+                                   FontWeight="Bold"
+                                   FontFamily="Bahnschrift"
+                                   Padding="20 8"
+                                   Text="{x:Bind viewModel.PickerTrainer.RandomWord.RussianForm, Mode=OneWay}"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   TextWrapping="Wrap" />
+                    </Viewbox>
+                    
                 </Border>
                 <AppBarSeparator />
                 <Button x:Name="answerButton1"
