@@ -1,5 +1,6 @@
 ﻿using MEnglish.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Toolkit.Uwp.Notifications;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Core;
 using Windows.UI;
+using Windows.UI.Notifications;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -46,6 +48,35 @@ namespace MEnglish
                 }
 
                 db.SaveChanges();
+            }
+
+            RunNotificationService();
+        }
+
+        void RunNotificationService()
+        {
+            var toastContent = new ToastContentBuilder()
+                    .AddText("Пора повторить и изучить новые слова")
+                    .AddText("Откройте приложение и начните упражнение")
+                    .AddButton(new ToastButton()
+                    .SetContent("Открыть")
+                    .AddArgument("action", "openApp"))
+                    .GetToastContent();
+
+            // Get the toast notifier
+            var notifier = ToastNotificationManager.CreateToastNotifier();
+
+            for (int i = 1; i < 13; i++)
+            {
+                // Create a scheduled notification to be displayed in one hour
+                var scheduledNotif = new ScheduledToastNotification(toastContent.GetXml(), DateTimeOffset.Now.AddHours(1 * i))
+                {
+                    // Assign a unique ID to the notification
+                    Id = "HourlyReminder"
+                };
+
+                // Add the scheduled notification to the notifier
+                notifier.AddToSchedule(scheduledNotif);
             }
         }
 
