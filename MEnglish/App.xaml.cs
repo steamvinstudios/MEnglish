@@ -64,9 +64,18 @@ namespace MEnglish
                     .GetToastContent();
 
             // Get the toast notifier
-            var notifier = ToastNotificationManager.CreateToastNotifier();
+            var notificationManager = ToastNotificationManager.CreateToastNotifier();
 
-            for (int i = 1; i < 13; i++)
+            // получить все уведомления
+            var scheduledNotifications = notificationManager.GetScheduledToastNotifications();
+
+            // зачистка уведомлений при старте
+            foreach (var notification in scheduledNotifications)
+            {
+                notificationManager.RemoveFromSchedule(notification);
+            }
+
+            for (int i = 1; i < 49; i++)
             {
                 // Create a scheduled notification to be displayed in one hour
                 var scheduledNotif = new ScheduledToastNotification(toastContent.GetXml(), DateTimeOffset.Now.AddHours(1 * i))
@@ -76,7 +85,7 @@ namespace MEnglish
                 };
 
                 // Add the scheduled notification to the notifier
-                notifier.AddToSchedule(scheduledNotif);
+                notificationManager.AddToSchedule(scheduledNotif);
             }
         }
 
