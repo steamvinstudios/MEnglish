@@ -171,23 +171,28 @@
                                   VerticalAlignment="Center"
                                   IsOpen="{x:Bind viewModel.WriterTrainer.WordInfoTeachingTipIsOpen, Mode=OneWay}">
                 <Grid>
-                    <Border CornerRadius="8"
-                            Margin="0 8"
-                            HorizontalAlignment="Right"
-                            VerticalAlignment="Top">
-                        <Image Source="{x:Bind viewModel.WriterTrainer.RandomWord.Image, Mode=OneWay}"
-                               Height="90"
-                               Width="160"
-                               Stretch="UniformToFill"
-                               HorizontalAlignment="Right"
-                               VerticalAlignment="Top" />
-                    </Border>
-                    <StackPanel VerticalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Viewbox Grid.Column="1">
+                        <Border CornerRadius="90"
+                                Background="Black">
+                            <Image Source="{x:Bind viewModel.WriterTrainer.RandomWord.Image, Mode=OneWay}"
+                                   Stretch="UniformToFill"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Top" />
+                        </Border>
+                    </Viewbox>
+                    <StackPanel Grid.Column="0"
+                                VerticalAlignment="Center"
+                                Padding="10">
                         <TextBlock Text="{x:Bind viewModel.WriterTrainer.RandomWord.RussianForm, Mode=OneWay}"
                                    FontSize="36"
                                    FontWeight="Bold"
                                    FontFamily="Bahnschrift"
-                                   FontStretch="Condensed" />
+                                   FontStretch="Condensed"
+                                   TextWrapping="Wrap" />
                         <TextBlock Text="{x:Bind viewModel.WriterTrainer.RandomWord.EnglishForm, Mode=OneWay}"
                                    FontSize="32"
                                    FontFamily="Bahnschrift"

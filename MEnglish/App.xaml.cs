@@ -55,12 +55,13 @@ namespace MEnglish
 
         void RunNotificationService()
         {
+            //.AddArgument("action", "openApp"))
             var toastContent = new ToastContentBuilder()
                     .AddText("Пора повторить и изучить новые слова")
                     .AddText("Откройте приложение и начните упражнение")
                     .AddButton(new ToastButton()
-                    .SetContent("Открыть")
-                    .AddArgument("action", "openApp"))
+                    .SetContent("Открыть"))
+                    .AddArgument("action", "openApp")
                     .GetToastContent();
 
             // Get the toast notifier
@@ -125,6 +126,34 @@ namespace MEnglish
                     rootFrame.Navigate(typeof(NavigationBarPage), e.Arguments);
                 }
                 // Обеспечение активности текущего окна
+                Window.Current.Activate();
+                // Extend acrylic
+                ExtendAcrylicIntoTitleBar(); // ПРОЗРАЧНЫЙ ВЕРХНИЙ БАР
+            }
+        }
+
+        protected override void OnActivated(IActivatedEventArgs args)
+        {
+            // Проверяем, что активация произошла из-за уведомления
+            if (args.Kind == ActivationKind.ToastNotification)
+            {
+                // Приводим аргументы к нужному типу
+                var toastArgs = args as ToastNotificationActivatedEventArgs;
+                // Получаем аргумент, который мы добавили в уведомление
+                var arguments = toastArgs.Argument;
+
+                // Получаем корневой фрейм приложения
+                Frame rootFrame = Window.Current.Content as Frame;
+                // Если фрейма нет, то создаем его
+                if (rootFrame == null)
+                {
+                    rootFrame = new Frame();
+                    rootFrame.NavigationFailed += OnNavigationFailed;
+                    Window.Current.Content = rootFrame;
+                }
+                // Переходим на страницу NavigationBarPage
+                rootFrame.Navigate(typeof(NavigationBarPage));
+                // Активируем окно приложения
                 Window.Current.Activate();
                 // Extend acrylic
                 ExtendAcrylicIntoTitleBar(); // ПРОЗРАЧНЫЙ ВЕРХНИЙ БАР
