@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.Input;
+using MEnglish.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,6 @@ namespace MEnglish.ViewModels
 {
     public class HomePageViewModel : BaseViewModel
     {
-
+        public News News { get; set; } = new News();
     }
 }
