@@ -24,8 +24,8 @@
                       SelectionMode="None">
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType="models:History">
-                        <StackPanel Orientation="Vertical"
-                                    Spacing="20">
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="4" Padding="20"
+                                    Spacing="20" CornerRadius="40" Background="#2000">
                             <TextBlock Text="{x:Bind TrainerInfo}"
                                        VerticalAlignment="Center"
                                        FontFamily="Bahnschrift"
@@ -109,6 +109,7 @@
                             </StackPanel>
                             <TextBlock Text="{x:Bind Date}"
                                        VerticalAlignment="Center"
+                                       HorizontalAlignment="Right"
                                        FontWeight="Bold" />
                         </StackPanel>
                     </DataTemplate>

@@ -126,7 +126,6 @@
                 </Rectangle.Fill>
             </Rectangle>
             <StackPanel x:Name="CenterStack"
-                        Margin="160"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         Spacing="8">
