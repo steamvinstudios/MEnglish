@@ -129,13 +129,10 @@
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         Spacing="8">
-                <StackPanel Orientation="Horizontal"
-                            HorizontalAlignment="Center">
-                    <HyperlinkButton NavigateUri="https://github.com/steamvinstudios/MEnglish">
-                        <Image Source="/Images/GitHub_Logo.png"
-                               MaxHeight="100" />
-                    </HyperlinkButton>
-                </StackPanel>
+                <HyperlinkButton NavigateUri="https://github.com/steamvinstudios/MEnglish">
+                    <Image Source="/Images/GitHub_Logo.png"
+                           MaxHeight="100" />
+                </HyperlinkButton>
                 <TextBlock Text="{x:Bind viewModel.LastUpdate}"
                            FontSize="14"
                            FontFamily="Bahnschrift"

@@ -6,21 +6,77 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:controls="using:Microsoft.UI.Xaml.Controls"
       xmlns:models="using:MEnglish.Models">
+    <Page.Resources>
+        <Style x:Key="TrainButtonStyle"
+               TargetType="Button">
+            <Setter Property="Width"
+                    Value="120" />
+            <Setter Property="Height"
+                    Value="240" />
+            <Setter Property="FontFamily"
+                    Value="Bahnschrift" />
+            <Setter Property="CornerRadius"
+                    Value="32" />
+            <Setter Property="FontStretch"
+                    Value="Condensed" />
+            <Setter Property="FontSize"
+                    Value="20" />
+        </Style>
+        <Style x:Key="BlockBorderStyle"
+               TargetType="Border">
+            <Setter Property="Background"
+                    Value="#11555555" />
+            <Setter Property="CornerRadius"
+                    Value="32" />
+            <Setter Property="Padding"
+                    Value="8" />
+            <Setter Property="Margin"
+                    Value="4" />
+            <Setter Property="BorderThickness"
+                    Value="2" />
+        </Style>
+        <Style x:Key="BlockStackPanelStyle"
+               TargetType="StackPanel">
+            <Setter Property="HorizontalAlignment"
+                    Value="Stretch" />
+            <Setter Property="VerticalAlignment"
+                    Value="Stretch" />
+            <Setter Property="Spacing"
+                    Value="8" />
+        </Style>
+    </Page.Resources>
     <ScrollViewer>
-        <Grid VerticalAlignment="Center">
-            <StackPanel HorizontalAlignment="Center">
-                <GridView HorizontalAlignment="Center"
-                          SelectionMode="None">
-                    <Border Background="#11555555"
-                            CornerRadius="32"
-                            Padding="8"
-                            Margin="4"
-                            BorderThickness="2">
-                        <StackPanel Spacing="8"
-                                    MinHeight="572">
-                            <Grid Background="#11555555"
-                                  CornerRadius="32"
-                                  Padding="8">
+        <Grid VerticalAlignment="Center"
+              HorizontalAlignment="Center">
+            <StackPanel HorizontalAlignment="Stretch">
+                <TextBlock Text="MEnglish"
+                           HorizontalAlignment="Center"
+                           FontFamily="Bahnschrift"
+                           Margin="0 20 0 0"
+                           FontSize="64"
+                           FontWeight="Bold"
+                           FontStretch="Condensed">
+                    <TextBlock.Foreground>
+                        <LinearGradientBrush>
+                            <GradientStop Color="{ThemeResource SystemAccentColorDark3}" />
+                            <GradientStop Color="{ThemeResource SystemAccentColorLight3}"
+                                          Offset="1" />
+                        </LinearGradientBrush>
+                    </TextBlock.Foreground></TextBlock>
+                <TextBlock Text="STEAMVIN STUDIOS"
+                           HorizontalAlignment="Center"
+                           Margin="0 -14 0 0"
+                           FontFamily="Bahnschrift"
+                           FontSize="30"
+                           FontWeight="Bold"
+                           FontStretch="Condensed" />
+                <VariableSizedWrapGrid HorizontalAlignment="Center"
+                                       Orientation="Horizontal">
+                    <Border Style="{StaticResource BlockBorderStyle}">
+                        <StackPanel Style="{StaticResource BlockStackPanelStyle}">
+                            <Border Background="#11555555"
+                                    CornerRadius="32"
+                                    Padding="8">
                                 <StackPanel>
                                     <TextBlock Text="Выбери режим тренировки"
                                                FontFamily="Bahnschrift"
@@ -30,20 +86,11 @@
                                     <StackPanel Orientation="Horizontal"
                                                 Spacing="4">
                                         <Button x:Name="ShortTrainBt"
-                                                Width="120"
-                                                Height="240"
+                                                Style="{StaticResource TrainButtonStyle}"
                                                 Content="Короткая"
-                                                Click="ShortTrainBt_Click"
-                                                FontFamily="Bahnschrift"
-                                                CornerRadius="32"
-                                                FontStretch="Condensed"
-                                                FontSize="20">
-                                            <Button.Shadow>
-                                                <ThemeShadow />
-                                            </Button.Shadow>
+                                                Click="ShortTrainBt_Click">
                                             <Button.Background>
-                                                <LinearGradientBrush EndPoint="0.5,1"
-                                                                     StartPoint="0.5,0">
+                                                <LinearGradientBrush>
                                                     <GradientStop Color="#FF3285FF" />
                                                     <GradientStop Color="#FF89FF7D"
                                                                   Offset="1" />
@@ -51,17 +98,11 @@
                                             </Button.Background>
                                         </Button>
                                         <Button x:Name="MidTrainBt"
-                                                Width="120"
-                                                Height="240"
+                                                Style="{StaticResource TrainButtonStyle}"
                                                 Content="Средняя"
-                                                Click="MidTrainBt_Click"
-                                                FontFamily="Bahnschrift"
-                                                CornerRadius="32"
-                                                FontStretch="Condensed"
-                                                FontSize="20">
+                                                Click="MidTrainBt_Click">
                                             <Button.Background>
-                                                <LinearGradientBrush EndPoint="0.5,1"
-                                                                     StartPoint="0.5,0">
+                                                <LinearGradientBrush>
                                                     <GradientStop Color="#FF57FFFF" />
                                                     <GradientStop Color="#FFFF6EA3"
                                                                   Offset="1" />
@@ -69,17 +110,11 @@
                                             </Button.Background>
                                         </Button>
                                         <Button x:Name="LongTrainBt"
-                                                Width="120"
-                                                Height="240"
+                                                Style="{StaticResource TrainButtonStyle}"
                                                 Content="Длинная"
-                                                Click="LongTrainBt_Click"
-                                                FontFamily="Bahnschrift"
-                                                CornerRadius="32"
-                                                FontStretch="Condensed"
-                                                FontSize="20">
+                                                Click="LongTrainBt_Click">
                                             <Button.Background>
-                                                <LinearGradientBrush EndPoint="0.5,1"
-                                                                     StartPoint="0.5,0">
+                                                <LinearGradientBrush>
                                                     <GradientStop Color="#FFFF5198" />
                                                     <GradientStop Color="#FFFFDC3E"
                                                                   Offset="1" />
@@ -88,13 +123,9 @@
                                         </Button>
                                     </StackPanel>
                                 </StackPanel>
-                            </Grid>
-                            <Grid x:Name="backLandGrid"
-                                  Background="#11555555"
-                                  CornerRadius="32">
-                                <Grid.Shadow>
-                                    <ThemeShadow />
-                                </Grid.Shadow>
+                            </Border>
+                            <Border Background="#11555555"
+                                    CornerRadius="32">
                                 <StackPanel>
                                     <TextBlock Text="Режим тренировки"
                                                FontSize="32"
@@ -114,19 +145,15 @@
                                                    HorizontalAlignment="Center" />
                                     </StackPanel>
                                 </StackPanel>
-                            </Grid>
+                            </Border>
                         </StackPanel>
                     </Border>
-                    <Border Background="#11555555"
-                            CornerRadius="32"
-                            Padding="8"
-                            Margin="4"
-                            BorderThickness="2">
+                    <Border Style="{StaticResource BlockBorderStyle}">
                         <StackPanel Grid.Column="1"
                                     Margin="20"
                                     Spacing="8">
-                            <Grid Background="#11555555"
-                                  CornerRadius="32">
+                            <Border Background="#11555555"
+                                    CornerRadius="32">
                                 <StackPanel Spacing="8">
                                     <Button Height="160"
                                             FontSize="72"
@@ -151,29 +178,25 @@
                                                FontStretch="Condensed"
                                                FontWeight="Bold"
                                                HorizontalAlignment="Center" />
-                                    <Grid Background="#11555555"
-                                          CornerRadius="32"
-                                          Padding="16">
+                                    <Border Background="#11555555"
+                                            CornerRadius="32"
+                                            Padding="16">
                                         <TextBlock Text="Тренируй мышечную память"
                                                    FontSize="16"
                                                    FontFamily="Bahnschrift"
                                                    TextWrapping="Wrap"
                                                    HorizontalAlignment="Center" />
-                                    </Grid>
+                                    </Border>
                                 </StackPanel>
-                            </Grid>
+                            </Border>
                         </StackPanel>
                     </Border>
-                    <Border Background="#11555555"
-                            CornerRadius="32"
-                            Padding="8"
-                            Margin="4"
-                            BorderThickness="2">
+                    <Border Style="{StaticResource BlockBorderStyle}">
                         <StackPanel Grid.Column="2"
                                     Margin="20"
                                     Spacing="8">
-                            <Grid Background="#11555555"
-                                  CornerRadius="32">
+                            <Border Background="#11555555"
+                                    CornerRadius="32">
                                 <StackPanel Spacing="16">
                                     <Button HorizontalAlignment="Stretch"
                                             FontSize="72"
@@ -207,25 +230,32 @@
                                                    HorizontalAlignment="Center" />
                                     </StackPanel>
                                 </StackPanel>
-                            </Grid>
+                            </Border>
                         </StackPanel>
                     </Border>
-                </GridView>
-                <GridView ItemsSource="{x:Bind viewModel.News.All}"
+                </VariableSizedWrapGrid>
+                <ListView ItemsSource="{x:Bind viewModel.News.All}"
                           HorizontalAlignment="Center"
                           SelectionMode="None">
-                    <GridView.ItemTemplate>
+                    <ListView.ItemTemplate>
                         <DataTemplate x:DataType="models:Article">
                             <Border Background="#11555555"
                                     CornerRadius="32"
-                                    Padding="8"
-                                    Margin="4"
-                                    BorderThickness="2"
-                                    BorderBrush="{ThemeResource SystemControlBackgroundAccentRevealBorderBrush}">
-                                <StackPanel HorizontalAlignment="Center"
-                                            VerticalAlignment="Center">
+                                    Padding="32"
+                                    Margin="4">
+                                <StackPanel>
+                                    <TextBlock Text="{x:Bind Title}"
+                                               FontSize="32"
+                                               FontFamily="Bahnschrift"
+                                               FontStretch="Condensed"
+                                               TextWrapping="Wrap"
+                                               HorizontalAlignment="Center" />
+                                    <TextBlock Text="{x:Bind Body}"
+                                               FontSize="16"
+                                               FontFamily="Bahnschrift"
+                                               TextWrapping="Wrap"
+                                               HorizontalAlignment="Center" />
                                     <TextBlock Text="{x:Bind Date}"
-                                               Width="340"
                                                FontSize="20"
                                                FontFamily="Bahnschrift"
                                                TextWrapping="Wrap"
@@ -237,23 +267,11 @@
                                                               Offset="1" />
                                             </LinearGradientBrush>
                                         </TextBlock.Foreground></TextBlock>
-                                    <TextBlock Text="{x:Bind Title}"
-                                               Width="340"
-                                               FontSize="16"
-                                               FontFamily="Bahnschrift"
-                                               TextWrapping="Wrap"
-                                               HorizontalAlignment="Center" />
-                                    <TextBlock Text="{x:Bind Body}"
-                                               Width="340"
-                                               FontSize="16"
-                                               FontFamily="Bahnschrift"
-                                               TextWrapping="Wrap"
-                                               HorizontalAlignment="Center" />
                                 </StackPanel>
                             </Border>
                         </DataTemplate>
-                    </GridView.ItemTemplate>
-                </GridView>
+                    </ListView.ItemTemplate>
+                </ListView>
             </StackPanel>
         </Grid>
     </ScrollViewer>

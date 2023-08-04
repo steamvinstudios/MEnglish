@@ -16,16 +16,30 @@
             <TextBlock Text="История"
                        HorizontalAlignment="Center"
                        FontFamily="Bahnschrift"
-                       FontSize="32"
-                       FontWeight="Bold" />
+                       FontSize="64"
+                       FontWeight="Bold"
+                       FontStretch="Condensed">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush>
+                        <GradientStop Color="{ThemeResource SystemAccentColorDark3}" />
+                        <GradientStop Color="{ThemeResource SystemAccentColorLight3}"
+                                      Offset="1" />
+                    </LinearGradientBrush>
+                </TextBlock.Foreground></TextBlock>
             <ListView Grid.Row="1"
                       ItemsSource="{x:Bind Answers}"
                       VerticalAlignment="Top"
                       SelectionMode="None">
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType="models:History">
-                        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="4" Padding="20"
-                                    Spacing="20" CornerRadius="40" Background="#2000">
+                        <StackPanel Orientation="Vertical"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Top"
+                                    Margin="4"
+                                    Padding="20"
+                                    Spacing="20"
+                                    CornerRadius="40"
+                                    Background="#1000">
                             <TextBlock Text="{x:Bind TrainerInfo}"
                                        VerticalAlignment="Center"
                                        FontFamily="Bahnschrift"
@@ -109,8 +123,9 @@
                             </StackPanel>
                             <TextBlock Text="{x:Bind Date}"
                                        VerticalAlignment="Center"
-                                       HorizontalAlignment="Right"
-                                       FontWeight="Bold" />
+                                       FontFamily="Bahnschrift"
+                                       FontStretch="Condensed"
+                                       HorizontalAlignment="Right" />
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
