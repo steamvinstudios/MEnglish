@@ -151,6 +151,7 @@
     <Compile Include="Models\WordBuilder.cs" />
     <Compile Include="Models\WordContext.cs" />
     <Compile Include="Models\WriterTrainer.cs" />
+    <Compile Include="Services\NewsService.cs" />
     <Compile Include="ViewModels\AboutPageViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\HistoryPageViewModel.cs" />
@@ -439,6 +440,9 @@
     </PackageReference>
     <PackageReference Include="Microsoft.UI.Xaml">
       <Version>2.8.5</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

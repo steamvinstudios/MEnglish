@@ -20,6 +20,7 @@ using Windows.UI.Xaml.Media.Animation;
 using MEnglish.ViewModels;
 using MEnglish.Models;
 using MEnglish.Views;
+using MEnglish.Services;
 
 // Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -30,6 +31,7 @@ namespace MEnglish
     /// </summary>
     public sealed partial class HomePage : Page
     {
+        public News News { get; set; }
         private HomePageViewModel viewModel = new HomePageViewModel();
         public HomePage()
         {
@@ -58,6 +60,37 @@ namespace MEnglish
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(PickerPage), null, new DrillInNavigationTransitionInfo());
+        }
+
+        private async void LoadNewsButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var newsService = new NewsService();
+                News = await newsService.GetNewsAsync("http://localhost:5000/news");
+                JsonNewsListView.ItemsSource = News.All;
+
+                var contentDialog = new ContentDialog
+                {
+                    Title = "Успешно",
+                    Content = "Загрузка новостей выполнена",
+                    CloseButtonText = "Закрыть"
+                };
+
+                var result = await contentDialog.ShowAsync();
+            }
+            catch (Exception ex)
+            {
+                var contentDialog = new ContentDialog
+                {
+                    Title = "Сервер недоступен",
+                    Content = $"Загрузка новостей не выполнена: {ex}",
+                    CloseButtonText = "Закрыть"
+                };
+
+                var result = await contentDialog.ShowAsync();
+            }
+            
         }
     }
 }

@@ -272,6 +272,31 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+                <Button x:Name="LoadNewsButton"
+                        Content="Загрузить новости"
+                        HorizontalAlignment="Center"
+                        Style="{ThemeResource AccentButtonStyle}"
+                        Click="LoadNewsButton_Click" />
+                <ListView x:Name="JsonNewsListView"
+                          ItemsSource="{x:Bind News}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="models:Article">
+                            <StackPanel>
+                                <TextBlock Text="{x:Bind Title}"
+                                           FontSize="24"
+                                           TextWrapping="Wrap"
+                                           FontWeight="Bold" />
+                                <TextBlock Text="{x:Bind Body}"
+                                           FontSize="16"
+                                           TextWrapping="Wrap" />
+                                <TextBlock Text="{x:Bind Date}"
+                                           FontSize="12"
+                                           TextWrapping="Wrap"
+                                           FontWeight="Bold" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </StackPanel>
         </Grid>
     </ScrollViewer>
